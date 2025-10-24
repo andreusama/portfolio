@@ -1,0 +1,171 @@
+/* ==============================================
+   MEDIA COMPONENTS
+   Images, Videos, and Media Placeholders
+   ============================================== */
+
+/* Media Container */
+.media {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-border-light);
+}
+
+.media img,
+.media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Aspect Ratio Variants */
+.media--16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.media--4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.media--1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.media--21-9 {
+    aspect-ratio: 21 / 9;
+}
+
+/* Object Fit Modifiers */
+.media--contain img,
+.media--contain video {
+    object-fit: contain;
+}
+
+.media--fill img,
+.media--fill video {
+    object-fit: fill;
+}
+
+/* Media Placeholders (For blocking/wireframe) */
+.media-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: var(--space-lg);
+    min-height: 200px;
+    border: 2px dashed var(--color-border);
+    background: repeating-linear-gradient(
+        45deg,
+        #f8f8f8,
+        #f8f8f8 10px,
+        #f0f0f0 10px,
+        #f0f0f0 20px
+    );
+    transition: all var(--transition-base);
+}
+
+.media-placeholder:hover {
+    border-color: var(--color-primary);
+    background: repeating-linear-gradient(
+        45deg,
+        #f0f8ff,
+        #f0f8ff 10px,
+        #e8f4ff 10px,
+        #e8f4ff 20px
+    );
+}
+
+/* Placeholder Types */
+.media-placeholder--image::before {
+    content: "📷 ";
+    font-size: var(--font-size-2xl);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.media-placeholder--video::before {
+    content: "🎬 ";
+    font-size: var(--font-size-2xl);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.media-placeholder--gallery::before {
+    content: "🖼️ ";
+    font-size: var(--font-size-2xl);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+/* Video Specific */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    padding: var(--space-md);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.video-container:hover .video-container__controls {
+    opacity: 1;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.gallery__item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.gallery__item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Media */
+@media (max-width: 768px) {
+    .media-placeholder {
+        min-height: 150px;
+        font-size: var(--font-size-xs);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--space-sm);
+    }
+}

@@ -1,0 +1,155 @@
+/* ==============================================
+   FLEXIBLE GRID SYSTEM
+   Highly customizable grid for layouts
+   ============================================== */
+
+/* Content Grid Container */
+.content-grid {
+    display: grid;
+    gap: var(--grid-gap);
+    width: 100%;
+}
+
+/* Default 2-column grid */
+.content-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Dynamic Column Counts via Data Attribute */
+.content-grid[data-grid-columns="1"] {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.content-grid[data-grid-columns="2"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content-grid[data-grid-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.content-grid[data-grid-columns="4"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.content-grid[data-grid-columns="5"] {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.content-grid[data-grid-columns="6"] {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Grid Gap Modifiers */
+.content-grid--gap-sm {
+    gap: var(--grid-gap-sm);
+}
+
+.content-grid--gap-lg {
+    gap: var(--grid-gap-lg);
+}
+
+.content-grid--no-gap {
+    gap: 0;
+}
+
+/* Grid Item Spans */
+.grid-item--full {
+    grid-column: 1 / -1;
+}
+
+.grid-item--half {
+    grid-column: span 1;
+}
+
+.grid-item--third {
+    grid-column: span 1;
+}
+
+.grid-item--two-thirds {
+    grid-column: span 2;
+}
+
+/* Explicit column spans */
+.grid-item--span-2 { grid-column: span 2; }
+.grid-item--span-3 { grid-column: span 3; }
+.grid-item--span-4 { grid-column: span 4; }
+.grid-item--span-5 { grid-column: span 5; }
+.grid-item--span-6 { grid-column: span 6; }
+
+/* Row spans */
+.grid-item--row-2 { grid-row: span 2; }
+.grid-item--row-3 { grid-row: span 3; }
+.grid-item--row-4 { grid-row: span 4; }
+
+/* Responsive Grids */
+@media (max-width: 1024px) {
+    .content-grid[data-grid-columns="4"],
+    .content-grid[data-grid-columns="5"],
+    .content-grid[data-grid-columns="6"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-grid[data-grid-columns="3"],
+    .content-grid[data-grid-columns="4"],
+    .content-grid[data-grid-columns="5"],
+    .content-grid[data-grid-columns="6"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .content-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .grid-item--half,
+    .grid-item--third,
+    .grid-item--two-thirds {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--row {
+    flex-direction: row;
+}
+
+.flex--center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex--between {
+    justify-content: space-between;
+}
+
+.flex--around {
+    justify-content: space-around;
+}
+
+.flex--start {
+    justify-content: flex-start;
+}
+
+.flex--end {
+    justify-content: flex-end;
+}
+
+.flex--wrap {
+    flex-wrap: wrap;
+}
+
+.flex--gap-sm { gap: var(--space-sm); }
+.flex--gap-md { gap: var(--space-md); }
+.flex--gap-lg { gap: var(--space-lg); }

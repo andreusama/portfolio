@@ -1,0 +1,177 @@
+/* ==============================================
+   BASE STYLES - Foundation & Reset
+   ============================================== */
+
+/* Box sizing reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root & Body */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary);
+    background: var(--color-bg-desktop);
+    overflow: hidden; /* Prevent scrolling on desktop */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-md);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-md); }
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+li {
+    margin-bottom: var(--space-xs);
+}
+
+/* Images & Media */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons Base */
+button {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Button Styles - XP Style */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    border-radius: 3px;
+    border: 1px solid #003c74;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1),
+                inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn--primary {
+    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
+    color: var(--color-text-primary);
+    border-color: #003c74;
+}
+
+.btn--primary:hover {
+    background: linear-gradient(180deg, #fef9f4 0%, #fde7d0 48%, #fdd5a8 50%, #fcc784 100%);
+    border-color: #d68c00;
+}
+
+.btn--primary:active {
+    background: linear-gradient(180deg, #e0ddd9 0%, #cbc7c4 48%, #b8b5b2 50%, #a8a5a2 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn--secondary {
+    background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 48%, #d8d8d8 50%, #d0d0d0 100%);
+    color: var(--color-text-primary);
+    border-color: #8c8c8c;
+}
+
+.btn--secondary:hover {
+    background: linear-gradient(180deg, #fefefe 0%, #f0f0f0 48%, #e0e0e0 50%, #d8d8d8 100%);
+}
+
+.btn--secondary:active {
+    background: linear-gradient(180deg, #d0d0d0 0%, #c0c0c0 48%, #b0b0b0 50%, #a8a8a8 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Selection */
+::selection {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* Scrollbar Styling (Windows 7 Style) */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border: 1px solid var(--color-border-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d4d4d4 50%, #c0c0c0 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d4d4d4 0%, #c0c0c0 50%, #acacac 100%);
+}
+
+::-webkit-scrollbar-button {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d4d4d4 50%, #c0c0c0 100%);
+    border: 1px solid var(--color-border);
+    height: 16px;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button:hover {
+    background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 100%);
+}

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Sànchez - Game Designer Portfolio</title>
+
+    <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout/grid.css">
+    <link rel="stylesheet" href="css/layout/windows7.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/window.css">
+    <link rel="stylesheet" href="css/components/card.css">
+    <link rel="stylesheet" href="css/components/media.css">
+    <link rel="stylesheet" href="css/components/project-window.css">
+    <link rel="stylesheet" href="css/utilities/spacing.css">
+    <link rel="stylesheet" href="css/utilities/typography.css">
+</head>
+<body>
+    <!-- Main Desktop Container (Windows 7 style) -->
+    <div class="desktop">
+
+        <!-- Taskbar -->
+        <nav class="taskbar">
+            <div class="taskbar__start">
+                <button class="start-button" aria-label="Start Menu">
+                    <span class="start-button__icon">⊞</span>
+                    <span class="start-button__text">Start</span>
+                </button>
+            </div>
+
+            <div class="taskbar__windows" id="taskbar-windows">
+                <!-- Active windows will appear here -->
+            </div>
+
+            <div class="taskbar__tray">
+                <span class="taskbar__time" id="taskbar-time">00:00</span>
+            </div>
+        </nav>
+
+        <!-- Desktop Area -->
+        <main class="desktop__content">
+
+            <!-- Hero Window -->
+            <section class="window window--hero" data-window="hero">
+                <div class="window__titlebar">
+                    <span class="window__title">Andrés Sànchez - Game Designer</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize" aria-label="Minimize">_</button>
+                        <button class="window__control window__control--maximize" aria-label="Maximize">□</button>
+                        <button class="window__control window__control--close" aria-label="Close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <div class="hero">
+                        <h1 class="hero__title">HERO TITLE</h1>
+                        <p class="hero__subtitle">HERO SUBTITLE / TAGLINE</p>
+                        <div class="hero__cta">
+                            <button class="btn btn--primary">PRIMARY ACTION</button>
+                            <button class="btn btn--secondary">SECONDARY ACTION</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Window -->
+            <section class="window window--about" data-window="about">
+                <div class="window__titlebar">
+                    <span class="window__title">About.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <div class="content-grid">
+                        <div class="grid-item grid-item--full">
+                            <h2>ABOUT SECTION TITLE</h2>
+                        </div>
+                        <div class="grid-item grid-item--half">
+                            <p>ABOUT TEXT BLOCK 1</p>
+                        </div>
+                        <div class="grid-item grid-item--half">
+                            <div class="media-placeholder media-placeholder--image">
+                                IMAGE PLACEHOLDER
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Projects Window -->
+            <section class="window window--projects" data-window="student-projects">
+                <div class="window__titlebar">
+                    <span class="window__title">Student Projects.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <h2>STUDENT PROJECTS</h2>
+
+                    <!-- Flexible Grid System -->
+                    <div class="content-grid" data-grid-columns="3">
+
+                        <!-- Project Card 1 -->
+                        <article class="card card--project">
+                            <div class="card__media">
+                                <div class="media-placeholder media-placeholder--image">
+                                    PROJECT IMAGE 1
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">PROJECT TITLE 1</h3>
+                                <p class="card__description">PROJECT DESCRIPTION 1</p>
+                                <div class="card__tags">
+                                    <span class="tag">TAG1</span>
+                                    <span class="tag">TAG2</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2 -->
+                        <article class="card card--project">
+                            <div class="card__media">
+                                <div class="media-placeholder media-placeholder--video">
+                                    VIDEO PLACEHOLDER 1
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">PROJECT TITLE 2</h3>
+                                <p class="card__description">PROJECT DESCRIPTION 2</p>
+                                <div class="card__tags">
+                                    <span class="tag">TAG1</span>
+                                    <span class="tag">TAG2</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 3 -->
+                        <article class="card card--project">
+                            <div class="card__media">
+                                <div class="media-placeholder media-placeholder--image">
+                                    PROJECT IMAGE 2
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">PROJECT TITLE 3</h3>
+                                <p class="card__description">PROJECT DESCRIPTION 3</p>
+                                <div class="card__tags">
+                                    <span class="tag">TAG1</span>
+                                    <span class="tag">TAG2</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 PROFESSIONAL PROJECTS - Individual Windows
+                 ======================================== -->
+
+            <!-- Professional Project 1: Hot Wheels Xtreme Overdrive -->
+            <section class="window window--project" data-window="hotwheels">
+                <div class="window__titlebar">
+                    <span class="window__title">Hot Wheels Xtreme Overdrive.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+
+                    <!-- Project Header -->
+                    <div class="project-header">
+                        <h1 class="project-header__title">Hot Wheels Xtreme Overdrive</h1>
+                        <div class="project-header__platforms">
+                            <span class="platform-badge">Android Automotive</span>
+                        </div>
+                    </div>
+
+                    <!-- Trailer Video -->
+                    <div class="project-video">
+                        <div class="project-video__container">
+                            <!-- Replace with actual YouTube/Vimeo embed or video file -->
+                            <div class="project-video__placeholder">
+                                🎬 GAME TRAILER VIDEO
+                            </div>
+                            <!-- Example YouTube embed:
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                            -->
+                            <!-- Example video file:
+                            <video controls>
+                                <source src="assets/videos/hotwheels-trailer.mp4" type="video/mp4">
+                            </video>
+                            -->
+                        </div>
+                    </div>
+
+                    <!-- Project Info Grid -->
+                    <div class="project-info">
+
+                        <!-- Responsibilities -->
+                        <div class="project-responsibilities">
+                            <h2 class="project-responsibilities__title">My Contributions</h2>
+
+                            <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>GAMEPLAY FEATURE 1</li>
+                                <li>GAMEPLAY FEATURE 2</li>
+                                <li>GAMEPLAY FEATURE 3</li>
+                            </ul>
+
+                            <h3 class="project-responsibilities__subtitle">UI Development</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>UI FEATURE 1</li>
+                                <li>UI FEATURE 2</li>
+                            </ul>
+
+                            <h3 class="project-responsibilities__subtitle">Multiplayer Systems</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>MULTIPLAYER FEATURE 1</li>
+                                <li>MULTIPLAYER FEATURE 2</li>
+                            </ul>
+
+                            <h3 class="project-responsibilities__subtitle">Optimization</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>OPTIMIZATION WORK 1</li>
+                                <li>OPTIMIZATION WORK 2</li>
+                            </ul>
+                        </div>
+
+                        <!-- Details Sidebar -->
+                        <div class="project-details">
+
+                            <!-- Role -->
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Role</h3>
+                                <div class="project-detail-box__content">
+                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                </div>
+                            </div>
+
+                            <!-- Technologies -->
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Technologies</h3>
+                                <div class="project-detail-box__content">
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">Unity</span>
+                                        <span class="tech-tag">C#</span>
+                                        <span class="tech-tag">Photon</span>
+                                        <span class="tech-tag">Android</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Duration -->
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Timeline</h3>
+                                <div class="project-detail-box__content">
+                                    <p>YEAR / DURATION</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Brand Logos -->
+                    <div class="project-brands">
+                        <h2 class="project-brands__title">Partners & Publishers</h2>
+                        <div class="project-brands__grid">
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">HOT WHEELS LOGO</div>
+                                <!-- Replace with: <img src="assets/images/brands/hotwheels.png" alt="Hot Wheels"> -->
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">MATTEL LOGO</div>
+                                <!-- Replace with: <img src="assets/images/brands/mattel.png" alt="Mattel"> -->
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
+                                <!-- Replace with actual publisher logo -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Professional Project 2: PJ Masks -->
+            <section class="window window--project" data-window="pjmasks">
+                <div class="window__titlebar">
+                    <span class="window__title">PJ Masks Power Heroes.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+
+                    <!-- Project Header -->
+                    <div class="project-header">
+                        <h1 class="project-header__title">PJ Masks Power Heroes: Mighty Alliance</h1>
+                        <div class="project-header__platforms">
+                            <span class="platform-badge">PC</span>
+                            <span class="platform-badge">PlayStation 4</span>
+                            <span class="platform-badge">PlayStation 5</span>
+                            <span class="platform-badge">Xbox One</span>
+                            <span class="platform-badge">Xbox Series X|S</span>
+                            <span class="platform-badge">Nintendo Switch</span>
+                        </div>
+                    </div>
+
+                    <!-- Trailer Video -->
+                    <div class="project-video">
+                        <div class="project-video__container">
+                            <div class="project-video__placeholder">
+                                🎬 GAME TRAILER VIDEO
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Info Grid -->
+                    <div class="project-info">
+
+                        <!-- Responsibilities -->
+                        <div class="project-responsibilities">
+                            <h2 class="project-responsibilities__title">My Contributions</h2>
+
+                            <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>GAMEPLAY FEATURE 1</li>
+                                <li>GAMEPLAY FEATURE 2</li>
+                                <li>GAMEPLAY FEATURE 3</li>
+                            </ul>
+
+                            <h3 class="project-responsibilities__subtitle">UI Programming</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>UI FEATURE 1</li>
+                                <li>UI FEATURE 2</li>
+                            </ul>
+                        </div>
+
+                        <!-- Details Sidebar -->
+                        <div class="project-details">
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Role</h3>
+                                <div class="project-detail-box__content">
+                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Technologies</h3>
+                                <div class="project-detail-box__content">
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">Unity</span>
+                                        <span class="tech-tag">C#</span>
+                                        <span class="tech-tag">Multi-platform</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Timeline</h3>
+                                <div class="project-detail-box__content">
+                                    <p>YEAR / DURATION</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Brand Logos -->
+                    <div class="project-brands">
+                        <h2 class="project-brands__title">Partners & Publishers</h2>
+                        <div class="project-brands__grid">
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">PJ MASKS LOGO</div>
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Professional Project 3: Monster High -->
+            <section class="window window--project" data-window="monsterhigh">
+                <div class="window__titlebar">
+                    <span class="window__title">Monster High Skulltimate Secrets.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+
+                    <!-- Project Header -->
+                    <div class="project-header">
+                        <h1 class="project-header__title">Monster High Skulltimate Secrets</h1>
+                        <div class="project-header__platforms">
+                            <span class="platform-badge">PC</span>
+                            <span class="platform-badge">PlayStation 4</span>
+                            <span class="platform-badge">PlayStation 5</span>
+                            <span class="platform-badge">Xbox One</span>
+                            <span class="platform-badge">Xbox Series X|S</span>
+                            <span class="platform-badge">Nintendo Switch</span>
+                        </div>
+                    </div>
+
+                    <!-- Trailer Video -->
+                    <div class="project-video">
+                        <div class="project-video__container">
+                            <div class="project-video__placeholder">
+                                🎬 GAME TRAILER VIDEO
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Info Grid -->
+                    <div class="project-info">
+
+                        <!-- Responsibilities -->
+                        <div class="project-responsibilities">
+                            <h2 class="project-responsibilities__title">My Contributions</h2>
+
+                            <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>GAMEPLAY FEATURE 1</li>
+                                <li>GAMEPLAY FEATURE 2</li>
+                                <li>GAMEPLAY FEATURE 3</li>
+                            </ul>
+
+                            <h3 class="project-responsibilities__subtitle">UI Programming</h3>
+                            <ul class="project-responsibilities__list">
+                                <li>UI FEATURE 1</li>
+                                <li>UI FEATURE 2</li>
+                            </ul>
+                        </div>
+
+                        <!-- Details Sidebar -->
+                        <div class="project-details">
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Role</h3>
+                                <div class="project-detail-box__content">
+                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Technologies</h3>
+                                <div class="project-detail-box__content">
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">Unity</span>
+                                        <span class="tech-tag">C#</span>
+                                        <span class="tech-tag">Multi-platform</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-box">
+                                <h3 class="project-detail-box__title">Timeline</h3>
+                                <div class="project-detail-box__content">
+                                    <p>YEAR / DURATION</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Brand Logos -->
+                    <div class="project-brands">
+                        <h2 class="project-brands__title">Partners & Publishers</h2>
+                        <div class="project-brands__grid">
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">MONSTER HIGH LOGO</div>
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">MATTEL LOGO</div>
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Skills Window -->
+            <section class="window window--skills" data-window="skills">
+                <div class="window__titlebar">
+                    <span class="window__title">Skills.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <h2>SKILLS SECTION TITLE</h2>
+                    <div class="content-grid" data-grid-columns="4">
+                        <div class="card card--skill">
+                            <h3>SKILL CATEGORY 1</h3>
+                            <ul>
+                                <li>SKILL ITEM 1</li>
+                                <li>SKILL ITEM 2</li>
+                                <li>SKILL ITEM 3</li>
+                            </ul>
+                        </div>
+                        <div class="card card--skill">
+                            <h3>SKILL CATEGORY 2</h3>
+                            <ul>
+                                <li>SKILL ITEM 1</li>
+                                <li>SKILL ITEM 2</li>
+                                <li>SKILL ITEM 3</li>
+                            </ul>
+                        </div>
+                        <div class="card card--skill">
+                            <h3>SKILL CATEGORY 3</h3>
+                            <ul>
+                                <li>SKILL ITEM 1</li>
+                                <li>SKILL ITEM 2</li>
+                                <li>SKILL ITEM 3</li>
+                            </ul>
+                        </div>
+                        <div class="card card--skill">
+                            <h3>SKILL CATEGORY 4</h3>
+                            <ul>
+                                <li>SKILL ITEM 1</li>
+                                <li>SKILL ITEM 2</li>
+                                <li>SKILL ITEM 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Window -->
+            <section class="window window--contact" data-window="contact">
+                <div class="window__titlebar">
+                    <span class="window__title">Contact.exe</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--minimize">_</button>
+                        <button class="window__control window__control--maximize">□</button>
+                        <button class="window__control window__control--close">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <h2>CONTACT SECTION TITLE</h2>
+                    <div class="content-grid" data-grid-columns="2">
+                        <div class="grid-item">
+                            <h3>GET IN TOUCH</h3>
+                            <p>CONTACT TEXT BLOCK</p>
+                            <div class="contact-links">
+                                <a href="#" class="contact-link">EMAIL LINK</a>
+                                <a href="#" class="contact-link">LINKEDIN LINK</a>
+                                <a href="#" class="contact-link">TWITTER LINK</a>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="media-placeholder media-placeholder--image">
+                                IMAGE/GRAPHIC PLACEHOLDER
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/modules/config.js"></script>
+    <script src="js/modules/windowManager.js"></script>
+    <script src="js/modules/taskbar.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

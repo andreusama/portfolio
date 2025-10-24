@@ -1,0 +1,58 @@
+/* ==============================================
+   NAVIGATION COMPONENTS
+   Taskbar buttons and window tabs
+   ============================================== */
+
+/* Taskbar Window Button */
+.taskbar-window {
+    background: linear-gradient(180deg, #3d8eeb 0%, #2d6adc 50%, #1f5bc7 100%);
+    border: 1px solid #1652ca;
+    border-radius: 3px;
+    padding: 4px 12px;
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.taskbar-window:hover {
+    background: linear-gradient(180deg, #4e9ffb 0%, #3d7eec 50%, #2e6bd7 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.taskbar-window--active {
+    background: linear-gradient(180deg, #1f5bc7 0%, #1652ca 50%, #0d42a5 100%);
+    border-color: #0a3580;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.nav-link--active {
+    background: rgba(255, 255, 255, 0.2);
+}
