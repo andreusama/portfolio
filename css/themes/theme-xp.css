@@ -1,0 +1,260 @@
+/* ==============================================
+   WINDOWS XP LUNA THEME
+   Classic Windows XP nostalgic design
+   ============================================== */
+
+/* ===== COLOR OVERRIDES ===== */
+:root {
+    /* XP Colors */
+    --color-primary: #0054e3;
+    --color-primary-light: #3d8eeb;
+    --color-primary-dark: #003db3;
+
+    --color-secondary: #73b350;
+    --color-secondary-light: #8dc963;
+    --color-secondary-dark: #5a9239;
+
+    --color-accent-1: #d68c00;
+    --color-accent-2: #dc143c;
+    --color-accent-3: #8e8cd8;
+    --color-accent-4: #00b7c3;
+
+    --color-bg-desktop: #5a8ecc;
+    --color-bg-window: #ece9d8;
+    --color-bg-titlebar: linear-gradient(180deg, #0997ff 0%, #0053ee 49%, #0050ee 50%, #06f 100%);
+    --color-bg-titlebar-inactive: linear-gradient(180deg, #bfbfbf 0%, #8a8a8a 49%, #828282 50%, #7a7a7a 100%);
+
+    --color-text-primary: #000000;
+    --color-text-secondary: #333333;
+    --color-text-light: #ffffff;
+    --color-text-muted: #808080;
+
+    --color-border: #003c74;
+    --color-border-light: #b8b8b8;
+    --color-shadow: rgba(0, 0, 0, 0.25);
+    --color-taskbar: #245edb;
+
+    /* XP Borders & Radius */
+    --border-radius-sm: 3px;
+    --border-radius: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+    --border-radius-xl: 12px;
+
+    /* XP Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.25);
+    --shadow-window: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== DESKTOP ===== */
+.desktop {
+    background-image:
+        radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
+        linear-gradient(180deg, #3a6ea5 0%, #4682b4 50%, #5a8ecc 100%);
+}
+
+/* ===== WINDOWS ===== */
+.window {
+    border: 3px solid var(--color-border);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.window:hover {
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.window__titlebar {
+    padding: 3px 4px 3px 8px;
+    border-bottom: none;
+}
+
+.window__title {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-light);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.window:not(.window--focused) .window__title {
+    color: var(--color-text-light);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Window Controls */
+.window__control {
+    width: 21px;
+    height: 21px;
+    font-size: var(--font-size-sm);
+    color: #000;
+    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 60, 116, 0.5);
+}
+
+.window__control:hover {
+    background: linear-gradient(180deg, #fef9f4 0%, #fde7d0 48%, #fdd5a8 50%, #fcc784 100%);
+}
+
+.window__control:active {
+    background: linear-gradient(180deg, #e0ddd9 0%, #cbc7c4 48%, #b8b5b2 50%, #a8a5a2 100%);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.window__control--close:hover {
+    background: linear-gradient(180deg, #ffddd7 0%, #ffc4b8 48%, #ffa894 50%, #ff8d6f 100%);
+    color: #000;
+}
+
+/* ===== TASKBAR ===== */
+.taskbar {
+    background: linear-gradient(180deg, #2d6adc 0%, #245edb 100%);
+    border-top: 2px solid #5a8ecc;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.taskbar__tray {
+    border-left: 2px solid rgba(16, 82, 206, 0.8);
+    background: linear-gradient(180deg, rgba(18, 105, 238, 0.3) 0%, rgba(13, 82, 214, 0.3) 100%);
+}
+
+/* Start Button */
+.start-button {
+    background: linear-gradient(180deg, #7cdc5c 0%, #5cb342 50%, #3d8b2a 100%);
+    border: 1px solid #2d6920;
+    border-radius: 0 12px 12px 0;
+    padding: 3px 24px 3px 12px;
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5),
+                inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+                2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.start-button:hover {
+    background: linear-gradient(180deg, #8df56d 0%, #6dc953 50%, #4da03b 100%);
+}
+
+.start-button:active {
+    background: linear-gradient(180deg, #5cb342 0%, #4da03b 50%, #2d6920 100%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Taskbar Buttons */
+.taskbar-window {
+    background: linear-gradient(180deg, #3d8eeb 0%, #2d6adc 50%, #1f5bc7 100%);
+    border: 1px solid #1652ca;
+    border-radius: 3px;
+    padding: 4px 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.taskbar-window:hover {
+    background: linear-gradient(180deg, #4e9ffb 0%, #3d7eec 50%, #2e6bd7 100%);
+}
+
+.taskbar-window--active {
+    background: linear-gradient(180deg, #1f5bc7 0%, #1652ca 50%, #0d42a5 100%);
+    border-color: #0a3580;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    border-radius: 3px;
+    border: 1px solid #003c74;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1),
+                inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn--primary {
+    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
+    color: var(--color-text-primary);
+    border-color: #003c74;
+}
+
+.btn--primary:hover {
+    background: linear-gradient(180deg, #fef9f4 0%, #fde7d0 48%, #fdd5a8 50%, #fcc784 100%);
+    border-color: #d68c00;
+}
+
+.btn--primary:active {
+    background: linear-gradient(180deg, #e0ddd9 0%, #cbc7c4 48%, #b8b5b2 50%, #a8a5a2 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn--secondary {
+    background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 48%, #d8d8d8 50%, #d0d0d0 100%);
+    border-color: #8c8c8c;
+}
+
+.btn--secondary:hover {
+    background: linear-gradient(180deg, #fefefe 0%, #f0f0f0 48%, #e0e0e0 50%, #d8d8d8 100%);
+}
+
+.btn--secondary:active {
+    background: linear-gradient(180deg, #d0d0d0 0%, #c0c0c0 48%, #b0b0b0 50%, #a8a8a8 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== CARDS ===== */
+.card {
+    border: 2px solid #b8b8b8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== PROFESSIONAL PROJECTS ===== */
+.platform-badge {
+    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
+    border: 1px solid #003c74;
+    border-radius: 3px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1),
+                inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.project-responsibilities,
+.project-detail-box {
+    background: #fff;
+    border: 2px solid #b8b8b8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo {
+    background: #fff;
+    border: 2px solid #b8b8b8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.brand-logo:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tech-tag {
+    background: linear-gradient(180deg, #fef9f4 0%, #fde7d0 48%, #fdd5a8 50%, #fcc784 100%);
+    border: 1px solid #d68c00;
+    border-radius: 3px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1),
+                inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.project-stat {
+    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
+    border: 1px solid #003c74;
+    border-radius: 3px;
+}
+
+.project-video {
+    border-radius: 4px;
+}

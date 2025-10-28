@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Sànchez - Game Designer Portfolio</title>
 
-    <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities -->
+    <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities → Theme -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout/grid.css">
@@ -17,9 +17,17 @@
     <link rel="stylesheet" href="css/components/project-window.css">
     <link rel="stylesheet" href="css/utilities/spacing.css">
     <link rel="stylesheet" href="css/utilities/typography.css">
+
+    <!-- ⭐ THEME SELECTOR - Change this line to switch themes! -->
+
+    <!-- Windows XP Theme (nostalgic, classic, full window OS) -->
+    <link rel="stylesheet" href="css/themes/theme-vscode.css">
+
+    <!-- VS Code Dark Theme (minimalist, dark mode, IDE-inspired) -->
+    <!-- <link rel="stylesheet" href="css/themes/theme-vscode.css"> -->
 </head>
 <body>
-    <!-- Main Desktop Container (Windows 7 style) -->
+    <!-- Main Desktop Container -->
     <div class="desktop">
 
         <!-- Taskbar -->
@@ -55,12 +63,10 @@
                 </div>
                 <div class="window__content">
                     <div class="hero">
-                        <h1 class="hero__title">HERO TITLE</h1>
-                        <p class="hero__subtitle">HERO SUBTITLE / TAGLINE</p>
-                        <div class="hero__cta">
-                            <button class="btn btn--primary">PRIMARY ACTION</button>
-                            <button class="btn btn--secondary">SECONDARY ACTION</button>
-                        </div>
+                        <h1 class="hero__title">Andrés Sànchez</h1>
+                        <p class="hero__subtitle">Game Designer & Developer</p>
+                        <p>Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High.</p>
+                        <p>Professional game designer with experience shipping multi-platform titles for leading entertainment franchises. Specialized in gameplay programming, UI development, and multiplayer systems using Unity and C#.</p>
                     </div>
                 </div>
             </section>
@@ -76,19 +82,21 @@
                     </div>
                 </div>
                 <div class="window__content">
-                    <div class="content-grid">
-                        <div class="grid-item grid-item--full">
-                            <h2>ABOUT SECTION TITLE</h2>
-                        </div>
-                        <div class="grid-item grid-item--half">
-                            <p>ABOUT TEXT BLOCK 1</p>
-                        </div>
-                        <div class="grid-item grid-item--half">
-                            <div class="media-placeholder media-placeholder--image">
-                                IMAGE PLACEHOLDER
-                            </div>
-                        </div>
-                    </div>
+                    <h2>About Me</h2>
+                    <p>Game designer passionate about creating memorable interactive experiences.</p>
+
+                    <h3>Background</h3>
+                    <p>[Your background story - education, how you got into game design, what drives you]</p>
+
+                    <h3>Approach</h3>
+                    <p>[Your design philosophy and approach to game development]</p>
+
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>X years in professional game development</li>
+                        <li>Shipped games on PC, Console, and Mobile platforms</li>
+                        <li>Worked with major entertainment brands</li>
+                    </ul>
                 </div>
             </section>
 
@@ -103,7 +111,7 @@
                     </div>
                 </div>
                 <div class="window__content">
-                    <h2>STUDENT PROJECTS</h2>
+                    <h2>Student Projects</h2>
 
                     <!-- Flexible Grid System -->
                     <div class="content-grid" data-grid-columns="3">
@@ -116,11 +124,12 @@
                                 </div>
                             </div>
                             <div class="card__content">
-                                <h3 class="card__title">PROJECT TITLE 1</h3>
-                                <p class="card__description">PROJECT DESCRIPTION 1</p>
+                                <h3 class="card__title">Project 1 Name</h3>
+                                <p class="card__description">Brief description of the project</p>
                                 <div class="card__tags">
-                                    <span class="tag">TAG1</span>
-                                    <span class="tag">TAG2</span>
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">2D</span>
                                 </div>
                             </div>
                         </article>
@@ -128,16 +137,17 @@
                         <!-- Project Card 2 -->
                         <article class="card card--project">
                             <div class="card__media">
-                                <div class="media-placeholder media-placeholder--video">
-                                    VIDEO PLACEHOLDER 1
+                                <div class="media-placeholder media-placeholder--image">
+                                    PROJECT IMAGE 2
                                 </div>
                             </div>
                             <div class="card__content">
-                                <h3 class="card__title">PROJECT TITLE 2</h3>
-                                <p class="card__description">PROJECT DESCRIPTION 2</p>
+                                <h3 class="card__title">Project 2 Name</h3>
+                                <p class="card__description">Brief description of the project</p>
                                 <div class="card__tags">
-                                    <span class="tag">TAG1</span>
-                                    <span class="tag">TAG2</span>
+                                    <span class="tag">Unreal</span>
+                                    <span class="tag">Blueprint</span>
+                                    <span class="tag">3D</span>
                                 </div>
                             </div>
                         </article>
@@ -146,15 +156,16 @@
                         <article class="card card--project">
                             <div class="card__media">
                                 <div class="media-placeholder media-placeholder--image">
-                                    PROJECT IMAGE 2
+                                    PROJECT IMAGE 3
                                 </div>
                             </div>
                             <div class="card__content">
-                                <h3 class="card__title">PROJECT TITLE 3</h3>
-                                <p class="card__description">PROJECT DESCRIPTION 3</p>
+                                <h3 class="card__title">Project 3 Name</h3>
+                                <p class="card__description">Brief description of the project</p>
                                 <div class="card__tags">
-                                    <span class="tag">TAG1</span>
-                                    <span class="tag">TAG2</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Phaser</span>
+                                    <span class="tag">Web</span>
                                 </div>
                             </div>
                         </article>
@@ -194,14 +205,6 @@
                             <div class="project-video__placeholder">
                                 🎬 GAME TRAILER VIDEO
                             </div>
-                            <!-- Example YouTube embed:
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-                            -->
-                            <!-- Example video file:
-                            <video controls>
-                                <source src="assets/videos/hotwheels-trailer.mp4" type="video/mp4">
-                            </video>
-                            -->
                         </div>
                     </div>
 
@@ -214,27 +217,27 @@
 
                             <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
                             <ul class="project-responsibilities__list">
-                                <li>GAMEPLAY FEATURE 1</li>
-                                <li>GAMEPLAY FEATURE 2</li>
-                                <li>GAMEPLAY FEATURE 3</li>
+                                <li>Vehicle physics and handling systems</li>
+                                <li>Track obstacles and power-ups</li>
+                                <li>Race progression and scoring</li>
                             </ul>
 
                             <h3 class="project-responsibilities__subtitle">UI Development</h3>
                             <ul class="project-responsibilities__list">
-                                <li>UI FEATURE 1</li>
-                                <li>UI FEATURE 2</li>
+                                <li>In-game HUD and menus</li>
+                                <li>Vehicle selection interface</li>
                             </ul>
 
                             <h3 class="project-responsibilities__subtitle">Multiplayer Systems</h3>
                             <ul class="project-responsibilities__list">
-                                <li>MULTIPLAYER FEATURE 1</li>
-                                <li>MULTIPLAYER FEATURE 2</li>
+                                <li>Networked race implementation</li>
+                                <li>Player synchronization</li>
                             </ul>
 
                             <h3 class="project-responsibilities__subtitle">Optimization</h3>
                             <ul class="project-responsibilities__list">
-                                <li>OPTIMIZATION WORK 1</li>
-                                <li>OPTIMIZATION WORK 2</li>
+                                <li>Performance optimization for automotive hardware</li>
+                                <li>Memory management and loading</li>
                             </ul>
                         </div>
 
@@ -245,7 +248,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Role</h3>
                                 <div class="project-detail-box__content">
-                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                    <p>Game Designer / Programmer</p>
                                 </div>
                             </div>
 
@@ -266,7 +269,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Timeline</h3>
                                 <div class="project-detail-box__content">
-                                    <p>YEAR / DURATION</p>
+                                    <p>2023 - 6 months</p>
                                 </div>
                             </div>
 
@@ -279,15 +282,9 @@
                         <div class="project-brands__grid">
                             <div class="brand-logo">
                                 <div class="brand-logo__placeholder">HOT WHEELS LOGO</div>
-                                <!-- Replace with: <img src="assets/images/brands/hotwheels.png" alt="Hot Wheels"> -->
                             </div>
                             <div class="brand-logo">
                                 <div class="brand-logo__placeholder">MATTEL LOGO</div>
-                                <!-- Replace with: <img src="assets/images/brands/mattel.png" alt="Mattel"> -->
-                            </div>
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
-                                <!-- Replace with actual publisher logo -->
                             </div>
                         </div>
                     </div>
@@ -338,15 +335,15 @@
 
                             <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
                             <ul class="project-responsibilities__list">
-                                <li>GAMEPLAY FEATURE 1</li>
-                                <li>GAMEPLAY FEATURE 2</li>
-                                <li>GAMEPLAY FEATURE 3</li>
+                                <li>Character abilities and powers</li>
+                                <li>Enemy AI and behavior</li>
+                                <li>Level progression systems</li>
                             </ul>
 
                             <h3 class="project-responsibilities__subtitle">UI Programming</h3>
                             <ul class="project-responsibilities__list">
-                                <li>UI FEATURE 1</li>
-                                <li>UI FEATURE 2</li>
+                                <li>Kid-friendly interface design</li>
+                                <li>Character selection system</li>
                             </ul>
                         </div>
 
@@ -356,7 +353,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Role</h3>
                                 <div class="project-detail-box__content">
-                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                    <p>Game Designer / Programmer</p>
                                 </div>
                             </div>
 
@@ -374,7 +371,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Timeline</h3>
                                 <div class="project-detail-box__content">
-                                    <p>YEAR / DURATION</p>
+                                    <p>2022 - 8 months</p>
                                 </div>
                             </div>
 
@@ -387,9 +384,6 @@
                         <div class="project-brands__grid">
                             <div class="brand-logo">
                                 <div class="brand-logo__placeholder">PJ MASKS LOGO</div>
-                            </div>
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
                             </div>
                         </div>
                     </div>
@@ -440,15 +434,15 @@
 
                             <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
                             <ul class="project-responsibilities__list">
-                                <li>GAMEPLAY FEATURE 1</li>
-                                <li>GAMEPLAY FEATURE 2</li>
-                                <li>GAMEPLAY FEATURE 3</li>
+                                <li>Mystery solving mechanics</li>
+                                <li>Character dialogue system</li>
+                                <li>Collectibles and secrets</li>
                             </ul>
 
                             <h3 class="project-responsibilities__subtitle">UI Programming</h3>
                             <ul class="project-responsibilities__list">
-                                <li>UI FEATURE 1</li>
-                                <li>UI FEATURE 2</li>
+                                <li>Inventory and clue system</li>
+                                <li>Character customization</li>
                             </ul>
                         </div>
 
@@ -458,7 +452,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Role</h3>
                                 <div class="project-detail-box__content">
-                                    <p>GAME DESIGNER / PROGRAMMER</p>
+                                    <p>Game Designer / Programmer</p>
                                 </div>
                             </div>
 
@@ -476,7 +470,7 @@
                             <div class="project-detail-box">
                                 <h3 class="project-detail-box__title">Timeline</h3>
                                 <div class="project-detail-box__content">
-                                    <p>YEAR / DURATION</p>
+                                    <p>2021 - 10 months</p>
                                 </div>
                             </div>
 
@@ -492,9 +486,6 @@
                             </div>
                             <div class="brand-logo">
                                 <div class="brand-logo__placeholder">MATTEL LOGO</div>
-                            </div>
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">PUBLISHER LOGO</div>
                             </div>
                         </div>
                     </div>
@@ -513,38 +504,45 @@
                     </div>
                 </div>
                 <div class="window__content">
-                    <h2>SKILLS SECTION TITLE</h2>
+                    <h2>Skills & Expertise</h2>
                     <div class="content-grid" data-grid-columns="4">
                         <div class="card card--skill">
-                            <h3>SKILL CATEGORY 1</h3>
+                            <h3>Game Design</h3>
                             <ul>
-                                <li>SKILL ITEM 1</li>
-                                <li>SKILL ITEM 2</li>
-                                <li>SKILL ITEM 3</li>
+                                <li>Gameplay Systems Design</li>
+                                <li>Level Design & Balancing</li>
+                                <li>Player Experience (UX)</li>
+                                <li>Game Mechanics Prototyping</li>
                             </ul>
                         </div>
                         <div class="card card--skill">
-                            <h3>SKILL CATEGORY 2</h3>
+                            <h3>Programming</h3>
                             <ul>
-                                <li>SKILL ITEM 1</li>
-                                <li>SKILL ITEM 2</li>
-                                <li>SKILL ITEM 3</li>
+                                <li>C# / Unity Development</li>
+                                <li>Gameplay Programming</li>
+                                <li>UI/UX Implementation</li>
+                                <li>Multiplayer/Networking</li>
                             </ul>
                         </div>
                         <div class="card card--skill">
-                            <h3>SKILL CATEGORY 3</h3>
+                            <h3>Platforms</h3>
                             <ul>
-                                <li>SKILL ITEM 1</li>
-                                <li>SKILL ITEM 2</li>
-                                <li>SKILL ITEM 3</li>
+                                <li>PC (Windows/Mac/Linux)</li>
+                                <li>PlayStation (4/5)</li>
+                                <li>Xbox (One/Series X|S)</li>
+                                <li>Nintendo Switch</li>
+                                <li>Mobile (iOS/Android)</li>
                             </ul>
                         </div>
                         <div class="card card--skill">
-                            <h3>SKILL CATEGORY 4</h3>
+                            <h3>Tools</h3>
                             <ul>
-                                <li>SKILL ITEM 1</li>
-                                <li>SKILL ITEM 2</li>
-                                <li>SKILL ITEM 3</li>
+                                <li>Unity</li>
+                                <li>Git</li>
+                                <li>Visual Studio</li>
+                                <li>Blender</li>
+                                <li>Figma</li>
+                                <li>Jira</li>
                             </ul>
                         </div>
                     </div>
@@ -562,21 +560,24 @@
                     </div>
                 </div>
                 <div class="window__content">
-                    <h2>CONTACT SECTION TITLE</h2>
+                    <h2>Get In Touch</h2>
                     <div class="content-grid" data-grid-columns="2">
                         <div class="grid-item">
-                            <h3>GET IN TOUCH</h3>
-                            <p>CONTACT TEXT BLOCK</p>
+                            <h3>Contact Information</h3>
+                            <p>I'm always interested in hearing about new opportunities, collaborations, and interesting game projects.</p>
+
+                            <h3>Connect</h3>
                             <div class="contact-links">
-                                <a href="#" class="contact-link">EMAIL LINK</a>
-                                <a href="#" class="contact-link">LINKEDIN LINK</a>
-                                <a href="#" class="contact-link">TWITTER LINK</a>
+                                <a href="mailto:your.email@example.com" class="contact-link">📧 Email</a>
+                                <a href="#" class="contact-link">💼 LinkedIn</a>
+                                <a href="#" class="contact-link">🐦 Twitter</a>
+                                <a href="#" class="contact-link">🎮 Portfolio</a>
                             </div>
                         </div>
                         <div class="grid-item">
-                            <div class="media-placeholder media-placeholder--image">
-                                IMAGE/GRAPHIC PLACEHOLDER
-                            </div>
+                            <h3>Location & Availability</h3>
+                            <p>Based in [Your Location]</p>
+                            <p>Open to remote work and relocation opportunities.</p>
                         </div>
                     </div>
                 </div>
