@@ -173,6 +173,23 @@
     max-width: 100%;
 }
 
+/* Modal Window Variant */
+.window--modal {
+    position: static;
+    max-width: 100%;
+    max-height: none;
+    margin: 2rem auto;
+}
+
+.window--modal .window__content {
+    max-height: calc(90vh - var(--window-titlebar-height, 32px));
+    overflow-y: auto;
+}
+
+.window--modal .window__titlebar {
+    cursor: default; /* No dragging for centered modals */
+}
+
 /* Responsive Windows */
 @media (max-width: 768px) {
     .window {
@@ -188,5 +205,13 @@
     .window--hero .window__content {
         padding: var(--space-xl) var(--space-md);
         min-height: 300px;
+    }
+
+    .window--modal {
+        margin: 1rem auto;
+    }
+
+    .window--modal .window__content {
+        max-height: 85vh;
     }
 }

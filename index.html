@@ -6,186 +6,235 @@
     <title>Andrés Sànchez - Game Designer Portfolio</title>
 
     <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities → Theme -->
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout/grid.css">
-    <link rel="stylesheet" href="css/layout/windows7.css">
+    <link rel="stylesheet" href="css/layout/modern.css">
     <link rel="stylesheet" href="css/components/navigation.css">
     <link rel="stylesheet" href="css/components/window.css">
     <link rel="stylesheet" href="css/components/card.css">
     <link rel="stylesheet" href="css/components/media.css">
     <link rel="stylesheet" href="css/components/project-window.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/section.css">
+    <link rel="stylesheet" href="css/components/marquee.css">
+    <link rel="stylesheet" href="css/components/decorations.css">
+    <link rel="stylesheet" href="css/components/button-animations.css">
     <link rel="stylesheet" href="css/utilities/spacing.css">
     <link rel="stylesheet" href="css/utilities/typography.css">
-
-    <!-- ⭐ THEME SELECTOR - Change this line to switch themes! -->
-
-    <!-- Windows XP Theme (nostalgic, classic, full window OS) -->
-    <link rel="stylesheet" href="css/themes/theme-vscode.css">
-
-    <!-- VS Code Dark Theme (minimalist, dark mode, IDE-inspired) -->
-    <!-- <link rel="stylesheet" href="css/themes/theme-vscode.css"> -->
 </head>
-<body>
-    <!-- Main Desktop Container -->
-    <div class="desktop">
+<body class="hybrid-layout">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#hero" class="navbar__logo">AS</a>
+            <ul class="navbar__menu">
+                <li><a href="#about" class="navbar__link">About</a></li>
+                <li><a href="#experience" class="navbar__link">Experience</a></li>
+                <li><a href="#projects" class="navbar__link">Projects</a></li>
+                <li><a href="#skills" class="navbar__link">Skills</a></li>
+                <li><a href="#contact" class="navbar__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Taskbar -->
-        <nav class="taskbar">
-            <div class="taskbar__start">
-                <button class="start-button" aria-label="Start Menu">
-                    <span class="start-button__icon">⊞</span>
-                    <span class="start-button__text">Start</span>
-                </button>
-            </div>
+    <!-- Main Content -->
+    <main class="main-content">
 
-            <div class="taskbar__windows" id="taskbar-windows">
-                <!-- Active windows will appear here -->
-            </div>
-
-            <div class="taskbar__tray">
-                <span class="taskbar__time" id="taskbar-time">00:00</span>
-            </div>
-        </nav>
-
-        <!-- Desktop Area -->
-        <main class="desktop__content">
-
-            <!-- Hero Window -->
-            <section class="window window--hero" data-window="hero">
-                <div class="window__titlebar">
-                    <span class="window__title">Andrés Sànchez - Game Designer</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--minimize" aria-label="Minimize">_</button>
-                        <button class="window__control window__control--maximize" aria-label="Maximize">□</button>
-                        <button class="window__control window__control--close" aria-label="Close">×</button>
-                    </div>
-                </div>
-                <div class="window__content">
-                    <div class="hero">
-                        <h1 class="hero__title">Andrés Sànchez</h1>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero__container">
+                <div class="blue-container blue-container--large">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            <span class="hero__greeting">Hi, I'm</span>
+                            <span class="hero__name">Andrés Sànchez</span>
+                        </h1>
                         <p class="hero__subtitle">Game Designer & Developer</p>
-                        <p>Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High.</p>
-                        <p>Professional game designer with experience shipping multi-platform titles for leading entertainment franchises. Specialized in gameplay programming, UI development, and multiplayer systems using Unity and C#.</p>
+                        <p class="hero__description">Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.</p>
+                        <div class="hero__cta">
+                            <a href="#projects" class="btn btn--primary">View My Work</a>
+                            <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- About Window -->
-            <section class="window window--about" data-window="about">
-                <div class="window__titlebar">
-                    <span class="window__title">About.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+        <!-- Animated Marquee Scroller -->
+        <div class="marquee marquee--cream">
+            <div class="marquee__content">
+                <span class="marquee__item">Unity</span>
+                <span class="marquee__item">C#</span>
+                <span class="marquee__item">Game Design</span>
+                <span class="marquee__item">Multiplayer</span>
+                <span class="marquee__item">UI Development</span>
+                <span class="marquee__item">Gameplay Programming</span>
+                <span class="marquee__item">Level Design</span>
+                <span class="marquee__item">Unity</span>
+                <span class="marquee__item">C#</span>
+                <span class="marquee__item">Game Design</span>
+                <span class="marquee__item">Multiplayer</span>
+                <span class="marquee__item">UI Development</span>
+                <span class="marquee__item">Gameplay Programming</span>
+                <span class="marquee__item">Level Design</span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="section section--about section--about--blue">
+            <div class="section__container">
+                <h2 class="section__title">About Me</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p class="about__intro">Professional game designer passionate about creating memorable interactive experiences for players of all ages.</p>
+                        <p>With several years of experience in the game industry, I've had the privilege of working on major entertainment franchises, shipping titles across PC, console, and mobile platforms. My approach combines creative design thinking with technical expertise in Unity and C#.</p>
+                        <p>I specialize in gameplay programming, UI/UX implementation, and creating engaging multiplayer experiences that keep players coming back for more.</p>
                     </div>
                 </div>
-                <div class="window__content">
-                    <h2>About Me</h2>
-                    <p>Game designer passionate about creating memorable interactive experiences.</p>
+            </div>
+        </section>
 
-                    <h3>Background</h3>
-                    <p>[Your background story - education, how you got into game design, what drives you]</p>
-
-                    <h3>Approach</h3>
-                    <p>[Your design philosophy and approach to game development]</p>
-
-                    <h3>Experience</h3>
-                    <ul>
-                        <li>X years in professional game development</li>
-                        <li>Shipped games on PC, Console, and Mobile platforms</li>
-                        <li>Worked with major entertainment brands</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Student Projects Window -->
-            <section class="window window--projects" data-window="student-projects">
-                <div class="window__titlebar">
-                    <span class="window__title">Student Projects.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section section--experience">
+            <div class="section__container">
+                <h2 class="section__title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Hot Wheels Xtreme Overdrive</h3>
+                            <span class="timeline__date">2023 • 6 months</span>
+                            <p class="timeline__role">Game Designer / Programmer</p>
+                            <p class="timeline__description">Developed high-speed racing game for Android Automotive platform, implementing vehicle physics, multiplayer systems, and UI components.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">PJ Masks Power Heroes: Mighty Alliance</h3>
+                            <span class="timeline__date">2022 • 8 months</span>
+                            <p class="timeline__role">Game Designer / Programmer</p>
+                            <p class="timeline__description">Multi-platform action-adventure game for kids. Designed character abilities, enemy AI, and kid-friendly UI systems.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Monster High Skulltimate Secrets</h3>
+                            <span class="timeline__date">2021 • 10 months</span>
+                            <p class="timeline__role">Game Designer / Programmer</p>
+                            <p class="timeline__description">Mystery-solving adventure game with character customization, dialogue systems, and collectible mechanics.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="window__content">
-                    <h2>Student Projects</h2>
+            </div>
+        </section>
 
-                    <!-- Flexible Grid System -->
-                    <div class="content-grid" data-grid-columns="3">
+        <!-- Animated Marquee Scroller - Reverse -->
+        <div class="marquee marquee--reverse marquee--slow">
+            <div class="marquee__content">
+                <span class="marquee__item">PlayStation</span>
+                <span class="marquee__item">Xbox</span>
+                <span class="marquee__item">Nintendo Switch</span>
+                <span class="marquee__item">PC Gaming</span>
+                <span class="marquee__item">Mobile Games</span>
+                <span class="marquee__item">Multi-platform</span>
+                <span class="marquee__item">Cross-platform</span>
+                <span class="marquee__item">PlayStation</span>
+                <span class="marquee__item">Xbox</span>
+                <span class="marquee__item">Nintendo Switch</span>
+                <span class="marquee__item">PC Gaming</span>
+                <span class="marquee__item">Mobile Games</span>
+                <span class="marquee__item">Multi-platform</span>
+                <span class="marquee__item">Cross-platform</span>
+            </div>
+        </div>
 
-                        <!-- Project Card 1 -->
-                        <article class="card card--project">
-                            <div class="card__media">
-                                <div class="media-placeholder media-placeholder--image">
-                                    PROJECT IMAGE 1
-                                </div>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title">Project 1 Name</h3>
-                                <p class="card__description">Brief description of the project</p>
-                                <div class="card__tags">
-                                    <span class="tag">Unity</span>
-                                    <span class="tag">C#</span>
-                                    <span class="tag">2D</span>
-                                </div>
-                            </div>
-                        </article>
+        <!-- Projects Section -->
+        <section id="projects" class="section section--projects">
+            <div class="section__container">
+                <h2 class="section__title">Featured Projects</h2>
+                <p class="section__subtitle">Professional games shipped for major entertainment brands</p>
 
-                        <!-- Project Card 2 -->
-                        <article class="card card--project">
-                            <div class="card__media">
-                                <div class="media-placeholder media-placeholder--image">
-                                    PROJECT IMAGE 2
-                                </div>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title">Project 2 Name</h3>
-                                <p class="card__description">Brief description of the project</p>
-                                <div class="card__tags">
-                                    <span class="tag">Unreal</span>
-                                    <span class="tag">Blueprint</span>
-                                    <span class="tag">3D</span>
-                                </div>
-                            </div>
-                        </article>
+                <div class="projects-grid">
 
-                        <!-- Project Card 3 -->
-                        <article class="card card--project">
-                            <div class="card__media">
-                                <div class="media-placeholder media-placeholder--image">
-                                    PROJECT IMAGE 3
-                                </div>
+                    <!-- Hot Wheels Project Card -->
+                    <article class="project-card" data-project="hotwheels">
+                        <div class="project-card__image">
+                            <div class="media-placeholder media-placeholder--image">HOT WHEELS</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Hot Wheels Xtreme Overdrive</h3>
+                            <div class="project-card__platforms">
+                                <span class="platform-badge platform-badge--small">Android Automotive</span>
                             </div>
-                            <div class="card__content">
-                                <h3 class="card__title">Project 3 Name</h3>
-                                <p class="card__description">Brief description of the project</p>
-                                <div class="card__tags">
-                                    <span class="tag">JavaScript</span>
-                                    <span class="tag">Phaser</span>
-                                    <span class="tag">Web</span>
-                                </div>
+                            <p class="project-card__description">High-speed racing game with multiplayer support and vehicle customization</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Photon</span>
                             </div>
-                        </article>
+                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="hotwheels">View Details</button>
+                        </div>
+                    </article>
 
-                    </div>
+                    <!-- PJ Masks Project Card -->
+                    <article class="project-card" data-project="pjmasks">
+                        <div class="project-card__image">
+                            <div class="media-placeholder media-placeholder--image">PJ MASKS</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">PJ Masks Power Heroes</h3>
+                            <div class="project-card__platforms">
+                                <span class="platform-badge platform-badge--small">Multi-platform</span>
+                            </div>
+                            <p class="project-card__description">Action-adventure game for kids with hero abilities and cooperative gameplay</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Multi-platform</span>
+                            </div>
+                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="pjmasks">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Monster High Project Card -->
+                    <article class="project-card" data-project="monsterhigh">
+                        <div class="project-card__image">
+                            <div class="media-placeholder media-placeholder--image">MONSTER HIGH</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Monster High Skulltimate Secrets</h3>
+                            <div class="project-card__platforms">
+                                <span class="platform-badge platform-badge--small">Multi-platform</span>
+                            </div>
+                            <p class="project-card__description">Mystery-solving adventure with character customization and exploration</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Dialogue System</span>
+                            </div>
+                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="monsterhigh">View Details</button>
+                        </div>
+                    </article>
+
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- ========================================
-                 PROFESSIONAL PROJECTS - Individual Windows
-                 ======================================== -->
+        <!-- ========================================
+             PROJECT MODAL WINDOWS
+             ======================================== -->
 
-            <!-- Professional Project 1: Hot Wheels Xtreme Overdrive -->
-            <section class="window window--project" data-window="hotwheels">
+        <!-- Hot Wheels Modal Window -->
+        <div class="modal-overlay" data-modal="hotwheels">
+            <section class="window window--project window--modal" data-window="hotwheels">
                 <div class="window__titlebar">
                     <span class="window__title">Hot Wheels Xtreme Overdrive.exe</span>
                     <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+                        <button class="window__control window__control--close" data-close-modal="hotwheels">×</button>
                     </div>
                 </div>
                 <div class="window__content">
@@ -291,15 +340,14 @@
 
                 </div>
             </section>
+        </div>
 
-            <!-- Professional Project 2: PJ Masks -->
-            <section class="window window--project" data-window="pjmasks">
+        <div class="modal-overlay" data-modal="pjmasks">
+            <section class="window window--project window--modal" data-window="pjmasks">
                 <div class="window__titlebar">
                     <span class="window__title">PJ Masks Power Heroes.exe</span>
                     <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+                        <button class="window__control window__control--close" data-close-modal="pjmasks">×</button>
                     </div>
                 </div>
                 <div class="window__content">
@@ -390,15 +438,14 @@
 
                 </div>
             </section>
+        </div>
 
-            <!-- Professional Project 3: Monster High -->
-            <section class="window window--project" data-window="monsterhigh">
+        <div class="modal-overlay" data-modal="monsterhigh">
+            <section class="window window--project window--modal" data-window="monsterhigh">
                 <div class="window__titlebar">
                     <span class="window__title">Monster High Skulltimate Secrets.exe</span>
                     <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+                        <button class="window__control window__control--close" data-close-modal="monsterhigh">×</button>
                     </div>
                 </div>
                 <div class="window__content">
@@ -492,102 +539,115 @@
 
                 </div>
             </section>
+        </div>
 
-            <!-- Skills Window -->
-            <section class="window window--skills" data-window="skills">
-                <div class="window__titlebar">
-                    <span class="window__title">Skills.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+        <section id="skills" class="section section--skills">
+            <div class="section__container">
+                <h2 class="section__title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🎮</div>
+                        <h3 class="skill-card__title">Game Design</h3>
+                        <ul class="skill-card__list">
+                            <li>Gameplay Systems Design</li>
+                            <li>Level Design & Balancing</li>
+                            <li>Player Experience (UX)</li>
+                            <li>Game Mechanics Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">💻</div>
+                        <h3 class="skill-card__title">Programming</h3>
+                        <ul class="skill-card__list">
+                            <li>C# / Unity Development</li>
+                            <li>Gameplay Programming</li>
+                            <li>UI/UX Implementation</li>
+                            <li>Multiplayer/Networking</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🎯</div>
+                        <h3 class="skill-card__title">Platforms</h3>
+                        <ul class="skill-card__list">
+                            <li>PC (Windows/Mac/Linux)</li>
+                            <li>PlayStation (4/5)</li>
+                            <li>Xbox (One/Series X|S)</li>
+                            <li>Nintendo Switch</li>
+                            <li>Mobile (iOS/Android)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🛠️</div>
+                        <h3 class="skill-card__title">Tools</h3>
+                        <ul class="skill-card__list">
+                            <li>Unity</li>
+                            <li>Git</li>
+                            <li>Visual Studio</li>
+                            <li>Blender</li>
+                            <li>Figma</li>
+                            <li>Jira</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="window__content">
-                    <h2>Skills & Expertise</h2>
-                    <div class="content-grid" data-grid-columns="4">
-                        <div class="card card--skill">
-                            <h3>Game Design</h3>
-                            <ul>
-                                <li>Gameplay Systems Design</li>
-                                <li>Level Design & Balancing</li>
-                                <li>Player Experience (UX)</li>
-                                <li>Game Mechanics Prototyping</li>
-                            </ul>
-                        </div>
-                        <div class="card card--skill">
-                            <h3>Programming</h3>
-                            <ul>
-                                <li>C# / Unity Development</li>
-                                <li>Gameplay Programming</li>
-                                <li>UI/UX Implementation</li>
-                                <li>Multiplayer/Networking</li>
-                            </ul>
-                        </div>
-                        <div class="card card--skill">
-                            <h3>Platforms</h3>
-                            <ul>
-                                <li>PC (Windows/Mac/Linux)</li>
-                                <li>PlayStation (4/5)</li>
-                                <li>Xbox (One/Series X|S)</li>
-                                <li>Nintendo Switch</li>
-                                <li>Mobile (iOS/Android)</li>
-                            </ul>
-                        </div>
-                        <div class="card card--skill">
-                            <h3>Tools</h3>
-                            <ul>
-                                <li>Unity</li>
-                                <li>Git</li>
-                                <li>Visual Studio</li>
-                                <li>Blender</li>
-                                <li>Figma</li>
-                                <li>Jira</li>
-                            </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section--contact">
+            <div class="section__container">
+                <h2 class="section__title">Get In Touch</h2>
+                <p class="section__subtitle">I'm always interested in hearing about new opportunities, collaborations, and interesting game projects.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="contact-info__title">Let's Connect</h3>
+                        <p class="contact-info__description">Feel free to reach out for collaborations, job opportunities, or just to chat about games!</p>
+
+                        <div class="contact-links">
+                            <a href="mailto:your.email@example.com" class="contact-link">
+                                <span class="contact-link__icon">📧</span>
+                                <span class="contact-link__text">your.email@example.com</span>
+                            </a>
+                            <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-link__icon">💼</span>
+                                <span class="contact-link__text">LinkedIn Profile</span>
+                            </a>
+                            <a href="https://twitter.com/yourhandle" class="contact-link" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-link__icon">🐦</span>
+                                <span class="contact-link__text">@yourhandle</span>
+                            </a>
+                            <a href="https://github.com/yourhandle" class="contact-link" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-link__icon">💻</span>
+                                <span class="contact-link__text">GitHub</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- Contact Window -->
-            <section class="window window--contact" data-window="contact">
-                <div class="window__titlebar">
-                    <span class="window__title">Contact.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--minimize">_</button>
-                        <button class="window__control window__control--maximize">□</button>
-                        <button class="window__control window__control--close">×</button>
+                    <div class="contact-availability">
+                        <h3 class="contact-availability__title">Availability</h3>
+                        <p><strong>Location:</strong> [Your Location]</p>
+                        <p><strong>Status:</strong> Open to remote work and relocation opportunities</p>
+                        <p><strong>Preferred Projects:</strong> Action games, kids entertainment, multiplayer experiences</p>
                     </div>
                 </div>
-                <div class="window__content">
-                    <h2>Get In Touch</h2>
-                    <div class="content-grid" data-grid-columns="2">
-                        <div class="grid-item">
-                            <h3>Contact Information</h3>
-                            <p>I'm always interested in hearing about new opportunities, collaborations, and interesting game projects.</p>
+            </div>
+        </section>
 
-                            <h3>Connect</h3>
-                            <div class="contact-links">
-                                <a href="mailto:your.email@example.com" class="contact-link">📧 Email</a>
-                                <a href="#" class="contact-link">💼 LinkedIn</a>
-                                <a href="#" class="contact-link">🐦 Twitter</a>
-                                <a href="#" class="contact-link">🎮 Portfolio</a>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <h3>Location & Availability</h3>
-                            <p>Based in [Your Location]</p>
-                            <p>Open to remote work and relocation opportunities.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    </main>
 
-        </main>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2024 Andrés Sànchez. All rights reserved.</p>
+            <p class="footer__subtext">Built with passion for great game experiences</p>
+        </div>
+    </footer>
 
     <!-- JavaScript Modules -->
     <script src="js/modules/config.js"></script>
+    <script src="js/modules/cursorFollower.js"></script>
+    <script src="js/modules/backgroundFollower.js"></script>
+    <script src="js/modules/modalManager.js"></script>
     <script src="js/modules/windowManager.js"></script>
     <script src="js/modules/taskbar.js"></script>
     <script src="js/modules/animations.js"></script>

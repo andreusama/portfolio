@@ -1,0 +1,242 @@
+/* ============================================
+   Decorative Elements - Clouds & Shapes
+   ============================================ */
+
+/* White Container - Cream background, dark borders */
+.cloud-container {
+    position: relative;
+    background: var(--color-base-light);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+}
+
+.cloud-container--large {
+    padding: 4rem 3rem;
+}
+
+/* Blue Container - Dark background, light borders (inverted White Container) */
+.blue-container {
+    position: relative;
+    background: var(--color-base-dark);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 16px;
+    border: 2px solid var(--color-base-light);
+    box-shadow: 5px 5px 0 rgba(249, 244, 242, 0.3);
+}
+
+/* Blue Container with pattern variant */
+.blue-container--pattern {
+    background-image:
+        url('../../pattern_white.png'),
+        linear-gradient(var(--color-base-dark), var(--color-base-dark));
+    background-repeat: repeat, no-repeat;
+    background-size: 600px 600px, cover;
+    background-position: 0 0, center;
+    background-blend-mode: screen;
+}
+
+.blue-container--large {
+    padding: 4rem 3rem;
+}
+
+.blue-container *:not(.btn):not(.btn *) {
+    color: var(--color-base-light) !important;
+}
+
+.blue-container .hero__name,
+.blue-container .hero__subtitle,
+.blue-container .hero__greeting,
+.blue-container .hero__description {
+    color: var(--color-base-light) !important;
+}
+
+/* Button overrides for Blue Container */
+.blue-container .btn--primary {
+    background: var(--color-base-light);
+    color: var(--color-base-dark) !important;
+    border-color: var(--color-base-light);
+}
+
+.blue-container .btn--secondary {
+    background: transparent;
+    color: var(--color-base-light) !important;
+    border-color: var(--color-base-light);
+}
+
+/* Accent Color Variants for 1-in-3 Highlighting */
+.cloud-container--turquoise {
+    background: var(--color-accent-turquoise);
+}
+
+.cloud-container--turquoise * {
+    color: var(--color-base-dark) !important;
+}
+
+.cloud-container--purple {
+    background: var(--color-accent-purple);
+}
+
+.cloud-container--purple * {
+    color: var(--color-base-light) !important;
+}
+
+.cloud-container--pink {
+    background: var(--color-accent-pink);
+}
+
+.cloud-container--pink * {
+    color: var(--color-base-light) !important;
+}
+
+.cloud-container--orange {
+    background: var(--color-accent-orange);
+}
+
+.cloud-container--orange * {
+    color: var(--color-base-dark) !important;
+}
+
+/* Animated Circle Border */
+.cloud-border {
+    position: absolute;
+    inset: -15px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.cloud-circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--color-base-light);
+    border-radius: 50%;
+    animation: cloudPulse 3s ease-in-out infinite;
+}
+
+/* Top Edge Circles */
+.cloud-circle:nth-child(1) { top: 0; left: 5%; animation-delay: 0s; }
+.cloud-circle:nth-child(2) { top: 0; left: 15%; animation-delay: 0.2s; }
+.cloud-circle:nth-child(3) { top: 0; left: 25%; animation-delay: 0.4s; }
+.cloud-circle:nth-child(4) { top: 0; left: 35%; animation-delay: 0.6s; }
+.cloud-circle:nth-child(5) { top: 0; left: 45%; animation-delay: 0.8s; }
+.cloud-circle:nth-child(6) { top: 0; left: 55%; animation-delay: 1s; }
+.cloud-circle:nth-child(7) { top: 0; left: 65%; animation-delay: 1.2s; }
+.cloud-circle:nth-child(8) { top: 0; left: 75%; animation-delay: 1.4s; }
+.cloud-circle:nth-child(9) { top: 0; left: 85%; animation-delay: 1.6s; }
+.cloud-circle:nth-child(10) { top: 0; left: 95%; animation-delay: 1.8s; }
+
+/* Bottom Edge Circles */
+.cloud-circle:nth-child(11) { bottom: 0; left: 5%; animation-delay: 1.8s; }
+.cloud-circle:nth-child(12) { bottom: 0; left: 15%; animation-delay: 1.6s; }
+.cloud-circle:nth-child(13) { bottom: 0; left: 25%; animation-delay: 1.4s; }
+.cloud-circle:nth-child(14) { bottom: 0; left: 35%; animation-delay: 1.2s; }
+.cloud-circle:nth-child(15) { bottom: 0; left: 45%; animation-delay: 1s; }
+.cloud-circle:nth-child(16) { bottom: 0; left: 55%; animation-delay: 0.8s; }
+.cloud-circle:nth-child(17) { bottom: 0; left: 65%; animation-delay: 0.6s; }
+.cloud-circle:nth-child(18) { bottom: 0; left: 75%; animation-delay: 0.4s; }
+.cloud-circle:nth-child(19) { bottom: 0; left: 85%; animation-delay: 0.2s; }
+.cloud-circle:nth-child(20) { bottom: 0; left: 95%; animation-delay: 0s; }
+
+/* Left Edge Circles */
+.cloud-circle:nth-child(21) { left: 0; top: 20%; animation-delay: 0.3s; }
+.cloud-circle:nth-child(22) { left: 0; top: 40%; animation-delay: 0.9s; }
+.cloud-circle:nth-child(23) { left: 0; top: 60%; animation-delay: 1.5s; }
+.cloud-circle:nth-child(24) { left: 0; top: 80%; animation-delay: 2.1s; }
+
+/* Right Edge Circles */
+.cloud-circle:nth-child(25) { right: 0; top: 20%; animation-delay: 0.5s; }
+.cloud-circle:nth-child(26) { right: 0; top: 40%; animation-delay: 1.1s; }
+.cloud-circle:nth-child(27) { right: 0; top: 60%; animation-delay: 1.7s; }
+.cloud-circle:nth-child(28) { right: 0; top: 80%; animation-delay: 2.3s; }
+
+@keyframes cloudPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Scalloped Edge Effect */
+.scalloped-edge {
+    position: relative;
+}
+
+.scalloped-edge::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background:
+        radial-gradient(circle at 5% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 15% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 25% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 35% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 45% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 55% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 65% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 75% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 85% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 95% 100%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px);
+    background-size: 10% 100%;
+    background-repeat: repeat-x;
+}
+
+.scalloped-edge::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background:
+        radial-gradient(circle at 5% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 15% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 25% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 35% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 45% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 55% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 65% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 75% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 85% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px),
+        radial-gradient(circle at 95% 0%, transparent 15px, var(--color-accent-3, #F0EDDD) 15px);
+    background-size: 10% 100%;
+    background-repeat: repeat-x;
+}
+
+/* Decorative Columns */
+.column-decoration {
+    width: 120px;
+    height: 250px;
+    position: absolute;
+    z-index: 1;
+}
+
+.column-decoration svg,
+.column-decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cloud-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .cloud-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .column-decoration {
+        width: 80px;
+        height: 180px;
+    }
+}

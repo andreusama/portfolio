@@ -36,21 +36,59 @@
     }
 
     function initializeModules() {
-        // Initialize Window Manager
-        if (typeof WindowManager !== 'undefined') {
-            window.windowManager = new WindowManager();
+        // Check if we're in hybrid layout mode
+        const isHybridLayout = document.body.classList.contains('hybrid-layout');
+
+        if (isHybridLayout) {
+            // Initialize Modal Manager for hybrid layout
+            if (typeof ModalManager !== 'undefined') {
+                window.modalManager = new ModalManager();
+            } else {
+                console.error('ModalManager not found');
+            }
+
+            // Initialize cursor follower
+            if (typeof CursorFollower !== 'undefined') {
+                window.cursorFollower = new CursorFollower({
+                    particleCount: 5,
+                    particleSize: 12,
+                    particleColor: 'rgba(45, 45, 95, 0.3)',
+                    enabled: true,
+                });
+            } else {
+                console.error('CursorFollower not found');
+            }
+
+            // Initialize background follower
+            if (typeof BackgroundFollower !== 'undefined') {
+                window.backgroundFollower = new BackgroundFollower({
+                    sensitivity: 0.05,
+                    smoothing: 0.1,
+                    selector: '.section--contact'
+                });
+            } else {
+                console.error('BackgroundFollower not found');
+            }
+
+            // Initialize smooth scroll
+            initSmoothScroll();
         } else {
-            console.error('WindowManager not found');
+            // Initialize Window Manager (old desktop layout)
+            if (typeof WindowManager !== 'undefined') {
+                window.windowManager = new WindowManager();
+            } else {
+                console.error('WindowManager not found');
+            }
+
+            // Initialize Taskbar Manager
+            if (typeof TaskbarManager !== 'undefined') {
+                window.taskbarManager = new TaskbarManager();
+            } else {
+                console.error('TaskbarManager not found');
+            }
         }
 
-        // Initialize Taskbar Manager
-        if (typeof TaskbarManager !== 'undefined') {
-            window.taskbarManager = new TaskbarManager();
-        } else {
-            console.error('TaskbarManager not found');
-        }
-
-        // Initialize Animation Manager
+        // Initialize Animation Manager (works for both layouts)
         if (typeof AnimationManager !== 'undefined') {
             window.animationManager = new AnimationManager();
         } else {
@@ -101,42 +139,76 @@
     }
 
     function handleKeyboardShortcuts(e) {
-        // Escape key - minimize focused window
-        if (e.key === 'Escape') {
+        const isHybridLayout = document.body.classList.contains('hybrid-layout');
+
+        // Escape key - handled by ModalManager in hybrid layout
+        if (e.key === 'Escape' && !isHybridLayout) {
             if (window.windowManager && window.windowManager.activeWindow) {
                 window.windowManager.minimizeWindow(window.windowManager.activeWindow);
             }
         }
 
-        // Ctrl/Cmd + M - Minimize active window
-        if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
-            e.preventDefault();
-            if (window.windowManager && window.windowManager.activeWindow) {
-                window.windowManager.minimizeWindow(window.windowManager.activeWindow);
+        // Keyboard shortcuts for desktop layout only
+        if (!isHybridLayout) {
+            // Ctrl/Cmd + M - Minimize active window
+            if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
+                e.preventDefault();
+                if (window.windowManager && window.windowManager.activeWindow) {
+                    window.windowManager.minimizeWindow(window.windowManager.activeWindow);
+                }
+            }
+
+            // Ctrl/Cmd + W - Close active window
+            if ((e.ctrlKey || e.metaKey) && e.key === 'w') {
+                e.preventDefault();
+                if (window.windowManager && window.windowManager.activeWindow) {
+                    window.windowManager.closeWindow(window.windowManager.activeWindow);
+                }
+            }
+
+            // F11 - Toggle fullscreen for active window
+            if (e.key === 'F11') {
+                e.preventDefault();
+                if (window.windowManager && window.windowManager.activeWindow) {
+                    window.windowManager.toggleMaximize(window.windowManager.activeWindow);
+                }
+            }
+
+            // Tab - Cycle through windows
+            if (e.key === 'Tab' && e.altKey) {
+                e.preventDefault();
+                cycleWindows(e.shiftKey);
             }
         }
+    }
 
-        // Ctrl/Cmd + W - Close active window
-        if ((e.ctrlKey || e.metaKey) && e.key === 'w') {
-            e.preventDefault();
-            if (window.windowManager && window.windowManager.activeWindow) {
-                window.windowManager.closeWindow(window.windowManager.activeWindow);
-            }
-        }
+    function initSmoothScroll() {
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
 
-        // F11 - Toggle fullscreen for active window
-        if (e.key === 'F11') {
-            e.preventDefault();
-            if (window.windowManager && window.windowManager.activeWindow) {
-                window.windowManager.toggleMaximize(window.windowManager.activeWindow);
-            }
-        }
+                // Don't prevent default for empty hash
+                if (href === '#') return;
 
-        // Tab - Cycle through windows
-        if (e.key === 'Tab' && e.altKey) {
-            e.preventDefault();
-            cycleWindows(e.shiftKey);
-        }
+                e.preventDefault();
+
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                    const targetPosition = targetElement.offsetTop - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        console.log('✅ Smooth scroll initialized');
     }
 
     function cycleWindows(reverse = false) {

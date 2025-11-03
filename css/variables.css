@@ -4,32 +4,43 @@
    ============================================== */
 
 :root {
-    /* ===== COLORS - Windows XP Luna Theme ===== */
+    /* ===== COLORS - Base & Accent Palette ===== */
 
-    /* Primary Colors - Classic XP Blue */
-    --color-primary: #0054e3;           /* Windows XP Blue */
-    --color-primary-light: #3d8eeb;
-    --color-primary-dark: #003db3;
+    /* Base Colors - Primary Use */
+    --color-base-dark: #2F1664;         /* Deep Purple - Main text/details */
+    --color-base-light: #F9F4F2;        /* Cream - Backgrounds/light text */
 
-    --color-secondary: #73b350;         /* XP Green */
-    --color-secondary-light: #8dc963;
-    --color-secondary-dark: #5a9239;
+    /* Accent Colors - Highlights & Special Elements */
+    --color-accent-turquoise: #4ECDC4;  /* Mint/Turquoise */
+    --color-accent-purple: #7B68EE;     /* Purple */
+    --color-accent-pink: #FF6B9D;       /* Pink/Coral */
+    --color-accent-orange: #FFB088;     /* Orange/Peach */
 
-    --color-accent-1: #d68c00;          /* XP Orange */
-    --color-accent-2: #dc143c;          /* Alert Red */
-    --color-accent-3: #8e8cd8;          /* Creative Purple */
-    --color-accent-4: #00b7c3;          /* Cyan */
+    /* Component Colors - Using Base Palette */
+    --color-primary: #2F1664;           /* Base dark purple */
+    --color-primary-light: #4A2890;
+    --color-primary-dark: #1F0E42;
 
-    /* Neutrals - XP Luna Colors */
-    --color-bg-desktop: #5a8ecc;        /* Desktop Bliss blue */
-    --color-bg-window: #ece9d8;         /* Window beige/cream */
-    --color-bg-titlebar: linear-gradient(180deg, #0997ff 0%, #0053ee 49%, #0050ee 50%, #06f 100%);
-    --color-bg-titlebar-inactive: linear-gradient(180deg, #bfbfbf 0%, #8a8a8a 49%, #828282 50%, #7a7a7a 100%);
+    --color-secondary: #F9F4F2;         /* Base cream */
+    --color-secondary-light: #FFFFFF;
+    --color-secondary-dark: #E8DFD9;
 
-    --color-text-primary: #000000;
-    --color-text-secondary: #333333;
-    --color-text-light: #ffffff;
-    --color-text-muted: #808080;
+    /* Accent Variations for Hover/Active States */
+    --color-accent-1: #4ECDC4;          /* Turquoise */
+    --color-accent-2: #7B68EE;          /* Purple */
+    --color-accent-3: #FF6B9D;          /* Pink */
+    --color-accent-4: #FFB088;          /* Orange */
+
+    /* Neutrals */
+    --color-bg-desktop: #F9F4F2;        /* Light cream background */
+    --color-bg-window: #FFFFFF;         /* White window */
+    --color-bg-titlebar: linear-gradient(180deg, #2F1664 0%, #1F0E42 100%);
+    --color-bg-titlebar-inactive: linear-gradient(180deg, #4A2890 0%, #2F1664 100%);
+
+    --color-text-primary: #2F1664;      /* Base dark purple */
+    --color-text-secondary: #4A2890;
+    --color-text-light: #F9F4F2;        /* Base cream */
+    --color-text-muted: #6B5580;
 
     /* UI Elements */
     --color-border: #003c74;
@@ -52,8 +63,8 @@
 
     /* ===== TYPOGRAPHY ===== */
     /* Font Families */
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-heading: 'Segoe UI', Arial, sans-serif;
+    --font-primary: 'LT Avocado', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'LT Avocado', 'Segoe UI', Arial, sans-serif;
     --font-code: 'Consolas', 'Courier New', monospace;
 
     /* Font Sizes */
