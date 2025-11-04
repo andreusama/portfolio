@@ -36,64 +36,45 @@
     }
 
     function initializeModules() {
-        // Check if we're in hybrid layout mode
-        const isHybridLayout = document.body.classList.contains('hybrid-layout');
-
-        if (isHybridLayout) {
-            // Initialize Modal Manager for hybrid layout
-            if (typeof ModalManager !== 'undefined') {
-                window.modalManager = new ModalManager();
-            } else {
-                console.error('ModalManager not found');
-            }
-
-            // Initialize cursor follower
-            if (typeof CursorFollower !== 'undefined') {
-                window.cursorFollower = new CursorFollower({
-                    particleCount: 5,
-                    particleSize: 12,
-                    particleColor: 'rgba(45, 45, 95, 0.3)',
-                    enabled: true,
-                });
-            } else {
-                console.error('CursorFollower not found');
-            }
-
-            // Initialize background follower
-            if (typeof BackgroundFollower !== 'undefined') {
-                window.backgroundFollower = new BackgroundFollower({
-                    sensitivity: 0.05,
-                    smoothing: 0.1,
-                    selector: '.section--contact'
-                });
-            } else {
-                console.error('BackgroundFollower not found');
-            }
-
-            // Initialize smooth scroll
-            initSmoothScroll();
+        // Initialize Modal Manager for hybrid layout
+        if (typeof ModalManager !== 'undefined') {
+            window.modalManager = new ModalManager();
         } else {
-            // Initialize Window Manager (old desktop layout)
-            if (typeof WindowManager !== 'undefined') {
-                window.windowManager = new WindowManager();
-            } else {
-                console.error('WindowManager not found');
-            }
-
-            // Initialize Taskbar Manager
-            if (typeof TaskbarManager !== 'undefined') {
-                window.taskbarManager = new TaskbarManager();
-            } else {
-                console.error('TaskbarManager not found');
-            }
+            console.error('ModalManager not found');
         }
 
-        // Initialize Animation Manager (works for both layouts)
+        // Initialize cursor follower
+        if (typeof CursorFollower !== 'undefined') {
+            window.cursorFollower = new CursorFollower({
+                particleCount: 5,
+                particleSize: 12,
+                particleColor: 'rgba(45, 45, 95, 0.3)',
+                enabled: true,
+            });
+        } else {
+            console.error('CursorFollower not found');
+        }
+
+        // Initialize background follower
+        if (typeof BackgroundFollower !== 'undefined') {
+            window.backgroundFollower = new BackgroundFollower({
+                sensitivity: 0.05,
+                smoothing: 0.1,
+                selector: '.section--projects'
+            });
+        } else {
+            console.error('BackgroundFollower not found');
+        }
+
+        // Initialize Animation Manager
         if (typeof AnimationManager !== 'undefined') {
             window.animationManager = new AnimationManager();
         } else {
             console.error('AnimationManager not found');
         }
+
+        // Initialize smooth scroll
+        initSmoothScroll();
     }
 
     function setupGlobalEvents() {
@@ -130,56 +111,11 @@
         if (CONFIG.debug) {
             console.log('Window resized:', window.innerWidth, 'x', window.innerHeight);
         }
-
-        // Reset maximized windows on resize
-        const maximizedWindows = document.querySelectorAll('.window--maximized');
-        maximizedWindows.forEach(window => {
-            // Recalculate positions if needed
-        });
     }
 
     function handleKeyboardShortcuts(e) {
-        const isHybridLayout = document.body.classList.contains('hybrid-layout');
-
-        // Escape key - handled by ModalManager in hybrid layout
-        if (e.key === 'Escape' && !isHybridLayout) {
-            if (window.windowManager && window.windowManager.activeWindow) {
-                window.windowManager.minimizeWindow(window.windowManager.activeWindow);
-            }
-        }
-
-        // Keyboard shortcuts for desktop layout only
-        if (!isHybridLayout) {
-            // Ctrl/Cmd + M - Minimize active window
-            if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
-                e.preventDefault();
-                if (window.windowManager && window.windowManager.activeWindow) {
-                    window.windowManager.minimizeWindow(window.windowManager.activeWindow);
-                }
-            }
-
-            // Ctrl/Cmd + W - Close active window
-            if ((e.ctrlKey || e.metaKey) && e.key === 'w') {
-                e.preventDefault();
-                if (window.windowManager && window.windowManager.activeWindow) {
-                    window.windowManager.closeWindow(window.windowManager.activeWindow);
-                }
-            }
-
-            // F11 - Toggle fullscreen for active window
-            if (e.key === 'F11') {
-                e.preventDefault();
-                if (window.windowManager && window.windowManager.activeWindow) {
-                    window.windowManager.toggleMaximize(window.windowManager.activeWindow);
-                }
-            }
-
-            // Tab - Cycle through windows
-            if (e.key === 'Tab' && e.altKey) {
-                e.preventDefault();
-                cycleWindows(e.shiftKey);
-            }
-        }
+        // Escape key - handled by ModalManager
+        // No additional keyboard shortcuts needed for hybrid layout
     }
 
     function initSmoothScroll() {
@@ -211,30 +147,6 @@
         console.log('✅ Smooth scroll initialized');
     }
 
-    function cycleWindows(reverse = false) {
-        if (!window.windowManager || window.windowManager.windows.length === 0) return;
-
-        const windows = window.windowManager.windows;
-        const currentIndex = windows.indexOf(window.windowManager.activeWindow);
-        let nextIndex;
-
-        if (reverse) {
-            nextIndex = currentIndex === 0 ? windows.length - 1 : currentIndex - 1;
-        } else {
-            nextIndex = currentIndex === windows.length - 1 ? 0 : currentIndex + 1;
-        }
-
-        // Skip minimized windows
-        while (windows[nextIndex].classList.contains('window--minimized')) {
-            if (reverse) {
-                nextIndex = nextIndex === 0 ? windows.length - 1 : nextIndex - 1;
-            } else {
-                nextIndex = nextIndex === windows.length - 1 ? 0 : nextIndex + 1;
-            }
-        }
-
-        window.windowManager.focusWindow(windows[nextIndex]);
-    }
 
     function initializeLazyLoading() {
         // Lazy load images and videos
@@ -282,35 +194,4 @@
         }
     }
 
-    // Expose API for external use
-    window.PortfolioAPI = {
-        focusWindow: (windowId) => {
-            const window = document.querySelector(`[data-window="${windowId}"]`);
-            if (window && window.windowManager) {
-                window.windowManager.focusWindow(window);
-            }
-        },
-        closeWindow: (windowId) => {
-            const window = document.querySelector(`[data-window="${windowId}"]`);
-            if (window && window.windowManager) {
-                window.windowManager.closeWindow(window);
-            }
-        },
-        minimizeWindow: (windowId) => {
-            const window = document.querySelector(`[data-window="${windowId}"]`);
-            if (window && window.windowManager) {
-                window.windowManager.minimizeWindow(window);
-            }
-        },
-        restoreWindow: (windowId) => {
-            const window = document.querySelector(`[data-window="${windowId}"]`);
-            if (window && window.windowManager) {
-                window.windowManager.restoreWindow(window);
-            }
-        },
-    };
-
-    if (CONFIG.debug) {
-        console.log('Portfolio API available via window.PortfolioAPI');
-    }
 })();

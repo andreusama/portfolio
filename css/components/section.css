@@ -170,7 +170,32 @@
 .section--projects {
     position: relative;
     padding-top: 7rem;
-    background: var(--color-accent-purple);
+    background: var(--color-base-dark);
+    overflow: hidden;
+    --pattern-x: 0px;
+    --pattern-y: 0px;
+}
+
+/* Pattern overlay layer with mouse movement */
+.section--projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../pattern_white.png');
+    background-repeat: repeat;
+    background-size: 600px 600px;
+    background-position: var(--pattern-x) var(--pattern-y);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section--projects .section__container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Projects section separator removed - using marquee-style transitions */
@@ -178,12 +203,13 @@
 .section--projects .section__title,
 .section--projects .section__subtitle {
     color: var(--color-base-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
     margin-top: 3rem;
 }
 
@@ -196,27 +222,132 @@
     cursor: pointer;
 }
 
+/* Different heights for visual variety */
+.project-card:nth-child(1) {
+    min-height: 520px;
+}
+
+.project-card:nth-child(2) {
+    min-height: 580px;
+}
+
+.project-card:nth-child(3) {
+    min-height: 550px;
+}
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 10px 10px 0 var(--color-base-dark);
 }
 
+.project-card__titlebar {
+    padding: 0.75rem 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(47, 22, 100, 0.1);
+}
+
+.macos-dots {
+    display: flex;
+    gap: 0.5rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.macos-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.macos-dot--red {
+    background: #FF5F57;
+}
+
+.macos-dot--yellow {
+    background: #FFBD2E;
+}
+
+.macos-dot--green {
+    background: #28CA42;
+}
+
 .project-card__image {
     width: 100%;
-    height: 200px;
+    height: 240px;
     overflow: hidden;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    transition: filter 0.3s ease;
+}
+
+/* Eye icon overlay - appears on hover */
+.project-card__image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 52px;
+    background-image: url('../../eyeHover.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Dark overlay for better icon visibility */
+.project-card__image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.project-card:hover .project-card__image {
+    filter: brightness(1.15);
+}
+
+.project-card:hover .project-card__image::before {
+    opacity: 1;
+}
+
+.project-card:hover .project-card__image::after {
+    opacity: 1;
+}
+
+/* Vary image heights for different cards */
+.project-card:nth-child(1) .project-card__image {
+    height: 220px;
+}
+
+.project-card:nth-child(2) .project-card__image {
+    height: 280px;
+}
+
+.project-card:nth-child(3) .project-card__image {
+    height: 250px;
 }
 
 .project-card__content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .project-card__title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-base-dark);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .project-card__platforms {
@@ -228,11 +359,18 @@
     padding: 0.25rem 0.75rem;
 }
 
+/* Ensure platform badges are visible in project cards */
+.project-card .platform-badge {
+    background: var(--color-base-dark);
+    color: var(--color-base-light);
+    border: 1px solid var(--color-base-dark);
+}
+
 .project-card__description {
     color: var(--color-text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
 }
 
 /* Accent Card Variants - Apply to every 3rd card for highlighting */
@@ -270,8 +408,59 @@
     margin-bottom: 1.25rem;
 }
 
+/* Ensure tags are visible with good contrast */
+.project-card .tag {
+    background: var(--color-base-dark);
+    color: var(--color-base-light);
+    border: 1px solid var(--color-base-dark);
+}
+
 .project-card__btn {
     width: 100%;
+}
+
+/* Ensure buttons in project cards are visible */
+.project-card .btn {
+    background: var(--color-base-dark) !important;
+    color: var(--color-base-light) !important;
+    border: 2px solid var(--color-base-dark) !important;
+}
+
+.project-card .btn:hover {
+    background: var(--color-accent-turquoise) !important;
+    color: var(--color-base-dark) !important;
+    border-color: var(--color-base-dark) !important;
+}
+
+/* Floating Animation for Project Cards */
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.project-card {
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Hover overrides float animation for stronger effect */
+.project-card:hover {
+    animation: none;
 }
 
 /* Skills Section */
@@ -286,6 +475,8 @@
 .section--skills .section__title,
 .section--skills .section__subtitle {
     color: var(--color-base-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
 
 .skills-grid {
@@ -349,13 +540,11 @@
     color: var(--color-base-dark) !important;
 }
 
-/* Contact Section - Color Container with Rotating Color Wheel */
+/* Contact Section - Rotating Color Wheel (without pattern overlay) */
 .section--contact {
     position: relative;
     padding-top: 7rem;
     overflow: hidden;
-    --pattern-x: 0px;
-    --pattern-y: 0px;
 }
 
 /* Rotating color wheel background */
@@ -421,25 +610,6 @@
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
-/* Pattern overlay layer */
-.section--contact::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../pattern_white.png');
-    background-repeat: repeat;
-    background-size: 600px 600px;
-    background-position: var(--pattern-x) var(--pattern-y);
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Bottom separator removed - color wheel effect is enough visual separation */
 
 .contact-grid {
     display: grid;
@@ -534,6 +704,28 @@
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(3) {
+        min-height: auto;
+    }
+
+    .project-card:nth-child(1) .project-card__image,
+    .project-card:nth-child(2) .project-card__image,
+    .project-card:nth-child(3) .project-card__image {
+        height: 200px;
+    }
+
+    .project-card__content {
+        padding: 1.5rem;
+    }
+
+    .project-card__title {
+        font-size: 1.3rem;
     }
 
     .skills-grid {

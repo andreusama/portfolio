@@ -1,15 +1,30 @@
-# 🎮 Game Designer Portfolio - Windows 7 Style
+# 🎮 Game Designer Portfolio - Modern Playful Design
 
-A highly modular, interactive portfolio with a Windows 7-inspired design system. Perfect for game designers who want to showcase their work in a unique, professional, and colorful way.
+A vibrant, interactive portfolio with a modern hybrid design featuring floating project cards, macOS-inspired aesthetics, and stunning animations. Perfect for game designers who want to showcase their work in a unique and memorable way.
 
 ## 🚀 Features
 
-- **Windows 7 Aesthetic**: Professional, familiar interface with glassmorphic effects
-- **Highly Modular Architecture**: Easy to customize every aspect
-- **Interactive Windows**: Draggable, minimizable, maximizable, and closable windows
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Performance Optimized**: Lazy loading, reduced motion support, smooth animations
-- **Easy Content Management**: Simple structure for adding projects, skills, and media
+- **Modern Hybrid Layout**: Seamless scrolling sections with floating card animations
+- **macOS-Inspired Cards**: Floating project cards with colored window controls (red, yellow, green)
+- **Interactive Modal Windows**: Click cards to view detailed project information
+- **4-Color Button Animations**: Beautiful expanding circle ripple effects with Turquoise → Purple → Pink → Orange
+- **Marquee Scrollers**: Animated text banners between sections
+- **Mouse-Tracking Background**: Dynamic pattern that follows cursor on Projects section
+- **Playful Color Palette**: Vibrant Turquoise, Purple, Pink, Orange with Deep Purple and Cream
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Performance Optimized**: Smooth animations with reduced motion support
+
+## 🎨 Color Palette
+
+```css
+--color-base-dark: #2F1664;         /* Deep Purple - Main text/headings */
+--color-base-light: #F9F4F2;        /* Cream - Backgrounds/light sections */
+
+--color-accent-turquoise: #4ECDC4;  /* Mint/Turquoise */
+--color-accent-purple: #7B68EE;     /* Purple */
+--color-accent-pink: #FF6B9D;       /* Pink/Coral */
+--color-accent-orange: #FFB088;     /* Orange/Peach */
+```
 
 ## 📁 Project Structure
 
@@ -17,268 +32,272 @@ A highly modular, interactive portfolio with a Windows 7-inspired design system.
 portfolio/
 ├── index.html                 # Main HTML file
 ├── css/
+│   ├── fonts.css              # Custom font declarations
 │   ├── variables.css          # All customizable variables (colors, spacing, fonts)
 │   ├── base.css              # Base styles and resets
 │   ├── layout/
 │   │   ├── grid.css          # Flexible grid system
-│   │   └── windows7.css      # Desktop and taskbar layout
+│   │   └── modern.css        # Modern hybrid layout
 │   ├── components/
-│   │   ├── navigation.css    # Navigation components
-│   │   ├── window.css        # Window component styles
-│   │   ├── card.css          # Project and skill cards
-│   │   └── media.css         # Image and video components
+│   │   ├── navigation.css    # Navigation bar
+│   │   ├── window.css        # Modal window styles
+│   │   ├── section.css       # Section layouts & project cards
+│   │   ├── hero.css          # Hero section
+│   │   ├── marquee.css       # Animated marquee scrollers
+│   │   ├── decorations.css   # Decorative elements
+│   │   └── button-animations.css  # 4-color button ripple effect
 │   └── utilities/
 │       ├── spacing.css       # Margin and padding utilities
 │       └── typography.css    # Text utilities
 ├── js/
 │   ├── modules/
 │   │   ├── config.js         # Configuration settings
-│   │   ├── windowManager.js  # Window interactions
-│   │   ├── taskbar.js        # Taskbar functionality
+│   │   ├── modalManager.js   # Modal window interactions
+│   │   ├── cursorFollower.js # Cursor-based animations
+│   │   ├── backgroundFollower.js  # Mouse-tracking background
 │   │   └── animations.js     # Animation effects
 │   └── main.js               # Main application entry
 └── assets/
     ├── images/               # Your images
-    └── videos/               # Your videos
+    ├── videos/               # Your videos
+    └── fonts/                # Custom fonts
 ```
 
-## 🎨 Customization Guide
+## 🎯 Key Components
 
-### 1. Colors (css/variables.css)
+### 1. Floating Project Cards
 
-Change the entire color scheme by editing these variables:
+Project cards feature:
+- **macOS colored circles** (red, yellow, green) in titlebar
+- **Floating animation** with staggered delays
+- **Eye icon hover effect** with brightness increase
+- **Varied heights** for visual interest
+- **Click to open** detailed modal window
 
-```css
---color-primary: #0078d7;        /* Main brand color */
---color-secondary: #f7630c;      /* Accent color */
---color-bg-desktop: #3a6ea5;     /* Desktop background */
---color-bg-window: #f0f0f0;      /* Window background */
-```
+### 2. Modal Windows
 
-### 2. Spacing (css/variables.css)
+Clicking a project card opens a centered modal with:
+- Full project details
+- Video trailer embed
+- Contributions breakdown
+- Technology tags
+- Brand/partner logos
 
-Adjust spacing throughout the site:
+### 3. Button Animations
 
-```css
---space-xs: 0.25rem;    /* 4px */
---space-sm: 0.5rem;     /* 8px */
---space-md: 1rem;       /* 16px */
---space-lg: 1.5rem;     /* 24px */
---space-xl: 2rem;       /* 32px */
-```
+All buttons feature a stunning 4-color expanding circle effect:
+- **Circle 1**: Turquoise (starts at 0s)
+- **Circle 2**: Purple (starts at 0.15s)
+- **Circle 3**: Pink (starts at 0.3s)
+- **Circle 4**: Orange (starts at 0.45s)
+- Total duration: **1.25 seconds**
+- Creates beautiful color overlap effect
 
-### 3. Typography (css/variables.css)
+### 4. Marquee Scrollers
 
-Change fonts and sizes:
+Animated text banners between sections:
+- **Double marquees** after Hero and Projects sections
+- **Alternating directions** for visual variety
+- **Customizable speed** (slow, normal, fast)
+- **Cream and Dark variants**
 
-```css
---font-primary: 'Segoe UI', sans-serif;
---font-size-base: 1rem;
---font-size-xl: 1.5rem;
---line-height-normal: 1.5;
-```
+### 5. Interactive Backgrounds
 
-### 4. Grid System (css/layout/grid.css)
-
-The grid system is flexible and controlled via data attributes:
-
-```html
-<!-- 2 columns -->
-<div class="content-grid" data-grid-columns="2">
-
-<!-- 3 columns -->
-<div class="content-grid" data-grid-columns="3">
-
-<!-- 4 columns -->
-<div class="content-grid" data-grid-columns="4">
-```
-
-Span multiple columns:
-
-```html
-<div class="grid-item--span-2">Spans 2 columns</div>
-<div class="grid-item--full">Spans all columns</div>
-```
+- **Projects Section**: Pattern background that follows mouse movement
+- **Contact Section**: Rotating color wheel (roulette) with 4 accent colors
+- Creates engaging, dynamic visual effects
 
 ## 📝 Adding Content
 
-### Adding a New Project
+### Adding a New Project Card
 
 1. Open `index.html`
-2. Find the Projects Window section
-3. Copy this template:
+2. Find the Projects Section (`<section id="projects">`)
+3. Add this template inside `.projects-grid`:
 
 ```html
-<article class="card card--project">
-    <div class="card__media">
-        <img src="assets/images/your-project.jpg" alt="Project Name">
-        <!-- OR for video -->
-        <video src="assets/videos/your-project.mp4" controls></video>
+<article class="project-card" data-project="yourgame">
+    <div class="project-card__titlebar">
+        <div class="macos-dots">
+            <span class="macos-dot macos-dot--red"></span>
+            <span class="macos-dot macos-dot--yellow"></span>
+            <span class="macos-dot macos-dot--green"></span>
+        </div>
     </div>
-    <div class="card__content">
-        <h3 class="card__title">Your Project Title</h3>
-        <p class="card__description">Your project description here.</p>
-        <div class="card__tags">
+    <div class="project-card__image">
+        <div class="media-placeholder media-placeholder--image">GAME NAME</div>
+    </div>
+    <div class="project-card__content">
+        <h3 class="project-card__title">Your Game Title</h3>
+        <div class="project-card__platforms">
+            <span class="platform-badge platform-badge--small">Platform</span>
+        </div>
+        <p class="project-card__description">Brief game description</p>
+        <div class="project-card__tags">
             <span class="tag">Unity</span>
             <span class="tag">C#</span>
-            <span class="tag">Multiplayer</span>
         </div>
+        <button class="btn btn--primary btn--sm project-card__btn" data-open-window="yourgame">
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            View Details
+        </button>
     </div>
 </article>
 ```
 
-### Adding Images/Videos
+### Adding a Modal Window for Your Project
 
-**Option 1: Direct (loads immediately)**
-```html
-<img src="assets/images/photo.jpg" alt="Description">
-<video src="assets/videos/gameplay.mp4" controls></video>
-```
-
-**Option 2: Lazy Loading (better performance)**
-```html
-<img data-src="assets/images/photo.jpg" alt="Description">
-<video data-src="assets/videos/gameplay.mp4" controls></video>
-```
-
-### Using Media Placeholders
-
-During development, use placeholders:
+After the Projects Section, add a modal window:
 
 ```html
-<div class="media-placeholder media-placeholder--image">
-    PROJECT IMAGE 1
-</div>
-
-<div class="media-placeholder media-placeholder--video">
-    VIDEO PLACEHOLDER 1
+<div class="modal-overlay" data-modal="yourgame">
+    <section class="window window--project window--modal" data-window="yourgame">
+        <div class="window__titlebar">
+            <span class="window__title">Your Game.exe</span>
+            <div class="window__controls">
+                <button class="window__control window__control--close" data-close-modal="yourgame">×</button>
+            </div>
+        </div>
+        <div class="window__content">
+            <!-- Your project details here -->
+        </div>
+    </section>
 </div>
 ```
 
-## 🎯 Utility Classes
+See `PROJECT_TEMPLATE.md` for complete modal template.
 
-### Spacing
+### Adding Buttons with Animations
+
+Always include 4 circle spans inside buttons:
 
 ```html
-<!-- Margins -->
-<div class="mt-lg mb-xl">Content with top and bottom margin</div>
-
-<!-- Padding -->
-<div class="p-md">Content with padding</div>
-
-<!-- Gap (for flex/grid) -->
-<div class="flex gap-md">Items with gap</div>
+<a href="#section" class="btn btn--primary">
+    <span class="btn__circle"></span>
+    <span class="btn__circle"></span>
+    <span class="btn__circle"></span>
+    <span class="btn__circle"></span>
+    Button Text
+</a>
 ```
 
-### Typography
+### Adding Marquee Scrollers
 
 ```html
-<h1 class="text-4xl font-bold text-center">Large Centered Title</h1>
-<p class="text-lg text-muted leading-relaxed">Large muted paragraph</p>
-```
-
-### Flexbox
-
-```html
-<div class="flex flex--between flex--center gap-md">
-    <div>Left</div>
-    <div>Right</div>
+<div class="marquee">
+    <div class="marquee__content">
+        <span class="marquee__item">Skill 1</span>
+        <span class="marquee__item">Skill 2</span>
+        <span class="marquee__item">Skill 3</span>
+        <!-- Repeat items 3-4x for seamless loop -->
+    </div>
 </div>
+```
+
+Modifiers:
+- `.marquee--reverse` - Scrolls right to left
+- `.marquee--slow` - Slower animation
+- `.marquee--fast` - Faster animation
+- `.marquee--narrow` - Less vertical padding
+- `.marquee--cream` - Cream background with dark text
+
+## 🎨 Customization
+
+### Change Colors
+
+Edit `css/variables.css`:
+
+```css
+:root {
+    --color-base-dark: #YOUR_COLOR;
+    --color-base-light: #YOUR_COLOR;
+    --color-accent-turquoise: #YOUR_COLOR;
+    --color-accent-purple: #YOUR_COLOR;
+    --color-accent-pink: #YOUR_COLOR;
+    --color-accent-orange: #YOUR_COLOR;
+}
+```
+
+### Adjust Card Heights
+
+Edit `css/components/section.css`:
+
+```css
+.project-card:nth-child(1) { min-height: 520px; }
+.project-card:nth-child(2) { min-height: 580px; }
+.project-card:nth-child(3) { min-height: 550px; }
+```
+
+### Modify Button Animation Speed
+
+Edit `css/components/button-animations.css`:
+
+```css
+.btn__circle {
+    transition: width 0.8s ease; /* Change 0.8s to your preferred duration */
+}
+```
+
+Change delays for circle start timing:
+```css
+.btn:hover .btn__circle:nth-child(1) { transition-delay: 0s; }
+.btn:hover .btn__circle:nth-child(2) { transition-delay: 0.15s; }
+.btn:hover .btn__circle:nth-child(3) { transition-delay: 0.3s; }
+.btn:hover .btn__circle:nth-child(4) { transition-delay: 0.45s; }
+```
+
+### Change Marquee Speed
+
+Edit `css/components/marquee.css`:
+
+```css
+.marquee__content {
+    animation: marquee 30s linear infinite; /* Change 30s to adjust speed */
+}
 ```
 
 ## ⚙️ Configuration (js/modules/config.js)
 
-Customize behavior:
-
 ```javascript
 const CONFIG = {
-    windows: {
-        enableDragging: true,      // Allow window dragging
-        enableResize: true,        // Allow window resizing
-        animationDuration: 300,    // Animation speed
-    },
     animations: {
-        enabled: true,             // Enable/disable animations
-        particles: {
-            enabled: true,         // Particle effects on click
-        },
+        enabled: true,
+        reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     },
-    taskbar: {
-        showTime: true,           // Show time in taskbar
-        timeFormat: '24h',        // '12h' or '24h'
+    modal: {
+        closeOnOverlayClick: true,
+        animationDuration: 300,
     },
-    debug: false,                 // Enable console logging
+    backgroundFollower: {
+        sensitivity: 0.05,
+        smoothing: 0.1,
+    },
 };
-```
-
-## ⌨️ Keyboard Shortcuts
-
-- **Escape**: Minimize focused window
-- **Ctrl/Cmd + M**: Minimize active window
-- **Ctrl/Cmd + W**: Close active window
-- **F11**: Toggle maximize active window
-- **Alt + Tab**: Cycle through windows
-
-## 🎨 Creating New Sections
-
-To add a new section:
-
-1. **Add Window in HTML**:
-
-```html
-<section class="window window--newsection" data-window="newsection">
-    <div class="window__titlebar">
-        <span class="window__title">New Section.exe</span>
-        <div class="window__controls">
-            <button class="window__control window__control--minimize">_</button>
-            <button class="window__control window__control--maximize">□</button>
-            <button class="window__control window__control--close">×</button>
-        </div>
-    </div>
-    <div class="window__content">
-        <h2>YOUR CONTENT HERE</h2>
-        <div class="content-grid" data-grid-columns="2">
-            <!-- Your grid items -->
-        </div>
-    </div>
-</section>
-```
-
-2. **Style if needed** (css/components/window.css):
-
-```css
-.window--newsection {
-    max-width: 1000px;
-}
 ```
 
 ## 📱 Responsive Behavior
 
-The portfolio automatically adapts:
-
-- **Desktop (>1024px)**: Full window system with dragging
-- **Tablet (768px-1024px)**: Simplified windows, 2-3 column grids
-- **Mobile (<768px)**: Single column, stacked windows
+- **Desktop (>1024px)**: Full floating cards grid, mouse tracking, all animations
+- **Tablet (768px-1024px)**: 2 column grid, simplified animations
+- **Mobile (<768px)**: Single column, cards stack vertically, reduced animations
 
 ## 🚀 Performance Tips
 
-1. **Use lazy loading** for images/videos:
-   ```html
-   <img data-src="path/to/image.jpg">
-   ```
-
-2. **Optimize images** before uploading (use WebP format)
-
-3. **Minimize video sizes** (compress and use appropriate resolution)
-
-4. **Enable caching** in your web server
+1. **Optimize images** - Use WebP format, compress before upload
+2. **Lazy loading** - Already implemented for images
+3. **Reduce motion** - Automatically detected via `prefers-reduced-motion`
+4. **Modal efficiency** - Modals load on demand when clicked
 
 ## 📦 Deployment
 
-1. Upload all files to your web server
-2. Ensure directory structure is maintained
-3. Test on different devices
-4. Update meta tags in `index.html` for SEO
+1. Update personal info in `index.html`
+2. Replace placeholder images/videos
+3. Update meta tags for SEO
+4. Test on multiple devices
+5. Upload to web server maintaining directory structure
 
 ## 🛠️ Browser Support
 
@@ -287,10 +306,25 @@ The portfolio automatically adapts:
 - Safari: ✅ Full support
 - Mobile browsers: ✅ Responsive design
 
+## 📄 Files Guide
+
+- **README.md** - This file, overview and setup
+- **CUSTOMIZATION_GUIDE.md** - Quick customization reference
+- **PROJECT_TEMPLATE.md** - Template for adding new projects
+- **THEME_SWITCHING.md** - (Legacy) Theme information
+
+## 🎮 Perfect For
+
+- Game Designers
+- Game Developers
+- Creative Portfolios
+- Interactive Resumes
+- Anyone who wants a playful, memorable portfolio
+
 ## 📄 License
 
 Free to use for personal and commercial projects.
 
 ---
 
-**Happy Coding! 🎮**
+**Let's make something amazing! 🎮✨**

@@ -1,356 +1,330 @@
-# 🎨 Theme Switching Guide
+# 🎨 Design System Guide
 
-Your portfolio now has a **modular theme system**! Switch between different visual styles instantly while keeping all functionality intact.
+This portfolio uses a unified **Modern Playful Design** system with a vibrant color palette and interactive animations.
 
-## 🚀 Quick Start - How to Switch Themes
+## 🎯 Design Philosophy
 
-Open `index.html` and find this section (around line 21):
+The portfolio moved away from switchable themes to a cohesive, carefully crafted design that combines:
+- **Playful Colors**: Vibrant accent colors (Turquoise, Purple, Pink, Orange)
+- **Modern Layout**: Hybrid scrolling with floating elements
+- **macOS Inspiration**: Colored window controls on cards
+- **Smooth Animations**: 4-color button ripples, floating cards, marquee scrollers
+- **Interactive Elements**: Mouse-tracking backgrounds, modal windows
 
-```html
-<!-- ⭐ THEME SELECTOR - Change this line to switch themes! -->
-<!-- Windows XP Theme (nostalgic, classic, full window OS) -->
-<link rel="stylesheet" href="css/themes/theme-xp.css">
-
-<!-- VS Code Dark Theme (minimalist, dark mode, IDE-inspired) -->
-<!-- <link rel="stylesheet" href="css/themes/theme-vscode.css"> -->
-```
-
-### To Use Windows XP Theme (Currently Active)
-
-**Already active!** No changes needed.
-
-### To Switch to VS Code Dark Theme
-
-**Comment out XP, uncomment VS Code:**
-
-```html
-<!-- ⭐ THEME SELECTOR - Change this line to switch themes! -->
-<!-- Windows XP Theme (nostalgic, classic, full window OS) -->
-<!-- <link rel="stylesheet" href="css/themes/theme-xp.css"> -->
-
-<!-- VS Code Dark Theme (minimalist, dark mode, IDE-inspired) -->
-<link rel="stylesheet" href="css/themes/theme-vscode.css">
-```
-
-**Save** → **Refresh browser** (Ctrl+Shift+R) → Done! ✨
+This unified approach creates a memorable, engaging experience that stands out.
 
 ---
 
-## 🎨 Available Themes
+## 🎨 Color System
 
-### 1. Windows XP Theme (`theme-xp.css`)
-
-**Style:** Nostalgic, classic Windows XP Luna design
-
-**Features:**
-- 🟦 Classic XP blue and green colors
-- 📦 Sharp, boxy windows with XP gradients
-- 🟢 Iconic green Start button
-- 💎 Glossy, gradient buttons
-- 📐 Rectangular shapes throughout
-- 🖼️ Full window chrome (titlebars, controls)
-
-**Best For:**
-- Nostalgic appeal
-- Retro gaming projects
-- Classic, professional look
-
-**Colors:**
-- Primary: XP Blue (#0054e3)
-- Secondary: XP Green (#73b350)
-- Accent: XP Orange (#d68c00)
-- Background: Sky Blue gradient
-
----
-
-### 2. VS Code Dark Theme (`theme-vscode.css`)
-
-**Style:** Minimalist dark mode inspired by Visual Studio Code IDE
-
-**Features:**
-- 🌑 Professional dark mode throughout
-- 💻 VS Code color palette (dark grays, accent blues)
-- 🎯 Minimalist, flat design (no gradients)
-- 🖼️ Full window chrome maintained
-- 📐 Clean rectangular shapes
-- ⚡ Sharp, crisp borders
-- 🔵 Subtle blue accents for focus states
-
-**Best For:**
-- Modern, professional portfolios
-- Developers who love VS Code
-- Dark mode enthusiasts
-- Minimalist aesthetic
-
-**Colors:**
-- Primary: VS Code Blue (#007acc)
-- Secondary: Teal (#4ec9b0)
-- Background: Dark Gray (#1e1e1e)
-- Window: Slightly lighter (#252526)
-- Titlebar: Medium Gray (#3c3c3c)
-- Text: Light Gray (#d4d4d4)
-- Accents: Light Blue, Yellow, Purple
-
----
-
-## 📊 Theme Comparison
-
-| Feature | Windows XP | VS Code Dark |
-|---------|-----------|--------------|
-| **Vibe** | Nostalgic, Classic | Modern, Professional |
-| **Mode** | Light Mode | Dark Mode |
-| **Style** | Glossy, Gradients | Flat, Minimalist |
-| **Colors** | Vibrant (Blue, Green, Orange) | Muted (Grays, Blues) |
-| **Window Chrome** | Full (with gradients) | Full (flat style) |
-| **Shadows** | Strong, XP-style | Subtle, soft |
-| **Borders** | Thick, colorful | Thin, gray |
-| **Border Radius** | Slightly rounded (8px) | Sharp (0px) |
-| **Best For** | Retro/Classic Games | Modern/Professional |
-
----
-
-## 🛠️ How It Works
-
-### Architecture
-
-```
-css/
-├── variables.css          # Base spacing, fonts (shared)
-├── base.css              # Foundation styles (shared)
-├── layout/               # Grid system (shared)
-├── components/           # Window logic (shared)
-├── utilities/            # Helper classes (shared)
-└── themes/               # Visual styles (swap these!)
-    ├── theme-xp.css      # XP colors & shapes
-    └── theme-vscode.css  # VS Code dark colors & shapes
+### Base Colors
+```css
+--color-base-dark: #2F1664;         /* Deep Purple - Main text/headings */
+--color-base-light: #F9F4F2;        /* Cream - Backgrounds/sections */
 ```
 
-**Only the `themes/` folder changes the visual appearance!**
+### Accent Colors (The "Roulette" Palette)
+```css
+--color-accent-turquoise: #4ECDC4;  /* Mint/Turquoise */
+--color-accent-purple: #7B68EE;     /* Purple */
+--color-accent-pink: #FF6B9D;       /* Pink/Coral */
+--color-accent-orange: #FFB088;     /* Orange/Peach */
+```
 
-All logic, layout, and functionality stays the same.
+These 4 accent colors appear throughout:
+- Button animations (expanding circles)
+- Contact section background (rotating roulette)
+- Hover states and interactive elements
+- Visual accents and highlights
 
 ---
 
-## ✨ Creating Your Own Theme
+## 🧩 Design Components
 
-Want to create a custom theme? Here's how:
+### 1. Color Usage Guidelines
 
-### Step 1: Copy a Theme File
+**Deep Purple** (`#2F1664`) - Use for:
+- Main headings and titles
+- Navigation text
+- Important body text
+- Dark sections (Projects, Skills)
 
-```bash
-cp css/themes/theme-vscode.css css/themes/theme-mytheme.css
-```
+**Cream** (`#F9F4F2`) - Use for:
+- Light section backgrounds
+- Text on dark backgrounds
+- Cards and containers
 
-### Step 2: Edit Colors
+**Accent Colors** - Use for:
+- Interactive elements (buttons, links)
+- Hover states
+- Visual emphasis
+- Animations and transitions
 
-Open `css/themes/theme-mytheme.css` and change:
+### 2. Typography
+
+**Primary Font**: LT Avocado (or fallback to Segoe UI)
+- Clean, modern, readable
+- Works well at all sizes
+- Professional yet friendly
+
+**Font Sizes**:
+- Hero: 3.5rem (56px)
+- Section Titles: 2.5rem (40px)
+- Card Titles: 1.5rem (24px)
+- Body: 1rem (16px)
+
+### 3. Interactive Elements
+
+**Buttons**:
+- 4-color expanding circle animation
+- Turquoise → Purple → Pink → Orange sequence
+- 1.25s total duration
+- Consistent across all button sizes
+
+**Cards**:
+- macOS colored circles (red, yellow, green)
+- Floating animation (subtle up/down movement)
+- Hover effects (eye icon, brightness increase)
+- Varied heights for visual interest
+
+**Modals**:
+- Centered overlay with backdrop
+- Smooth fade-in animation
+- Clean, focused content presentation
+
+---
+
+## 🎨 Customizing the Design
+
+While the portfolio uses a unified design, you can still customize many aspects:
+
+### Change the Color Palette
+
+**File**: `css/variables.css`
+
+To use different accent colors while keeping the same structure:
 
 ```css
-:root {
-    /* Your custom colors */
-    --color-primary: #YOUR_COLOR;
-    --color-secondary: #YOUR_COLOR;
-    --color-bg-desktop: #YOUR_COLOR;
-    --color-bg-window: #YOUR_COLOR;
-    --color-text-primary: #YOUR_COLOR;
-    /* etc... */
-}
+/* Example: Cool Blues Theme */
+--color-accent-turquoise: #00D9FF;  /* Bright Cyan */
+--color-accent-purple: #667EEA;     /* Soft Blue */
+--color-accent-pink: #764BA2;       /* Deep Purple */
+--color-accent-orange: #F093FB;     /* Light Purple */
+
+/* Example: Warm Earth Tones */
+--color-accent-turquoise: #43C6AC;  /* Mint Green */
+--color-accent-purple: #826C5C;     /* Brown */
+--color-accent-pink: #E85D75;       /* Coral */
+--color-accent-orange: #F39C6B;     /* Peach */
+
+/* Example: Neon Gaming */
+--color-accent-turquoise: #00FFFF;  /* Cyan */
+--color-accent-purple: #FF00FF;     /* Magenta */
+--color-accent-pink: #FF1493;       /* Hot Pink */
+--color-accent-orange: #FFD700;     /* Gold */
 ```
 
-### Step 3: Customize Shapes
+**Important**: Keep 4 distinct accent colors for the animations to work properly.
+
+### Adjust Base Colors
+
+Change the primary dark/light colors:
 
 ```css
-/* Adjust border radius */
-:root {
-    --border-radius: 8px; /* Rounded corners */
-}
+/* Example: Dark Mode Style */
+--color-base-dark: #1a1a1a;         /* Near Black */
+--color-base-light: #ffffff;        /* Pure White */
 
-/* Change button styles */
-.btn--primary {
-    background: your-color;
-    border-radius: 4px;
-}
+/* Example: Soft Pastel */
+--color-base-dark: #4A4A68;         /* Soft Dark Purple */
+--color-base-light: #FFF8F0;        /* Warm White */
 ```
 
-### Step 4: Activate Your Theme
+### Modify macOS Circle Colors
 
-In `index.html`:
+**File**: `css/components/section.css`
 
-```html
-<link rel="stylesheet" href="css/themes/theme-mytheme.css">
-```
-
----
-
-## 🎯 Theme Customization Quick Reference
-
-### Common Changes
-
-**Change window background:**
 ```css
-:root {
-    --color-bg-window: #YOURCOLOR;
-}
+.macos-dot--red { background: #FF5F57; }      /* Default red */
+.macos-dot--yellow { background: #FFBD2E; }   /* Default yellow */
+.macos-dot--green { background: #28CA42; }    /* Default green */
+
+/* Example: Blue Theme */
+.macos-dot--red { background: #5C9EFF; }      /* Light Blue */
+.macos-dot--yellow { background: #3D7EFF; }   /* Mid Blue */
+.macos-dot--green { background: #1E5FFF; }    /* Dark Blue */
 ```
 
-**Change desktop background:**
+---
+
+## 🖌️ Design Best Practices
+
+### Color Contrast
+
+Ensure sufficient contrast for accessibility:
+- Text on cream background: Use deep purple or dark colors
+- Text on dark background: Use cream or light colors
+- Links and interactive elements: Use accent colors
+
+### Animation Consistency
+
+All animations follow the same principles:
+- Smooth easing (ease, ease-in-out)
+- Reasonable durations (0.3s - 1.25s)
+- Respect `prefers-reduced-motion` setting
+
+### Visual Hierarchy
+
+Establish clear hierarchy:
+1. **Primary**: Large headings, hero text
+2. **Secondary**: Section titles, card titles
+3. **Tertiary**: Body text, descriptions
+4. **Accent**: Buttons, links, interactive elements
+
+---
+
+## 🎨 Color Psychology
+
+The current palette was chosen for specific reasons:
+
+**Turquoise** (#4ECDC4):
+- Creativity, energy
+- Perfect for game design portfolios
+- Eye-catching without being aggressive
+
+**Purple** (#7B68EE):
+- Imagination, creativity
+- Associated with gaming and tech
+- Professional yet playful
+
+**Pink** (#FF6B9D):
+- Friendly, approachable
+- Adds warmth
+- Balances the cool tones
+
+**Orange** (#FFB088):
+- Enthusiasm, energy
+- Completes the color wheel
+- Creates visual harmony
+
+**Deep Purple Base** (#2F1664):
+- Professional, sophisticated
+- Strong presence
+- Excellent for readability
+
+**Cream** (#F9F4F2):
+- Soft, inviting
+- Easy on the eyes
+- Better than pure white
+
+---
+
+## 🔄 From Themes to Unified Design
+
+### Why No More Theme Switching?
+
+The portfolio originally supported multiple themes (Windows XP, VS Code Dark), but evolved to a single cohesive design because:
+
+1. **Stronger Identity**: A unified design creates a memorable brand
+2. **Optimized Experience**: Every detail is crafted for this specific design
+3. **Easier Maintenance**: One design system to perfect
+4. **Better Performance**: No theme-switching overhead
+5. **Cohesive Animations**: All animations work together harmoniously
+
+### Migration Notes
+
+If you're coming from the old theme system:
+- Theme CSS files have been removed
+- All styling is now in component files
+- Colors are defined in `variables.css`
+- No more theme switching in `index.html`
+
+---
+
+## 🎨 Design Inspiration
+
+This design draws inspiration from:
+- **macOS**: Colored window controls, clean interfaces
+- **Material Design**: Floating elements, depth
+- **Neumorphism**: Soft shadows, subtle depth
+- **Y2K Aesthetics**: Playful colors, fun interactions
+- **Modern Web Design**: Smooth animations, responsive layout
+
+---
+
+## 📐 Layout Principles
+
+### Grid System
+- Flexible CSS Grid for project cards
+- Responsive breakpoints (mobile, tablet, desktop)
+- Consistent spacing using CSS variables
+
+### Spacing Scale
 ```css
-.desktop {
-    background: #YOURCOLOR;
-}
+--space-xs: 0.25rem;    /* 4px - Tight spacing */
+--space-sm: 0.5rem;     /* 8px - Small gaps */
+--space-md: 1rem;       /* 16px - Default */
+--space-lg: 1.5rem;     /* 24px - Section padding */
+--space-xl: 2rem;       /* 32px - Large spacing */
+--space-2xl: 3rem;      /* 48px - Extra spacing */
+--space-3xl: 4rem;      /* 64px - Section separation */
+--space-4xl: 6rem;      /* 96px - Major breaks */
 ```
 
-**Adjust border radius:**
-```css
-:root {
-    --border-radius: 8px; /* Rounded */
-    /* OR */
-    --border-radius: 0px; /* Sharp */
-}
-```
-
-**Modify shadows:**
-```css
-:root {
-    --shadow-window: 0 20px 60px rgba(0, 0, 0, 0.2);
-}
-```
-
-**Dark Mode Colors (VS Code style):**
-```css
-:root {
-    --color-bg-desktop: #1e1e1e;
-    --color-bg-window: #252526;
-    --color-text-primary: #d4d4d4;
-}
-```
-
-**Light Mode Colors (XP style):**
-```css
-:root {
-    --color-bg-desktop: #5a8ecc;
-    --color-bg-window: #ece9d8;
-    --color-text-primary: #000000;
-}
-```
+### Responsive Design
+- Mobile-first approach
+- Touch-friendly targets (44px minimum)
+- Readable font sizes on all devices
+- Simplified animations on mobile
 
 ---
 
-## 🔥 Theme Switching Tips
+## 🚀 Creating Your Own Variation
 
-### During Development
+Want to create a significantly different look?
 
-**Split Screen Testing:**
-Open two browser windows side-by-side:
-- Window 1: XP theme
-- Window 2: VS Code theme
+1. **Start with colors** - Change the 4 accent colors in `variables.css`
+2. **Adjust base colors** - Modify deep purple and cream
+3. **Tweak animations** - Adjust timing in `button-animations.css` and `section.css`
+4. **Modify spacing** - Change spacing variables for tighter/looser feel
+5. **Update typography** - Change fonts in `variables.css` and add web font links
 
-Compare designs in real-time!
-
-### Cache Issues
-
-If theme doesn't change:
-1. **Hard refresh:** Ctrl+Shift+F5 (Windows) or Cmd+Shift+R (Mac)
-2. **Clear cache:** Browser DevTools → Network → Disable cache
-3. **Incognito mode:** Test in private browsing
-
-### Performance
-
-- Only **ONE theme** should be loaded at a time
-- Comment out unused themes
-- Themes add minimal overhead (~10KB each)
+**Remember**: Keep the 4-color system intact for button animations!
 
 ---
 
-## 📋 Theme Checklist
+## 📚 Resources
 
-When creating/switching themes, verify:
+**Color Tools**:
+- [Coolors.co](https://coolors.co) - Generate color schemes
+- [Adobe Color](https://color.adobe.com) - Color wheel and harmonies
+- [Paletton](https://paletton.com) - Advanced color scheme designer
 
-- [ ] Desktop background looks good
-- [ ] Windows are visible and styled correctly
-- [ ] Taskbar is readable
-- [ ] Start button is prominent
-- [ ] Window controls work and are visible
-- [ ] Buttons have clear hover states
-- [ ] Cards have proper shadows
-- [ ] Project windows look professional
-- [ ] Text is readable everywhere (check contrast in dark mode!)
-- [ ] Colors work together harmoniously
+**Accessibility**:
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Color Safe](http://colorsafe.co/) - Accessible color palettes
 
----
-
-## 🎨 Theme-Specific Tips
-
-### Windows XP Theme
-- Uses light backgrounds, so dark text works best
-- Colorful and vibrant - great for fun, retro projects
-- Gradients make it feel authentic to XP
-
-### VS Code Dark Theme
-- Uses dark backgrounds, ensure text has good contrast
-- Minimalist - avoid adding too many decorative elements
-- Blue accents for interactive elements
-- Professional look - great for developer portfolios
+**Inspiration**:
+- [Dribbble](https://dribbble.com) - UI design inspiration
+- [Awwwards](https://awwwards.com) - Award-winning websites
+- [Behance](https://behance.net) - Creative portfolios
 
 ---
 
-## 🎨 Future Theme Ideas
+## ✨ Summary
 
-Want more themes? Here are some ideas:
+The portfolio uses a **unified modern playful design** featuring:
+- 🎨 Vibrant 4-color accent palette (Turquoise, Purple, Pink, Orange)
+- 💻 macOS-inspired floating cards
+- 🎭 Interactive modal windows
+- 🌊 Smooth animations and transitions
+- 📱 Fully responsive layout
+- ♿ Accessibility-conscious design
 
-- **Windows 98**: Even more retro!
-- **MacOS Big Sur**: Clean, modern Apple aesthetic
-- **Dracula**: Popular dark theme from Dracula theme
-- **Monokai**: Classic dark theme with warm colors
-- **Solarized Dark/Light**: Popular color scheme
-- **GitHub Dark**: GitHub's dark mode colors
-- **Material Design**: Google's design language
-- **Nord**: Cool, arctic-inspired palette
-
----
-
-## 🆘 Troubleshooting
-
-**Theme not applying?**
-- Check file path is correct
-- Ensure only ONE theme is uncommented
-- Hard refresh browser (Ctrl+Shift+R)
-
-**Colors look wrong?**
-- Check CSS variables in theme file
-- Verify `:root` declarations are correct
-
-**Text not readable in dark mode?**
-- Ensure text colors have sufficient contrast
-- VS Code theme uses #d4d4d4 for main text on dark backgrounds
-
-**Shapes not changing?**
-- Some shapes are in base CSS (intentional)
-- Theme overrides specific visual properties
-
-**Both themes loading?**
-- Make sure to comment out `<!--` the unused theme
+This cohesive approach creates a memorable, engaging portfolio that showcases your work in the best light.
 
 ---
 
-## 📚 Additional Resources
+**Happy Designing! 🎨✨**
 
-- **Color Palette Generators:**
-  - [Coolors.co](https://coolors.co) - Generate color schemes
-  - [Adobe Color](https://color.adobe.com) - Color wheel
-
-- **VS Code Theme Colors:**
-  - [VS Code Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
-
-- **Contrast Checkers (for dark mode):**
-  - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
-
-- **Inspiration:**
-  - [Dribbble](https://dribbble.com) - UI design inspiration
-  - [Awwwards](https://awwwards.com) - Web design showcase
-
----
-
-**Happy Theming! 🎨**
-
-Remember: You can switch between XP and VS Code themes anytime by just commenting/uncommenting one line!
+For more customization options, check out `CUSTOMIZATION_GUIDE.md`!

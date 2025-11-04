@@ -14,6 +14,30 @@
     z-index: 100;
 }
 
+/* Narrow variant - less wide */
+.marquee--narrow {
+    padding: 0.6rem 0;
+}
+
+/* Double marquee wrapper */
+.marquee-double {
+    position: relative;
+    margin: -1rem 0;
+    z-index: 100;
+}
+
+.marquee-double .marquee {
+    margin: 0;
+}
+
+.marquee-double .marquee:first-child {
+    margin-bottom: -0.5rem;
+}
+
+.marquee-double .marquee:last-child {
+    margin-top: -0.5rem;
+}
+
 .marquee--reverse {
     transform: rotate(2deg);
 }

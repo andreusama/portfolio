@@ -6,45 +6,59 @@ This guide shows you exactly where to edit to customize your portfolio.
 
 ### 1. Change Colors (5 minutes)
 
-**File**: `css/variables.css` (lines 7-30)
+**File**: `css/variables.css` (lines 7-18)
 
 ```css
-/* Your brand colors */
---color-primary: #0078d7;           /* Change this to your primary color */
---color-secondary: #f7630c;         /* Change this to your accent color */
---color-bg-desktop: #3a6ea5;        /* Desktop background color */
+/* Base Colors */
+--color-base-dark: #2F1664;         /* Deep Purple - Main text/headings */
+--color-base-light: #F9F4F2;        /* Cream - Backgrounds/light sections */
+
+/* Accent Colors */
+--color-accent-turquoise: #4ECDC4;  /* Mint/Turquoise */
+--color-accent-purple: #7B68EE;     /* Purple */
+--color-accent-pink: #FF6B9D;       /* Pink/Coral */
+--color-accent-orange: #FFB088;     /* Orange/Peach */
 ```
 
 **Quick color palettes for game designers**:
 
 **Energetic/Action Games**:
 ```css
---color-primary: #ff4654;           /* Red */
---color-secondary: #ffd93d;         /* Yellow */
---color-bg-desktop: #2d2d2d;        /* Dark gray */
+--color-base-dark: #1a1a1a;         /* Deep Black */
+--color-base-light: #f5f5f5;        /* Off White */
+--color-accent-turquoise: #00ffff;  /* Cyan */
+--color-accent-purple: #ff00ff;     /* Magenta */
+--color-accent-pink: #ff4654;       /* Red */
+--color-accent-orange: #ffd93d;     /* Yellow */
 ```
 
 **Adventure/Fantasy**:
 ```css
---color-primary: #6b4de0;           /* Purple */
---color-secondary: #4de0b6;         /* Teal */
---color-bg-desktop: #1a1a3e;        /* Deep blue */
+--color-base-dark: #1a1a3e;         /* Deep Blue */
+--color-base-light: #e8e0d5;        /* Parchment */
+--color-accent-turquoise: #4de0b6;  /* Teal */
+--color-accent-purple: #6b4de0;     /* Royal Purple */
+--color-accent-pink: #e04da7;       /* Magenta Pink */
+--color-accent-orange: #e09a4d;     /* Gold */
 ```
 
 **Retro/Casual**:
 ```css
---color-primary: #ff6b9d;           /* Pink */
---color-secondary: #c449c2;         /* Magenta */
---color-bg-desktop: #4a5568;        /* Slate */
+--color-base-dark: #2d2d2d;         /* Dark Gray */
+--color-base-light: #fffdf7;        /* Cream White */
+--color-accent-turquoise: #39d9b1;  /* Mint */
+--color-accent-purple: #a78bfa;     /* Lavender */
+--color-accent-pink: #ff6b9d;       /* Bubblegum */
+--color-accent-orange: #ffa07a;     /* Coral */
 ```
 
 ### 2. Change Fonts (3 minutes)
 
-**File**: `css/variables.css` (lines 70-72)
+**File**: `css/variables.css` (lines 66-68)
 
 ```css
---font-primary: 'Segoe UI', Tahoma, sans-serif;
---font-heading: 'Segoe UI', Arial, sans-serif;
+--font-primary: 'LT Avocado', 'Segoe UI', sans-serif;
+--font-heading: 'LT Avocado', 'Segoe UI', sans-serif;
 ```
 
 **Recommended game designer fonts**:
@@ -62,7 +76,7 @@ This guide shows you exactly where to edit to customize your portfolio.
 --font-heading: 'Orbitron', 'Arial', sans-serif;
 ```
 
-**Don't forget to add the font link in `index.html`**:
+**Add font link in `index.html` head**:
 ```html
 <head>
     ...
@@ -73,254 +87,317 @@ This guide shows you exactly where to edit to customize your portfolio.
 
 ### 3. Adjust Spacing (2 minutes)
 
-**File**: `css/variables.css` (lines 50-58)
-
-Make everything tighter or more spacious:
+**File**: `css/variables.css` (lines 54-62)
 
 ```css
-/* Tight spacing (compact design) */
---space-xs: 0.125rem;   /* 2px */
---space-sm: 0.25rem;    /* 4px */
---space-md: 0.5rem;     /* 8px */
---space-lg: 1rem;       /* 16px */
-
-/* Loose spacing (airy design) */
---space-xs: 0.5rem;     /* 8px */
---space-sm: 1rem;       /* 16px */
---space-md: 2rem;       /* 32px */
---space-lg: 3rem;       /* 48px */
+/* Default spacing */
+--space-xs: 0.25rem;    /* 4px */
+--space-sm: 0.5rem;     /* 8px */
+--space-md: 1rem;       /* 16px */
+--space-lg: 1.5rem;     /* 24px */
+--space-xl: 2rem;       /* 32px */
+--space-2xl: 3rem;      /* 48px */
+--space-3xl: 4rem;      /* 64px */
+--space-4xl: 6rem;      /* 96px */
 ```
 
-### 4. Change Grid Columns (1 minute)
+### 4. Button Animation Speed (2 minutes)
 
-**File**: `index.html`
+**File**: `css/components/button-animations.css`
 
-Change `data-grid-columns` attribute:
-
-```html
-<!-- Projects section - 3 columns -->
-<div class="content-grid" data-grid-columns="3">
-
-<!-- Change to 2 columns -->
-<div class="content-grid" data-grid-columns="2">
-
-<!-- Change to 4 columns -->
-<div class="content-grid" data-grid-columns="4">
+Change expansion duration:
+```css
+.btn__circle {
+    transition: width 0.8s ease; /* Change 0.8s to 0.5s for faster, 1.2s for slower */
+}
 ```
 
-### 5. Modify Window Sizes
+Change delay between circles:
+```css
+.btn:hover .btn__circle:nth-child(1) { transition-delay: 0s; }
+.btn:hover .btn__circle:nth-child(2) { transition-delay: 0.15s; } /* Change 0.15s */
+.btn:hover .btn__circle:nth-child(3) { transition-delay: 0.3s; }  /* Change 0.3s */
+.btn:hover .btn__circle:nth-child(4) { transition-delay: 0.45s; } /* Change 0.45s */
+```
 
-**File**: `css/variables.css` (lines 144-152)
+### 5. Project Card Heights (1 minute)
+
+**File**: `css/components/section.css` (search for `.project-card:nth-child`)
 
 ```css
---window-width-sm: 400px;    /* Small window */
---window-width-md: 600px;    /* Medium window */
---window-width-lg: 800px;    /* Large window */
---window-width-xl: 1000px;   /* Extra large window */
+.project-card:nth-child(1) { min-height: 520px; } /* Adjust height */
+.project-card:nth-child(2) { min-height: 580px; }
+.project-card:nth-child(3) { min-height: 550px; }
+```
+
+### 6. Floating Animation Speed (2 minutes)
+
+**File**: `css/components/section.css`
+
+```css
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); } /* Change -8px to -12px for more movement */
+}
+
+.project-card {
+    animation: cardFloat 4s ease-in-out infinite; /* Change 4s for speed */
+}
+```
+
+### 7. Marquee Speed (1 minute)
+
+**File**: `css/components/marquee.css`
+
+```css
+.marquee__content {
+    animation: marquee 30s linear infinite; /* Change 30s (higher = slower) */
+}
+
+.marquee--slow .marquee__content {
+    animation-duration: 45s; /* Adjust slow variant */
+}
+
+.marquee--fast .marquee__content {
+    animation-duration: 20s; /* Adjust fast variant */
+}
 ```
 
 ## 📝 Content Updates
 
 ### Update Hero Section
 
-**File**: `index.html` (lines 45-55)
+**File**: `index.html` (lines 46-63)
 
 ```html
-<div class="hero">
-    <h1 class="hero__title">YOUR NAME</h1>
-    <p class="hero__subtitle">Game Designer | Developer | Creator</p>
+<div class="hero__content">
+    <h1 class="hero__title">
+        <span class="hero__greeting">Hi, I'm</span>
+        <span class="hero__name">YOUR NAME</span>
+    </h1>
+    <p class="hero__subtitle">Game Designer & Developer</p>
+    <p class="hero__description">Your bio here</p>
     <div class="hero__cta">
-        <button class="btn btn--primary">View My Work</button>
-        <button class="btn btn--secondary">Contact Me</button>
+        <a href="#projects" class="btn btn--primary">
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            View My Work
+        </a>
     </div>
 </div>
 ```
 
 ### Add Your Projects
 
-**File**: `index.html` (lines 100+)
+**File**: `index.html` (Projects Section, around line 213)
 
-Replace placeholder cards with your projects:
-
+1. Add project card:
 ```html
-<article class="card card--project">
-    <div class="card__media">
-        <img src="assets/images/project1.jpg" alt="Project Name">
+<article class="project-card" data-project="mygame">
+    <div class="project-card__titlebar">
+        <div class="macos-dots">
+            <span class="macos-dot macos-dot--red"></span>
+            <span class="macos-dot macos-dot--yellow"></span>
+            <span class="macos-dot macos-dot--green"></span>
+        </div>
     </div>
-    <div class="card__content">
-        <h3 class="card__title">Game Title Here</h3>
-        <p class="card__description">Brief description of your game, your role, and key achievements.</p>
-        <div class="card__tags">
+    <div class="project-card__image">
+        <div class="media-placeholder">MY GAME</div>
+    </div>
+    <div class="project-card__content">
+        <h3 class="project-card__title">Game Title</h3>
+        <div class="project-card__platforms">
+            <span class="platform-badge platform-badge--small">PC</span>
+        </div>
+        <p class="project-card__description">Brief description</p>
+        <div class="project-card__tags">
             <span class="tag">Unity</span>
             <span class="tag">C#</span>
-            <span class="tag">Multiplayer</span>
         </div>
+        <button class="btn btn--primary btn--sm" data-open-window="mygame">
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            View Details
+        </button>
     </div>
 </article>
 ```
 
-### Add Your Skills
+2. Add corresponding modal window (see PROJECT_TEMPLATE.md)
 
-**File**: `index.html` (Skills Window section)
+### Customize Marquee Content
+
+**File**: `index.html` (search for `.marquee`)
 
 ```html
-<div class="card card--skill">
-    <h3>Game Design</h3>
-    <ul>
-        <li>Level Design</li>
-        <li>Game Mechanics</li>
-        <li>Systems Design</li>
-        <li>Player Psychology</li>
-    </ul>
+<div class="marquee">
+    <div class="marquee__content">
+        <span class="marquee__item">YOUR SKILL 1</span>
+        <span class="marquee__item">YOUR SKILL 2</span>
+        <span class="marquee__item">YOUR SKILL 3</span>
+        <!-- Repeat items 3-4 times for seamless scrolling -->
+    </div>
 </div>
 ```
 
 ### Update Contact Info
 
-**File**: `index.html` (Contact Window section)
+**File**: `index.html` (Contact Section, around line 737)
 
 ```html
-<div class="contact-links">
-    <a href="mailto:your@email.com" class="contact-link">
-        📧 your@email.com
-    </a>
-    <a href="https://linkedin.com/in/yourprofile" class="contact-link">
-        💼 LinkedIn Profile
-    </a>
-    <a href="https://twitter.com/yourhandle" class="contact-link">
-        🐦 @yourhandle
-    </a>
-</div>
+<a href="mailto:your@email.com" class="contact-link">
+    <span class="contact-link__icon">📧</span>
+    <span class="contact-link__text">your@email.com</span>
+</a>
+<a href="https://linkedin.com/in/yourprofile" class="contact-link">
+    <span class="contact-link__icon">💼</span>
+    <span class="contact-link__text">LinkedIn Profile</span>
+</a>
+```
+
+## 🎨 Advanced Styling
+
+### macOS Circles Color Customization
+
+**File**: `css/components/section.css` (search for `.macos-dot`)
+
+```css
+.macos-dot--red { background: #FF5F57; }    /* Change red */
+.macos-dot--yellow { background: #FFBD2E; } /* Change yellow */
+.macos-dot--green { background: #28CA42; }  /* Change green */
+```
+
+### Card Hover Effect Intensity
+
+**File**: `css/components/section.css`
+
+```css
+.project-card:hover .project-card__image {
+    filter: brightness(1.15); /* Change 1.15 to 1.3 for more brightness */
+}
+
+.project-card:hover .project-card__image::before {
+    opacity: 1; /* Eye icon - change to 0.8 for semi-transparent */
+}
+```
+
+### Background Pattern Sensitivity
+
+**File**: `js/main.js` (around line 30)
+
+```javascript
+window.backgroundFollower = new BackgroundFollower({
+    sensitivity: 0.05,  // Change to 0.1 for faster movement
+    smoothing: 0.1,     // Change to 0.2 for smoother transitions
+    selector: '.section--projects'
+});
+```
+
+### Rotating Roulette Speed (Contact Section)
+
+**File**: `css/components/section.css` (search for `@keyframes rotate`)
+
+```css
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.section--contact::before {
+    animation: rotate 20s linear infinite; /* Change 20s for speed */
+}
 ```
 
 ## 🎬 Adding Media
 
-### Add an Image
+### Add an Image to Project Card
 
 1. Place image in `assets/images/`
-2. Reference in HTML:
+2. Replace placeholder:
 
 ```html
-<img src="assets/images/your-image.jpg" alt="Description">
+<div class="project-card__image">
+    <img src="assets/images/your-game.jpg" alt="Game Name">
+</div>
 ```
 
-### Add a Video
+### Add Video Trailer to Modal
 
-1. Place video in `assets/videos/`
-2. Reference in HTML:
-
+**YouTube**:
 ```html
-<video src="assets/videos/gameplay.mp4" controls></video>
-```
-
-### Add a YouTube/Vimeo Video
-
-```html
-<div class="video-container">
+<div class="project-video__container">
     <iframe
-        width="100%"
-        height="100%"
         src="https://www.youtube.com/embed/VIDEO_ID"
-        frameborder="0"
         allowfullscreen>
     </iframe>
 </div>
 ```
 
+**Self-hosted**:
+```html
+<div class="project-video__container">
+    <video controls>
+        <source src="assets/videos/trailer.mp4" type="video/mp4">
+    </video>
+</div>
+```
+
 ## 🔧 Behavior Settings
 
-### Disable Window Dragging
+### Disable Floating Animation
 
-**File**: `js/modules/config.js` (line 9)
-
-```javascript
-enableDragging: false,
-```
-
-### Change Animation Speed
-
-**File**: `js/modules/config.js` (line 18)
-
-```javascript
-duration: 300,  // Change to 150 for faster, 500 for slower
-```
-
-### Disable Particle Effects
-
-**File**: `js/modules/config.js` (line 21)
-
-```javascript
-particles: {
-    enabled: false,
-},
-```
-
-### Change Taskbar Time Format
-
-**File**: `js/modules/config.js` (line 28)
-
-```javascript
-timeFormat: '12h',  // or '24h'
-```
-
-## 🎨 Advanced Styling
-
-### Add a Background Pattern
-
-**File**: `css/layout/windows7.css` (line 9)
+**File**: `css/components/section.css`
 
 ```css
-.desktop {
-    background: var(--color-bg-desktop);
-    background-image:
-        url('data:image/svg+xml,...'), /* Add your pattern */
-        linear-gradient(135deg, #2b5876 0%, #4e7ba5 100%);
+.project-card {
+    /* animation: cardFloat 4s ease-in-out infinite; */ /* Comment this out */
 }
 ```
 
-### Customize Card Hover Effects
+### Disable Mouse-Following Background
 
-**File**: `css/components/card.css` (line 13)
+**File**: `js/main.js`
 
-```css
-.card:hover {
-    box-shadow: var(--shadow-xl);     /* Make shadow bigger */
-    transform: translateY(-4px);      /* Lift higher */
-    border-color: var(--color-secondary); /* Different border color */
-}
+```javascript
+// window.backgroundFollower = new BackgroundFollower({ /* Comment out */
 ```
 
-### Change Window Titlebar Style
+### Change Modal Animation Speed
 
-**File**: `css/components/window.css` (line 37)
+**File**: `js/modules/config.js`
 
-```css
-.window__titlebar {
-    background: var(--color-primary);  /* Solid color instead of gradient */
-    color: white;
+```javascript
+modal: {
+    animationDuration: 300,  // Change to 150 for faster, 500 for slower
 }
 ```
 
 ## 📱 Mobile Customization
 
-### Adjust Mobile Breakpoints
+### Adjust Mobile Card Width
 
-**File**: `css/variables.css` (lines 161-166)
-
-```css
---breakpoint-sm: 640px;   /* Small devices */
---breakpoint-md: 768px;   /* Tablets */
---breakpoint-lg: 1024px;  /* Desktop */
-```
-
-### Modify Mobile Spacing
-
-**File**: `css/layout/windows7.css` (media query section)
+**File**: `css/components/section.css` (media query section)
 
 ```css
 @media (max-width: 768px) {
-    .desktop__content {
-        padding: var(--space-sm);  /* Less padding on mobile */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Always single column on mobile */
+    }
+}
+```
+
+### Mobile Marquee Speed
+
+**File**: `css/components/marquee.css` (media query)
+
+```css
+@media (max-width: 768px) {
+    .marquee__content {
+        animation-duration: 25s; /* Faster on mobile */
     }
 }
 ```
@@ -337,19 +414,27 @@ timeFormat: '12h',  // or '24h'
 
 **Colors not changing?**
 - Clear browser cache (Ctrl+Shift+R)
-- Check if you're editing the right variable name
+- Check if you're editing the right CSS variable
 
-**Grid not working?**
-- Verify `data-grid-columns` attribute is set
-- Check for typos in class names
+**Button circles not animating?**
+- Ensure all 4 `<span class="btn__circle"></span>` are inside button
+- Check transitions aren't disabled
 
-**JavaScript not working?**
-- Open browser console (F12) for error messages
-- Ensure all script files are properly linked in HTML
+**Cards not floating?**
+- Verify animation isn't commented out
+- Check `prefers-reduced-motion` isn't enabled in OS
+
+**Marquee not scrolling?**
+- Check content is duplicated 3-4 times
+- Verify animation isn't paused
+
+**Modal not opening?**
+- Ensure `data-project` on card matches `data-modal` on overlay
+- Check JavaScript is loading (F12 console)
 
 **Images not showing?**
-- Check file paths are correct
-- Verify images are in `assets/images/` folder
+- Verify file paths are correct
+- Check images are in `assets/images/` folder
 
 ---
 

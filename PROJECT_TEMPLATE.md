@@ -1,172 +1,280 @@
-# 🎮 Professional Project Window Template
+# 🎮 Project Template - Floating Cards + Modal Windows
 
-This guide shows you how to add new professional game projects to your portfolio. Each project gets its own dedicated window with trailer video, contributions, and brand logos.
+This guide shows you how to add new game projects to your portfolio. Each project needs TWO parts: a floating card and a detailed modal window.
 
 ## 📋 Quick Start
 
-1. **Copy the template** below
-2. **Paste** it in `index.html` after line 165 (in the Professional Projects section)
-3. **Replace** all PLACEHOLDER text with your actual content
-4. **Add** your trailer video and brand logos
-5. **Save** and refresh your browser!
+1. **Copy Part 1** (Project Card) - Add to Projects Section
+2. **Copy Part 2** (Modal Window) - Add after Projects Section
+3. **Replace** PLACEHOLDER text with your content
+4. **Add** media (images, videos, logos)
+5. **Save** and refresh!
 
 ---
 
-## 🎯 Complete Project Template
+## 🎯 Part 1: Project Card (Grid Display)
+
+### Where to Add
+**File**: `index.html`
+**Location**: Inside `<div class="projects-grid">` (around line 213)
+**Position**: After existing project cards
+
+### Complete Card Template
 
 ```html
-<!-- Professional Project: YOUR GAME NAME -->
-<section class="window window--project" data-window="yourgame">
-    <div class="window__titlebar">
-        <span class="window__title">Your Game Name.exe</span>
-        <div class="window__controls">
-            <button class="window__control window__control--minimize">_</button>
-            <button class="window__control window__control--maximize">□</button>
-            <button class="window__control window__control--close">×</button>
+<!-- YOUR GAME NAME Project Card -->
+<article class="project-card" data-project="yourgameid">
+    <!-- macOS Titlebar with colored circles -->
+    <div class="project-card__titlebar">
+        <div class="macos-dots">
+            <span class="macos-dot macos-dot--red"></span>
+            <span class="macos-dot macos-dot--yellow"></span>
+            <span class="macos-dot macos-dot--green"></span>
         </div>
     </div>
-    <div class="window__content">
 
-        <!-- Project Header -->
-        <div class="project-header">
-            <h1 class="project-header__title">Your Game Name</h1>
-            <div class="project-header__platforms">
-                <span class="platform-badge">PC</span>
-                <span class="platform-badge">PlayStation 5</span>
-                <span class="platform-badge">Xbox Series X|S</span>
-                <span class="platform-badge">Nintendo Switch</span>
-                <!-- Add/remove platforms as needed -->
+    <!-- Game Image/Thumbnail -->
+    <div class="project-card__image">
+        <!-- OPTION 1: Placeholder (while developing) -->
+        <div class="media-placeholder media-placeholder--image">YOUR GAME NAME</div>
+
+        <!-- OPTION 2: Actual Image (when ready) -->
+        <!-- <img src="assets/images/your-game.jpg" alt="Your Game Name"> -->
+    </div>
+
+    <!-- Card Content -->
+    <div class="project-card__content">
+        <h3 class="project-card__title">Your Game Name</h3>
+
+        <!-- Platform Badges -->
+        <div class="project-card__platforms">
+            <span class="platform-badge platform-badge--small">PC</span>
+            <span class="platform-badge platform-badge--small">PlayStation 5</span>
+            <!-- Add/remove platforms as needed -->
+        </div>
+
+        <!-- Brief Description (2-3 sentences) -->
+        <p class="project-card__description">
+            Brief, engaging description of your game. Mention genre, your role, and key features.
+        </p>
+
+        <!-- Technology Tags -->
+        <div class="project-card__tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Multiplayer</span>
+            <!-- Add relevant tags -->
+        </div>
+
+        <!-- View Details Button (with 4 circles for animation) -->
+        <button class="btn btn--primary btn--sm project-card__btn" data-open-window="yourgameid">
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            View Details
+        </button>
+    </div>
+</article>
+```
+
+---
+
+## 🪟 Part 2: Modal Window (Detailed View)
+
+### Where to Add
+**File**: `index.html`
+**Location**: After the Projects Section (around line 347)
+**Position**: After existing modal overlays
+
+### Complete Modal Template
+
+```html
+<!-- YOUR GAME NAME Modal Window -->
+<div class="modal-overlay" data-modal="yourgameid">
+    <section class="window window--project window--modal" data-window="yourgameid">
+
+        <!-- Window Titlebar -->
+        <div class="window__titlebar">
+            <span class="window__title">Your Game Name.exe</span>
+            <div class="window__controls">
+                <button class="window__control window__control--close" data-close-modal="yourgameid">×</button>
             </div>
         </div>
 
-        <!-- Trailer Video -->
-        <div class="project-video">
-            <div class="project-video__container">
+        <!-- Window Content -->
+        <div class="window__content">
 
-                <!-- OPTION 1: YouTube Video -->
-                <iframe
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                    allowfullscreen>
-                </iframe>
-
-                <!-- OPTION 2: Vimeo Video -->
-                <!-- <iframe
-                    src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                    allowfullscreen>
-                </iframe> -->
-
-                <!-- OPTION 3: Self-hosted Video -->
-                <!-- <video controls>
-                    <source src="assets/videos/your-game-trailer.mp4" type="video/mp4">
-                </video> -->
-
-                <!-- OPTION 4: Placeholder (while you get the video) -->
-                <!-- <div class="project-video__placeholder">
-                    🎬 GAME TRAILER VIDEO
-                </div> -->
-
-            </div>
-        </div>
-
-        <!-- Project Info Grid -->
-        <div class="project-info">
-
-            <!-- Responsibilities (LEFT COLUMN) -->
-            <div class="project-responsibilities">
-                <h2 class="project-responsibilities__title">My Contributions</h2>
-
-                <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
-                <ul class="project-responsibilities__list">
-                    <li>Implemented core combat mechanics and player controls</li>
-                    <li>Developed AI behavior systems for NPCs</li>
-                    <li>Created level progression and checkpoint systems</li>
-                </ul>
-
-                <h3 class="project-responsibilities__subtitle">UI Development</h3>
-                <ul class="project-responsibilities__list">
-                    <li>Designed and implemented main menu system</li>
-                    <li>Created HUD and in-game interface elements</li>
-                </ul>
-
-                <h3 class="project-responsibilities__subtitle">Systems Design</h3>
-                <ul class="project-responsibilities__list">
-                    <li>Architected save/load system</li>
-                    <li>Implemented achievement and progression tracking</li>
-                </ul>
-
-                <!-- ADD MORE SECTIONS AS NEEDED -->
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-header__title">Your Game Name</h1>
+                <div class="project-header__platforms">
+                    <span class="platform-badge">PC</span>
+                    <span class="platform-badge">PlayStation 4</span>
+                    <span class="platform-badge">PlayStation 5</span>
+                    <span class="platform-badge">Xbox One</span>
+                    <span class="platform-badge">Xbox Series X|S</span>
+                    <span class="platform-badge">Nintendo Switch</span>
+                    <!-- Add/remove platforms -->
+                </div>
             </div>
 
-            <!-- Details Sidebar (RIGHT COLUMN) -->
-            <div class="project-details">
+            <!-- Trailer Video -->
+            <div class="project-video">
+                <div class="project-video__container">
 
-                <!-- Role -->
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Role</h3>
-                    <div class="project-detail-box__content">
-                        <p>Game Designer / Gameplay Programmer</p>
-                    </div>
+                    <!-- OPTION 1: YouTube Video (RECOMMENDED) -->
+                    <iframe
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                        allowfullscreen>
+                    </iframe>
+
+                    <!-- OPTION 2: Vimeo Video -->
+                    <!-- <iframe
+                        src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+                        allowfullscreen>
+                    </iframe> -->
+
+                    <!-- OPTION 3: Self-hosted Video -->
+                    <!-- <video controls>
+                        <source src="assets/videos/your-trailer.mp4" type="video/mp4">
+                    </video> -->
+
+                    <!-- OPTION 4: Placeholder (while getting video) -->
+                    <!-- <div class="project-video__placeholder">
+                        🎬 GAME TRAILER VIDEO
+                    </div> -->
+
+                </div>
+            </div>
+
+            <!-- Project Info Grid (2 columns) -->
+            <div class="project-info">
+
+                <!-- LEFT COLUMN: Your Contributions -->
+                <div class="project-responsibilities">
+                    <h2 class="project-responsibilities__title">My Contributions</h2>
+
+                    <!-- Category 1: Gameplay Programming -->
+                    <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
+                    <ul class="project-responsibilities__list">
+                        <li>Implemented core combat mechanics and player controls</li>
+                        <li>Developed enemy AI behavior systems</li>
+                        <li>Created progression and leveling systems</li>
+                        <li>Built checkpoint and save/load functionality</li>
+                    </ul>
+
+                    <!-- Category 2: UI Development -->
+                    <h3 class="project-responsibilities__subtitle">UI Development</h3>
+                    <ul class="project-responsibilities__list">
+                        <li>Designed and coded main menu system</li>
+                        <li>Created in-game HUD and health/stamina displays</li>
+                        <li>Implemented inventory and equipment UI</li>
+                    </ul>
+
+                    <!-- Category 3: Systems Design (ADD MORE AS NEEDED) -->
+                    <h3 class="project-responsibilities__subtitle">Systems Design</h3>
+                    <ul class="project-responsibilities__list">
+                        <li>Architected upgrade and skill tree system</li>
+                        <li>Balanced gameplay difficulty and pacing</li>
+                    </ul>
+
+                    <!-- Add more categories as needed -->
                 </div>
 
-                <!-- Technologies -->
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Technologies</h3>
-                    <div class="project-detail-box__content">
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">Photon</span>
-                            <span class="tech-tag">PlayStation SDK</span>
-                            <!-- Add/remove tech tags as needed -->
+                <!-- RIGHT COLUMN: Project Details Sidebar -->
+                <div class="project-details">
+
+                    <!-- Role Box -->
+                    <div class="project-detail-box">
+                        <h3 class="project-detail-box__title">Role</h3>
+                        <div class="project-detail-box__content">
+                            <p>Game Designer / Gameplay Programmer</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Timeline -->
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Timeline</h3>
-                    <div class="project-detail-box__content">
-                        <p>2023 - 2024 (12 months)</p>
+                    <!-- Technologies Box -->
+                    <div class="project-detail-box">
+                        <h3 class="project-detail-box__title">Technologies</h3>
+                        <div class="project-detail-box__content">
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Photon</span>
+                                <span class="tech-tag">Addressables</span>
+                                <!-- Add technologies used -->
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- OPTIONAL: Add more detail boxes -->
-                <!-- <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Team Size</h3>
-                    <div class="project-detail-box__content">
-                        <p>15 developers</p>
+                    <!-- Timeline Box -->
+                    <div class="project-detail-box">
+                        <h3 class="project-detail-box__title">Timeline</h3>
+                        <div class="project-detail-box__content">
+                            <p>2023 - 2024 (12 months)</p>
+                        </div>
                     </div>
-                </div> -->
 
-            </div>
-        </div>
+                    <!-- OPTIONAL: Team Size Box -->
+                    <!-- <div class="project-detail-box">
+                        <h3 class="project-detail-box__title">Team Size</h3>
+                        <div class="project-detail-box__content">
+                            <p>15 developers</p>
+                        </div>
+                    </div> -->
 
-        <!-- Brand Logos -->
-        <div class="project-brands">
-            <h2 class="project-brands__title">Partners & Publishers</h2>
-            <div class="project-brands__grid">
-
-                <!-- Brand 1 -->
-                <div class="brand-logo">
-                    <img src="assets/images/brands/brand1.png" alt="Brand Name">
-                    <!-- While you don't have the logo yet:
-                    <div class="brand-logo__placeholder">BRAND LOGO</div>
-                    -->
                 </div>
-
-                <!-- Brand 2 -->
-                <div class="brand-logo">
-                    <img src="assets/images/brands/brand2.png" alt="Publisher Name">
-                </div>
-
-                <!-- Add more brands as needed -->
-
             </div>
-        </div>
 
-    </div>
-</section>
+            <!-- Brand Logos -->
+            <div class="project-brands">
+                <h2 class="project-brands__title">Partners & Publishers</h2>
+                <div class="project-brands__grid">
+
+                    <!-- Brand/Publisher Logo 1 -->
+                    <div class="brand-logo">
+                        <!-- OPTION 1: Actual logo image -->
+                        <img src="assets/images/brands/company-logo.png" alt="Company Name">
+
+                        <!-- OPTION 2: Placeholder while getting logo -->
+                        <!-- <div class="brand-logo__placeholder">COMPANY LOGO</div> -->
+                    </div>
+
+                    <!-- Brand/Publisher Logo 2 -->
+                    <div class="brand-logo">
+                        <img src="assets/images/brands/publisher-logo.png" alt="Publisher Name">
+                    </div>
+
+                    <!-- Add more logos as needed -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
 ```
+
+---
+
+## ⚠️ IMPORTANT: Matching IDs
+
+The `data-project` and `data-modal` attributes **MUST match** for the modal to open correctly:
+
+```html
+<!-- Card -->
+<article class="project-card" data-project="yourgameid">
+    <button data-open-window="yourgameid">...</button>
+</article>
+
+<!-- Modal -->
+<div class="modal-overlay" data-modal="yourgameid">
+    <section data-window="yourgameid">
+        <button data-close-modal="yourgameid">×</button>
+    </section>
+</div>
+```
+
+All three must use the **same unique ID** (e.g., `yourgameid`).
 
 ---
 
@@ -174,315 +282,222 @@ This guide shows you how to add new professional game projects to your portfolio
 
 ### Platform Badges
 
-Common platform badges you can use:
-
+**Small badges** (for card):
 ```html
-<span class="platform-badge">PC</span>
-<span class="platform-badge">Steam</span>
-<span class="platform-badge">PlayStation 4</span>
-<span class="platform-badge">PlayStation 5</span>
-<span class="platform-badge">Xbox One</span>
-<span class="platform-badge">Xbox Series X|S</span>
-<span class="platform-badge">Nintendo Switch</span>
-<span class="platform-badge">iOS</span>
-<span class="platform-badge">Android</span>
-<span class="platform-badge">Web</span>
-<span class="platform-badge">VR</span>
+<span class="platform-badge platform-badge--small">PC</span>
 ```
+
+**Regular badges** (for modal):
+```html
+<span class="platform-badge">PlayStation 5</span>
+```
+
+Common platforms:
+- PC / Steam
+- PlayStation 4 / PlayStation 5
+- Xbox One / Xbox Series X|S
+- Nintendo Switch
+- iOS / Android
+- Mobile / Web / VR
 
 ### Technology Tags
 
-Common tech tags:
-
 ```html
-<span class="tech-tag">Unity</span>
-<span class="tech-tag">Unreal Engine</span>
-<span class="tech-tag">C#</span>
-<span class="tech-tag">C++</span>
-<span class="tech-tag">Python</span>
-<span class="tech-tag">Photon</span>
-<span class="tech-tag">Mirror</span>
-<span class="tech-tag">PlayFab</span>
-<span class="tech-tag">AWS</span>
-<span class="tech-tag">Addressables</span>
-<span class="tech-tag">DOTS</span>
+<!-- Card (2-3 tags) -->
+<div class="project-card__tags">
+    <span class="tag">Unity</span>
+    <span class="tag">C#</span>
+</div>
+
+<!-- Modal (all technologies) -->
+<div class="project-tech-tags">
+    <span class="tech-tag">Unity</span>
+    <span class="tech-tag">C#</span>
+    <span class="tech-tag">Photon</span>
+    <span class="tech-tag">Addressables</span>
+</div>
 ```
 
-### Responsibility Categories
+Common tech tags:
+- Unity / Unreal Engine / Godot
+- C# / C++ / Python
+- Photon / Mirror / Netcode
+- PlayFab / AWS / Firebase
+- Addressables / DOTS / ECS
 
-Common sections:
+### Contribution Categories
 
+Common responsibility sections:
 - **Gameplay Programming**
-- **UI Development** / **UI Programming**
-- **Multiplayer Systems** / **Networking**
+- **UI Development / UI Programming**
+- **Multiplayer Systems / Networking**
 - **Systems Design**
-- **Optimization** / **Performance**
+- **Optimization / Performance**
 - **Tools Development**
 - **Audio Integration**
 - **Level Design**
-- **Game Design**
 - **Technical Art**
 
 ---
 
-## 🎬 Adding Videos
+## 🎬 Adding Media
 
 ### YouTube Video
 
 1. Go to your YouTube video
 2. Click **Share** → **Embed**
 3. Copy the video ID (the part after `embed/`)
-4. Use:
+4. Use in modal:
 
 ```html
 <iframe
-    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
     allowfullscreen>
 </iframe>
 ```
 
-### Vimeo Video
+### Project Card Image
 
-1. Go to your Vimeo video
-2. Click the **Share** button
-3. Copy the video ID
-4. Use:
+1. Save image to `assets/images/` (recommended: 600x400px, JPG/PNG/WebP)
+2. Replace placeholder in card:
 
 ```html
-<iframe
-    src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-    allowfullscreen>
-</iframe>
-```
-
-### Self-Hosted Video
-
-1. Place your video in `assets/videos/`
-2. Use:
-
-```html
-<video controls>
-    <source src="assets/videos/your-game.mp4" type="video/mp4">
-</video>
-```
-
----
-
-## 🖼️ Adding Brand Logos
-
-### Step 1: Add Logo Files
-
-1. Save logo images in `assets/images/brands/`
-2. Use PNG or SVG format
-3. Recommended size: 300x100px or similar aspect ratio
-
-### Step 2: Add to HTML
-
-```html
-<div class="brand-logo">
-    <img src="assets/images/brands/company-name.png" alt="Company Name">
+<div class="project-card__image">
+    <img src="assets/images/your-game-screenshot.jpg" alt="Your Game Name">
 </div>
 ```
 
-### Placeholder (temporary)
+### Brand Logos
+
+1. Save logos to `assets/images/brands/` (recommended: PNG with transparency, 300x100px)
+2. Add to modal:
 
 ```html
 <div class="brand-logo">
-    <div class="brand-logo__placeholder">COMPANY LOGO</div>
+    <img src="assets/images/brands/company-logo.png" alt="Company Name">
 </div>
 ```
 
 ---
 
-## 🎯 Example: Complete Real Project
+## ✅ Project Addition Checklist
 
-Here's a filled-in example:
-
-```html
-<!-- Professional Project: Cosmic Racer -->
-<section class="window window--project" data-window="cosmicracer">
-    <div class="window__titlebar">
-        <span class="window__title">Cosmic Racer.exe</span>
-        <div class="window__controls">
-            <button class="window__control window__control--minimize">_</button>
-            <button class="window__control window__control--maximize">□</button>
-            <button class="window__control window__control--close">×</button>
-        </div>
-    </div>
-    <div class="window__content">
-
-        <div class="project-header">
-            <h1 class="project-header__title">Cosmic Racer</h1>
-            <div class="project-header__platforms">
-                <span class="platform-badge">PC</span>
-                <span class="platform-badge">PlayStation 5</span>
-                <span class="platform-badge">Xbox Series X|S</span>
-            </div>
-        </div>
-
-        <div class="project-video">
-            <div class="project-video__container">
-                <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <div class="project-info">
-            <div class="project-responsibilities">
-                <h2 class="project-responsibilities__title">My Contributions</h2>
-
-                <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
-                <ul class="project-responsibilities__list">
-                    <li>Implemented vehicle physics and handling systems</li>
-                    <li>Created track hazards and power-up mechanics</li>
-                    <li>Developed split-screen multiplayer mode</li>
-                </ul>
-
-                <h3 class="project-responsibilities__subtitle">UI Development</h3>
-                <ul class="project-responsibilities__list">
-                    <li>Designed and coded racing HUD with speedometer and lap timer</li>
-                    <li>Created lobby and matchmaking interface</li>
-                </ul>
-            </div>
-
-            <div class="project-details">
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Role</h3>
-                    <div class="project-detail-box__content">
-                        <p>Senior Gameplay Programmer</p>
-                    </div>
-                </div>
-
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Technologies</h3>
-                    <div class="project-detail-box__content">
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">Unreal Engine 5</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Blueprints</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-detail-box">
-                    <h3 class="project-detail-box__title">Timeline</h3>
-                    <div class="project-detail-box__content">
-                        <p>2023 - 2024 (18 months)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-brands">
-            <h2 class="project-brands__title">Partners & Publishers</h2>
-            <div class="project-brands__grid">
-                <div class="brand-logo">
-                    <img src="assets/images/brands/studio.png" alt="Studio Name">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/publisher.png" alt="Publisher">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-```
-
----
-
-## 📍 Where to Add New Projects
-
-In `index.html`, find this section (around line 166):
-
-```html
-<!-- ========================================
-     PROFESSIONAL PROJECTS - Individual Windows
-     ======================================== -->
-```
-
-Add your new project windows **here**, before the Skills Window section.
-
----
-
-## 🎨 Styling Customization
-
-All styles are in `css/components/project-window.css`. You can customize:
-
-### Colors
-
-```css
-.project-responsibilities__title {
-    color: var(--color-primary);  /* Change to any color */
-    border-bottom: 2px solid var(--color-primary);
-}
-```
-
-### Layout
-
-```css
-.project-info {
-    grid-template-columns: 2fr 1fr;  /* Adjust column ratio */
-}
-```
-
-### Spacing
-
-```css
-.project-header {
-    margin-bottom: var(--space-3xl);  /* More/less space */
-}
-```
-
----
-
-## ✅ Checklist for Adding a Project
-
-- [ ] Copy the template
-- [ ] Update `data-window="uniqueid"` (must be unique!)
-- [ ] Update window title (e.g., "Your Game.exe")
-- [ ] Add game name in header
+### Card (Part 1)
+- [ ] Copy card template to `<div class="projects-grid">`
+- [ ] Set unique `data-project="yourID"`
+- [ ] Add game title
 - [ ] Add platform badges
-- [ ] Add trailer video (YouTube/Vimeo/file)
-- [ ] List your contributions (gameplay, UI, etc.)
-- [ ] Add your role
+- [ ] Write brief description (2-3 sentences)
 - [ ] Add technology tags
-- [ ] Add timeline/duration
-- [ ] Add brand logos
-- [ ] Test in browser!
+- [ ] Update button `data-open-window="yourID"`
+- [ ] Add project image or keep placeholder
+
+### Modal (Part 2)
+- [ ] Copy modal template after Projects Section
+- [ ] Match `data-modal="yourID"` to card ID
+- [ ] Update window title
+- [ ] Match close button `data-close-modal="yourID"`
+- [ ] Add full game title
+- [ ] Add platform badges
+- [ ] Embed trailer video
+- [ ] List all contributions by category
+- [ ] Add role
+- [ ] Add all technology tags
+- [ ] Add timeline
+- [ ] Add brand/publisher logos
+
+### Testing
+- [ ] Save `index.html`
+- [ ] Refresh browser (Ctrl+Shift+R)
+- [ ] Card appears in Projects grid
+- [ ] Card has floating animation
+- [ ] macOS circles are visible
+- [ ] Eye icon appears on hover
+- [ ] Button animation works (4 colors)
+- [ ] Clicking card opens modal
+- [ ] Modal content displays correctly
+- [ ] Close button works
+- [ ] Test on mobile view
+
+---
+
+## 🎯 Real Example
+
+Here's the Hot Wheels project from the portfolio:
+
+### Card (Part 1)
+```html
+<article class="project-card" data-project="hotwheels">
+    <div class="project-card__titlebar">
+        <div class="macos-dots">
+            <span class="macos-dot macos-dot--red"></span>
+            <span class="macos-dot macos-dot--yellow"></span>
+            <span class="macos-dot macos-dot--green"></span>
+        </div>
+    </div>
+    <div class="project-card__image">
+        <div class="media-placeholder media-placeholder--image">HOT WHEELS</div>
+    </div>
+    <div class="project-card__content">
+        <h3 class="project-card__title">Hot Wheels Xtreme Overdrive</h3>
+        <div class="project-card__platforms">
+            <span class="platform-badge platform-badge--small">Android Automotive</span>
+        </div>
+        <p class="project-card__description">High-speed racing game with multiplayer support and vehicle customization</p>
+        <div class="project-card__tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Photon</span>
+        </div>
+        <button class="btn btn--primary btn--sm project-card__btn" data-open-window="hotwheels">
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            <span class="btn__circle"></span>
+            View Details
+        </button>
+    </div>
+</article>
+```
+
+### Modal (Part 2) - See existing code in `index.html` starting at line 349
 
 ---
 
 ## 🚀 Pro Tips
 
-1. **Unique IDs**: Make sure `data-window="yourid"` is unique for each project
-2. **Video Performance**: YouTube embeds are faster than self-hosted videos
-3. **Logo Optimization**: Compress logo images to keep page fast
-4. **Consistent Tone**: Keep responsibility descriptions in similar format
-5. **Order Matters**: Put your best/most recent projects first
+1. **Keep card descriptions brief** - Save details for the modal
+2. **Use high-quality images** - First impressions matter
+3. **Compress media** - Keep page loading fast
+4. **YouTube for videos** - Faster than self-hosted
+5. **Update regularly** - Keep portfolio fresh with latest work
+6. **Test responsively** - Check on mobile and tablet
 
 ---
 
 ## 🆘 Troubleshooting
 
-**Project window not showing?**
-- Check that you closed all HTML tags properly
-- Verify `data-window` ID is unique
+**Card not appearing?**
+- Check you added it inside `<div class="projects-grid">`
+- Verify HTML tags are closed properly
 
-**Video not loading?**
-- Check video URL is correct
-- Make sure it's a public video (not private)
+**Modal not opening?**
+- Ensure `data-project`, `data-open-window`, and `data-modal` all match
+- Check browser console (F12) for JavaScript errors
 
-**Taskbar button not appearing?**
-- JavaScript auto-generates buttons
-- Refresh the page (Ctrl+Shift+R)
+**Button animation not working?**
+- Verify all 4 `<span class="btn__circle"></span>` are present
+- Check button has class `btn btn--primary`
 
-**Styling looks wrong?**
-- Clear browser cache
-- Check `project-window.css` is linked in `index.html`
+**Images broken?**
+- Verify image file paths are correct
+- Ensure images are in `assets/images/` folder
+- Check image file names match exactly (case-sensitive)
+
+**macOS circles missing?**
+- Ensure `.macos-dots` div is in card titlebar
+- Check all 3 dot spans are present
 
 ---
 
-Need help? Check the examples in `index.html` (Hot Wheels, PJ Masks, Monster High)!
+Need more examples? Check the existing 3 projects (Hot Wheels, PJ Masks, Monster High) in `index.html`!
