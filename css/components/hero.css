@@ -10,7 +10,14 @@
     position: relative;
     overflow: hidden;
     padding: 2rem;
-    background: transparent;
+    /* Dark base colour */
+    background-color: var(--color-base-dark);
+    background-position: center top;  /* horizontally centered */
+
+    /* White line / scallop pattern overlay */
+    background-image: url('../../whiteLine.png');
+    background-size: repeat;        /* but be aware of cropping */
+    background-size: 15% 100%;   /* or a value so the tile fits evenly */
 }
 
 .hero::before {

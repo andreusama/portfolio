@@ -84,7 +84,14 @@
 .section--experience {
     position: relative;
     padding-top: 7rem;
-    background: var(--color-accent-orange);
+    background: var(--color-base-dark);
+    background-color: var(--color-base-dark);
+    background-position: center top;  /* horizontally centered */
+
+    /* White line / scallop pattern overlay */
+    background-image: url('../../whiteLine.png');
+    background-size: repeat;        /* but be aware of cropping */
+    background-size: 15% 100%;   /* or a value so the tile fits evenly */
 }
 
 /* Experience section separator removed - using marquee-style transitions */
@@ -98,7 +105,7 @@
 
 .section--experience .section__title,
 .section--experience .section__subtitle {
-    color: var(--color-base-dark);
+    color: var(--color-base-light);
 }
 
 .timeline::before {
@@ -108,7 +115,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, transparent, var(--color-base-dark), transparent);
+    background: linear-gradient(to bottom, transparent, var(--color-base-light), transparent);
 }
 
 .timeline__item {
@@ -124,7 +131,7 @@
     height: 12px;
     border-radius: 50%;
     background: var(--color-base-light);
-    border: 3px solid var(--color-base-dark);
+    border: 3px solid var(--color-base-light);
     box-shadow: 0 0 0 4px rgba(47, 22, 100, 0.2);
 }
 
@@ -170,7 +177,7 @@
 .section--projects {
     position: relative;
     padding-top: 7rem;
-    background: var(--color-base-dark);
+    background: var(--color-base-light);
     overflow: hidden;
     --pattern-x: 0px;
     --pattern-y: 0px;
@@ -186,7 +193,8 @@
     bottom: 0;
     background-image: url('../../pattern_white.png');
     background-repeat: repeat;
-    background-size: 600px 600px;
+    opacity: 50%;
+    background-size: 1200px 1200px;
     background-position: var(--pattern-x) var(--pattern-y);
     mix-blend-mode: multiply;
     pointer-events: none;
@@ -236,7 +244,6 @@
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
     box-shadow: 10px 10px 0 var(--color-base-dark);
 }
 
@@ -438,7 +445,7 @@
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 }
 

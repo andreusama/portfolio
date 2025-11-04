@@ -108,8 +108,8 @@
 
 .cloud-circle {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     background: var(--color-base-light);
     border-radius: 50%;
     animation: cloudPulse 3s ease-in-out infinite;
