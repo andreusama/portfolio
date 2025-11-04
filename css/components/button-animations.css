@@ -60,34 +60,30 @@
 
 /* On hover: expand circles with staggered delays (0.15s spacing) */
 .btn:hover .btn__circle:nth-child(1) {
-    width: max(800px, 50rem);
+    width: max(1600px, 100rem);
     transition-delay: 0s; /* Expands first - finishes at 0.8s */
 }
 
 .btn:hover .btn__circle:nth-child(2) {
-    width: max(800px, 50rem);
+    width: max(1600px, 100rem);
     transition-delay: 0.15s; /* Expands second - finishes at 0.95s */
 }
 
 .btn:hover .btn__circle:nth-child(3) {
-    width: max(800px, 50rem);
+    width: max(1600px, 100rem);
     transition-delay: 0.3s; /* Expands third - finishes at 1.1s */
 }
 
 .btn:hover .btn__circle:nth-child(4) {
-    width: max(800px, 50rem);
+    width: max(1600px, 100rem);
     transition-delay: 0.45s; /* Expands fourth - finishes at 1.25s (total duration) */
-}
-
-.btn:hover {
-    color: var(--color-base-light) !important;
 }
 
 /* Primary Button */
 .btn--primary {
     background: var(--color-base-dark);
     color: var(--color-base-light) !important;
-    border: 2px solid var(--color-base-dark);
+    border: none;
     box-shadow: 0 4px 15px rgba(47, 22, 100, 0.2);
 }
 
@@ -95,20 +91,20 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(47, 22, 100, 0.3);
     color: var(--color-base-dark) !important;
-    border-color: var(--color-accent-orange);
 }
 
 /* Secondary Button */
 .btn--secondary {
     background: transparent;
     color: var(--color-base-dark) !important;
-    border: 2px solid var(--color-base-dark);
+    border: none;
+    box-shadow: 0 2px 8px rgba(47, 22, 100, 0.1);
 }
 
 .btn--secondary:hover {
     color: var(--color-base-light) !important;
-    border-color: var(--color-accent-pink);
     transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(47, 22, 100, 0.2);
 }
 
 /* Small Button Variant */

@@ -91,32 +91,7 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-/* Button Styles - XP Style */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-sm) var(--space-lg);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal);
-    border-radius: 3px;
-    border: 1px solid #003c74;
-    transition: all var(--transition-base);
-    cursor: pointer;
-    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1),
-                inset 1px 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.btn--primary {
-    background: linear-gradient(180deg, #eff5fb 0%, #d6e8f7 48%, #c2dcf2 50%, #b8d4ee 100%);
-    color: var(--color-text-primary);
-    border-color: #003c74;
-}
-
-.btn--primary:hover {
-    background: linear-gradient(180deg, #fef9f4 0%, #fde7d0 48%, #fdd5a8 50%, #fcc784 100%);
-    border-color: #d68c00;
-}
+/* Button Styles - Removed legacy XP styles, now handled by button-animations.css */
 
 .btn--primary:active {
     background: linear-gradient(180deg, #e0ddd9 0%, #cbc7c4 48%, #b8b5b2 50%, #a8a5a2 100%);
