@@ -946,18 +946,55 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section section--contact">
+        <!-- Final CTA Section with Roulette -->
+        <section id="final-cta" class="section section--final-cta">
             <div class="section__container">
-                <h2 class="section__title">Get In Touch</h2>
-                <p class="section__subtitle">I'm always interested in hearing about new opportunities, collaborations, and interesting game projects.</p>
+                <div class="final-cta__content">
+                    <div class="cloud-container cloud-container--final">
+                        <h2 class="final-cta__title">Get In Touch</h2>
 
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3 class="contact-info__title">Let's Connect</h3>
-                        <p class="contact-info__description">Feel free to reach out for collaborations, job opportunities, or just to chat about games!</p>
+                        <div class="final-cta__window-column">
+                            <div class="final-window">
+                                <div class="final-window__titlebar">
+                                    <div class="macos-dots">
+                                        <span class="macos-dot macos-dot--red"></span>
+                                        <span class="macos-dot macos-dot--yellow"></span>
+                                        <span class="macos-dot macos-dot--green"></span>
+                                    </div>
+                                </div>
+                                <div class="final-window__content">
+                                    <h3 class="final-window__text">Let's talk!</h3>
+                                    <button class="btn btn--primary btn--final" data-open-window="contact">
+                                        <span class="btn__circle"></span>
+                                        <span class="btn__circle"></span>
+                                        <span class="btn__circle"></span>
+                                        <span class="btn__circle"></span>
+                                        Get in touch
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="column.svg" alt="Decorative column" class="final-cta__column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="contact-links">
+        <!-- Contact Modal Window -->
+        <div class="modal-overlay" data-modal="contact">
+            <section class="window window--modal" data-window="contact">
+                <div class="window__titlebar">
+                    <span class="window__title">Contact.txt</span>
+                    <div class="window__controls">
+                        <button class="window__control window__control--close" data-close-modal="contact">×</button>
+                    </div>
+                </div>
+                <div class="window__content">
+                    <div class="contact-modal">
+                        <h2 class="contact-modal__title">Let's Connect</h2>
+                        <p class="contact-modal__description">Feel free to reach out for collaborations, job opportunities, or just to chat about games!</p>
+
+                        <div class="contact-modal__links">
                             <a href="mailto:your.email@example.com" class="contact-link">
                                 <span class="contact-link__icon">📧</span>
                                 <span class="contact-link__text">your.email@example.com</span>
@@ -975,17 +1012,17 @@
                                 <span class="contact-link__text">GitHub</span>
                             </a>
                         </div>
-                    </div>
 
-                    <div class="contact-availability">
-                        <h3 class="contact-availability__title">Availability</h3>
-                        <p><strong>Location:</strong> [Your Location]</p>
-                        <p><strong>Status:</strong> Open to remote work and relocation opportunities</p>
-                        <p><strong>Preferred Projects:</strong> Action games, kids entertainment, multiplayer experiences</p>
+                        <div class="contact-modal__availability">
+                            <h3>Availability</h3>
+                            <p><strong>Location:</strong> [Your Location]</p>
+                            <p><strong>Status:</strong> Open to remote work and relocation opportunities</p>
+                            <p><strong>Preferred Projects:</strong> Action games, kids entertainment, multiplayer experiences</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
     </main>
 
