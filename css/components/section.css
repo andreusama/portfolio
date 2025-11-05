@@ -214,6 +214,53 @@
     margin-top: 3rem;
 }
 
+/* Side Projects Section Background */
+.section.section--student-projects {
+    background-position: center top;  /* horizontally centered */
+    background-image: url('../../purpleLine.png');
+    background-size: repeat;        /* but be aware of cropping */
+    background-size: 15% 100%;   /* or a value so the tile fits evenly */
+}
+
+/* Student Projects Grid - 3 columns */
+.student-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1200px) {
+    .student-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .student-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Widescreen aspect ratio for student projects (16:9 - matches 1920/1080) */
+.student-projects-grid .project-card__video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+}
+
+/* Staggered vertical offset for visual interest */
+.student-projects-grid .project-card:nth-child(2),
+.student-projects-grid .project-card:nth-child(5) {
+    margin-top: 3rem;
+}
+
+/* Invisible spacer for layout (takes up grid space but not visible) */
+.project-card-spacer {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .project-card {
     background: var(--color-base-light);
     border-radius: 16px;
