@@ -109,6 +109,19 @@
     box-shadow: 0 6px 20px rgba(47, 22, 100, 0.3);
 }
 
+/* Purple Button Variant */
+.btn--purple {
+    background: #6942BB;
+    color: var(--color-base-light) !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(105, 66, 187, 0.2);
+}
+
+.btn--purple:hover {
+    box-shadow: 0 6px 20px rgba(105, 66, 187, 0.3);
+    color: var(--color-base-dark) !important;
+}
+
 /* Small Button Variant */
 .btn--sm {
     padding: 0.625rem 1.5rem;
