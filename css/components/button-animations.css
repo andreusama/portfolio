@@ -33,7 +33,7 @@
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    transition: width 0.8s ease;
+    transition: width 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Slow start, fast end (ease-in) */
     z-index: -1;
     pointer-events: none;
 }
@@ -41,19 +41,19 @@
 /* Circle 1 - Turquoise */
 .btn__circle:nth-child(1) {
     background: var(--color-accent-turquoise);
-    transition-delay: 0.45s; /* Shrinks first on unhover (reverse order) */
+    transition-delay: 0.3s; /* Shrinks first on unhover (reverse order) */
 }
 
 /* Circle 2 - Purple */
 .btn__circle:nth-child(2) {
     background: var(--color-accent-purple);
-    transition-delay: 0.3s; /* Shrinks second on unhover */
+    transition-delay: 0.2s; /* Shrinks second on unhover */
 }
 
 /* Circle 3 - Pink */
 .btn__circle:nth-child(3) {
     background: var(--color-accent-pink);
-    transition-delay: 0.15s; /* Shrinks third on unhover */
+    transition-delay: 0.1s; /* Shrinks third on unhover */
 }
 
 /* Circle 4 - Orange */
@@ -62,25 +62,26 @@
     transition-delay: 0s; /* Shrinks last on unhover (no delay) */
 }
 
-/* On hover: expand circles with staggered delays (0.15s spacing) */
+/* On hover: expand circles with staggered delays (0.1s spacing - closer together) */
+/* Circles expand to 300% of button width to ensure complete coverage with padding */
 .btn:hover .btn__circle:nth-child(1) {
-    width: max(1600px, 100rem);
+    width: 300%;
     transition-delay: 0s; /* Expands first - finishes at 0.8s */
 }
 
 .btn:hover .btn__circle:nth-child(2) {
-    width: max(1600px, 100rem);
-    transition-delay: 0.15s; /* Expands second - finishes at 0.95s */
+    width: 300%;
+    transition-delay: 0.1s; /* Expands second - finishes at 0.9s */
 }
 
 .btn:hover .btn__circle:nth-child(3) {
-    width: max(1600px, 100rem);
-    transition-delay: 0.3s; /* Expands third - finishes at 1.1s */
+    width: 300%;
+    transition-delay: 0.2s; /* Expands third - finishes at 1.0s */
 }
 
 .btn:hover .btn__circle:nth-child(4) {
-    width: max(1600px, 100rem);
-    transition-delay: 0.45s; /* Expands fourth - finishes at 1.25s (total duration) */
+    width: 300%;
+    transition-delay: 0.3s; /* Expands fourth - finishes at 1.1s (total duration) */
 }
 
 /* Primary Button */
@@ -127,6 +128,8 @@
     padding: 0.625rem 1.5rem;
     font-size: 0.9rem;
 }
+
+/* Circles automatically scale to button size using percentage-based width */
 
 /* Remove custom durations - all buttons use same timing for consistency */
 
