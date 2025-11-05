@@ -19,6 +19,10 @@
     transition: color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.btn:hover {
+    text-decoration: none;
+}
+
 /* Circle animation elements */
 .btn__circle {
     content: '';
@@ -88,23 +92,21 @@
 }
 
 .btn--primary:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(47, 22, 100, 0.3);
     color: var(--color-base-dark) !important;
 }
 
 /* Secondary Button */
 .btn--secondary {
-    background: transparent;
-    color: var(--color-base-dark) !important;
+    background: var(--color-base-dark);
+    color: var(--color-base-light) !important;
     border: none;
-    box-shadow: 0 2px 8px rgba(47, 22, 100, 0.1);
+    box-shadow: 0 4px 15px rgba(47, 22, 100, 0.2);
 }
 
 .btn--secondary:hover {
-    color: var(--color-base-light) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(47, 22, 100, 0.2);
+    color: var(--color-base-dark) !important;
+    box-shadow: 0 6px 20px rgba(47, 22, 100, 0.3);
 }
 
 /* Small Button Variant */
