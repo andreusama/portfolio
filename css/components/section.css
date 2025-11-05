@@ -646,39 +646,41 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 200vmax;
-    height: 200vmax;
+    width: 150vmax;
+    height: 150vmax;
+    border-radius: 50%;
     transform: translate(-50%, -50%);
     background:
         conic-gradient(
             from 0deg,
             var(--color-accent-turquoise) 0deg,
-            var(--color-accent-turquoise) 71deg,
-            var(--color-base-dark) 71deg,
+            var(--color-accent-turquoise) 70deg,
+            var(--color-base-dark) 70deg,
             var(--color-base-dark) 72deg,
             var(--color-accent-purple) 72deg,
-            var(--color-accent-purple) 143deg,
-            var(--color-base-dark) 143deg,
+            var(--color-accent-purple) 142deg,
+            var(--color-base-dark) 142deg,
             var(--color-base-dark) 144deg,
             var(--color-accent-pink) 144deg,
-            var(--color-accent-pink) 215deg,
-            var(--color-base-dark) 215deg,
+            var(--color-accent-pink) 214deg,
+            var(--color-base-dark) 214deg,
             var(--color-base-dark) 216deg,
             var(--color-accent-orange) 216deg,
-            var(--color-accent-orange) 287deg,
-            var(--color-base-dark) 287deg,
+            var(--color-accent-orange) 286deg,
+            var(--color-base-dark) 286deg,
             var(--color-base-dark) 288deg,
-            #1a0f3d 288deg,
-            #1a0f3d 359deg,
-            var(--color-base-dark) 359deg,
+            var(--color-accent-indigo) 288deg,
+            var(--color-accent-indigo) 358deg,
+            var(--color-base-dark) 358deg,
             var(--color-base-dark) 360deg
         );
     animation: rotateWheel 60s linear infinite;
     z-index: 0;
 }
 
-/* Note: All color sections are exactly 71 degrees each with 1-degree dark separators
-   Calculation: (360deg - 5 separators) / 5 colors = 355 / 5 = 71deg per color */
+/* Note: All color sections are exactly 70 degrees each with 2-degree dark separators
+   Calculation: (360deg - 6 separators) / 5 colors = 348 / 5 = ~70deg per color
+   Colors: Turquoise (0-70°), Purple (72-142°), Pink (144-214°), Orange (216-286°), Indigo (288-358°) */
 
 .section--contact .section__container {
     position: relative;
@@ -989,5 +991,271 @@
 
     .team-column__image {
         max-width: 150px;
+    }
+}
+
+/* ============================================
+   Final CTA Section with Roulette
+   ============================================ */
+
+.section--final-cta {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--color-base-dark);
+    padding: 0;
+    width: 100%;
+}
+
+/* 5-Color Rotating Roulette Background */
+.section--final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+        from 0deg,
+        var(--color-accent-turquoise) 0deg,
+        var(--color-accent-turquoise) 70deg,
+        var(--color-base-dark) 70deg,
+        var(--color-base-dark) 72deg,
+        var(--color-accent-purple) 72deg,
+        var(--color-accent-purple) 142deg,
+        var(--color-base-dark) 142deg,
+        var(--color-base-dark) 144deg,
+        var(--color-accent-pink) 144deg,
+        var(--color-accent-pink) 214deg,
+        var(--color-base-dark) 214deg,
+        var(--color-base-dark) 216deg,
+        var(--color-accent-orange) 216deg,
+        var(--color-accent-orange) 286deg,
+        var(--color-base-dark) 286deg,
+        var(--color-base-dark) 288deg,
+        var(--color-accent-indigo) 288deg,
+        var(--color-accent-indigo) 358deg,
+        var(--color-base-dark) 358deg,
+        var(--color-base-dark) 360deg
+    );
+    animation: rotateWheel 60s linear infinite;
+    z-index: 0;
+}
+
+.section--final-cta .section__container {
+    position: relative;
+    z-index: 2;
+    max-width: none;
+}
+
+.final-cta__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+}
+
+/* Cloud container - 70% wider */
+.cloud-container--final {
+    text-align: center;
+    max-width: 1530px;
+    padding: 4rem 3rem;
+}
+
+.final-cta__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-base-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.final-cta__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-base-dark);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.final-cta__subtitle em {
+    font-style: italic;
+    color: var(--color-accent-purple);
+}
+
+/* Window and Column Container */
+.final-cta__window-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Final Window - 30% bigger */
+.final-window {
+    background: var(--color-base-light);
+    border: 2px solid var(--color-base-dark);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.final-window:hover {
+    box-shadow: 10px 10px 0 var(--color-base-dark);
+}
+
+.final-window__titlebar {
+    padding: 0.75rem 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(47, 22, 100, 0.1);
+}
+
+.final-window__content {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.final-window__text {
+    font-size: 2rem;
+    color: var(--color-base-dark);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.btn--final {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Column beneath window */
+.final-cta__column {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1580px) {
+    .cloud-container--final {
+        padding: 2rem 1.5rem;
+    }
+
+    .final-cta__title {
+        font-size: 1.75rem;
+    }
+
+    .final-cta__subtitle {
+        font-size: 1rem;
+    }
+
+    .final-window__content {
+        padding: 2rem 1.5rem;
+    }
+
+    .final-window__text {
+        font-size: 1.5rem;
+    }
+
+    .final-cta__column {
+        max-width: 180px;
+    }
+}
+
+/* ============================================
+   Contact Modal Window
+   ============================================ */
+
+.contact-modal {
+    padding: 2rem;
+}
+
+.contact-modal__title {
+    font-size: 2rem;
+    color: var(--color-base-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-modal__description {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-modal__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--color-base-light);
+    border: 2px solid var(--color-base-dark);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-base-dark);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    box-shadow: 5px 5px 0 var(--color-base-dark);
+    transform: translateY(-2px);
+}
+
+.contact-link__icon {
+    font-size: 1.5rem;
+}
+
+.contact-link__text {
+    flex: 1;
+}
+
+.contact-modal__availability {
+    padding: 1.5rem;
+    background: rgba(47, 22, 100, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(47, 22, 100, 0.1);
+}
+
+.contact-modal__availability h3 {
+    font-size: 1.3rem;
+    color: var(--color-base-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-modal__availability p {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-modal {
+        padding: 1.5rem;
+    }
+
+    .contact-modal__title {
+        font-size: 1.5rem;
+    }
+
+    .contact-link {
+        padding: 0.875rem 1.25rem;
     }
 }
