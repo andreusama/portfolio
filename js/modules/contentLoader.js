@@ -167,7 +167,7 @@ class ContentLoader {
                     playsinline
                     preload="auto"
                     ${posterAttr}
-                    style="width: 100%; height: 100%; object-fit: cover;">
+                    style="width: 100%; height: auto; object-fit: contain; display: block;">
                     <source src="${project.mediaSrc}" type="video/mp4">
                 </video>`;
             } else {

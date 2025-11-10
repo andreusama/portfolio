@@ -377,8 +377,8 @@
           "Engine Dev",
           "Low-Level"
         ],
-        "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/kofi-engine-thumbnail.jpg",
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
         "mediaPlaceholder": "🎮 KO-FI ENGINE",
         "modal": {
           "title": "Ko-Fi Engine",
@@ -413,8 +413,8 @@
           "Mobile",
           "Casual"
         ],
-        "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/the-tower-thumbnail.jpg",
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
         "mediaPlaceholder": "🎮 THE TOWER",
         "modal": {
           "title": "The Tower",
@@ -449,8 +449,8 @@
           "Clone",
           "Arcade"
         ],
-        "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/pengo-thumbnail.jpg",
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
         "mediaPlaceholder": "🎮 PENGO",
         "modal": {
           "title": "Pengo",

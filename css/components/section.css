@@ -228,6 +228,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    grid-auto-rows: auto;
+    align-items: start;
 }
 
 @media (max-width: 1200px) {
@@ -242,11 +244,19 @@
     }
 }
 
-/* Widescreen aspect ratio for student projects (16:9 - matches 1920/1080) */
+/* Let side projects use their natural video aspect ratio */
 .student-projects-grid .project-card__video {
-    aspect-ratio: 16 / 9;
     width: 100%;
     height: auto;
+    min-height: 0;
+}
+
+/* Let video elements in side projects maintain their aspect ratio */
+.student-projects-grid .project-card__video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* Staggered vertical offset for visual interest */
@@ -309,7 +319,7 @@
 
 .project-card__video {
     width: 100%;
-    height: 400px;
+    min-height: 300px;
     overflow: hidden;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
