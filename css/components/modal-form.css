@@ -311,7 +311,7 @@
 .project-modal-video__container {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: var(--color-base-dark);
+    background: #000000;
     border-radius: 12px;
     overflow: hidden;
     display: flex;

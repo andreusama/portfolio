@@ -1,0 +1,18 @@
+{
+  "version": "casual-games",
+  "dataFile": "data/casual-games.json",
+  "availableVersions": {
+    "casual-games": {
+      "name": "Casual Games Portfolio",
+      "dataFile": "data/casual-games.json"
+    },
+    "cpp-programming": {
+      "name": "C++ Programming Portfolio",
+      "dataFile": "data/cpp-programming.json"
+    },
+    "freelance-tech": {
+      "name": "Freelance Tech Solutions",
+      "dataFile": "data/freelance-tech.json"
+    }
+  }
+}

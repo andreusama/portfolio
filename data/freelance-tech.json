@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Freelance Tech Solutions",
+    "description": "Full-stack developer and technical consultant providing custom software solutions"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Andrés Sànchez, Full-Stack Developer & Consultant",
+    "headline": "Solutions that deliver",
+    "description": "Welcome! Creating custom software solutions for businesses and individuals. Specialized in web applications, game development tools, and technical consulting across multiple technologies.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Get In Touch"
+  },
+  "marquees": {
+    "skills1": ["React", "Node.js", "TypeScript", "Python", "Unity"],
+    "skills2": ["Full-Stack Development", "Web Applications", "API Design", "Database Design"],
+    "platforms": ["Web", "Desktop", "Mobile", "Cloud (AWS/Azure)", "Cross-platform"],
+    "genres": ["Web Apps", "Game Tools", "Business Software", "Data Visualization"],
+    "types": ["Freelance Projects", "Consulting", "Custom Solutions", "Technical Consulting"],
+    "misc": ["Agile", "Project Management", "Client Communication", "Requirements Analysis", "Testing", "Deployment"]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Featured Projects",
+    "sectionSubtitle": "Client projects and custom solutions delivered",
+    "projects": [
+      {
+        "id": "web-app",
+        "title": "Custom Web Application",
+        "tags": ["React", "Node.js", "PostgreSQL"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/FeaturedProjects/web-app-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 WEB APP DEMO",
+        "modal": {
+          "title": "Custom Web Application",
+          "windowTitle": "WebApp.exe",
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 APPLICATION DEMO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Full-Stack Development",
+              "items": [
+                "React frontend with responsive design",
+                "RESTful API with Node.js/Express",
+                "PostgreSQL database design and optimization"
+              ]
+            },
+            {
+              "category": "Features Implementation",
+              "items": [
+                "User authentication and authorization",
+                "Real-time data updates with WebSockets",
+                "File upload and management system"
+              ]
+            },
+            {
+              "category": "DevOps & Deployment",
+              "items": [
+                "CI/CD pipeline setup",
+                "AWS deployment and configuration",
+                "Performance monitoring and optimization"
+              ]
+            },
+            {
+              "category": "Client Collaboration",
+              "items": [
+                "Requirements gathering and analysis",
+                "Regular progress updates and demos",
+                "Documentation and training"
+              ]
+            }
+          ],
+          "role": "Full-Stack Developer / Consultant",
+          "technologies": ["React", "Node.js", "PostgreSQL", "AWS"],
+          "timeline": "2023 - 4 months"
+        }
+      },
+      {
+        "id": "game-tool",
+        "title": "Unity Level Editor Tool",
+        "tags": ["Unity", "C#", "Editor Tools"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/FeaturedProjects/game-tool-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 TOOL DEMO",
+        "modal": {
+          "title": "Unity Level Editor Tool",
+          "windowTitle": "LevelEditor.exe",
+          "platforms": ["Unity Editor"],
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 EDITOR TOOL DEMO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Tool Development",
+              "items": [
+                "Custom Unity Editor window and inspectors",
+                "Visual level editing interface",
+                "Prefab management and placement system"
+              ]
+            },
+            {
+              "category": "Workflow Optimization",
+              "items": [
+                "Batch operations and automation",
+                "Undo/redo system integration",
+                "Asset validation and error checking"
+              ]
+            }
+          ],
+          "role": "Unity Tools Developer",
+          "technologies": ["Unity", "C#", "Unity Editor API"],
+          "timeline": "2022 - 3 months"
+        }
+      },
+      {
+        "id": "data-dashboard",
+        "title": "Business Analytics Dashboard",
+        "tags": ["Vue.js", "Python", "Data Viz"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/FeaturedProjects/data-dashboard-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 DASHBOARD DEMO",
+        "modal": {
+          "title": "Business Analytics Dashboard",
+          "windowTitle": "Dashboard.exe",
+          "platforms": ["Web"],
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 DASHBOARD DEMO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Frontend Development",
+              "items": [
+                "Vue.js dashboard with interactive charts",
+                "Data visualization with D3.js",
+                "Responsive design for all devices"
+              ]
+            },
+            {
+              "category": "Backend & Data",
+              "items": [
+                "Python Flask API for data processing",
+                "Database integration and queries",
+                "Automated data aggregation pipeline"
+              ]
+            }
+          ],
+          "role": "Full-Stack Developer",
+          "technologies": ["Vue.js", "Python", "Flask", "D3.js"],
+          "timeline": "2021 - 5 months"
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Side Projects",
+    "sectionSubtitle": "Personal projects and open-source contributions",
+    "projects": [
+      {
+        "id": "portfolio-builder",
+        "title": "Portfolio Builder SaaS",
+        "tags": ["React", "Next.js"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/SideProjects/portfolio-builder-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PORTFOLIO BUILDER"
+      },
+      {
+        "id": "game-jam-tool",
+        "title": "Game Jam Management Tool",
+        "tags": ["TypeScript", "Firebase"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/SideProjects/game-jam-tool-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 JAM TOOL"
+      },
+      {
+        "id": "automation-scripts",
+        "title": "Workflow Automation Scripts",
+        "tags": ["Python", "Automation"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/SideProjects/automation-scripts-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 SCRIPTS"
+      },
+      {
+        "id": "api-wrapper",
+        "title": "Unity Services API Wrapper",
+        "tags": ["C#", "Unity"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/SideProjects/api-wrapper-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 API WRAPPER"
+      },
+      {
+        "id": "mobile-app",
+        "title": "Mobile Productivity App",
+        "tags": ["React Native", "Mobile"],
+        "mediaType": "image",
+        "mediaSrc": "assets/freelanceTech/SideProjects/mobile-app-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 MOBILE APP"
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "Technologies and services I offer",
+    "skillsList": [
+      {
+        "title": "Web Development",
+        "description": "Full-stack web applications with React, Vue, Angular, Node.js, Python, and modern databases. Responsive design, RESTful APIs, and cloud deployment.",
+        "image": "assets/freelanceTech/Skills/web-development-icon.png"
+      },
+      {
+        "title": "Game Development",
+        "description": "Unity development, custom tools and editor extensions, gameplay programming, and technical consulting for game projects.",
+        "image": "assets/freelanceTech/Skills/game-development-icon.png"
+      },
+      {
+        "title": "Consulting & Solutions",
+        "description": "Technical consulting, requirements analysis, architecture design, project management, and custom software solutions tailored to client needs.",
+        "image": "assets/freelanceTech/Skills/consulting-solutions-icon.png"
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "That's Me",
+    "sectionSubtitle": "Services I provide",
+    "roles": [
+      {
+        "role": "Full-Stack Developer",
+        "name": "Andrés Sánchez",
+        "image": "assets/freelanceTech/PersonalPhotos/role-fullstack-developer.jpg"
+      },
+      {
+        "role": "Technical Consultant",
+        "name": "Andrés Sánchez",
+        "image": "assets/freelanceTech/PersonalPhotos/role-technical-consultant.jpg"
+      },
+      {
+        "role": "Project Manager",
+        "name": "Andrés Sánchez",
+        "image": "assets/freelanceTech/PersonalPhotos/role-project-manager.jpg"
+      },
+      {
+        "role": "Solutions Architect",
+        "name": "Andrés Sánchez",
+        "image": "assets/freelanceTech/PersonalPhotos/role-solutions-architect.jpg"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Get In Touch",
+    "text": "Let's build something!",
+    "buttonText": "Get in touch"
+  },
+  "contact": {
+    "modalTitle": "Let's Connect",
+    "modalDescription": "Looking for custom software solutions or technical consulting? Let's discuss your project!",
+    "email": "your.email@example.com",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "linkedinText": "LinkedIn Profile",
+    "twitter": "https://twitter.com/yourhandle",
+    "twitterHandle": "@yourhandle",
+    "github": "https://github.com/yourhandle",
+    "githubText": "GitHub",
+    "availability": {
+      "location": "[Your Location]",
+      "status": "Available for freelance projects and consulting",
+      "preferredProjects": "Web applications, game tools, custom software solutions"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Andrés Sànchez. All rights reserved.",
+    "tagline": "Building solutions that make a difference"
+  }
+}

@@ -1,0 +1,150 @@
+/* ==============================================
+   CIRCLE BACKGROUND - Concentric circles that follow cursor
+   ============================================== */
+
+.circle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.circle-background__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out;
+}
+
+/* Concentric Circles */
+.circle-background__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #6942BB;
+    opacity: 0.15;
+}
+
+/* Circle 1 - Smallest (most responsive to cursor) */
+.circle-background__circle--1 {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.2s ease-out;
+}
+
+/* Circle 2 */
+.circle-background__circle--2 {
+    width: 400px;
+    height: 400px;
+    opacity: 0.12;
+    transition: transform 0.25s ease-out;
+}
+
+/* Circle 3 */
+.circle-background__circle--3 {
+    width: 600px;
+    height: 600px;
+    opacity: 0.1;
+    transition: transform 0.3s ease-out;
+}
+
+/* Circle 4 */
+.circle-background__circle--4 {
+    width: 800px;
+    height: 800px;
+    opacity: 0.08;
+    transition: transform 0.35s ease-out;
+}
+
+/* Circle 5 - Largest (least responsive to cursor) */
+.circle-background__circle--5 {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.06;
+    transition: transform 0.4s ease-out;
+}
+
+/* Dark Background Variant (for dark sections) */
+.circle-background--dark .circle-background__circle {
+    border-color: #6942BB;
+}
+
+.circle-background--dark .circle-background__circle--1 {
+    opacity: 0.25;
+}
+
+.circle-background--dark .circle-background__circle--2 {
+    opacity: 0.2;
+}
+
+.circle-background--dark .circle-background__circle--3 {
+    opacity: 0.15;
+}
+
+.circle-background--dark .circle-background__circle--4 {
+    opacity: 0.12;
+}
+
+.circle-background--dark .circle-background__circle--5 {
+    opacity: 0.1;
+}
+
+/* Light Background Variant (for light sections) */
+.circle-background--light .circle-background__circle {
+    border-color: #6942BB;
+}
+
+.circle-background--light .circle-background__circle--1 {
+    opacity: 0.2;
+}
+
+.circle-background--light .circle-background__circle--2 {
+    opacity: 0.15;
+}
+
+.circle-background--light .circle-background__circle--3 {
+    opacity: 0.12;
+}
+
+.circle-background--light .circle-background__circle--4 {
+    opacity: 0.1;
+}
+
+.circle-background--light .circle-background__circle--5 {
+    opacity: 0.08;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circle-background__circle--1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-background__circle--2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle-background__circle--3 {
+        width: 450px;
+        height: 450px;
+    }
+
+    .circle-background__circle--4 {
+        width: 600px;
+        height: 600px;
+    }
+
+    .circle-background__circle--5 {
+        width: 750px;
+        height: 750px;
+    }
+}

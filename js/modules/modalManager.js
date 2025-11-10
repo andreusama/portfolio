@@ -91,6 +91,22 @@ class ModalManager {
             return;
         }
 
+        // Pause any videos in the modal
+        const videos = modal.querySelectorAll('video');
+        videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0; // Reset to beginning
+        });
+
+        // Pause any iframes (YouTube videos)
+        const iframes = modal.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            // Reset iframe src to stop playback
+            const src = iframe.src;
+            iframe.src = '';
+            iframe.src = src;
+        });
+
         // Close the modal
         modal.classList.remove('active');
 
@@ -105,6 +121,21 @@ class ModalManager {
 
     closeAllModals() {
         this.modals.forEach(modal => {
+            // Pause any videos
+            const videos = modal.querySelectorAll('video');
+            videos.forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Pause any iframes
+            const iframes = modal.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = '';
+                iframe.src = src;
+            });
+
             modal.classList.remove('active');
         });
         this.activeModal = null;

@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="css/components/window.css">
     <link rel="stylesheet" href="css/components/card.css">
     <link rel="stylesheet" href="css/components/media.css">
-    <link rel="stylesheet" href="css/components/project-window.css">
     <link rel="stylesheet" href="css/components/hero.css">
     <link rel="stylesheet" href="css/components/section.css">
     <link rel="stylesheet" href="css/components/marquee.css">
     <link rel="stylesheet" href="css/components/decorations.css">
     <link rel="stylesheet" href="css/components/button-animations.css">
     <link rel="stylesheet" href="css/components/modal-form.css">
+    <link rel="stylesheet" href="css/components/circle-background.css">
     <link rel="stylesheet" href="css/utilities/spacing.css">
     <link rel="stylesheet" href="css/utilities/typography.css">
 </head>
@@ -61,23 +61,23 @@
                     </div>
                     <!-- Decorative Windows and Columns -->
                     <div class="hero__content">
-                        <p class="hero__greeting">Hi, I'm Andrés Sànchez, Game Designer & Developer</p>
-                        <h1 class="hero__name">Games that impact</h1>
-                        <p class="hero__description">Welcome! Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.</p>
+                        <p class="hero__greeting" data-content="hero-greeting">Hi, I'm Andrés Sànchez, Game Designer & Developer</p>
+                        <h1 class="hero__name" data-content="hero-headline">Games that impact</h1>
+                        <p class="hero__description" data-content="hero-description">Welcome! Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.</p>
                         <div class="hero__cta">
                             <a href="#projects" class="btn btn--primary">
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
-                                View My Work
+                                <span data-content="hero-cta-primary">View My Work</span>
                             </a>
                             <a href="#contact" class="btn btn--secondary">
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
                                 <span class="btn__circle"></span>
-                                Get In Touch
+                                <span data-content="hero-cta-secondary">Get In Touch</span>
                             </a>
                         </div>
                     </div>
@@ -104,47 +104,13 @@
         <!-- Animated Marquee Scroller - Double -->
         <div class="marquee-double">
             <div class="marquee marquee--cream marquee--narrow">
-                <div class="marquee__content">
-                    <span class="marquee__item">Unity</span>
-                    <span class="marquee__item">C#</span>
-                    <span class="marquee__item">Game Design</span>
-                    <span class="marquee__item">Multiplayer</span>
-                    <span class="marquee__item">UI Development</span>
-                    <span class="marquee__item">Unity</span>
-                    <span class="marquee__item">C#</span>
-                    <span class="marquee__item">Game Design</span>
-                    <span class="marquee__item">Multiplayer</span>
-                    <span class="marquee__item">UI Development</span>
-                    <span class="marquee__item">Unity</span>
-                    <span class="marquee__item">C#</span>
-                    <span class="marquee__item">Game Design</span>
-                    <span class="marquee__item">Multiplayer</span>
-                    <span class="marquee__item">UI Development</span>
-                    <span class="marquee__item">Unity</span>
-                    <span class="marquee__item">C#</span>
-                    <span class="marquee__item">Game Design</span>
-                    <span class="marquee__item">Multiplayer</span>
-                    <span class="marquee__item">UI Development</span>
+                <div class="marquee__content" data-content="marquee-skills1">
+                    <!-- Content loaded dynamically -->
                 </div>
             </div>
             <div class="marquee marquee--cream marquee--reverse marquee--narrow">
-                <div class="marquee__content">
-                    <span class="marquee__item">Gameplay Programming</span>
-                    <span class="marquee__item">Level Design</span>
-                    <span class="marquee__item">AI Systems</span>
-                    <span class="marquee__item">Physics</span>
-                    <span class="marquee__item">Gameplay Programming</span>
-                    <span class="marquee__item">Level Design</span>
-                    <span class="marquee__item">AI Systems</span>
-                    <span class="marquee__item">Physics</span>
-                    <span class="marquee__item">Gameplay Programming</span>
-                    <span class="marquee__item">Level Design</span>
-                    <span class="marquee__item">AI Systems</span>
-                    <span class="marquee__item">Physics</span>
-                    <span class="marquee__item">Gameplay Programming</span>
-                    <span class="marquee__item">Level Design</span>
-                    <span class="marquee__item">AI Systems</span>
-                    <span class="marquee__item">Physics</span>
+                <div class="marquee__content" data-content="marquee-skills2">
+                    <!-- Content loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -154,315 +120,44 @@
         <!-- Projects Section -->
         <section id="projects" class="section section--projects">
             <div class="section__container">
-                <h2 class="section__title">Featured Projects</h2>
-                <p class="section__subtitle">Professional games shipped for major entertainment brands</p>
-                <div class="projects-grid">
-                    <!-- Hot Wheels Project Card -->
-                    <article class="project-card" data-project="hotwheels">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎬 HOT WHEELS TRAILER</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Hot Wheels Xtreme Overdrive</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">Photon</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="hotwheels">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- PJ Masks Project Card -->
-                    <article class="project-card" data-project="pjmasks">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎬 PJ MASKS TRAILER</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">PJ Masks Power Heroes</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">Multi-platform</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="pjmasks">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Monster High Project Card -->
-                    <article class="project-card" data-project="monsterhigh">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎬 MONSTER HIGH TRAILER</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Monster High Skulltimate Secrets</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">Dialogue System</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="monsterhigh">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
+                <h2 class="section__title" data-content="featured-projects-title">Featured Projects</h2>
+                <p class="section__subtitle" data-content="featured-projects-subtitle">Professional games shipped for major entertainment brands</p>
+                <div class="projects-grid" data-content="featured-projects-grid">
+                    <!-- Project cards loaded dynamically -->
                 </div>
             </div>
         </section>
 
         <!-- Animated Marquee Scroller - Reverse -->
         <div class="marquee marquee--cream marquee--reverse marquee--narrow">
-            <div class="marquee__content">
-                <span class="marquee__item">PlayStation</span>
-                <span class="marquee__item">Xbox</span>
-                <span class="marquee__item">Nintendo Switch</span>
-                <span class="marquee__item">PC Gaming</span>
-                <span class="marquee__item">Mobile Games</span>
-                <span class="marquee__item">Multi-platform</span>
-                <span class="marquee__item">Cross-platform</span>
-                <span class="marquee__item">PlayStation</span>
-                <span class="marquee__item">Xbox</span>
-                <span class="marquee__item">Nintendo Switch</span>
-                <span class="marquee__item">PC Gaming</span>
-                <span class="marquee__item">Mobile Games</span>
-                <span class="marquee__item">Multi-platform</span>
-                <span class="marquee__item">Cross-platform</span>
+            <div class="marquee__content" data-content="marquee-platforms">
+                <!-- Content loaded dynamically -->
             </div>
         </div>
 
         <!-- Student Projects Section -->
         <section id="student-projects" class="section section--student-projects">
             <div class="section__container">
-                <h2 class="section__title">Side Projects</h2>
-                <p class="section__subtitle">Personal game development projects and experiments</p>
+                <h2 class="section__title" data-content="side-projects-title">Side Projects</h2>
+                <p class="section__subtitle" data-content="side-projects-subtitle">Personal game development projects and experiments</p>
 
-                <div class="student-projects-grid">
-                    <!-- Student Project Card 1 -->
-                    <article class="project-card" data-project="student1">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎮 PROJECT 1</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Student Project 1</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="student1">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Student Project Card 2 -->
-                    <article class="project-card" data-project="student2">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎮 PROJECT 2</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Student Project 2</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="student2">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Student Project Card 3 -->
-                    <article class="project-card" data-project="student3">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎮 PROJECT 3</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Student Project 3</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="student3">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Student Project Card 4 -->
-                    <article class="project-card" data-project="student4">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎮 PROJECT 4</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Student Project 4</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="student4">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Invisible spacer for layout -->
-                    <div class="project-card-spacer" aria-hidden="true"></div>
-
-                    <!-- Student Project Card 5 -->
-                    <article class="project-card" data-project="student5">
-                        <div class="project-card__titlebar">
-                            <div class="macos-dots">
-                                <span class="macos-dot macos-dot--red"></span>
-                                <span class="macos-dot macos-dot--yellow"></span>
-                                <span class="macos-dot macos-dot--green"></span>
-                            </div>
-                        </div>
-                        <div class="project-card__video">
-                            <div class="media-placeholder media-placeholder--video">🎮 PROJECT 5</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Student Project 5</h3>
-                            <div class="project-card__tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                            </div>
-                            <button class="btn btn--primary btn--sm project-card__btn" data-open-window="student5">
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                <span class="btn__circle"></span>
-                                View Details
-                            </button>
-                        </div>
-                    </article>
-
+                <div class="student-projects-grid" data-content="side-projects-grid">
+                    <!-- Side project cards loaded dynamically -->
                 </div>
             </div>
         </section>
 
-        
+
         <!-- Animated Marquee Scroller - Double -->
         <div class="marquee-double">
             <div class="marquee marquee--narrow">
-                <div class="marquee__content">
-                    <span class="marquee__item">Action Games</span>
-                    <span class="marquee__item">Adventure</span>
-                    <span class="marquee__item">Racing</span>
-                    <span class="marquee__item">Kids Entertainment</span>
-                    <span class="marquee__item">Action Games</span>
-                    <span class="marquee__item">Adventure</span>
-                    <span class="marquee__item">Racing</span>
-                    <span class="marquee__item">Kids Entertainment</span>
-                    <span class="marquee__item">Action Games</span>
-                    <span class="marquee__item">Adventure</span>
-                    <span class="marquee__item">Racing</span>
-                    <span class="marquee__item">Kids Entertainment</span>
-                    <span class="marquee__item">Action Games</span>
-                    <span class="marquee__item">Adventure</span>
-                    <span class="marquee__item">Racing</span>
-                    <span class="marquee__item">Kids Entertainment</span>
+                <div class="marquee__content" data-content="marquee-genres">
+                    <!-- Content loaded dynamically -->
                 </div>
             </div>
             <div class="marquee marquee--reverse marquee--narrow">
-                <div class="marquee__content">
-                    <span class="marquee__item">AAA Development</span>
-                    <span class="marquee__item">Indie Games</span>
-                    <span class="marquee__item">Mobile Games</span>
-                    <span class="marquee__item">Console Games</span>
-                    <span class="marquee__item">AAA Development</span>
-                    <span class="marquee__item">Indie Games</span>
-                    <span class="marquee__item">Mobile Games</span>
-                    <span class="marquee__item">Console Games</span>
-                    <span class="marquee__item">AAA Development</span>
-                    <span class="marquee__item">Indie Games</span>
-                    <span class="marquee__item">Mobile Games</span>
-                    <span class="marquee__item">Console Games</span>
-                    <span class="marquee__item">AAA Development</span>
-                    <span class="marquee__item">Indie Games</span>
-                    <span class="marquee__item">Mobile Games</span>
-                    <span class="marquee__item">Console Games</span>
+                <div class="marquee__content" data-content="marquee-types">
+                    <!-- Content loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -470,481 +165,46 @@
         <!-- ========================================
              PROJECT MODAL WINDOWS
              ======================================== -->
-
-        <!-- Hot Wheels Modal Window -->
-        <div class="modal-overlay" data-modal="hotwheels">
-            <section class="window window--project window--modal" data-window="hotwheels">
-                <div class="window__titlebar">
-                    <div class="macos-dots">
-                        <span class="macos-dot macos-dot--red"></span>
-                        <span class="macos-dot macos-dot--yellow"></span>
-                        <span class="macos-dot macos-dot--green"></span>
-                    </div>
-                    <div class="window__controls">
-                        <button class="window__control window__control--close" data-close-modal="hotwheels">×</button>
-                    </div>
-                </div>
-                <div class="window__content">
-
-                    <!-- Project Header -->
-                    <div class="project-modal-header">
-                        <h1 class="project-modal-header__title">Hot Wheels Xtreme Overdrive</h1>
-                    </div>
-
-                    <!-- Trailer Video -->
-                    <div class="project-modal-video">
-                        <div class="project-modal-video__container">
-                            <!-- Replace with actual YouTube/Vimeo embed or video file -->
-                            <div class="project-video__placeholder">
-                                🎬 GAME TRAILER VIDEO
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Brand Logos Row (directly below video) -->
-                    <div class="project-modal-brands">
-                        <div class="brand-logo">
-                            <div class="brand-logo__placeholder">HOT WHEELS</div>
-                        </div>
-                        <div class="brand-logo">
-                            <div class="brand-logo__placeholder">MATTEL</div>
-                        </div>
-                    </div>
-
-                    <!-- Project Details Grid -->
-                    <div class="project-modal-grid">
-
-                        <!-- Contributions Cloud -->
-                        <div class="cloud-container project-modal-contributions">
-                            <h2 class="project-modal__section-title">My Contributions</h2>
-
-                            <div class="project-modal-contribution-group">
-                                <h3 class="project-modal-contribution-group__title">Gameplay Programming</h3>
-                                <ul class="project-modal-contribution-group__list">
-                                    <li>Vehicle physics and handling systems</li>
-                                    <li>Track obstacles and power-ups</li>
-                                    <li>Race progression and scoring</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-modal-contribution-group">
-                                <h3 class="project-modal-contribution-group__title">UI Development</h3>
-                                <ul class="project-modal-contribution-group__list">
-                                    <li>In-game HUD and menus</li>
-                                    <li>Vehicle selection interface</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-modal-contribution-group">
-                                <h3 class="project-modal-contribution-group__title">Multiplayer Systems</h3>
-                                <ul class="project-modal-contribution-group__list">
-                                    <li>Networked race implementation</li>
-                                    <li>Player synchronization</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-modal-contribution-group">
-                                <h3 class="project-modal-contribution-group__title">Optimization</h3>
-                                <ul class="project-modal-contribution-group__list">
-                                    <li>Performance optimization for automotive hardware</li>
-                                    <li>Memory management and loading</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Sidebar Info Boxes -->
-                        <div class="project-modal-sidebar">
-
-                            <!-- Role Cloud -->
-                            <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Role</h3>
-                                <p class="project-modal-info-box__content">Game Designer / Programmer</p>
-                            </div>
-
-                            <!-- Technologies Cloud -->
-                            <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Technologies</h3>
-                                <div class="project-modal-info-box__tags">
-                                    <span class="tag">Unity</span>
-                                    <span class="tag">C#</span>
-                                    <span class="tag">Photon</span>
-                                    <span class="tag">Android</span>
-                                </div>
-                            </div>
-
-                            <!-- Timeline Cloud -->
-                            <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Timeline</h3>
-                                <p class="project-modal-info-box__content">2023 - 6 months</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </div>
-
-        <div class="modal-overlay" data-modal="pjmasks">
-            <section class="window window--project window--modal" data-window="pjmasks">
-                <div class="window__titlebar">
-                    <span class="window__title">PJ Masks Power Heroes.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--close" data-close-modal="pjmasks">×</button>
-                    </div>
-                </div>
-                <div class="window__content">
-
-                    <!-- Project Header -->
-                    <div class="project-header">
-                        <h1 class="project-header__title">PJ Masks Power Heroes: Mighty Alliance</h1>
-                        <div class="project-header__platforms">
-                            <span class="platform-badge">PC</span>
-                            <span class="platform-badge">PlayStation 4</span>
-                            <span class="platform-badge">PlayStation 5</span>
-                            <span class="platform-badge">Xbox One</span>
-                            <span class="platform-badge">Xbox Series X|S</span>
-                            <span class="platform-badge">Nintendo Switch</span>
-                        </div>
-                    </div>
-
-                    <!-- Trailer Video -->
-                    <div class="project-video">
-                        <div class="project-video__container">
-                            <div class="project-video__placeholder">
-                                🎬 GAME TRAILER VIDEO
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Info Grid -->
-                    <div class="project-info">
-
-                        <!-- Responsibilities -->
-                        <div class="project-responsibilities">
-                            <h2 class="project-responsibilities__title">My Contributions</h2>
-
-                            <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
-                            <ul class="project-responsibilities__list">
-                                <li>Character abilities and powers</li>
-                                <li>Enemy AI and behavior</li>
-                                <li>Level progression systems</li>
-                            </ul>
-
-                            <h3 class="project-responsibilities__subtitle">UI Programming</h3>
-                            <ul class="project-responsibilities__list">
-                                <li>Kid-friendly interface design</li>
-                                <li>Character selection system</li>
-                            </ul>
-                        </div>
-
-                        <!-- Details Sidebar -->
-                        <div class="project-details">
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Role</h3>
-                                <div class="project-detail-box__content">
-                                    <p>Game Designer / Programmer</p>
-                                </div>
-                            </div>
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Technologies</h3>
-                                <div class="project-detail-box__content">
-                                    <div class="project-tech-tags">
-                                        <span class="tech-tag">Unity</span>
-                                        <span class="tech-tag">C#</span>
-                                        <span class="tech-tag">Multi-platform</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Timeline</h3>
-                                <div class="project-detail-box__content">
-                                    <p>2022 - 8 months</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Brand Logos -->
-                    <div class="project-brands">
-                        <h2 class="project-brands__title">Partners & Publishers</h2>
-                        <div class="project-brands__grid">
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">PJ MASKS LOGO</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </div>
-
-        <div class="modal-overlay" data-modal="monsterhigh">
-            <section class="window window--project window--modal" data-window="monsterhigh">
-                <div class="window__titlebar">
-                    <span class="window__title">Monster High Skulltimate Secrets.exe</span>
-                    <div class="window__controls">
-                        <button class="window__control window__control--close" data-close-modal="monsterhigh">×</button>
-                    </div>
-                </div>
-                <div class="window__content">
-
-                    <!-- Project Header -->
-                    <div class="project-header">
-                        <h1 class="project-header__title">Monster High Skulltimate Secrets</h1>
-                        <div class="project-header__platforms">
-                            <span class="platform-badge">PC</span>
-                            <span class="platform-badge">PlayStation 4</span>
-                            <span class="platform-badge">PlayStation 5</span>
-                            <span class="platform-badge">Xbox One</span>
-                            <span class="platform-badge">Xbox Series X|S</span>
-                            <span class="platform-badge">Nintendo Switch</span>
-                        </div>
-                    </div>
-
-                    <!-- Trailer Video -->
-                    <div class="project-video">
-                        <div class="project-video__container">
-                            <div class="project-video__placeholder">
-                                🎬 GAME TRAILER VIDEO
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Info Grid -->
-                    <div class="project-info">
-
-                        <!-- Responsibilities -->
-                        <div class="project-responsibilities">
-                            <h2 class="project-responsibilities__title">My Contributions</h2>
-
-                            <h3 class="project-responsibilities__subtitle">Gameplay Programming</h3>
-                            <ul class="project-responsibilities__list">
-                                <li>Mystery solving mechanics</li>
-                                <li>Character dialogue system</li>
-                                <li>Collectibles and secrets</li>
-                            </ul>
-
-                            <h3 class="project-responsibilities__subtitle">UI Programming</h3>
-                            <ul class="project-responsibilities__list">
-                                <li>Inventory and clue system</li>
-                                <li>Character customization</li>
-                            </ul>
-                        </div>
-
-                        <!-- Details Sidebar -->
-                        <div class="project-details">
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Role</h3>
-                                <div class="project-detail-box__content">
-                                    <p>Game Designer / Programmer</p>
-                                </div>
-                            </div>
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Technologies</h3>
-                                <div class="project-detail-box__content">
-                                    <div class="project-tech-tags">
-                                        <span class="tech-tag">Unity</span>
-                                        <span class="tech-tag">C#</span>
-                                        <span class="tech-tag">Multi-platform</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-detail-box">
-                                <h3 class="project-detail-box__title">Timeline</h3>
-                                <div class="project-detail-box__content">
-                                    <p>2021 - 10 months</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Brand Logos -->
-                    <div class="project-brands">
-                        <h2 class="project-brands__title">Partners & Publishers</h2>
-                        <div class="project-brands__grid">
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">MONSTER HIGH LOGO</div>
-                            </div>
-                            <div class="brand-logo">
-                                <div class="brand-logo__placeholder">MATTEL LOGO</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </div>
+        <!-- Project modals loaded dynamically -->
 
         <!-- Skills Section -->
         <section id="skills" class="section section--skills">
+            <!-- Circle Background for Skills -->
+            <div class="circle-background circle-background--dark">
+                <div class="circle-background__container">
+                    <div class="circle-background__circle circle-background__circle--1"></div>
+                    <div class="circle-background__circle circle-background__circle--2"></div>
+                    <div class="circle-background__circle circle-background__circle--3"></div>
+                    <div class="circle-background__circle circle-background__circle--4"></div>
+                    <div class="circle-background__circle circle-background__circle--5"></div>
+                </div>
+            </div>
             <div class="section__container">
-                <h2 class="section__title">Skills & Expertise</h2>
-                <p class="section__subtitle">Tools and technologies I work with</p>
+                <h2 class="section__title" data-content="skills-title">Skills & Expertise</h2>
+                <p class="section__subtitle" data-content="skills-subtitle">Tools and technologies I work with</p>
 
-                <div class="skills-column">
-                    <!-- Skill Row 1: Game Design (Image on RIGHT) -->
-                    <div class="skill-row">
-                        <div class="skill-row__image">
-                            <img src=";.png" alt="Game Design">
-                        </div>
-                        <div class="skill-cloud cloud-container">
-                            <h3 class="skill-cloud__title">Game Design</h3>
-                            <p class="skill-cloud__description">Gameplay systems design, level design & balancing, player experience (UX), and game mechanics prototyping for engaging player experiences.</p>
-                        </div>
-                        
-                    </div>
-
-                    <!-- Skill Row 2: Programming (Image on LEFT) -->
-                    <div class="skill-row">
-                        <div class="skill-row__image">
-                            <img src=";.png" alt="Programming">
-                        </div>
-                        <div class="skill-cloud cloud-container">
-                            <h3 class="skill-cloud__title">Programming</h3>
-                            <p class="skill-cloud__description">Unity & C# development, gameplay programming, UI/UX implementation, and multiplayer/networking systems with Photon.</p>
-                        </div>
-                    </div>
-
-                    <!-- Skill Row 3: Platforms & Tools (Image on RIGHT) -->
-                    <div class="skill-row">
-                        <div class="skill-row__image">
-                            <img src=";.png" alt="Platforms & Tools">
-                        </div>
-                        <div class="skill-cloud cloud-container">
-                            <h3 class="skill-cloud__title">Platforms & Tools</h3>
-                            <p class="skill-cloud__description">Cross-platform development (PC, PlayStation, Xbox, Switch, Mobile), Git version control, Visual Studio, Blender, Figma, and Jira.</p>
-                        </div>
-                        
-                    </div>
+                <div class="skills-column" data-content="skills-list">
+                    <!-- Skills loaded dynamically -->
                 </div>
             </div>
         </section>
 
         <!-- Animated Marquee Scroller - Reverse -->
         <div class="marquee marquee--reverse marquee--slow marquee--narrow">
-            <div class="marquee__content">
-                <span class="marquee__item">Game Jams</span>
-                <span class="marquee__item">Prototyping</span>
-                <span class="marquee__item">Playtesting</span>
-                <span class="marquee__item">User Research</span>
-                <span class="marquee__item">Documentation</span>
-                <span class="marquee__item">Version Control</span>
-                <span class="marquee__item">Game Jams</span>
-                <span class="marquee__item">Prototyping</span>
-                <span class="marquee__item">Playtesting</span>
-                <span class="marquee__item">User Research</span>
-                <span class="marquee__item">Documentation</span>
-                <span class="marquee__item">Version Control</span>
-                <span class="marquee__item">Game Jams</span>
-                <span class="marquee__item">Prototyping</span>
-                <span class="marquee__item">Playtesting</span>
-                <span class="marquee__item">User Research</span>
-                <span class="marquee__item">Documentation</span>
-                <span class="marquee__item">Version Control</span>
+            <div class="marquee__content" data-content="marquee-misc">
+                <!-- Content loaded dynamically -->
             </div>
         </div>
 
         <!-- That's Me Section -->
         <section id="thats-me" class="section section--thats-me">
             <div class="section__container">
-                <h2 class="section__title">That's Me</h2>
-                <p class="section__subtitle">I wear a lot of hats around here.</p>
+                <h2 class="section__title" data-content="thatsme-title">That's Me</h2>
+                <p class="section__subtitle" data-content="thatsme-subtitle">I wear a lot of hats around here.</p>
 
-                <div class="team-grid">
-                    <!-- Team Member 1 -->
-                    <div class="team-column">
-                        <div class="team-window">
-                            <div class="team-window__titlebar">
-                                <div class="macos-dots">
-                                    <span class="macos-dot macos-dot--red"></span>
-                                    <span class="macos-dot macos-dot--yellow"></span>
-                                    <span class="macos-dot macos-dot--green"></span>
-                                </div>
-                            </div>
-                            <div class="team-window__content">
-                                <img src="assets/images/team-1.jpg" alt="Team Member 1" class="team-window__photo">
-                            </div>
-                            <div class="team-window__info">
-                                <h3 class="team-window__role">President</h3>
-                                <p class="team-window__name">Andrés Sánchez</p>
-                            </div>
-                        </div>
-                        <img src="column.svg" alt="Decorative column" class="team-column__image">
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="team-column">
-                        <div class="team-window">
-                            <div class="team-window__titlebar">
-                                <div class="macos-dots">
-                                    <span class="macos-dot macos-dot--red"></span>
-                                    <span class="macos-dot macos-dot--yellow"></span>
-                                    <span class="macos-dot macos-dot--green"></span>
-                                </div>
-                            </div>
-                            <div class="team-window__content">
-                                <img src="assets/images/team-2.jpg" alt="Team Member 2" class="team-window__photo">
-                            </div>
-                            <div class="team-window__info">
-                                <h3 class="team-window__role">Sales</h3>
-                                <p class="team-window__name">Andrés Sánchez</p>
-                            </div>
-                        </div>
-                        <img src="column.svg" alt="Decorative column" class="team-column__image">
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="team-column">
-                        <div class="team-window">
-                            <div class="team-window__titlebar">
-                                <div class="macos-dots">
-                                    <span class="macos-dot macos-dot--red"></span>
-                                    <span class="macos-dot macos-dot--yellow"></span>
-                                    <span class="macos-dot macos-dot--green"></span>
-                                </div>
-                            </div>
-                            <div class="team-window__content">
-                                <img src="assets/images/team-3.jpg" alt="Team Member 3" class="team-window__photo">
-                            </div>
-                            <div class="team-window__info">
-                                <h3 class="team-window__role">Creative Director</h3>
-                                <p class="team-window__name">Andrés Sánchez</p>
-                            </div>
-                        </div>
-                        <img src="column.svg" alt="Decorative column" class="team-column__image">
-                    </div>
-
-                    <!-- Team Member 4 -->
-                    <div class="team-column">
-                        <div class="team-window">
-                            <div class="team-window__titlebar">
-                                <div class="macos-dots">
-                                    <span class="macos-dot macos-dot--red"></span>
-                                    <span class="macos-dot macos-dot--yellow"></span>
-                                    <span class="macos-dot macos-dot--green"></span>
-                                </div>
-                            </div>
-                            <div class="team-window__content">
-                                <img src="assets/images/team-4.jpg" alt="Team Member 4" class="team-window__photo">
-                            </div>
-                            <div class="team-window__info">
-                                <h3 class="team-window__role">Developer</h3>
-                                <p class="team-window__name">Andrés Sánchez</p>
-                            </div>
-                        </div>
-                        <img src="column.svg" alt="Decorative column" class="team-column__image">
-                    </div>
+                <div class="team-grid" data-content="thatsme-grid">
+                    <!-- Team members loaded dynamically -->
                 </div>
-            </div>
         </section>
 
         <!-- Final CTA Section with Roulette -->
@@ -952,7 +212,7 @@
             <div class="section__container">
                 <div class="final-cta__content">
                     <div class="cloud-container cloud-container--final">
-                        <h2 class="final-cta__title">Get In Touch</h2>
+                        <h2 class="final-cta__title" data-content="final-cta-title">Get In Touch</h2>
                         <div class="final-cta__window-column">
                             <div class="final-window">
                                 <div class="final-window__titlebar">
@@ -963,13 +223,13 @@
                                     </div>
                                 </div>
                                 <div class="final-window__content">
-                                    <h3 class="final-window__text">Let's talk!</h3>
+                                    <h3 class="final-window__text" data-content="final-cta-text">Let's talk!</h3>
                                     <button class="btn btn--primary btn--purple btn--final" data-open-window="contact">
                                         <span class="btn__circle"></span>
                                         <span class="btn__circle"></span>
                                         <span class="btn__circle"></span>
                                         <span class="btn__circle"></span>
-                                        Get in touch
+                                        <span data-content="final-cta-button">Get in touch</span>
                                     </button>
                                 </div>
                             </div>
@@ -995,33 +255,33 @@
                 </div>
                 <div class="window__content">
                     <div class="contact-modal">
-                        <h2 class="contact-modal__title">Let's Connect</h2>
-                        <p class="contact-modal__description">Feel free to reach out for collaborations, job opportunities, or just to chat about games!</p>
+                        <h2 class="contact-modal__title" data-content="contact-title">Let's Connect</h2>
+                        <p class="contact-modal__description" data-content="contact-description">Feel free to reach out for collaborations, job opportunities, or just to chat about games!</p>
 
                         <div class="contact-modal__links">
-                            <a href="mailto:your.email@example.com" class="contact-link">
+                            <a href="mailto:your.email@example.com" class="contact-link" data-content="contact-email">
                                 <span class="contact-link__icon">📧</span>
-                                <span class="contact-link__text">your.email@example.com</span>
+                                <span class="contact-link__text" data-content="contact-email-text">your.email@example.com</span>
                             </a>
-                            <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/in/yourprofile" class="contact-link" data-content="contact-linkedin" target="_blank" rel="noopener noreferrer">
                                 <span class="contact-link__icon">💼</span>
-                                <span class="contact-link__text">LinkedIn Profile</span>
+                                <span class="contact-link__text" data-content="contact-linkedin-text">LinkedIn Profile</span>
                             </a>
-                            <a href="https://twitter.com/yourhandle" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://twitter.com/yourhandle" class="contact-link" data-content="contact-twitter" target="_blank" rel="noopener noreferrer">
                                 <span class="contact-link__icon">🐦</span>
-                                <span class="contact-link__text">@yourhandle</span>
+                                <span class="contact-link__text" data-content="contact-twitter-text">@yourhandle</span>
                             </a>
-                            <a href="https://github.com/yourhandle" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/yourhandle" class="contact-link" data-content="contact-github" target="_blank" rel="noopener noreferrer">
                                 <span class="contact-link__icon">💻</span>
-                                <span class="contact-link__text">GitHub</span>
+                                <span class="contact-link__text" data-content="contact-github-text">GitHub</span>
                             </a>
                         </div>
 
                         <div class="contact-modal__availability">
                             <h3>Availability</h3>
-                            <p><strong>Location:</strong> [Your Location]</p>
-                            <p><strong>Status:</strong> Open to remote work and relocation opportunities</p>
-                            <p><strong>Preferred Projects:</strong> Action games, kids entertainment, multiplayer experiences</p>
+                            <p><strong>Location:</strong> <span data-content="contact-location">[Your Location]</span></p>
+                            <p><strong>Status:</strong> <span data-content="contact-status">Open to remote work and relocation opportunities</span></p>
+                            <p><strong>Preferred Projects:</strong> <span data-content="contact-preferred">Action games, kids entertainment, multiplayer experiences</span></p>
                         </div>
                     </div>
                 </div>
@@ -1033,17 +293,19 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
-            <p class="footer__text">&copy; 2024 Andrés Sànchez. All rights reserved.</p>
-            <p class="footer__subtext">Built with passion for great game experiences</p>
+            <p class="footer__text" data-content="footer-copyright">&copy; 2024 Andrés Sànchez. All rights reserved.</p>
+            <p class="footer__subtext" data-content="footer-tagline">Built with passion for great game experiences</p>
         </div>
     </footer>
 
     <!-- JavaScript Modules -->
     <script src="js/modules/config.js"></script>
+    <script src="js/modules/contentLoader.js"></script>
     <script src="js/modules/cursorFollower.js"></script>
     <script src="js/modules/backgroundFollower.js"></script>
     <script src="js/modules/modalManager.js"></script>
     <script src="js/modules/animations.js"></script>
+    <script src="js/circle-background.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

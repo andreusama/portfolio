@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Game Designer Portfolio",
+    "description": "Game designer and developer specializing in casual games and kid-friendly experiences"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Andrés Sànchez, Game Designer & Developer",
+    "headline": "Games that impact",
+    "description": "Welcome! Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Get In Touch"
+  },
+  "marquees": {
+    "skills1": ["Unity", "C#", "Game Design", "Multiplayer", "UI Development"],
+    "skills2": ["Gameplay Programming", "Level Design", "AI Systems", "Physics"],
+    "platforms": ["PlayStation", "Xbox", "Nintendo Switch", "PC Gaming", "Mobile Games", "Multi-platform", "Cross-platform"],
+    "genres": ["Action Games", "Adventure", "Racing", "Kids Entertainment"],
+    "types": ["AAA Development", "Indie Games", "Mobile Games", "Console Games"],
+    "misc": ["Game Jams", "Prototyping", "Playtesting", "User Research", "Documentation", "Version Control"]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Featured Projects",
+    "sectionSubtitle": "Professional games shipped for major entertainment brands",
+    "projects": [
+      {
+        "id": "hotwheels",
+        "title": "Hot Wheels Xtreme Overdrive",
+        "tags": ["Unity", "C#", "Photon"],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/FeaturedProjects/videos/hotWheels.mp4",
+        "mediaPlaceholder": "🎬 HOT WHEELS TRAILER",
+        "modal": {
+          "title": "Hot Wheels Xtreme Overdrive",
+          "windowTitle": "Hot Wheels Xtreme Overdrive.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/hotWheels.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {"name": "HOT WHEELS", "logo": "assets/casualGames/FeaturedProjects/hotwheels-brand-logo.png"},
+            {"name": "MATTEL", "logo": "assets/casualGames/FeaturedProjects/mattel-logo.png"}
+          ],
+          "contributions": [
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Vehicle physics and handling systems",
+                "Track obstacles and power-ups",
+                "Race progression and scoring"
+              ]
+            },
+            {
+              "category": "UI Development",
+              "items": [
+                "In-game HUD and menus",
+                "Vehicle selection interface"
+              ]
+            },
+            {
+              "category": "Multiplayer Systems",
+              "items": [
+                "Networked race implementation",
+                "Player synchronization"
+              ]
+            },
+            {
+              "category": "Optimization",
+              "items": [
+                "Performance optimization for automotive hardware",
+                "Memory management and loading"
+              ]
+            }
+          ],
+          "role": "Game Designer / Programmer",
+          "technologies": ["Unity", "C#", "Photon", "Android"],
+          "timeline": "2023 - 6 months"
+        }
+      },
+      {
+        "id": "pjmasks",
+        "title": "PJ Masks Power Heroes",
+        "tags": ["Unity", "C#", "Multi-platform"],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/FeaturedProjects/videos/pjMasks.mp4",
+        "mediaPlaceholder": "🎬 PJ MASKS TRAILER",
+        "modal": {
+          "title": "PJ Masks Power Heroes: Mighty Alliance",
+          "windowTitle": "PJ Masks Power Heroes.exe",
+          "platforms": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X|S", "Nintendo Switch"],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/pjMasks.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {"name": "PJ MASKS", "logo": "assets/casualGames/FeaturedProjects/pjmasks-brand-logo.png"}
+          ],
+          "contributions": [
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Character abilities and powers",
+                "Enemy AI and behavior",
+                "Level progression systems"
+              ]
+            },
+            {
+              "category": "UI Programming",
+              "items": [
+                "Kid-friendly interface design",
+                "Character selection system"
+              ]
+            }
+          ],
+          "role": "Game Designer / Programmer",
+          "technologies": ["Unity", "C#", "Multi-platform"],
+          "timeline": "2022 - 8 months"
+        }
+      },
+      {
+        "id": "monsterhigh",
+        "title": "Monster High Skulltimate Secrets",
+        "tags": ["Unity", "C#", "Dialogue System"],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/FeaturedProjects/videos/monsterHigh.mp4",
+        "mediaPlaceholder": "🎬 MONSTER HIGH TRAILER",
+        "modal": {
+          "title": "Monster High Skulltimate Secrets",
+          "windowTitle": "Monster High Skulltimate Secrets.exe",
+          "platforms": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X|S", "Nintendo Switch"],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/monsterHigh.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {"name": "MONSTER HIGH", "logo": "assets/casualGames/FeaturedProjects/monsterhigh-brand-logo.png"},
+            {"name": "MATTEL", "logo": "assets/casualGames/FeaturedProjects/mattel-logo.png"}
+          ],
+          "contributions": [
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Mystery solving mechanics",
+                "Character dialogue system",
+                "Collectibles and secrets"
+              ]
+            },
+            {
+              "category": "UI Programming",
+              "items": [
+                "Inventory and clue system",
+                "Character customization"
+              ]
+            }
+          ],
+          "role": "Game Designer / Programmer",
+          "technologies": ["Unity", "C#", "Multi-platform"],
+          "timeline": "2021 - 10 months"
+        }
+      },
+      {
+        "id": "dracamar",
+        "title": "Dracamar",
+        "tags": ["Unity", "C#", "Adventure"],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
+        "mediaPlaceholder": "🎬 DRACAMAR TRAILER",
+        "modal": {
+          "title": "Dracamar",
+          "windowTitle": "Dracamar.exe",
+          "platforms": ["PC", "Mobile"],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Game Design",
+              "items": [
+                "Level design and progression",
+                "Puzzle mechanics design",
+                "Player experience optimization"
+              ]
+            },
+            {
+              "category": "Programming",
+              "items": [
+                "Character controller implementation",
+                "Game mechanics programming",
+                "UI/UX development"
+              ]
+            },
+            {
+              "category": "Development",
+              "items": [
+                "Solo project development",
+                "Asset integration",
+                "Testing and iteration"
+              ]
+            }
+          ],
+          "role": "Game Designer / Developer",
+          "technologies": ["Unity", "C#", "Game Design"],
+          "timeline": "2020 - 4 months"
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Side Projects",
+    "sectionSubtitle": "Personal game development projects and experiments",
+    "projects": [
+      {
+        "id": "student1",
+        "title": "Student Project 1",
+        "tags": ["Unity", "C#"],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/student1-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PROJECT 1"
+      },
+      {
+        "id": "student2",
+        "title": "Student Project 2",
+        "tags": ["Unity", "C#"],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/student2-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PROJECT 2"
+      },
+      {
+        "id": "student3",
+        "title": "Student Project 3",
+        "tags": ["Unity", "C#"],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/student3-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PROJECT 3"
+      },
+      {
+        "id": "student4",
+        "title": "Student Project 4",
+        "tags": ["Unity", "C#"],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/student4-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PROJECT 4"
+      },
+      {
+        "id": "student5",
+        "title": "Student Project 5",
+        "tags": ["Unity", "C#"],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/student5-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PROJECT 5"
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "Tools and technologies I work with",
+    "skillsList": [
+      {
+        "title": "Game Design",
+        "description": "Gameplay systems design, level design & balancing, player experience (UX), and game mechanics prototyping for engaging player experiences.",
+        "image": "assets/casualGames/Skills/game-design-icon.png"
+      },
+      {
+        "title": "Programming",
+        "description": "Unity & C# development, gameplay programming, UI/UX implementation, and multiplayer/networking systems with Photon.",
+        "image": "assets/casualGames/Skills/programming-icon.png"
+      },
+      {
+        "title": "Platforms & Tools",
+        "description": "Cross-platform development (PC, PlayStation, Xbox, Switch, Mobile), Git version control, Visual Studio, Blender, Figma, and Jira.",
+        "image": "assets/casualGames/Skills/platforms-tools-icon.png"
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "That's Me",
+    "sectionSubtitle": "I wear a lot of hats around here.",
+    "roles": [
+      {
+        "role": "President",
+        "name": "Andrés Sánchez",
+        "image": "assets/casualGames/PersonalPhotos/role-president.jpg"
+      },
+      {
+        "role": "Sales",
+        "name": "Andrés Sánchez",
+        "image": "assets/casualGames/PersonalPhotos/role-sales.jpg"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Andrés Sánchez",
+        "image": "assets/casualGames/PersonalPhotos/role-creative.jpg"
+      },
+      {
+        "role": "Developer",
+        "name": "Andrés Sánchez",
+        "image": "assets/casualGames/PersonalPhotos/role-developer.jpg"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Get In Touch",
+    "text": "Let's talk!",
+    "buttonText": "Get in touch"
+  },
+  "contact": {
+    "modalTitle": "Let's Connect",
+    "modalDescription": "Feel free to reach out for collaborations, job opportunities, or just to chat about games!",
+    "email": "your.email@example.com",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "linkedinText": "LinkedIn Profile",
+    "twitter": "https://twitter.com/yourhandle",
+    "twitterHandle": "@yourhandle",
+    "github": "https://github.com/yourhandle",
+    "githubText": "GitHub",
+    "availability": {
+      "location": "[Your Location]",
+      "status": "Open to remote work and relocation opportunities",
+      "preferredProjects": "Action games, kids entertainment, multiplayer experiences"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Andrés Sànchez. All rights reserved.",
+    "tagline": "Built with passion for great game experiences"
+  }
+}

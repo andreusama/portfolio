@@ -13,10 +13,29 @@
         init();
     }
 
-    function init() {
+    async function init() {
         console.log('🎮 Game Designer Portfolio - Initializing...');
 
-        // Initialize all modules
+        // Initialize content loader FIRST
+        if (typeof ContentLoader !== 'undefined') {
+            window.contentLoader = new ContentLoader();
+            try {
+                await window.contentLoader.init();
+
+                // Create project modals after content is loaded
+                window.contentLoader.createProjectModals();
+
+                console.log('✅ Content loaded successfully!');
+            } catch (error) {
+                console.error('❌ Failed to load content:', error);
+                return; // Stop initialization if content fails to load
+            }
+        } else {
+            console.error('ContentLoader not found');
+            return;
+        }
+
+        // Initialize all other modules AFTER content is loaded
         initializeModules();
 
         // Set up global event listeners
@@ -71,6 +90,16 @@
             window.animationManager = new AnimationManager();
         } else {
             console.error('AnimationManager not found');
+        }
+
+        // Initialize circle background
+        if (typeof CircleBackground !== 'undefined') {
+            window.circleBackground = new CircleBackground({
+                maxMovement: 30,
+                enabled: true
+            });
+        } else {
+            console.error('CircleBackground not found');
         }
 
         // Initialize smooth scroll

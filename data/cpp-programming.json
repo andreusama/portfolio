@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - C++ Programmer Portfolio",
+    "description": "Systems programmer specialized in game engines, graphics programming, and performance-critical systems"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Andrés Sànchez, Systems Programmer",
+    "headline": "High-Performance Systems",
+    "description": "Welcome! Specialized in C++ game engine development, graphics programming, and performance-critical systems. Building robust, optimized solutions for AAA games and custom engines.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Get In Touch"
+  },
+  "marquees": {
+    "skills1": ["C++", "C", "OpenGL", "Vulkan", "DirectX"],
+    "skills2": ["Memory Management", "Performance Optimization", "Graphics Programming", "Multi-threading"],
+    "platforms": ["Windows", "Linux", "PlayStation", "Xbox", "Custom Hardware"],
+    "genres": ["Game Engines", "Graphics Systems", "Physics Engines", "Tools Development"],
+    "types": ["AAA Development", "Engine Development", "Graphics Programming", "Systems Architecture"],
+    "misc": ["Profiling", "Debugging", "Algorithm Optimization", "Code Review", "Technical Documentation", "Git"]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Featured Projects",
+    "sectionSubtitle": "Professional C++ projects and engine work",
+    "projects": [
+      {
+        "id": "custom-engine",
+        "title": "Custom Game Engine",
+        "tags": ["C++", "OpenGL", "Physics"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/FeaturedProjects/custom-engine-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 ENGINE DEMO",
+        "modal": {
+          "title": "Custom Game Engine",
+          "windowTitle": "CustomEngine.exe",
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 ENGINE DEMO VIDEO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Core Engine Development",
+              "items": [
+                "Entity-Component System architecture",
+                "Custom memory allocators and management",
+                "Scene graph and spatial partitioning"
+              ]
+            },
+            {
+              "category": "Graphics Programming",
+              "items": [
+                "OpenGL rendering pipeline",
+                "Shader system and material management",
+                "Deferred rendering and lighting"
+              ]
+            },
+            {
+              "category": "Systems Programming",
+              "items": [
+                "Multi-threaded job system",
+                "Asset loading and streaming",
+                "Platform abstraction layer"
+              ]
+            },
+            {
+              "category": "Performance Optimization",
+              "items": [
+                "Profiling and bottleneck identification",
+                "Cache-friendly data structures",
+                "SIMD optimization for math operations"
+              ]
+            }
+          ],
+          "role": "Engine Programmer",
+          "technologies": ["C++17", "OpenGL", "GLSL", "CMake"],
+          "timeline": "2023 - 12 months"
+        }
+      },
+      {
+        "id": "graphics-renderer",
+        "title": "Advanced Graphics Renderer",
+        "tags": ["C++", "Vulkan", "PBR"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/FeaturedProjects/graphics-renderer-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 RENDERER DEMO",
+        "modal": {
+          "title": "Advanced Graphics Renderer",
+          "windowTitle": "Renderer.exe",
+          "platforms": ["Windows", "Linux"],
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 RENDERER DEMO VIDEO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Rendering Systems",
+              "items": [
+                "Vulkan-based rendering pipeline",
+                "Physically-based rendering (PBR)",
+                "HDR and tone mapping"
+              ]
+            },
+            {
+              "category": "Graphics Features",
+              "items": [
+                "Shadow mapping and cascaded shadows",
+                "Screen-space reflections",
+                "Post-processing effects pipeline"
+              ]
+            }
+          ],
+          "role": "Graphics Programmer",
+          "technologies": ["C++20", "Vulkan", "SPIR-V", "GLSL"],
+          "timeline": "2022 - 8 months"
+        }
+      },
+      {
+        "id": "physics-engine",
+        "title": "Physics Engine",
+        "tags": ["C++", "Physics", "Collision"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/FeaturedProjects/physics-engine-thumbnail.jpg",
+        "mediaPlaceholder": "🎬 PHYSICS DEMO",
+        "modal": {
+          "title": "Physics Engine",
+          "windowTitle": "PhysicsEngine.exe",
+          "platforms": ["Cross-platform"],
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 PHYSICS ENGINE DEMO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "Physics Systems",
+              "items": [
+                "Rigid body dynamics simulation",
+                "Broad and narrow phase collision detection",
+                "Constraint solver and joints"
+              ]
+            },
+            {
+              "category": "Optimization",
+              "items": [
+                "Spatial hashing for collision queries",
+                "SIMD-optimized vector math",
+                "Multi-threaded physics simulation"
+              ]
+            }
+          ],
+          "role": "Physics Programmer",
+          "technologies": ["C++17", "SIMD", "CMake"],
+          "timeline": "2021 - 10 months"
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Side Projects",
+    "sectionSubtitle": "Personal programming projects and experiments",
+    "projects": [
+      {
+        "id": "raytracer",
+        "title": "CPU Raytracer",
+        "tags": ["C++", "Raytracing"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/SideProjects/raytracer-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 RAYTRACER"
+      },
+      {
+        "id": "pathtracer",
+        "title": "Path Tracer",
+        "tags": ["C++", "Monte Carlo"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/SideProjects/pathtracer-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 PATH TRACER"
+      },
+      {
+        "id": "voxel-engine",
+        "title": "Voxel Engine",
+        "tags": ["C++", "OpenGL"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/SideProjects/voxel-engine-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 VOXEL ENGINE"
+      },
+      {
+        "id": "ecs-framework",
+        "title": "ECS Framework",
+        "tags": ["C++", "Architecture"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/SideProjects/ecs-framework-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 ECS FRAMEWORK"
+      },
+      {
+        "id": "memory-allocator",
+        "title": "Custom Memory Allocator",
+        "tags": ["C++", "Performance"],
+        "mediaType": "image",
+        "mediaSrc": "assets/cppProgramming/SideProjects/memory-allocator-thumbnail.jpg",
+        "mediaPlaceholder": "🎮 ALLOCATOR"
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "Technologies and domains I specialize in",
+    "skillsList": [
+      {
+        "title": "Systems Programming",
+        "description": "Modern C++ (C++17/20), memory management, multi-threading, performance optimization, and low-level systems design for game engines and graphics applications.",
+        "image": "assets/cppProgramming/Skills/systems-programming-icon.png"
+      },
+      {
+        "title": "Graphics Programming",
+        "description": "OpenGL, Vulkan, DirectX 11/12, shader programming (GLSL, HLSL), rendering techniques, and real-time graphics optimization.",
+        "image": "assets/cppProgramming/Skills/graphics-programming-icon.png"
+      },
+      {
+        "title": "Tools & Platforms",
+        "description": "Visual Studio, GCC, Clang, CMake, Git, profiling tools (Intel VTune, Valgrind), Windows/Linux development, console platforms.",
+        "image": "assets/cppProgramming/Skills/tools-platforms-icon.png"
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "That's Me",
+    "sectionSubtitle": "Roles I take on in projects",
+    "roles": [
+      {
+        "role": "Engine Programmer",
+        "name": "Andrés Sánchez",
+        "image": "assets/cppProgramming/PersonalPhotos/role-engine-programmer.jpg"
+      },
+      {
+        "role": "Graphics Programmer",
+        "name": "Andrés Sánchez",
+        "image": "assets/cppProgramming/PersonalPhotos/role-graphics-programmer.jpg"
+      },
+      {
+        "role": "Technical Architect",
+        "name": "Andrés Sánchez",
+        "image": "assets/cppProgramming/PersonalPhotos/role-technical-architect.jpg"
+      },
+      {
+        "role": "Performance Engineer",
+        "name": "Andrés Sánchez",
+        "image": "assets/cppProgramming/PersonalPhotos/role-performance-engineer.jpg"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Get In Touch",
+    "text": "Let's collaborate!",
+    "buttonText": "Get in touch"
+  },
+  "contact": {
+    "modalTitle": "Let's Connect",
+    "modalDescription": "Interested in discussing engine development, graphics programming, or performance optimization? Let's talk!",
+    "email": "your.email@example.com",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "linkedinText": "LinkedIn Profile",
+    "twitter": "https://twitter.com/yourhandle",
+    "twitterHandle": "@yourhandle",
+    "github": "https://github.com/yourhandle",
+    "githubText": "GitHub",
+    "availability": {
+      "location": "[Your Location]",
+      "status": "Open to remote work and on-site opportunities",
+      "preferredProjects": "Game engines, graphics programming, performance-critical systems"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Andrés Sànchez. All rights reserved.",
+    "tagline": "Built with precision and performance in mind"
+  }
+}
