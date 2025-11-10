@@ -428,7 +428,7 @@ class ContentLoader {
         // Create modals for side projects
         this.data.sideProjects.projects.forEach(project => {
             if (project.modal) {
-                const modal = this.createProjectModal(project);
+                const modal = this.createProjectModal(project, true);
                 modalContainer.appendChild(modal);
             }
         });
@@ -437,7 +437,7 @@ class ContentLoader {
     /**
      * Create a project modal element
      */
-    createProjectModal(project) {
+    createProjectModal(project, isSideProject = false) {
         const modalData = project.modal;
 
         const overlay = document.createElement('div');
@@ -464,9 +464,34 @@ class ContentLoader {
         // Build brands HTML
         const brandsHTML = modalData.brands && modalData.brands.length > 0 ? `
             <div class="project-modal-brands">
-                ${modalData.brands.map(brand => `
-                    <div class="brand-logo">
-                        <div class="brand-logo__placeholder">${brand.name}</div>
+                ${modalData.brands.map(brand => {
+                    if (brand.logo && brand.logo.trim() !== '') {
+                        return `<div class="brand-logo">
+                            <img src="${brand.logo}" alt="${brand.name}" class="brand-logo__image">
+                        </div>`;
+                    } else {
+                        return `<div class="brand-logo">
+                            <div class="brand-logo__placeholder">${brand.name}</div>
+                        </div>`;
+                    }
+                }).join('')}
+            </div>
+        ` : '';
+
+
+        // Build features section for side projects (image + description like skills section)
+        const featuresHTML = isSideProject && modalData.features && modalData.features.length > 0 ? `
+            <div class="project-modal-features">
+                <h2 class="project-modal__section-title">Project Highlights</h2>
+                ${modalData.features.map(feature => `
+                    <div class="project-feature-row">
+                        <div class="project-feature-row__image">
+                            <img src="${feature.image}" alt="${feature.title}">
+                        </div>
+                        <div class="project-feature-cloud cloud-container">
+                            <h3 class="project-feature-cloud__title">${feature.title}</h3>
+                            <p class="project-feature-cloud__description">${feature.description}</p>
+                        </div>
                     </div>
                 `).join('')}
             </div>
@@ -497,6 +522,8 @@ class ContentLoader {
                     </div>
 
                     ${brandsHTML}
+
+                    ${featuresHTML}
 
                     <div class="project-modal-grid">
                         <div class="cloud-container project-modal-contributions">

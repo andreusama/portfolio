@@ -77,12 +77,16 @@
           "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
           "brands": [
             {
-              "name": "HOT WHEELS",
-              "logo": "assets/casualGames/FeaturedProjects/hotwheels-brand-logo.png"
+              "name": "Hot Wheels",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/[CITYPNG.COM]HD Hot Wheels Logo Transparent Background - 3000x3000.png"
             },
             {
-              "name": "MATTEL",
-              "logo": "assets/casualGames/FeaturedProjects/mattel-logo.png"
+              "name": "BMW",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/[CITYPNG.COM]BMW White Logo HD PNG - 8000x8000.png"
+            },
+            {
+              "name": "airConsole",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/airConsole.png"
             }
           ],
           "contributions": [
@@ -147,7 +151,12 @@
           "videoType": "video",
           "videoSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
           "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
-          "brands": [],
+          "brands": [
+            {
+              "name": "3Cat",
+              "logo": "assets/casualGames/FeaturedProjects/logos/Dracamar/3cat.png"
+            }
+          ],
           "contributions": [
             {
               "category": "Game Design",
@@ -210,8 +219,12 @@
           "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
           "brands": [
             {
-              "name": "PJ MASKS",
-              "logo": "assets/casualGames/FeaturedProjects/pjmasks-brand-logo.png"
+              "name": "PJ Masks",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/PJ-Masks-logo-2.png"
+            },
+            {
+              "name": "Hasbro",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/Hasbro_logo.svg.png"
             }
           ],
           "contributions": [
@@ -267,12 +280,12 @@
           "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
           "brands": [
             {
-              "name": "MONSTER HIGH",
-              "logo": "assets/casualGames/FeaturedProjects/monsterhigh-brand-logo.png"
+              "name": "Monster High",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Monster-High-Logo-2010.png"
             },
             {
-              "name": "MATTEL",
-              "logo": "assets/casualGames/FeaturedProjects/mattel-logo.png"
+              "name": "Mattel",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Mattel_logo.svg.png"
             }
           ],
           "contributions": [
@@ -316,8 +329,8 @@
           "Game Feel",
           "Prototyping"
         ],
-        "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/apigalypsis-thumbnail.jpg",
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
         "mediaPlaceholder": "🎮 APIGALYPSIS",
         "modal": {
           "title": "Apigalypsis",
@@ -326,6 +339,18 @@
           "videoSrc": "",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Game Feel Mechanics",
+              "description": "Experimental gameplay focused on responsive controls, satisfying feedback, and juice. Implemented screen shake, particle effects, and sound design to create an engaging player experience.",
+              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-1.jpg"
+            },
+            {
+              "title": "Rapid Prototyping",
+              "description": "Used Unity's rapid iteration tools to quickly test and refine gameplay ideas. Focused on creating a fun core loop before adding polish and visual effects.",
+              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-2.jpg"
+            }
+          ],
           "contributions": [
             {
               "category": "Project Details",
