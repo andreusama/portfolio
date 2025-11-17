@@ -222,26 +222,31 @@
     background-size: 15% 100%;   /* or a value so the tile fits evenly */
 }
 
-/* Student Projects Grid - 3 columns */
+/* Student Projects Grid - Column-based Masonry Layout */
 .student-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    column-count: 3;
+    column-gap: 2rem;
     margin-top: 3rem;
-    grid-auto-rows: auto;
-    align-items: start;
 }
 
 @media (max-width: 1200px) {
     .student-projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        column-count: 2;
     }
 }
 
 @media (max-width: 768px) {
     .student-projects-grid {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
+}
+
+/* Prevent cards from breaking across columns */
+.student-projects-grid .project-card {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 100%;
 }
 
 /* Let side projects use their natural video aspect ratio */
@@ -257,18 +262,6 @@
     height: auto;
     display: block;
     object-fit: contain;
-}
-
-/* Staggered vertical offset for visual interest */
-.student-projects-grid .project-card:nth-child(2),
-.student-projects-grid .project-card:nth-child(5) {
-    margin-top: 3rem;
-}
-
-/* Invisible spacer for layout (takes up grid space but not visible) */
-.project-card-spacer {
-    visibility: hidden;
-    pointer-events: none;
 }
 
 .project-card {
@@ -1197,87 +1190,117 @@
    ============================================ */
 
 .contact-modal {
-    padding: 2rem;
+    padding: 3rem;
+    text-align: center;
 }
 
 .contact-modal__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--color-base-dark);
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .contact-modal__description {
     font-size: 1.1rem;
     color: var(--color-text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-modal__links {
+.contact-modal__buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contact-link {
+.btn--contact {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    background: var(--color-base-light);
-    border: 2px solid var(--color-base-dark);
-    border-radius: 8px;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
     text-decoration: none;
-    color: var(--color-base-dark);
-    font-weight: 500;
-    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
 }
 
-.contact-link:hover {
-    box-shadow: 5px 5px 0 var(--color-base-dark);
-    transform: translateY(-2px);
+.btn--contact .btn__icon {
+    font-size: 2rem;
+    flex-shrink: 0;
 }
 
-.contact-link__icon {
-    font-size: 1.5rem;
+.btn--contact .btn__icon-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.contact-link__text {
+.btn--contact .btn__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     flex: 1;
 }
 
-.contact-modal__availability {
-    padding: 1.5rem;
-    background: rgba(47, 22, 100, 0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(47, 22, 100, 0.1);
-}
-
-.contact-modal__availability h3 {
-    font-size: 1.3rem;
-    color: var(--color-base-dark);
-    margin-bottom: 1rem;
+.btn--contact .btn__label {
+    font-size: 0.85rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    margin-bottom: 0.25rem;
 }
 
-.contact-modal__availability p {
-    margin-bottom: 0.5rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
+.btn--contact .btn__email,
+.btn--contact .btn__handle {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn--copy-email.copied .btn__label::after {
+    content: ' ✓ Copied!';
+    color: var(--color-accent-turquoise);
 }
 
 @media (max-width: 768px) {
     .contact-modal {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
     }
 
     .contact-modal__title {
+        font-size: 1.8rem;
+    }
+
+    .contact-modal__buttons {
+        max-width: 100%;
+    }
+
+    .btn--contact {
+        padding: 1.25rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .btn--contact .btn__icon {
         font-size: 1.5rem;
     }
 
-    .contact-link {
-        padding: 0.875rem 1.25rem;
+    .btn--contact .btn__icon-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn--contact .btn__email,
+    .btn--contact .btn__handle {
+        font-size: 1rem;
     }
 }

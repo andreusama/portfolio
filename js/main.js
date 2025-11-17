@@ -126,6 +126,25 @@
             }
         });
 
+        // Handle email copy button
+        document.addEventListener('click', (e) => {
+            const copyButton = e.target.closest('[data-email-copy]');
+            if (copyButton) {
+                const emailText = copyButton.querySelector('[data-content="contact-email-text"]');
+                if (emailText) {
+                    const email = emailText.textContent;
+                    navigator.clipboard.writeText(email).then(() => {
+                        copyButton.classList.add('copied');
+                        setTimeout(() => {
+                            copyButton.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy email:', err);
+                    });
+                }
+            }
+        });
+
         // Add click effect (optional)
         if (CONFIG.animations.particles.enabled) {
             document.addEventListener('click', (e) => {

@@ -680,17 +680,17 @@
   "contact": {
     "modalTitle": "Let's Connect",
     "modalDescription": "Feel free to reach out for collaborations, job opportunities, or just to chat about games!",
-    "email": "your.email@example.com",
-    "linkedin": "https://linkedin.com/in/yourprofile",
+    "email": "andres8sanchez@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/andresama",
     "linkedinText": "LinkedIn Profile",
-    "twitter": "https://twitter.com/yourhandle",
-    "twitterHandle": "@yourhandle",
-    "github": "https://github.com/yourhandle",
-    "githubText": "GitHub",
+    "twitter": "",
+    "twitterHandle": "",
+    "github": "",
+    "githubText": "",
     "availability": {
-      "location": "[Your Location]",
-      "status": "Open to remote work and relocation opportunities",
-      "preferredProjects": "Action games, kids entertainment, multiplayer experiences"
+      "location": "",
+      "status": "",
+      "preferredProjects": ""
     }
   },
   "footer": {
