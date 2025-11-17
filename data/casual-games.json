@@ -323,11 +323,11 @@
       {
         "id": "apigalypsis",
         "title": "Apigalypsis",
-        "description": "A Unity experiment on game feel",
+        "description": "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose",
         "tags": [
           "Unity",
-          "Game Feel",
-          "Prototyping"
+          "UI/UX Design",
+          "Adventure"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
@@ -341,29 +341,39 @@
           "brands": [],
           "features": [
             {
-              "title": "Game Feel Mechanics",
-              "description": "Experimental gameplay focused on responsive controls, satisfying feedback, and juice. Implemented screen shake, particle effects, and sound design to create an engaging player experience.",
+              "title": "From Ugly to Beautiful",
+              "description": "Transformed visual aesthetics from unattractive to appealing through complete UI/UX redesign and visual polish. Enhanced player experience through thoughtful design choices.",
               "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-1.jpg"
             },
             {
-              "title": "Rapid Prototyping",
-              "description": "Used Unity's rapid iteration tools to quickly test and refine gameplay ideas. Focused on creating a fun core loop before adding polish and visual effects.",
+              "title": "Farm-Themed Tiles",
+              "description": "Designed interactive game elements with agricultural visual styling. Created cohesive farm aesthetic throughout game board with responsive tile interactions.",
               "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-2.jpg"
+            },
+            {
+              "title": "Fancy Tiled Board",
+              "description": "Developed ornate game board design as primary interface. Created responsive layout optimized for desktop and mobile, implementing Share Tech typography with visual hierarchy.",
+              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-3.jpg"
+            },
+            {
+              "title": "Reach the End to Free Your Species",
+              "description": "Core game objective: progress through board to achieve liberation. Designed progression mechanics and victory conditions with engaging narrative framework for adventure gameplay.",
+              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-4.jpg"
             }
           ],
           "contributions": [
             {
               "category": "Project Details",
               "items": [
-                "A Unity experiment on game feel"
+                "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose"
               ]
             }
           ],
-          "role": "Developer",
+          "role": "UI/UX Designer & Developer",
           "technologies": [
             "Unity",
-            "Game Feel",
-            "Prototyping"
+            "UI/UX Design",
+            "Adventure Game Design"
           ],
           "timeline": "Personal Project"
         }
@@ -371,7 +381,7 @@
       {
         "id": "kofi-engine",
         "title": "Ko-Fi Engine",
-        "description": "Custom C++ Game Engine with Animation & Memory Optimization",
+        "description": "Custom C++ Game Engine - Foundation for Dune Special Spice Ops",
         "tags": [
           "C++",
           "Engine Dev",
@@ -387,6 +397,28 @@
           "videoSrc": "",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Physics & Animation Systems",
+              "description": "Comprehensive physics system with camera movement controls and robust animation framework. Built from scratch over three months to support complex game mechanics.",
+              "image": "assets/casualGames/SideProjects/Features/kofi-feature-1.jpg"
+            },
+            {
+              "title": "Particle System & Shaders",
+              "description": "Advanced particle system with shader support for visual effects. Implemented scripting capabilities for gameplay logic and dynamic behavior.",
+              "image": "assets/casualGames/SideProjects/Features/kofi-feature-2.jpg"
+            },
+            {
+              "title": "UI & Audio Implementation",
+              "description": "Complete user interface system with integrated audio framework. Designed to provide all essential tools for game development within a custom engine environment.",
+              "image": "assets/casualGames/SideProjects/Features/kofi-feature-3.jpg"
+            },
+            {
+              "title": "Dune Special Spice Ops Game",
+              "description": "Practical demonstration of engine capabilities through full game development. Serves as proof of concept for engine's functionality and performance.",
+              "image": "assets/casualGames/SideProjects/Features/kofi-feature-4.jpg"
+            }
+          ],
           "contributions": [
             {
               "category": "Animation Module",
@@ -459,11 +491,11 @@
       {
         "id": "the-tower",
         "title": "The Tower",
-        "description": "Android Casual Clicker",
+        "description": "Mobile Clicker & Builder Game - Final Degree Thesis Study Case",
         "tags": [
-          "Android",
-          "Mobile",
-          "Casual"
+          "Unity",
+          "C#",
+          "Mobile"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
@@ -475,30 +507,54 @@
           "videoSrc": "",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Kings Need Towers",
+              "description": "Construct structures for monarchs without castles, progressing through increasingly difficult construction challenges across different environments. Build towers for kingdoms using hammer-based mechanics where skill progression unlocks superior tools.",
+              "image": "assets/casualGames/SideProjects/Features/tower-feature-1.jpg"
+            },
+            {
+              "title": "NPC Recruitment & Resource Management",
+              "description": "Recruit NPCs through resource management by providing food and security. Manage reputation system affecting job difficulty and complexity while balancing resource allocation.",
+              "image": "assets/casualGames/SideProjects/Features/tower-feature-2.jpg"
+            },
+            {
+              "title": "Environmental Hazards",
+              "description": "Face extreme weather conditions and freezing mechanics that challenge tower construction. Navigate environmental obstacles while maintaining building progress and worker safety.",
+              "image": "assets/casualGames/SideProjects/Features/tower-feature-3.jpg"
+            },
+            {
+              "title": "Progression & Reward System",
+              "description": "Complete levels to earn rewards funding further progression. Part of final degree thesis 'Fun in simplicity' - demonstrating engaging gameplay through streamlined mechanics.",
+              "image": "assets/casualGames/SideProjects/Features/tower-feature-4.jpg"
+            }
+          ],
           "contributions": [
             {
               "category": "Project Details",
               "items": [
-                "Android Casual Clicker"
+                "Solo passionate project and final degree thesis study case",
+                "Entirely self-developed except for 3D models and third party scripts (More Mountains)",
+                "Intended for publication as debut commercial game release"
               ]
             }
           ],
-          "role": "Developer",
+          "role": "Solo Developer",
           "technologies": [
-            "Android",
-            "Mobile",
-            "Casual"
+            "Unity",
+            "C#",
+            "Mobile Development"
           ],
-          "timeline": "Personal Project"
+          "timeline": "Final Degree Thesis Project"
         }
       },
       {
         "id": "pengo",
         "title": "Pengo",
-        "description": "C/C++ Based Pengo Clone",
+        "description": "Recreation of the Legendary Sega Arcade Game",
         "tags": [
           "C++",
-          "Clone",
+          "2D Engine",
           "Arcade"
         ],
         "mediaType": "video",
@@ -511,21 +567,36 @@
           "videoSrc": "",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Over 10 Levels of Classic Arcade Action",
+              "description": "Recreation of the legendary Sega arcade game with over 10 levels faithfully recreating original gameplay. Developed during first year at university using a basic 2D engine.",
+              "image": "assets/casualGames/SideProjects/Features/pengo-feature-1.jpg"
+            },
+            {
+              "title": "Maximum Fidelity to Original",
+              "description": "Designed with maximum fidelity to the original Pengo game, capturing the arcade feel and mechanics that made it a classic. Built with a fundamental 2D graphics engine framework.",
+              "image": "assets/casualGames/SideProjects/Features/pengo-feature-2.jpg"
+            }
+          ],
           "contributions": [
             {
               "category": "Project Details",
               "items": [
-                "C/C++ Based Pengo Clone"
+                "First-year university project recreating Sega's Pengo",
+                "Built with basic 2D engine framework",
+                "Multiple level design and implementation",
+                "GitHub: https://github.com/OCA99/PenguBruh-Pengo"
               ]
             }
           ],
           "role": "Developer",
           "technologies": [
             "C++",
-            "Clone",
-            "Arcade"
+            "2D Engine",
+            "Arcade Game Development"
           ],
-          "timeline": "Personal Project"
+          "timeline": "First Year University Project"
         }
       },
       {
@@ -590,11 +661,11 @@
       {
         "id": "fire-fighters",
         "title": "Fire Fighters",
-        "description": "Network Programming (LAN Multiplayer using TCP/UDP and lag mitigation techniques)",
+        "description": "Online Multiplayer Battle Royale - Network Programming Showcase",
         "tags": [
-          "Networking",
-          "Multiplayer",
-          "TCP/UDP"
+          "Unity",
+          "C#",
+          "Networking"
         ],
         "mediaType": "image",
         "mediaSrc": "assets/casualGames/SideProjects/FireFighters/firefighters.gif",
@@ -606,21 +677,48 @@
           "videoSrc": "",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Multiplayer Battle Royale",
+              "description": "Online multiplayer game supporting up to four players competing on an island for dominance. Built in Unity using C# and .NET over five months as a solo university assignment created from scratch.",
+              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-1.jpg"
+            },
+            {
+              "title": "Client-Server Architecture",
+              "description": "Multi-threaded communication system with UDP protocol implementation for streamlined data transfer. Endpoint binding to individual sockets ensuring efficient network communication.",
+              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-2.jpg"
+            },
+            {
+              "title": "World State Replication",
+              "description": "Welcome package system for new client connections with dynamic world updates triggered by relevant packet transmission. Ensures synchronized game state across all connected players.",
+              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-3.jpg"
+            },
+            {
+              "title": "Latency Optimization",
+              "description": "Interpolation techniques to smooth player movement with synchronized packet and interpolation periods. Visual feedback showing player direction and position targets for seamless position updates.",
+              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-4.jpg"
+            }
+          ],
           "contributions": [
             {
               "category": "Project Details",
               "items": [
-                "Network Programming (LAN Multiplayer using TCP/UDP and lag mitigation techniques)"
+                "University assignment completed over five months",
+                "Solo developer - created from scratch",
+                "Last remaining player wins the match",
+                "Demonstrates networking fundamentals and real-time multiplayer synchronization"
               ]
             }
           ],
-          "role": "Developer",
+          "role": "Solo Developer",
           "technologies": [
-            "Networking",
-            "Multiplayer",
-            "TCP/UDP"
+            "Unity",
+            "C#",
+            ".NET",
+            "UDP Networking",
+            "Multiplayer Systems"
           ],
-          "timeline": "Personal Project"
+          "timeline": "5-Month University Assignment"
         }
       }
     ]

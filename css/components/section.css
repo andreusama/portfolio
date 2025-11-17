@@ -1214,17 +1214,18 @@
 .contact-modal__buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 500px;
+    gap: 2rem;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .btn--contact {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     font-size: 1rem;
     text-decoration: none;
     border: none;
@@ -1238,8 +1239,8 @@
 }
 
 .btn--contact .btn__icon-img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -1247,24 +1248,19 @@
 .btn--contact .btn__text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    flex: 1;
+    align-items: center;
+    text-align: center;
 }
 
 .btn--contact .btn__label {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.9;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
 }
 
 .btn--contact .btn__email,
 .btn--contact .btn__handle {
-    font-size: 1.1rem;
-    font-weight: 500;
+    display: none;
 }
 
 .btn--copy-email.copied .btn__label::after {
@@ -1287,20 +1283,15 @@
 
     .btn--contact {
         padding: 1.25rem 1.5rem;
-        gap: 1rem;
-    }
-
-    .btn--contact .btn__icon {
-        font-size: 1.5rem;
+        gap: 1.5rem;
     }
 
     .btn--contact .btn__icon-img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 
-    .btn--contact .btn__email,
-    .btn--contact .btn__handle {
+    .btn--contact .btn__label {
         font-size: 1rem;
     }
 }
