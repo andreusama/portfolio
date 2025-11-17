@@ -78,11 +78,11 @@
           "brands": [
             {
               "name": "Hot Wheels",
-              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/[CITYPNG.COM]HD Hot Wheels Logo Transparent Background - 3000x3000.png"
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/HotWheelsLogo.png"
             },
             {
               "name": "BMW",
-              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/[CITYPNG.COM]BMW White Logo HD PNG - 8000x8000.png"
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/BMWLogo.png"
             },
             {
               "name": "airConsole",
