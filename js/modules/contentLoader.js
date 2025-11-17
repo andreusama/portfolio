@@ -224,14 +224,6 @@ class ContentLoader {
 
         section.projects.forEach((project, index) => {
             grid.appendChild(this.createProjectCard(project));
-
-            // Add spacer after 4th project (for layout)
-            if (index === 3) {
-                const spacer = document.createElement('div');
-                spacer.className = 'project-card-spacer';
-                spacer.setAttribute('aria-hidden', 'true');
-                grid.appendChild(spacer);
-            }
         });
     }
 

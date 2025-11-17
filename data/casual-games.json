@@ -371,11 +371,11 @@
       {
         "id": "kofi-engine",
         "title": "Ko-Fi Engine",
-        "description": "C/C++ Low Level Programming",
+        "description": "Custom C++ Game Engine with Animation & Memory Optimization",
         "tags": [
           "C++",
           "Engine Dev",
-          "Low-Level"
+          "OpenGL"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
@@ -389,19 +389,71 @@
           "brands": [],
           "contributions": [
             {
-              "category": "Project Details",
+              "category": "Animation Module",
               "items": [
-                "C/C++ Low Level Programming"
+                "Developed complete animation system from import to mesh deformation",
+                "Implemented animation importing and data management",
+                "Built bone creation and placement system",
+                "Programmed keyframe interpolation across the engine"
+              ]
+            },
+            {
+              "category": "Scene Transition System",
+              "items": [
+                "Built upgrade/shop interface with character rotation",
+                "Implemented skill leveling mechanics",
+                "Created UI responsiveness with JSON-driven skill descriptions",
+                "Developed game state persistence"
+              ]
+            },
+            {
+              "category": "Unlock System",
+              "items": [
+                "Implemented character unlock mechanics triggered by dialogue",
+                "Controlled character availability and display in gameplay",
+                "Created JSON-based UI feedback system"
+              ]
+            },
+            {
+              "category": "Memory Optimization",
+              "items": [
+                "Identified and resolved significant memory leaks",
+                "Reduced 500MB scene by 150MB (30% optimization)",
+                "Prevented crashes near 2GB engine limit",
+                "Corrected malloc/delete operations"
+              ]
+            },
+            {
+              "category": "Camera System",
+              "items": [
+                "Implemented gameplay camera with WASD/mouse border movement",
+                "Added Q/E rotation controls",
+                "Programmed mousewheel dragging with smoothing",
+                "Created map boundary constraints"
+              ]
+            },
+            {
+              "category": "Engine Improvements",
+              "items": [
+                "Fixed event triggering issues and auto-attack crash loops",
+                "Resolved character collision problems",
+                "Implemented multipicking functionality and scene parallelization",
+                "Optimized hierarchy system",
+                "Created waypoint inspector tools and dynamic cursor switching",
+                "Added skill tooltips and loading screen animations"
               ]
             }
           ],
-          "role": "Developer",
+          "role": "Engine Programmer",
           "technologies": [
             "C++",
-            "Engine Dev",
-            "Low-Level"
+            "OpenGL",
+            "Assimp",
+            "SDL2",
+            "Memory Management",
+            "Animation Systems"
           ],
-          "timeline": "Personal Project"
+          "timeline": "Academic Project"
         }
       },
       {
@@ -477,6 +529,65 @@
         }
       },
       {
+        "id": "7up-pinball",
+        "title": "7up Pinball Clone",
+        "description": "2D Physics Engine Built from Scratch",
+        "tags": [
+          "C/C++",
+          "2D Physics",
+          "Arcade"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
+        "mediaPlaceholder": "🎮 7UP PINBALL",
+        "modal": {
+          "title": "7up Pinball Clone",
+          "windowTitle": "7up Pinball.exe",
+          "videoType": "youtube",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "contributions": [
+            {
+              "category": "2D Physics System",
+              "items": [
+                "Built custom 2D physics engine from scratch in C/C++",
+                "Implemented collision detection and resolution",
+                "Programmed ball physics with realistic friction and gravity",
+                "Created flipper mechanics with impulse-based forces"
+              ]
+            },
+            {
+              "category": "Game Mechanics",
+              "items": [
+                "Designed and implemented pinball table layout",
+                "Created bumper and obstacle interactions",
+                "Programmed scoring system and combo mechanics",
+                "Implemented ball launch and reset mechanics"
+              ]
+            },
+            {
+              "category": "Rendering & Visuals",
+              "items": [
+                "Developed 2D rendering pipeline",
+                "Implemented sprite rendering and animations",
+                "Created visual feedback for collisions and scoring",
+                "Optimized rendering for smooth 60fps gameplay"
+              ]
+            }
+          ],
+          "role": "Solo Developer",
+          "technologies": [
+            "C",
+            "C++",
+            "2D Physics",
+            "SDL2",
+            "Custom Engine"
+          ],
+          "timeline": "Academic Project"
+        }
+      },
+      {
         "id": "fire-fighters",
         "title": "Fire Fighters",
         "description": "Network Programming (LAN Multiplayer using TCP/UDP and lag mitigation techniques)",
@@ -486,7 +597,7 @@
           "TCP/UDP"
         ],
         "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/fire-fighters-thumbnail.jpg",
+        "mediaSrc": "assets/casualGames/SideProjects/FireFighters/firefighters.gif",
         "mediaPlaceholder": "🎮 FIRE FIGHTERS",
         "modal": {
           "title": "Fire Fighters",
@@ -519,19 +630,19 @@
     "sectionSubtitle": "Tools and technologies I work with",
     "skillsList": [
       {
-        "title": "Game Design",
-        "description": "Gameplay systems design, level design & balancing, player experience (UX), and game mechanics prototyping for engaging player experiences.",
-        "image": "assets/casualGames/Skills/game-design-icon.png"
+        "title": "Unity Development",
+        "description": "Unity is where I bring worlds to life. From crafting responsive player controllers that feel just right to building multiplayer systems that keep friends connected across platforms, I've spent years making Unity sing. Whether it's optimizing for mobile or shipping to six different consoles, Unity's been my creative partner in turning ideas into games people actually want to play.",
+        "image": "assets/casualGames/Skills/Unity.png"
       },
       {
-        "title": "Programming",
-        "description": "Unity & C# development, gameplay programming, UI/UX implementation, and multiplayer/networking systems with Photon.",
-        "image": "assets/casualGames/Skills/programming-icon.png"
+        "title": "C/C++ Engine Programming",
+        "description": "Sometimes you need to go deeper. I love getting my hands dirty with C and C++, building custom engines and understanding what's really happening under the hood. There's something beautiful about optimizing memory, crafting your own systems from scratch, and having complete control over how every frame renders. It's where performance meets creativity.",
+        "image": "assets/casualGames/Skills/clogo.png"
       },
       {
-        "title": "Platforms & Tools",
-        "description": "Cross-platform development (PC, PlayStation, Xbox, Switch, Mobile), Git version control, Visual Studio, Blender, Figma, and Jira.",
-        "image": "assets/casualGames/Skills/platforms-tools-icon.png"
+        "title": "Git & Version Control",
+        "description": "Working in teams means staying in sync, and Git keeps everything flowing smoothly. I'm comfortable with branching strategies, merge conflicts, and all those fun moments when code needs to come together. Whether it's Agile sprints or Scrum workflows, version control isn't just about saving code—it's about collaboration, iteration, and making sure we can always roll back when that \"brilliant\" idea turns out to be not so brilliant after all.",
+        "image": "assets/casualGames/Skills/Git-logo.svg.png"
       }
     ]
   },
