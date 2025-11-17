@@ -335,30 +335,35 @@
         "modal": {
           "title": "Apigalypsis",
           "windowTitle": "Apigalypsis.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
-              "title": "From Ugly to Beautiful",
-              "description": "Transformed visual aesthetics from unattractive to appealing through complete UI/UX redesign and visual polish. Enhanced player experience through thoughtful design choices.",
-              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-1.jpg"
+              "title": "First Make It Work",
+              "description": "Started with core game logic and mechanics. Focused on getting the gameplay systems functional before any visual polish - making sure the dice rolls, movement, and game rules worked correctly.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/firstMakeItWork.webp"
+            },
+            {
+              "title": "Then Make It Beautiful",
+              "description": "Transformed the functional prototype into a polished experience. This project was an adventure in game feel - exploring animations, transitions, visual feedback, and UI polish to create satisfying player interactions and responsive design.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/fancyTiledBoard.mp4"
             },
             {
               "title": "Farm-Themed Tiles",
-              "description": "Designed interactive game elements with agricultural visual styling. Created cohesive farm aesthetic throughout game board with responsive tile interactions.",
-              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-2.jpg"
-            },
-            {
-              "title": "Fancy Tiled Board",
-              "description": "Developed ornate game board design as primary interface. Created responsive layout optimized for desktop and mobile, implementing Share Tech typography with visual hierarchy.",
-              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-3.jpg"
+              "description": "Created all the art assets myself. Designed custom farm-themed tiles with bridges, fields, and agricultural elements to build a cohesive visual identity for the game board.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/tiles.png"
             },
             {
               "title": "Reach the End to Free Your Species",
-              "description": "Core game objective: progress through board to achieve liberation. Designed progression mechanics and victory conditions with engaging narrative framework for adventure gameplay.",
-              "image": "assets/casualGames/SideProjects/Features/apigalypsis-feature-4.jpg"
+              "description": "Victory condition: guide your bee through the perilous farm board to reach the end and achieve freedom. Complete the journey to liberate your species from the dangers of the agricultural world.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/win.mp4"
+            },
+            {
+              "title": "Or Die to the Farmers",
+              "description": "The stakes are high - land on the wrong tiles and face defeat at the hands of the farmers. Avoid hazards and dangerous spaces or meet your end in this risky adventure.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/lose.mp4"
             }
           ],
           "contributions": [
@@ -393,30 +398,45 @@
         "modal": {
           "title": "Ko-Fi Engine",
           "windowTitle": "Ko-Fi Engine.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
-              "title": "Physics & Animation Systems",
-              "description": "Comprehensive physics system with camera movement controls and robust animation framework. Built from scratch over three months to support complex game mechanics.",
-              "image": "assets/casualGames/SideProjects/Features/kofi-feature-1.jpg"
+              "title": "Physics System",
+              "description": "Custom physics implementation with collision detection, rigid body dynamics, and force calculations. Built from scratch to provide realistic object interactions and movement.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/Physics.gif"
             },
             {
-              "title": "Particle System & Shaders",
-              "description": "Advanced particle system with shader support for visual effects. Implemented scripting capabilities for gameplay logic and dynamic behavior.",
-              "image": "assets/casualGames/SideProjects/Features/kofi-feature-2.jpg"
+              "title": "Animation Module",
+              "description": "Skeletal animation system with keyframe interpolation and animation blending. Supports complex character movements and smooth transitions between animation states.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/engine_animation.gif"
             },
             {
-              "title": "UI & Audio Implementation",
-              "description": "Complete user interface system with integrated audio framework. Designed to provide all essential tools for game development within a custom engine environment.",
-              "image": "assets/casualGames/SideProjects/Features/kofi-feature-3.jpg"
+              "title": "Camera System",
+              "description": "Flexible camera implementation with multiple view modes, smooth movement controls, and follow mechanics. Supports both 2D and 3D camera perspectives.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/camera.gif"
             },
             {
-              "title": "Dune Special Spice Ops Game",
-              "description": "Practical demonstration of engine capabilities through full game development. Serves as proof of concept for engine's functionality and performance.",
-              "image": "assets/casualGames/SideProjects/Features/kofi-feature-4.jpg"
+              "title": "Particle Effects",
+              "description": "Advanced particle system for creating visual effects like explosions, smoke, fire, and environmental ambience. Features emitter configurations and particle lifecycle management.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/particles.gif"
+            },
+            {
+              "title": "Shader Pipeline",
+              "description": "Custom shader system supporting vertex and fragment shaders for advanced rendering effects. Enables visual polish and specialized graphical features.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/shaders.gif"
+            },
+            {
+              "title": "Scripting System",
+              "description": "Integrated scripting framework allowing gameplay logic implementation. Provides flexibility for rapid prototyping and game behavior customization.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/scripting.gif"
+            },
+            {
+              "title": "User Interface",
+              "description": "UI framework for creating menus, HUD elements, and interactive interface components. Supports text rendering, buttons, and layout management.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/audio.gif"
             }
           ],
           "contributions": [
@@ -503,30 +523,45 @@
         "modal": {
           "title": "The Tower",
           "windowTitle": "The Tower.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
               "title": "Kings Need Towers",
               "description": "Construct structures for monarchs without castles, progressing through increasingly difficult construction challenges across different environments. Build towers for kingdoms using hammer-based mechanics where skill progression unlocks superior tools.",
-              "image": "assets/casualGames/SideProjects/Features/tower-feature-1.jpg"
+              "image": "assets/casualGames/SideProjects/TheTower/features/kingsNeedTowers.PNG"
+            },
+            {
+              "title": "Grab a Hammer",
+              "description": "Use hammer-based mechanics to build towers, where skill progression unlocks superior tools and abilities for more efficient construction.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/grabAHammer.mp4"
             },
             {
               "title": "NPC Recruitment & Resource Management",
               "description": "Recruit NPCs through resource management by providing food and security. Manage reputation system affecting job difficulty and complexity while balancing resource allocation.",
-              "image": "assets/casualGames/SideProjects/Features/tower-feature-2.jpg"
+              "image": "assets/casualGames/SideProjects/TheTower/features/NPCRecruitment.PNG"
             },
             {
               "title": "Environmental Hazards",
               "description": "Face extreme weather conditions and freezing mechanics that challenge tower construction. Navigate environmental obstacles while maintaining building progress and worker safety.",
-              "image": "assets/casualGames/SideProjects/Features/tower-feature-3.jpg"
+              "image": "assets/casualGames/SideProjects/TheTower/features/enviromentalHazards.mp4"
+            },
+            {
+              "title": "Get Paid",
+              "description": "Earn rewards and currency by completing construction jobs and satisfying client requirements. Manage your earnings to unlock new tools, hire workers, and expand your building capabilities.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/getPaid.mp4"
             },
             {
               "title": "Progression & Reward System",
               "description": "Complete levels to earn rewards funding further progression. Part of final degree thesis 'Fun in simplicity' - demonstrating engaging gameplay through streamlined mechanics.",
-              "image": "assets/casualGames/SideProjects/Features/tower-feature-4.jpg"
+              "image": "assets/casualGames/SideProjects/TheTower/features/progression&RewardSystem.mp4"
+            },
+            {
+              "title": "Under the Scenes",
+              "description": "Behind-the-scenes look at how diverse environments were created using minimal assets. Demonstrates efficient game development through smart asset reuse and strategic placement to build rich, varied worlds from a limited set of elements.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/underTheScenes.mp4"
             }
           ],
           "contributions": [
@@ -563,20 +598,15 @@
         "modal": {
           "title": "Pengo",
           "windowTitle": "Pengo.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
-              "title": "Over 10 Levels of Classic Arcade Action",
-              "description": "Recreation of the legendary Sega arcade game with over 10 levels faithfully recreating original gameplay. Developed during first year at university using a basic 2D engine.",
-              "image": "assets/casualGames/SideProjects/Features/pengo-feature-1.jpg"
-            },
-            {
-              "title": "Maximum Fidelity to Original",
-              "description": "Designed with maximum fidelity to the original Pengo game, capturing the arcade feel and mechanics that made it a classic. Built with a fundamental 2D graphics engine framework.",
-              "image": "assets/casualGames/SideProjects/Features/pengo-feature-2.jpg"
+              "title": "Differences from Original",
+              "description": "Recreation of the legendary Sega arcade game with one key difference: this version includes 10 levels instead of the original 16 levels. Otherwise maintains maximum fidelity to the original gameplay and mechanics.",
+              "image": "assets/casualGames/SideProjects/Pengo/features/pengoFeature.png"
             }
           ],
           "contributions": [
@@ -614,36 +644,23 @@
         "modal": {
           "title": "7up Pinball Clone",
           "windowTitle": "7up Pinball.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
+          "features": [
+            {
+              "title": "Differences from Original",
+              "description": "Recreation of the classic 7up Pinball game with the following differences from the original: Left funnel without gravity, Right hole spawns ball on top, Middle cannon spawns ball on top, Point system implemented differently.",
+              "image": "assets/casualGames/SideProjects/7upPinball/feature/hqdefault.jpg"
+            }
+          ],
           "contributions": [
             {
-              "category": "2D Physics System",
+              "category": "Project Details",
               "items": [
-                "Built custom 2D physics engine from scratch in C/C++",
-                "Implemented collision detection and resolution",
-                "Programmed ball physics with realistic friction and gravity",
-                "Created flipper mechanics with impulse-based forces"
-              ]
-            },
-            {
-              "category": "Game Mechanics",
-              "items": [
-                "Designed and implemented pinball table layout",
-                "Created bumper and obstacle interactions",
-                "Programmed scoring system and combo mechanics",
-                "Implemented ball launch and reset mechanics"
-              ]
-            },
-            {
-              "category": "Rendering & Visuals",
-              "items": [
-                "Developed 2D rendering pipeline",
-                "Implemented sprite rendering and animations",
-                "Created visual feedback for collisions and scoring",
-                "Optimized rendering for smooth 60fps gameplay"
+                "Recreation of classic 7up Pinball game",
+                "Built with custom 2D physics engine from scratch"
               ]
             }
           ],
@@ -668,35 +685,35 @@
           "Networking"
         ],
         "mediaType": "image",
-        "mediaSrc": "assets/casualGames/SideProjects/FireFighters/firefighters.gif",
+        "mediaSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
         "mediaPlaceholder": "🎮 FIRE FIGHTERS",
         "modal": {
           "title": "Fire Fighters",
           "windowTitle": "Fire Fighters.exe",
-          "videoType": "youtube",
-          "videoSrc": "",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
-              "title": "Multiplayer Battle Royale",
-              "description": "Online multiplayer game supporting up to four players competing on an island for dominance. Built in Unity using C# and .NET over five months as a solo university assignment created from scratch.",
-              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-1.jpg"
+              "title": "Log In System",
+              "description": "Player authentication and connection system for joining multiplayer matches. Handles client login, user identification, and initial server handshake for game sessions.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/logIn.mp4"
             },
             {
-              "title": "Client-Server Architecture",
-              "description": "Multi-threaded communication system with UDP protocol implementation for streamlined data transfer. Endpoint binding to individual sockets ensuring efficient network communication.",
-              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-2.jpg"
+              "title": "Fire Alive",
+              "description": "Dynamic fire mechanics creating gameplay tension and environmental hazards. Fire spreads across the island, forcing players into smaller play areas as the match progresses.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/fireAlive.mp4"
             },
             {
-              "title": "World State Replication",
-              "description": "Welcome package system for new client connections with dynamic world updates triggered by relevant packet transmission. Ensures synchronized game state across all connected players.",
-              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-3.jpg"
+              "title": "Latency Hiding",
+              "description": "Interpolation techniques to smooth player movement and hide network latency. Implements prediction and position updates to maintain responsive gameplay despite network conditions.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/latencyHiding.mp4"
             },
             {
-              "title": "Latency Optimization",
-              "description": "Interpolation techniques to smooth player movement with synchronized packet and interpolation periods. Visual feedback showing player direction and position targets for seamless position updates.",
-              "image": "assets/casualGames/SideProjects/Features/firefighters-feature-4.jpg"
+              "title": "Last Remaining Wins",
+              "description": "Battle royale victory condition - survive longer than all opponents to claim victory. Players compete until only one firefighter remains standing on the shrinking island.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/lastRemainingWins.mp4"
             }
           ],
           "contributions": [
@@ -751,22 +768,22 @@
       {
         "role": "President",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-president.jpg"
+        "image": "assets/casualGames/PersonalPhotos/role-president.png"
       },
       {
         "role": "Sales",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-sales.jpg"
+        "image": "assets/casualGames/PersonalPhotos/role-sales.png"
       },
       {
         "role": "Creative Director",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-creative.jpg"
+        "image": "assets/casualGames/PersonalPhotos/role-creative.png"
       },
       {
         "role": "Developer",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-developer.jpg"
+        "image": "assets/casualGames/PersonalPhotos/role-developer.png"
       }
     ]
   },

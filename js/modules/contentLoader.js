@@ -471,21 +471,37 @@ class ContentLoader {
         ` : '';
 
 
-        // Build features section for side projects (image + description like skills section)
+        // Build features section for side projects (image/video + description like skills section)
         const featuresHTML = isSideProject && modalData.features && modalData.features.length > 0 ? `
             <div class="project-modal-features">
                 <h2 class="project-modal__section-title">Project Highlights</h2>
-                ${modalData.features.map(feature => `
+                ${modalData.features.map(feature => {
+                    // Check if the feature media is a video (mp4) or image
+                    const isVideo = feature.image && feature.image.toLowerCase().endsWith('.mp4');
+                    const mediaHTML = isVideo
+                        ? `<video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="auto"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                            <source src="${feature.image}" type="video/mp4">
+                        </video>`
+                        : `<img src="${feature.image}" alt="${feature.title}">`;
+
+                    return `
                     <div class="project-feature-row">
                         <div class="project-feature-row__image">
-                            <img src="${feature.image}" alt="${feature.title}">
+                            ${mediaHTML}
                         </div>
                         <div class="project-feature-cloud cloud-container">
                             <h3 class="project-feature-cloud__title">${feature.title}</h3>
                             <p class="project-feature-cloud__description">${feature.description}</p>
                         </div>
                     </div>
-                `).join('')}
+                    `;
+                }).join('')}
             </div>
         ` : '';
 

@@ -374,17 +374,18 @@
 
 .project-feature-row__image {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 300px;
     border-radius: 12px;
     overflow: hidden;
     border: 2px solid var(--color-base-dark);
 }
 
-.project-feature-row__image img {
+.project-feature-row__image img,
+.project-feature-row__image video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .project-feature-cloud {
