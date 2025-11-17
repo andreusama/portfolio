@@ -1,57 +1,58 @@
 {
   "meta": {
-    "title": "Andrés Sànchez - Game Designer Portfolio",
-    "description": "Game designer and developer specializing in casual games and kid-friendly experiences"
+    "title": "Andrés Sànchez - Game Programmer Portfolio",
+    "description": "Game programmer specializing in gameplay systems, multiplayer networking, and engine development"
   },
   "hero": {
-    "greeting": "Hi, I'm Andrés Sànchez, Game Designer & Developer",
-    "headline": "Games that impact",
-    "description": "Welcome! Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.",
+    "greeting": "Hi, I'm Andrés Sànchez, Game Programmer",
+    "headline": "Code that brings games to life",
+    "description": "Gameplay programmer with shipped titles for Hot Wheels, PJ Masks, and Monster High. Specialized in multiplayer systems, physics engines, and performance optimization across Unity and custom C++ engines.",
     "ctaPrimary": "View My Work",
     "ctaSecondary": "Get In Touch"
   },
   "marquees": {
     "skills1": [
-      "Unity",
       "C#",
-      "Game Design",
-      "Multiplayer",
-      "UI Development"
+      "C++",
+      ".NET",
+      "OpenGL",
+      "SDL2"
     ],
     "skills2": [
       "Gameplay Programming",
-      "Level Design",
-      "AI Systems",
-      "Physics"
+      "Engine Programming",
+      "Network Programming",
+      "Physics Programming",
+      "Memory Optimization"
     ],
     "platforms": [
       "PlayStation",
       "Xbox",
       "Nintendo Switch",
-      "PC Gaming",
-      "Mobile Games",
+      "PC",
+      "Mobile",
       "Multi-platform",
       "Cross-platform"
     ],
     "genres": [
-      "Action Games",
-      "Adventure",
-      "Racing",
-      "Kids Entertainment"
+      "UDP Networking",
+      "Client-Server Architecture",
+      "Photon Multiplayer",
+      "Unity Scripting"
     ],
     "types": [
-      "AAA Development",
-      "Indie Games",
-      "Mobile Games",
-      "Console Games"
+      "Indie Development",
+      "Mobile Development",
+      "Console Development",
+      "Academic Projects"
     ],
     "misc": [
-      "Game Jams",
-      "Prototyping",
-      "Playtesting",
-      "User Research",
-      "Documentation",
-      "Version Control"
+      "Version Control",
+      "Git",
+      "Agile",
+      "Performance Profiling",
+      "Code Optimization",
+      "Debug & Testing"
     ]
   },
   "featuredProjects": {
@@ -368,13 +369,16 @@
           ],
           "contributions": [
             {
-              "category": "Project Details",
+              "category": "Development",
               "items": [
-                "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose"
+                "Everything programmed and designed by me - all game logic, UI/UX implementation, animations, and visual polish",
+                "UI/UX learning project exploring game feel and player feedback",
+                "Adaptation of the Royal Game of Goose with custom farm theme",
+                "All art assets created by me"
               ]
             }
           ],
-          "role": "UI/UX Designer & Developer",
+          "role": "Solo Developer",
           "technologies": [
             "Unity",
             "UI/UX Design",
@@ -566,15 +570,16 @@
           ],
           "contributions": [
             {
-              "category": "Project Details",
+              "category": "Development",
               "items": [
-                "Solo passionate project and final degree thesis study case",
-                "Entirely self-developed except for 3D models and third party scripts (More Mountains)",
+                "Everything programmed by me - all gameplay systems, UI, progression mechanics, and game logic",
+                "Solo development project completed as final degree thesis study case",
+                "Integrated third-party assets: 3D models and More Mountains tools",
                 "Intended for publication as debut commercial game release"
               ]
             }
           ],
-          "role": "Solo Developer",
+          "role": "Solo Programmer",
           "technologies": [
             "Unity",
             "C#",
@@ -718,12 +723,13 @@
           ],
           "contributions": [
             {
-              "category": "Project Details",
+              "category": "Development",
               "items": [
-                "University assignment completed over five months",
-                "Solo developer - created from scratch",
-                "Last remaining player wins the match",
-                "Demonstrates networking fundamentals and real-time multiplayer synchronization"
+                "Everything programmed by me - all networking systems, gameplay logic, client-server architecture, and multiplayer synchronization",
+                "Built custom UDP networking implementation from scratch",
+                "Implemented latency hiding, world state replication, and packet management",
+                "Five-month university assignment completed as solo programmer",
+                "Battle royale mechanics: last remaining player wins"
               ]
             }
           ],
@@ -763,27 +769,27 @@
   },
   "thatsMe": {
     "sectionTitle": "That's Me",
-    "sectionSubtitle": "I wear a lot of hats around here.",
+    "sectionSubtitle": "From low-level engine code to high-level gameplay systems.",
     "roles": [
       {
-        "role": "President",
+        "role": "Gameplay Programmer",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-president.png"
+        "image": "assets/casualGames/PersonalPhotos/role-developer.png"
       },
       {
-        "role": "Sales",
-        "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-sales.png"
-      },
-      {
-        "role": "Creative Director",
+        "role": "Engine Developer",
         "name": "Andrés Sánchez",
         "image": "assets/casualGames/PersonalPhotos/role-creative.png"
       },
       {
-        "role": "Developer",
+        "role": "Systems Architect",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-developer.png"
+        "image": "assets/casualGames/PersonalPhotos/role-president.png"
+      },
+      {
+        "role": "Performance Optimizer",
+        "name": "Andrés Sánchez",
+        "image": "assets/casualGames/PersonalPhotos/role-sales.png"
       }
     ]
   },
