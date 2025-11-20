@@ -191,7 +191,10 @@ class ContentLoader {
                 ${mediaHTML}
             </div>
             <div class="project-card__content">
-                <h3 class="project-card__title">${project.title}</h3>
+                <div class="project-card__header">
+                    <h3 class="project-card__title">${project.title}</h3>
+                    ${project.genre ? `<span class="genre-label">${project.genre}</span>` : ''}
+                </div>
                 <div class="project-card__tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
@@ -550,11 +553,6 @@ class ContentLoader {
                                 <div class="project-modal-info-box__tags">
                                     ${modalData.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
                                 </div>
-                            </div>
-
-                            <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Timeline</h3>
-                                <p class="project-modal-info-box__content">${modalData.timeline}</p>
                             </div>
                         </div>
                     </div>

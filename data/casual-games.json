@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Andrés Sànchez - Game Programmer Portfolio",
-    "description": "Game programmer specializing in gameplay systems, multiplayer networking, and engine development"
+    "description": "Game programmer specializing in gameplay systems, engine development and gameplay optimization"
   },
   "hero": {
-    "greeting": "Hi, I'm Andrés Sànchez, Game Programmer",
-    "headline": "Code that brings games to life",
-    "description": "Gameplay programmer with shipped titles for Hot Wheels, PJ Masks, and Monster High. Specialized in multiplayer systems, physics engines, and performance optimization across Unity and custom C++ engines.",
+    "greeting": "Hi, I'm Andrés",
+    "headline": "I make games",
+    "description": "Software developer with experience on the videogames industry, expertise with Unity and with deep knowledge on engine programming.",
     "ctaPrimary": "View My Work",
     "ctaSecondary": "Get In Touch"
   },
@@ -62,10 +62,14 @@
       {
         "id": "hotwheels",
         "title": "Hot Wheels Xtreme Overdrive",
+        "genre": "Racing game",
         "tags": [
           "Unity",
           "C#",
-          "Photon"
+          "Android Studio",
+          "HTML",
+          "CSS",
+          "JavaScript"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/FeaturedProjects/videos/hotWheels.mp4",
@@ -121,23 +125,25 @@
               ]
             }
           ],
-          "role": "Game Designer / Programmer",
+          "role": "Gameplay Programmer / Android Developer / UI Programmer / Technical Designer",
           "technologies": [
             "Unity",
             "C#",
-            "Photon",
-            "Android"
-          ],
-          "timeline": "2023 - 6 months"
+            "Android Studio",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
         }
       },
       {
         "id": "dracamar",
         "title": "Dracamar",
+        "genre": "3D Platformer",
         "tags": [
           "Unity",
           "C#",
-          "Adventure"
+          "Multiplatform Porting"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
@@ -160,46 +166,39 @@
           ],
           "contributions": [
             {
-              "category": "Game Design",
+              "category": "Multiplatform Porting & Optimization",
               "items": [
-                "Level design and progression",
-                "Puzzle mechanics design",
-                "Player experience optimization"
+                "Crash fixing on Nintendo Switch, Xbox, PS4, and PS5",
+                "Asset bundles loading optimization",
+                "Render optimization with impostors",
+                "Custom graphics per platform architecture and implementation",
+                "GPU Instancing / SRP Batching case studies and implementation"
               ]
             },
             {
-              "category": "Programming",
+              "category": "Gameplay Programming",
               "items": [
-                "Character controller implementation",
-                "Game mechanics programming",
-                "UI/UX development"
-              ]
-            },
-            {
-              "category": "Development",
-              "items": [
-                "Solo project development",
-                "Asset integration",
-                "Testing and iteration"
+                "Gameplay feedbacks programming for game feel",
+                "Quest debugging"
               ]
             }
           ],
-          "role": "Game Designer / Developer",
+          "role": "Gameplay Programmer / Porting Engineer",
           "technologies": [
             "Unity",
             "C#",
-            "Game Design"
-          ],
-          "timeline": "2020 - 4 months"
+            "Multiplatform Porting"
+          ]
         }
       },
       {
         "id": "pjmasks",
         "title": "PJ Masks Power Heroes",
+        "genre": "2D Platformer",
         "tags": [
           "Unity",
           "C#",
-          "Multi-platform"
+          "Multiplatform Porting"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/FeaturedProjects/videos/pjMasks.mp4",
@@ -230,37 +229,36 @@
           ],
           "contributions": [
             {
-              "category": "Gameplay Programming",
+              "category": "Professional Development",
               "items": [
-                "Character abilities and powers",
-                "Enemy AI and behavior",
-                "Level progression systems"
+                "First professional project, learnt platforms SDK's and how to port, debug and profile a game"
               ]
             },
             {
-              "category": "UI Programming",
+              "category": "UI Programming & Optimization",
               "items": [
-                "Kid-friendly interface design",
-                "Character selection system"
+                "Several UI programming debugging",
+                "Game QA",
+                "UI Render loop optimization"
               ]
             }
           ],
-          "role": "Game Designer / Programmer",
+          "role": "Porting Engineer / QA",
           "technologies": [
             "Unity",
             "C#",
-            "Multi-platform"
-          ],
-          "timeline": "2022 - 8 months"
+            "Multiplatform Porting"
+          ]
         }
       },
       {
         "id": "monsterhigh",
         "title": "Monster High Skulltimate Secrets",
+        "genre": "3D Platformer",
         "tags": [
           "Unity",
           "C#",
-          "Dialogue System"
+          "Multiplatform Porting"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/FeaturedProjects/videos/monsterHigh.mp4",
@@ -291,28 +289,28 @@
           ],
           "contributions": [
             {
-              "category": "Gameplay Programming",
+              "category": "World Streaming & Optimization",
               "items": [
-                "Mystery solving mechanics",
-                "Character dialogue system",
-                "Collectibles and secrets"
+                "World streaming implementation using SECTR",
+                "Impostor implementation to fake non-loaded chunks and loading spots with low stress to avoid going below 30 fps",
+                "Deep memory profiling and optimization"
               ]
             },
             {
-              "category": "UI Programming",
+              "category": "Gameplay Programming",
               "items": [
-                "Inventory and clue system",
-                "Character customization"
+                "Quest programming",
+                "Customization system programming",
+                "Menu UI programming and UI Optimization"
               ]
             }
           ],
-          "role": "Game Designer / Programmer",
+          "role": "Gameplay Programmer / Porting Engineer",
           "technologies": [
             "Unity",
             "C#",
-            "Multi-platform"
-          ],
-          "timeline": "2021 - 10 months"
+            "Multiplatform Porting"
+          ]
         }
       }
     ]
@@ -327,8 +325,9 @@
         "description": "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose",
         "tags": [
           "Unity",
-          "UI/UX Design",
-          "Adventure"
+          "UI / UX Design",
+          "UI Art",
+          "Game feel"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
@@ -392,9 +391,8 @@
         "title": "Ko-Fi Engine",
         "description": "Custom C++ Game Engine - Foundation for Dune Special Spice Ops",
         "tags": [
-          "C++",
-          "Engine Dev",
-          "OpenGL"
+          "C/C++",
+          "Engine Dev"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
@@ -519,7 +517,8 @@
         "tags": [
           "Unity",
           "C#",
-          "Mobile"
+          "Android",
+          "Clicker"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
@@ -593,9 +592,9 @@
         "title": "Pengo",
         "description": "Recreation of the Legendary Sega Arcade Game",
         "tags": [
-          "C++",
+          "C/C++",
           "2D Engine",
-          "Arcade"
+          "Arcade Clone"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
@@ -641,7 +640,7 @@
         "tags": [
           "C/C++",
           "2D Physics",
-          "Arcade"
+          "Arcade Clone"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
@@ -687,7 +686,8 @@
         "tags": [
           "Unity",
           "C#",
-          "Networking"
+          "Local network programming",
+          "Multiplayer"
         ],
         "mediaType": "image",
         "mediaSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",

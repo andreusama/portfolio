@@ -77,6 +77,33 @@
     transform: scale(1.05);
 }
 
+/* Project Card Header (Title + Genre) */
+.project-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+/* Genre Label */
+.genre-label {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-accent-orange);
+    color: var(--color-base-dark);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius-full);
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+}
+
+.genre-label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(255, 133, 82, 0.3);
+}
+
 /* Project Card Variant */
 .card--project {
     cursor: pointer;
