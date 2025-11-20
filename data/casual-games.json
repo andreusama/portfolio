@@ -769,27 +769,17 @@
   },
   "thatsMe": {
     "sectionTitle": "That's Me",
-    "sectionSubtitle": "From low-level engine code to high-level gameplay systems.",
+    "sectionSubtitle": "Sometimes you must go AFK... to come back stronger.",
     "roles": [
       {
-        "role": "Gameplay Programmer",
+        "role": "Gameplay Programmer and a Cook-Reader",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-developer.png"
+        "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
       },
       {
-        "role": "Engine Developer",
+        "role": "Porting Engineer and a Traveler",
         "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-creative.png"
-      },
-      {
-        "role": "Systems Architect",
-        "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-president.png"
-      },
-      {
-        "role": "Performance Optimizer",
-        "name": "Andrés Sánchez",
-        "image": "assets/casualGames/PersonalPhotos/role-sales.png"
+        "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
       }
     ]
   },
