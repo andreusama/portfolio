@@ -141,7 +141,20 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach(project => {
-            grid.appendChild(this.createProjectCard(project));
+            const card = this.createProjectCard(project);
+            grid.appendChild(card);
+
+            // Add click handler to video section to open modal
+            const videoSection = card.querySelector('.project-card__video');
+            if (videoSection && project.modal) {
+                videoSection.style.cursor = 'pointer';
+                videoSection.addEventListener('click', () => {
+                    const modalManager = window.modalManager;
+                    if (modalManager) {
+                        modalManager.openModal(project.id);
+                    }
+                });
+            }
         });
     }
 
@@ -159,17 +172,25 @@ class ContentLoader {
             if (project.mediaType === 'video') {
                 // Video thumbnail - auto-playing, looping, muted
                 const posterAttr = project.videoPoster ? `poster="${project.videoPoster}"` : '';
-                mediaHTML = `<video
-                    class="project-card__media"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="auto"
-                    ${posterAttr}
-                    style="width: 100%; height: auto; object-fit: contain; display: block;">
-                    <source src="${project.mediaSrc}" type="video/mp4">
-                </video>`;
+                mediaHTML = `
+                    <div class="video-container" style="position: relative; width: 100%;">
+                        <div class="video-loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1rem; z-index: 10;">
+                            <div class="loading-spinner" style="width: 40px; height: 40px; border: 4px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                            <span style="color: #fff; font-size: 0.875rem;">Loading...</span>
+                        </div>
+                        <video
+                            class="project-card__media"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="auto"
+                            ${posterAttr}
+                            onloadeddata="this.parentElement.querySelector('.video-loading').style.display='none'"
+                            style="width: 100%; height: auto; object-fit: contain; display: block;">
+                            <source src="${project.mediaSrc}" type="video/mp4">
+                        </video>
+                    </div>`;
             } else {
                 // Image thumbnail
                 mediaHTML = `<img src="${project.mediaSrc}" alt="${project.title}" class="project-card__media" style="width: 100%; height: 100%; object-fit: cover;">`;
@@ -226,7 +247,20 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach((project, index) => {
-            grid.appendChild(this.createProjectCard(project));
+            const card = this.createProjectCard(project);
+            grid.appendChild(card);
+
+            // Add click handler to video section to open modal
+            const videoSection = card.querySelector('.project-card__video');
+            if (videoSection && project.modal) {
+                videoSection.style.cursor = 'pointer';
+                videoSection.addEventListener('click', () => {
+                    const modalManager = window.modalManager;
+                    if (modalManager) {
+                        modalManager.openModal(project.id);
+                    }
+                });
+            }
         });
     }
 

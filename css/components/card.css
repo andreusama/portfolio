@@ -69,12 +69,6 @@
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-medium);
     border-radius: var(--border-radius-full);
-    transition: all var(--transition-fast);
-}
-
-.tag:hover {
-    background: var(--color-primary-dark);
-    transform: scale(1.05);
 }
 
 /* Project Card Header (Title + Genre) */
@@ -96,12 +90,6 @@
     font-weight: var(--font-weight-bold);
     border-radius: var(--border-radius-full);
     white-space: nowrap;
-    transition: all var(--transition-fast);
-}
-
-.genre-label:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(255, 133, 82, 0.3);
 }
 
 /* Project Card Variant */
