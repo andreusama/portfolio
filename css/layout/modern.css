@@ -51,11 +51,12 @@ body.hybrid-layout {
 }
 
 .navbar__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--color-base-dark);
     text-decoration: none;
     transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 .navbar__logo:hover {
@@ -67,6 +68,12 @@ body.hybrid-layout {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
+}
+
+.navbar__menu li {
+    display: flex;
+    align-items: center;
 }
 
 .navbar__link {
@@ -75,6 +82,7 @@ body.hybrid-layout {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    display: inline-block;
 }
 
 .navbar__link::after {

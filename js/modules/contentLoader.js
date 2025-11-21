@@ -141,7 +141,20 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach(project => {
-            grid.appendChild(this.createProjectCard(project));
+            const card = this.createProjectCard(project);
+            grid.appendChild(card);
+
+            // Add click handler to video section to open modal
+            const videoSection = card.querySelector('.project-card__video');
+            if (videoSection && project.modal) {
+                videoSection.style.cursor = 'pointer';
+                videoSection.addEventListener('click', () => {
+                    const modalManager = window.modalManager;
+                    if (modalManager) {
+                        modalManager.openModal(project.id);
+                    }
+                });
+            }
         });
     }
 
@@ -234,7 +247,20 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach((project, index) => {
-            grid.appendChild(this.createProjectCard(project));
+            const card = this.createProjectCard(project);
+            grid.appendChild(card);
+
+            // Add click handler to video section to open modal
+            const videoSection = card.querySelector('.project-card__video');
+            if (videoSection && project.modal) {
+                videoSection.style.cursor = 'pointer';
+                videoSection.addEventListener('click', () => {
+                    const modalManager = window.modalManager;
+                    if (modalManager) {
+                        modalManager.openModal(project.id);
+                    }
+                });
+            }
         });
     }
 

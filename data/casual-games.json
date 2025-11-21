@@ -56,7 +56,7 @@
     ]
   },
   "featuredProjects": {
-    "sectionTitle": "Featured Projects",
+    "sectionTitle": "Commercial Games",
     "sectionSubtitle": "Professional games shipped for major entertainment brands",
     "projects": [
       {
@@ -322,11 +322,10 @@
       {
         "id": "apigalypsis",
         "title": "Apigalypsis",
+        "genre": "Mobile Game",
         "description": "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose",
         "tags": [
           "Unity",
-          "UI / UX Design",
-          "UI Art",
           "Game feel"
         ],
         "mediaType": "video",
@@ -389,9 +388,10 @@
       {
         "id": "kofi-engine",
         "title": "Ko-Fi Engine",
+        "genre": "Game Engine",
         "description": "Custom C++ Game Engine - Foundation for Dune Special Spice Ops",
         "tags": [
-          "C/C++",
+          "C++",
           "Engine Dev"
         ],
         "mediaType": "video",
@@ -513,12 +513,11 @@
       {
         "id": "the-tower",
         "title": "The Tower",
+        "genre": "Mobile Game",
         "description": "Mobile Clicker & Builder Game - Final Degree Thesis Study Case",
         "tags": [
           "Unity",
-          "C#",
-          "Android",
-          "Clicker"
+          "Android"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
@@ -590,11 +589,11 @@
       {
         "id": "pengo",
         "title": "Pengo",
+        "genre": "Arcade Game",
         "description": "Recreation of the Legendary Sega Arcade Game",
         "tags": [
-          "C/C++",
-          "2D Engine",
-          "Arcade Clone"
+          "C++",
+          "2D Engine"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
@@ -636,11 +635,11 @@
       {
         "id": "7up-pinball",
         "title": "7up Pinball Clone",
+        "genre": "Arcade Game",
         "description": "2D Physics Engine Built from Scratch",
         "tags": [
-          "C/C++",
-          "2D Physics",
-          "Arcade Clone"
+          "C++",
+          "2D Physics"
         ],
         "mediaType": "video",
         "mediaSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
@@ -682,11 +681,10 @@
       {
         "id": "fire-fighters",
         "title": "Fire Fighters",
+        "genre": "Battle Royale",
         "description": "Online Multiplayer Battle Royale - Network Programming Showcase",
         "tags": [
           "Unity",
-          "C#",
-          "Local network programming",
           "Multiplayer"
         ],
         "mediaType": "image",
@@ -752,17 +750,17 @@
     "skillsList": [
       {
         "title": "Unity Development",
-        "description": "Unity is where I bring worlds to life. From crafting responsive player controllers that feel just right to building multiplayer systems that keep friends connected across platforms, I've spent years making Unity sing. Whether it's optimizing for mobile or shipping to six different consoles, Unity's been my creative partner in turning ideas into games people actually want to play.",
+        "description": "I've worked as a Unity developer for quite a few international brands, implementing game design documents while sorting technical challenges. Delivering beautiful worlds for clients at aimed fps, rest easy knowing your clients are in good hands, and I've yet to encounter a feature I couldn't deliver on.",
         "image": "assets/casualGames/Skills/Unity.png"
       },
       {
         "title": "C/C++ Engine Programming",
-        "description": "Sometimes you need to go deeper. I love getting my hands dirty with C and C++, building custom engines and understanding what's really happening under the hood. There's something beautiful about optimizing memory, crafting your own systems from scratch, and having complete control over how every frame renders. It's where performance meets creativity.",
+        "description": "The key is behind the scenes. I've developed solo and team projects combining C and C++ to build software that becomes a game. I built an entire animation module for an engine, understanding how everything is just processed data being interpreted, making a 3D mesh modify its shape. I made contributions to other modules, gaining a deeper understanding of how game engines work. This knowledge helped me solve many problems in commercial engines.",
         "image": "assets/casualGames/Skills/clogo.png"
       },
       {
         "title": "Git & Version Control",
-        "description": "Working in teams means staying in sync, and Git keeps everything flowing smoothly. I'm comfortable with branching strategies, merge conflicts, and all those fun moments when code needs to come together. Whether it's Agile sprints or Scrum workflows, version control isn't just about saving code—it's about collaboration, iteration, and making sure we can always roll back when that \"brilliant\" idea turns out to be not so brilliant after all.",
+        "description": "Experienced in collaborative development using Git. I design modular projects to minimize merge conflicts and am careful about file modifications in shared repositories. This approach keeps team workflows smooth and avoids uncomfortable merges.",
         "image": "assets/casualGames/Skills/Git-logo.svg.png"
       }
     ]

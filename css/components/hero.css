@@ -114,4 +114,10 @@
         width: 100%;
         max-width: 300px;
     }
+
+    /* Hide decorative columns on mobile */
+    .hero-column,
+    .hero-window {
+        display: none !important;
+    }
 }
