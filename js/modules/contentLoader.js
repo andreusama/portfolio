@@ -311,25 +311,46 @@ class ContentLoader {
         section.roles.forEach(role => {
             const column = document.createElement('div');
             column.className = 'team-column';
-            column.innerHTML = `
-                <div class="team-window">
-                    <div class="team-window__titlebar">
-                        <div class="macos-dots">
-                            <span class="macos-dot macos-dot--red"></span>
-                            <span class="macos-dot macos-dot--yellow"></span>
-                            <span class="macos-dot macos-dot--green"></span>
+
+            // Check if it's a decoration item
+            if (role.isDecoration) {
+                column.innerHTML = `
+                    <div class="team-window team-window--decoration">
+                        <div class="team-window__titlebar">
+                            <div class="macos-dots">
+                                <span class="macos-dot macos-dot--red"></span>
+                                <span class="macos-dot macos-dot--yellow"></span>
+                                <span class="macos-dot macos-dot--green"></span>
+                            </div>
+                        </div>
+                        <div class="team-window__content team-window__content--decoration">
+                            <img src="${role.image}" alt="Decoration" class="team-window__decoration-icon">
                         </div>
                     </div>
-                    <div class="team-window__content">
-                        <img src="${role.image}" alt="${role.name}" class="team-window__photo">
+                    <img src="column.svg" alt="Decorative column" class="team-column__image">
+                `;
+            } else {
+                column.innerHTML = `
+                    <div class="team-window">
+                        <div class="team-window__titlebar">
+                            <div class="macos-dots">
+                                <span class="macos-dot macos-dot--red"></span>
+                                <span class="macos-dot macos-dot--yellow"></span>
+                                <span class="macos-dot macos-dot--green"></span>
+                            </div>
+                        </div>
+                        <div class="team-window__content">
+                            <img src="${role.image}" alt="${role.name}" class="team-window__photo">
+                        </div>
+                        <div class="team-window__info">
+                            <h3 class="team-window__role">${role.role}</h3>
+                            <p class="team-window__name">${role.name}</p>
+                        </div>
                     </div>
-                    <div class="team-window__info">
-                        <h3 class="team-window__role">${role.role}</h3>
-                        <p class="team-window__name">${role.name}</p>
-                    </div>
-                </div>
-                <img src="column.svg" alt="Decorative column" class="team-column__image">
-            `;
+                    <img src="column.svg" alt="Decorative column" class="team-column__image">
+                `;
+            }
+
             grid.appendChild(column);
         });
     }

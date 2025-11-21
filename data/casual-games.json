@@ -770,14 +770,26 @@
     "sectionSubtitle": "Sometimes you must go AFK... to come back stronger.",
     "roles": [
       {
-        "role": "Gameplay Programmer and a Cook-Reader",
-        "name": "Andrés Sánchez",
+        "role": "",
+        "name": "",
+        "image": "corchetes.png",
+        "isDecoration": true
+      },
+      {
+        "role": "Sometimes a bug solution comes between pages",
+        "name": "",
         "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
       },
       {
-        "role": "Porting Engineer and a Traveler",
-        "name": "Andrés Sánchez",
+        "role": "After a lot of mallocs the heap can overflow, so I like to free() myself",
+        "name": "",
         "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
+      },
+      {
+        "role": "",
+        "name": "",
+        "image": ";.png",
+        "isDecoration": true
       }
     ]
   },
