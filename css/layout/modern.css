@@ -55,12 +55,12 @@ body.hybrid-layout {
     font-weight: 500;
     color: var(--color-base-dark);
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease;
     display: inline-block;
+    line-height: 1;
 }
 
 .navbar__logo:hover {
-    transform: scale(1.1);
     color: var(--color-accent-purple);
 }
 
@@ -83,6 +83,7 @@ body.hybrid-layout {
     transition: color 0.3s ease;
     position: relative;
     display: inline-block;
+    line-height: 1;
 }
 
 .navbar__link::after {
