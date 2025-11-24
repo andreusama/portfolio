@@ -166,17 +166,36 @@ class ContentLoader {
         article.className = 'project-card';
         article.setAttribute('data-project', project.id);
 
-        // Generate media content (image, video, or placeholder)
+        // Generate media content (image, video, youtube, or placeholder)
         let mediaHTML = '';
         if (project.mediaSrc && project.mediaSrc.trim() !== '') {
-            if (project.mediaType === 'video') {
+            if (project.mediaType === 'youtube') {
+                // YouTube embed
+                const youtubeId = this.extractYoutubeId(project.mediaSrc);
+                if (youtubeId) {
+                    mediaHTML = `
+                        <div class="video-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
+                            <iframe
+                                class="project-card__media"
+                                src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&modestbranding=1"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen>
+                            </iframe>
+                        </div>`;
+                } else {
+                    mediaHTML = `<div class="media-placeholder media-placeholder--video">Invalid YouTube URL</div>`;
+                }
+            } else if (project.mediaType === 'video') {
                 // Video thumbnail - auto-playing, looping, muted
                 const posterAttr = project.videoPoster ? `poster="${project.videoPoster}"` : '';
                 mediaHTML = `
                     <div class="video-container" style="position: relative; width: 100%;">
-                        <div class="video-loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1rem; z-index: 10;">
-                            <div class="loading-spinner" style="width: 40px; height: 40px; border: 4px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-                            <span style="color: #fff; font-size: 0.875rem;">Loading...</span>
+                        <div class="video-loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 10; width: 80%; max-width: 300px;">
+                            <span style="color: var(--color-cream, #fff); font-size: 0.875rem; margin-bottom: 0.5rem;">Loading...</span>
+                            <div style="width: 100%; height: 4px; background-color: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); border-radius: 2px; animation: loading 2s ease-in-out infinite;"></div>
+                            </div>
                         </div>
                         <video
                             class="project-card__media"
@@ -616,6 +635,29 @@ class ContentLoader {
         `;
 
         return overlay;
+    }
+
+    /**
+     * Helper: Extract YouTube video ID from URL
+     */
+    extractYoutubeId(url) {
+        // Handle different YouTube URL formats:
+        // - https://www.youtube.com/watch?v=VIDEO_ID
+        // - https://youtu.be/VIDEO_ID
+        // - https://www.youtube.com/embed/VIDEO_ID
+        const patterns = [
+            /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\?\/]+)/,
+            /^([a-zA-Z0-9_-]{11})$/ // Direct video ID
+        ];
+
+        for (const pattern of patterns) {
+            const match = url.match(pattern);
+            if (match && match[1]) {
+                return match[1];
+            }
+        }
+
+        return null;
     }
 }
 
