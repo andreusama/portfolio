@@ -4,8 +4,8 @@
     "description": "Game programmer specializing in gameplay systems, engine development and gameplay optimization"
   },
   "hero": {
-    "greeting": "Hi, I'm Andrés",
-    "headline": "I make games",
+    "greeting": "Professional developer industry-proven",
+    "headline": "Unity - C# Engineer",
     "description": "Software developer with experience on the videogames industry, expertise with Unity and with deep knowledge on engine programming.",
     "ctaPrimary": "View My Work",
     "ctaSecondary": "Get In Touch"
@@ -795,7 +795,7 @@
   },
   "finalCta": {
     "title": "I would love to work with you!",
-    "text": "Let's talk!",
+    "text": "Feel free to reach out",
     "buttonText": "Get in touch"
   },
   "contact": {

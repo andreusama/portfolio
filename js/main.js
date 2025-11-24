@@ -28,10 +28,12 @@
                 console.log('✅ Content loaded successfully!');
             } catch (error) {
                 console.error('❌ Failed to load content:', error);
+                hideLoadingScreen();
                 return; // Stop initialization if content fails to load
             }
         } else {
             console.error('ContentLoader not found');
+            hideLoadingScreen();
             return;
         }
 
@@ -46,11 +48,32 @@
             initializeLazyLoading();
         }
 
+        // Hide loading screen and show content
+        hideLoadingScreen();
+
         // Log completion
         console.log('✅ Portfolio initialized successfully!');
         if (CONFIG.debug) {
             console.log('Debug mode enabled');
             logPerformanceMetrics();
+        }
+    }
+
+    function hideLoadingScreen() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const body = document.body;
+
+        if (loadingScreen) {
+            // Add fade-out class
+            loadingScreen.classList.add('fade-out');
+
+            // Remove loading class from body to show content
+            body.classList.remove('loading');
+
+            // Remove loading screen from DOM after animation
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
         }
     }
 

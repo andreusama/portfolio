@@ -35,8 +35,83 @@
     <link rel="stylesheet" href="css/components/circle-background.css">
     <link rel="stylesheet" href="css/utilities/spacing.css">
     <link rel="stylesheet" href="css/utilities/typography.css">
+    <style>
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-base-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .loading-bar__progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            border-radius: 2px;
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        .loading-text {
+            color: var(--color-cream);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Hide content until loaded */
+        body.loading .main-content,
+        body.loading .navbar,
+        body.loading .footer {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Show content when loaded */
+        body:not(.loading) .main-content,
+        body:not(.loading) .navbar,
+        body:not(.loading) .footer {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+        }
+    </style>
 </head>
-<body class="hybrid-layout">
+<body class="hybrid-layout loading">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Loading...</div>
+        <div class="loading-bar">
+            <div class="loading-bar__progress"></div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar__container">
