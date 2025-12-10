@@ -322,43 +322,58 @@
       {
         "id": "football-guesser",
         "title": "Football Guesser",
-        "genre": "Web Game",
-        "description": "Football guessing game built with web technologies",
+        "genre": "Web Application",
+        "description": "Interactive football player identification game with DOM manipulation and event-driven architecture",
         "tags": [
           "JavaScript",
-          "Web Dev"
+          "DOM API"
         ],
         "mediaType": "video",
-        "mediaSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/footballGuesser.mp4",
+        "mediaSrc": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4",
         "mediaPlaceholder": "🎮 FOOTBALL GUESSER",
         "modal": {
           "title": "Football Guesser",
-          "windowTitle": "Football Guesser.exe",
+          "windowTitle": "Football Guesser.html",
           "videoType": "video",
-          "videoSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/footballGuesser.mp4",
+          "videoSrc": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
-              "title": "Feature 1",
-              "description": "Description of feature 1",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/features/feature1.png"
+              "title": "Client-Side Game Logic",
+              "description": "Pure JavaScript implementation using ES6+ features: arrow functions, destructuring, template literals. State management through closure patterns and module design for encapsulation.",
+              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
+            },
+            {
+              "title": "Dynamic DOM Rendering",
+              "description": "Event-driven UI updates using vanilla JavaScript DOM API. Implements efficient element creation, attribute manipulation, and event delegation for optimal performance without frameworks.",
+              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
+            },
+            {
+              "title": "Responsive CSS Layout",
+              "description": "Flexbox and CSS Grid implementation for cross-device compatibility. Custom animations using CSS transitions and keyframes for smooth user interactions.",
+              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
             }
           ],
           "contributions": [
             {
-              "category": "Development",
+              "category": "Web Development",
               "items": [
-                "Web-based football guessing game",
-                "Built with JavaScript and web technologies"
+                "Vanilla JavaScript game logic with ES6+ syntax and module pattern",
+                "DOM manipulation and event handling without external libraries",
+                "Responsive CSS using Flexbox/Grid and media queries",
+                "Client-side state management and data persistence",
+                "Asynchronous operations and promise-based data fetching"
               ]
             }
           ],
           "role": "Web Developer",
           "technologies": [
-            "JavaScript",
-            "HTML",
-            "CSS"
+            "JavaScript ES6+",
+            "HTML5",
+            "CSS3",
+            "DOM API",
+            "Responsive Design"
           ],
           "timeline": "Personal Project"
         }
