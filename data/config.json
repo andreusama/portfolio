@@ -1,6 +1,6 @@
 {
-  "version": "casual-games",
-  "dataFile": "data/casual-games.json",
+  "version": "webdev",
+  "dataFile": "data/webDev.json",
   "availableVersions": {
     "casual-games": {
       "name": "Casual Games Portfolio",
@@ -13,6 +13,10 @@
     "freelance-tech": {
       "name": "Freelance Tech Solutions",
       "dataFile": "data/freelance-tech.json"
+    },
+    "webdev": {
+      "name": "Web Developer Portfolio",
+      "dataFile": "data/webDev.json"
     }
   }
 }
