@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Game Programmer Portfolio",
+    "description": "Game programmer specializing in gameplay systems, engine development and gameplay optimization"
+  },
+  "hero": {
+    "greeting": "professional software developer",
+    "headline": "C++ & C# Programmer",
+    "description": "Developer with experience on the videogames industry, familiar with web developement and knowledge on c++ engine programming.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Get In Touch"
+  },
+  "marquees": {
+    "skills1": [
+      "C#",
+      "C++",
+      ".NET",
+      "OpenGL",
+      "SDL2"
+    ],
+    "skills2": [
+      "Gameplay Programming",
+      "Engine Programming",
+      "Network Programming",
+      "Physics Programming",
+      "Memory Optimization"
+    ],
+    "platforms": [
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch",
+      "PC",
+      "Mobile",
+      "Multi-platform",
+      "Cross-platform"
+    ],
+    "genres": [
+      "UDP Networking",
+      "Client-Server Architecture",
+      "Photon Multiplayer",
+      "Unity Scripting"
+    ],
+    "types": [
+      "Indie Development",
+      "Mobile Development",
+      "Console Development",
+      "Academic Projects"
+    ],
+    "misc": [
+      "Version Control",
+      "Git",
+      "Agile",
+      "Performance Profiling",
+      "Code Optimization",
+      "Debug & Testing"
+    ]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Commercial Games",
+    "sectionSubtitle": "Professional games shipped for major entertainment brands",
+    "projects": [
+      {
+        "id": "hotwheels",
+        "title": "Hot Wheels Xtreme Overdrive",
+        "genre": "Racing game",
+        "tags": [
+          "Unity",
+          "C#",
+          "Android Studio",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=ee5uKTAfbCU",
+        "mediaPlaceholder": "🎬 HOT WHEELS TRAILER",
+        "modal": {
+          "title": "Hot Wheels Xtreme Overdrive",
+          "windowTitle": "Hot Wheels Xtreme Overdrive.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/hotWheels.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {
+              "name": "Hot Wheels",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/HotWheelsLogo.png"
+            },
+            {
+              "name": "BMW",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/BMWLogo.png"
+            },
+            {
+              "name": "airConsole",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/airConsole.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Vehicle physics and handling systems",
+                "Track obstacles and power-ups",
+                "Race progression and scoring"
+              ]
+            },
+            {
+              "category": "UI Development",
+              "items": [
+                "In-game HUD and menus",
+                "Vehicle selection interface"
+              ]
+            },
+            {
+              "category": "Multiplayer Systems",
+              "items": [
+                "Networked race implementation",
+                "Player synchronization"
+              ]
+            },
+            {
+              "category": "Optimization",
+              "items": [
+                "Performance optimization for automotive hardware",
+                "Memory management and loading"
+              ]
+            }
+          ],
+          "role": "Gameplay Programmer / Android Developer / UI Programmer / Technical Designer",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Android Studio",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
+        }
+      },
+      {
+        "id": "dracamar",
+        "title": "Dracamar",
+        "genre": "3D Platformer",
+        "tags": [
+          "Unity",
+          "C#",
+          "Multiplatform Porting"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=4ZHwP0Y-2As",
+        "mediaPlaceholder": "🎬 DRACAMAR TRAILER",
+        "modal": {
+          "title": "Dracamar",
+          "windowTitle": "Dracamar.exe",
+          "platforms": [
+            "PC",
+            "Mobile"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {
+              "name": "3Cat",
+              "logo": "assets/casualGames/FeaturedProjects/logos/Dracamar/3cat.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Multiplatform Porting & Optimization",
+              "items": [
+                "Crash fixing on Nintendo Switch, Xbox, PS4, and PS5",
+                "Asset bundles loading optimization",
+                "Render optimization with impostors",
+                "Custom graphics per platform architecture and implementation",
+                "GPU Instancing / SRP Batching case studies and implementation"
+              ]
+            },
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Gameplay feedbacks programming for game feel",
+                "Quest debugging"
+              ]
+            }
+          ],
+          "role": "Gameplay Programmer / Porting Engineer",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Multiplatform Porting"
+          ]
+        }
+      },
+      {
+        "id": "pjmasks",
+        "title": "PJ Masks Power Heroes",
+        "genre": "2D Platformer",
+        "tags": [
+          "Unity",
+          "C#",
+          "Multiplatform Porting"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=JqxbOwEULMY",
+        "mediaPlaceholder": "🎬 PJ MASKS TRAILER",
+        "modal": {
+          "title": "PJ Masks Power Heroes: Mighty Alliance",
+          "windowTitle": "PJ Masks Power Heroes.exe",
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X|S",
+            "Nintendo Switch"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/pjMasks.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {
+              "name": "PJ Masks",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/PJ-Masks-logo-2.png"
+            },
+            {
+              "name": "Hasbro",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/Hasbro_logo.svg.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Professional Development",
+              "items": [
+                "First professional project, learnt platforms SDK's and how to port, debug and profile a game"
+              ]
+            },
+            {
+              "category": "UI Programming & Optimization",
+              "items": [
+                "Several UI programming debugging",
+                "Game QA",
+                "UI Render loop optimization"
+              ]
+            }
+          ],
+          "role": "Porting Engineer / QA",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Multiplatform Porting"
+          ]
+        }
+      },
+      {
+        "id": "monsterhigh",
+        "title": "Monster High Skulltimate Secrets",
+        "genre": "3D Platformer",
+        "tags": [
+          "Unity",
+          "C#",
+          "Multiplatform Porting"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=etbysGnthu8",
+        "mediaPlaceholder": "🎬 MONSTER HIGH TRAILER",
+        "modal": {
+          "title": "Monster High Skulltimate Secrets",
+          "windowTitle": "Monster High Skulltimate Secrets.exe",
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X|S",
+            "Nintendo Switch"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/monsterHigh.mp4",
+          "videoPlaceholder": "🎬 GAME TRAILER VIDEO",
+          "brands": [
+            {
+              "name": "Monster High",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Monster-High-Logo-2010.png"
+            },
+            {
+              "name": "Mattel",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Mattel_logo.svg.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "World Streaming & Optimization",
+              "items": [
+                "World streaming implementation using SECTR",
+                "Impostor implementation to fake non-loaded chunks and loading spots with low stress to avoid going below 30 fps",
+                "Deep memory profiling and optimization"
+              ]
+            },
+            {
+              "category": "Gameplay Programming",
+              "items": [
+                "Quest programming",
+                "Customization system programming",
+                "Menu UI programming and UI Optimization"
+              ]
+            }
+          ],
+          "role": "Gameplay Programmer / Porting Engineer",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Multiplatform Porting"
+          ]
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Side Projects",
+    "sectionSubtitle": "Personal game development projects and experiments",
+    "projects": [
+      {
+        "id": "football-guesser",
+        "title": "Football Guesser",
+        "genre": "Web Game",
+        "description": "Football guessing game built with web technologies",
+        "tags": [
+          "JavaScript",
+          "Web Dev"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/footballGuesser.mp4",
+        "mediaPlaceholder": "🎮 FOOTBALL GUESSER",
+        "modal": {
+          "title": "Football Guesser",
+          "windowTitle": "Football Guesser.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/footballGuesser.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Feature 1",
+              "description": "Description of feature 1",
+              "image": "assets/casualGames/SideProjects/FootballGuesser/features/feature1.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Development",
+              "items": [
+                "Web-based football guessing game",
+                "Built with JavaScript and web technologies"
+              ]
+            }
+          ],
+          "role": "Web Developer",
+          "technologies": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
+          "timeline": "Personal Project"
+        }
+      },
+      {
+        "id": "apigalypsis",
+        "title": "Apigalypsis",
+        "genre": "Mobile Game",
+        "description": "UI/UX Learning Adventure - Adaptation of the Royal Game of Goose",
+        "tags": [
+          "Unity",
+          "Game feel"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
+        "mediaPlaceholder": "🎮 APIGALYPSIS",
+        "modal": {
+          "title": "Apigalypsis",
+          "windowTitle": "Apigalypsis.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "First Make It Work",
+              "description": "Started with core game logic and mechanics. Focused on getting the gameplay systems functional before any visual polish - making sure the dice rolls, movement, and game rules worked correctly.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/firstMakeItWork.webp"
+            },
+            {
+              "title": "Then Make It Beautiful",
+              "description": "Transformed the functional prototype into a polished experience. This project was an adventure in game feel - exploring animations, transitions, visual feedback, and UI polish to create satisfying player interactions and responsive design.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/fancyTiledBoard.mp4"
+            },
+            {
+              "title": "Farm-Themed Tiles",
+              "description": "Created all the art assets myself. Designed custom farm-themed tiles with bridges, fields, and agricultural elements to build a cohesive visual identity for the game board.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/tiles.png"
+            },
+            {
+              "title": "Reach the End to Free Your Species",
+              "description": "Victory condition: guide your bee through the perilous farm board to reach the end and achieve freedom. Complete the journey to liberate your species from the dangers of the agricultural world.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/win.mp4"
+            },
+            {
+              "title": "Or Die to the Farmers",
+              "description": "The stakes are high - land on the wrong tiles and face defeat at the hands of the farmers. Avoid hazards and dangerous spaces or meet your end in this risky adventure.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/lose.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Development",
+              "items": [
+                "Everything programmed and designed by me - all game logic, UI/UX implementation, animations, and visual polish",
+                "UI/UX learning project exploring game feel and player feedback",
+                "Adaptation of the Royal Game of Goose with custom farm theme",
+                "All art assets created by me"
+              ]
+            }
+          ],
+          "role": "Solo Developer",
+          "technologies": [
+            "Unity",
+            "UI/UX Design",
+            "Adventure Game Design"
+          ],
+          "timeline": "Personal Project"
+        }
+      },
+      {
+        "id": "kofi-engine",
+        "title": "Ko-Fi Engine",
+        "genre": "Game Engine",
+        "description": "Custom C++ Game Engine - Foundation for Dune Special Spice Ops",
+        "tags": [
+          "C++",
+          "Engine Dev"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
+        "mediaPlaceholder": "🎮 KO-FI ENGINE",
+        "modal": {
+          "title": "Ko-Fi Engine",
+          "windowTitle": "Ko-Fi Engine.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Physics System",
+              "description": "Custom physics implementation with collision detection, rigid body dynamics, and force calculations. Built from scratch to provide realistic object interactions and movement.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/Physics.gif"
+            },
+            {
+              "title": "Animation Module",
+              "description": "Skeletal animation system with keyframe interpolation and animation blending. Supports complex character movements and smooth transitions between animation states.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/engine_animation.gif"
+            },
+            {
+              "title": "Camera System",
+              "description": "Flexible camera implementation with multiple view modes, smooth movement controls, and follow mechanics. Supports both 2D and 3D camera perspectives.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/camera.gif"
+            },
+            {
+              "title": "Particle Effects",
+              "description": "Advanced particle system for creating visual effects like explosions, smoke, fire, and environmental ambience. Features emitter configurations and particle lifecycle management.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/particles.gif"
+            },
+            {
+              "title": "Shader Pipeline",
+              "description": "Custom shader system supporting vertex and fragment shaders for advanced rendering effects. Enables visual polish and specialized graphical features.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/shaders.gif"
+            },
+            {
+              "title": "Scripting System",
+              "description": "Integrated scripting framework allowing gameplay logic implementation. Provides flexibility for rapid prototyping and game behavior customization.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/scripting.gif"
+            },
+            {
+              "title": "User Interface",
+              "description": "UI framework for creating menus, HUD elements, and interactive interface components. Supports text rendering, buttons, and layout management.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/audio.gif"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Animation Module",
+              "items": [
+                "Developed complete animation system from import to mesh deformation",
+                "Implemented animation importing and data management",
+                "Built bone creation and placement system",
+                "Programmed keyframe interpolation across the engine"
+              ]
+            },
+            {
+              "category": "Scene Transition System",
+              "items": [
+                "Built upgrade/shop interface with character rotation",
+                "Implemented skill leveling mechanics",
+                "Created UI responsiveness with JSON-driven skill descriptions",
+                "Developed game state persistence"
+              ]
+            },
+            {
+              "category": "Unlock System",
+              "items": [
+                "Implemented character unlock mechanics triggered by dialogue",
+                "Controlled character availability and display in gameplay",
+                "Created JSON-based UI feedback system"
+              ]
+            },
+            {
+              "category": "Memory Optimization",
+              "items": [
+                "Identified and resolved significant memory leaks",
+                "Reduced 500MB scene by 150MB (30% optimization)",
+                "Prevented crashes near 2GB engine limit",
+                "Corrected malloc/delete operations"
+              ]
+            },
+            {
+              "category": "Camera System",
+              "items": [
+                "Implemented gameplay camera with WASD/mouse border movement",
+                "Added Q/E rotation controls",
+                "Programmed mousewheel dragging with smoothing",
+                "Created map boundary constraints"
+              ]
+            },
+            {
+              "category": "Engine Improvements",
+              "items": [
+                "Fixed event triggering issues and auto-attack crash loops",
+                "Resolved character collision problems",
+                "Implemented multipicking functionality and scene parallelization",
+                "Optimized hierarchy system",
+                "Created waypoint inspector tools and dynamic cursor switching",
+                "Added skill tooltips and loading screen animations"
+              ]
+            }
+          ],
+          "role": "Engine Programmer",
+          "technologies": [
+            "C++",
+            "OpenGL",
+            "Assimp",
+            "SDL2",
+            "Memory Management",
+            "Animation Systems"
+          ],
+          "timeline": "Academic Project"
+        }
+      },
+      {
+        "id": "the-tower",
+        "title": "The Tower",
+        "genre": "Mobile Game",
+        "description": "Mobile Clicker & Builder Game - Final Degree Thesis Study Case",
+        "tags": [
+          "Unity",
+          "Android"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
+        "mediaPlaceholder": "🎮 THE TOWER",
+        "modal": {
+          "title": "The Tower",
+          "windowTitle": "The Tower.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Kings Need Towers",
+              "description": "Construct structures for monarchs without castles, progressing through increasingly difficult construction challenges across different environments. Build towers for kingdoms using hammer-based mechanics where skill progression unlocks superior tools.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/kingsNeedTowers.PNG"
+            },
+            {
+              "title": "Grab a Hammer",
+              "description": "Use hammer-based mechanics to build towers, where skill progression unlocks superior tools and abilities for more efficient construction.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/grabAHammer.mp4"
+            },
+            {
+              "title": "NPC Recruitment & Resource Management",
+              "description": "Recruit NPCs through resource management by providing food and security. Manage reputation system affecting job difficulty and complexity while balancing resource allocation.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/NPCRecruitment.PNG"
+            },
+            {
+              "title": "Environmental Hazards",
+              "description": "Face extreme weather conditions and freezing mechanics that challenge tower construction. Navigate environmental obstacles while maintaining building progress and worker safety.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/enviromentalHazards.mp4"
+            },
+            {
+              "title": "Get Paid",
+              "description": "Earn rewards and currency by completing construction jobs and satisfying client requirements. Manage your earnings to unlock new tools, hire workers, and expand your building capabilities.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/getPaid.mp4"
+            },
+            {
+              "title": "Progression & Reward System",
+              "description": "Complete levels to earn rewards funding further progression. Part of final degree thesis 'Fun in simplicity' - demonstrating engaging gameplay through streamlined mechanics.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/progression&RewardSystem.mp4"
+            },
+            {
+              "title": "Under the Scenes",
+              "description": "Behind-the-scenes look at how diverse environments were created using minimal assets. Demonstrates efficient game development through smart asset reuse and strategic placement to build rich, varied worlds from a limited set of elements.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/underTheScenes.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Development",
+              "items": [
+                "Everything programmed by me - all gameplay systems, UI, progression mechanics, and game logic",
+                "Solo development project completed as final degree thesis study case",
+                "Integrated third-party assets: 3D models and More Mountains tools",
+                "Intended for publication as debut commercial game release"
+              ]
+            }
+          ],
+          "role": "Solo Programmer",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Mobile Development"
+          ],
+          "timeline": "Final Degree Thesis Project"
+        }
+      },
+      {
+        "id": "pengo",
+        "title": "Pengo",
+        "genre": "Arcade Game",
+        "description": "Recreation of the Legendary Sega Arcade Game",
+        "tags": [
+          "C++",
+          "2D Engine"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
+        "mediaPlaceholder": "🎮 PENGO",
+        "modal": {
+          "title": "Pengo",
+          "windowTitle": "Pengo.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Differences from Original",
+              "description": "Recreation of the legendary Sega arcade game with one key difference: this version includes 10 levels instead of the original 16 levels. Otherwise maintains maximum fidelity to the original gameplay and mechanics.",
+              "image": "assets/casualGames/SideProjects/Pengo/features/pengoFeature.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Project Details",
+              "items": [
+                "First-year university project recreating Sega's Pengo",
+                "Built with basic 2D engine framework",
+                "Multiple level design and implementation",
+                "GitHub: https://github.com/OCA99/PenguBruh-Pengo"
+              ]
+            }
+          ],
+          "role": "Developer",
+          "technologies": [
+            "C++",
+            "2D Engine",
+            "Arcade Game Development"
+          ],
+          "timeline": "First Year University Project"
+        }
+      },
+      {
+        "id": "7up-pinball",
+        "title": "7up Pinball Clone",
+        "genre": "Arcade Game",
+        "description": "2D Physics Engine Built from Scratch",
+        "tags": [
+          "C++",
+          "2D Physics"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
+        "mediaPlaceholder": "🎮 7UP PINBALL",
+        "modal": {
+          "title": "7up Pinball Clone",
+          "windowTitle": "7up Pinball.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Differences from Original",
+              "description": "Recreation of the classic 7up Pinball game with the following differences from the original: Left funnel without gravity, Right hole spawns ball on top, Middle cannon spawns ball on top, Point system implemented differently.",
+              "image": "assets/casualGames/SideProjects/7upPinball/feature/hqdefault.jpg"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Project Details",
+              "items": [
+                "Recreation of classic 7up Pinball game",
+                "Built with custom 2D physics engine from scratch"
+              ]
+            }
+          ],
+          "role": "Solo Developer",
+          "technologies": [
+            "C",
+            "C++",
+            "2D Physics",
+            "SDL2",
+            "Custom Engine"
+          ],
+          "timeline": "Academic Project"
+        }
+      },
+      {
+        "id": "fire-fighters",
+        "title": "Fire Fighters",
+        "genre": "Battle Royale",
+        "description": "Online Multiplayer Battle Royale - Network Programming Showcase",
+        "tags": [
+          "Unity",
+          "Multiplayer"
+        ],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
+        "mediaPlaceholder": "🎮 FIRE FIGHTERS",
+        "modal": {
+          "title": "Fire Fighters",
+          "windowTitle": "Fire Fighters.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
+          "videoPlaceholder": "🎬 PROJECT VIDEO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Log In System",
+              "description": "Player authentication and connection system for joining multiplayer matches. Handles client login, user identification, and initial server handshake for game sessions.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/logIn.mp4"
+            },
+            {
+              "title": "Fire Alive",
+              "description": "Dynamic fire mechanics creating gameplay tension and environmental hazards. Fire spreads across the island, forcing players into smaller play areas as the match progresses.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/fireAlive.mp4"
+            },
+            {
+              "title": "Latency Hiding",
+              "description": "Interpolation techniques to smooth player movement and hide network latency. Implements prediction and position updates to maintain responsive gameplay despite network conditions.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/latencyHiding.mp4"
+            },
+            {
+              "title": "Last Remaining Wins",
+              "description": "Battle royale victory condition - survive longer than all opponents to claim victory. Players compete until only one firefighter remains standing on the shrinking island.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/lastRemainingWins.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Development",
+              "items": [
+                "Everything programmed by me - all networking systems, gameplay logic, client-server architecture, and multiplayer synchronization",
+                "Built custom UDP networking implementation from scratch",
+                "Implemented latency hiding, world state replication, and packet management",
+                "Five-month university assignment completed as solo programmer",
+                "Battle royale mechanics: last remaining player wins"
+              ]
+            }
+          ],
+          "role": "Solo Developer",
+          "technologies": [
+            "Unity",
+            "C#",
+            ".NET",
+            "UDP Networking",
+            "Multiplayer Systems"
+          ],
+          "timeline": "5-Month University Assignment"
+        }
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "Tools and technologies I work with",
+    "skillsList": [
+      {
+        "title": "Unity Development",
+        "description": "I've worked as a Unity developer for quite a few international brands, implementing game design documents while sorting technical challenges. Delivering beautiful worlds for clients at aimed fps, rest easy knowing your clients are in good hands, and I've yet to encounter a feature I couldn't deliver on.",
+        "image": "assets/casualGames/Skills/Unity.png"
+      },
+      {
+        "title": "C/C++ Engine Programming",
+        "description": "The key is behind the scenes. I've developed solo and team projects combining C and C++ to build software that becomes a game. I built an entire animation module for an engine, understanding how everything is just processed data being interpreted, making a 3D mesh modify its shape. I made contributions to other modules, gaining a deeper understanding of how game engines work. This knowledge helped me solve many problems in commercial engines.",
+        "image": "assets/casualGames/Skills/clogo.png"
+      },
+      {
+        "title": "Git & Version Control",
+        "description": "Experienced in collaborative development using Git. I design modular projects to minimize merge conflicts and am careful about file modifications in shared repositories. This approach keeps team workflows smooth and avoids uncomfortable merges.",
+        "image": "assets/casualGames/Skills/Git-logo.svg.png"
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "That's Me",
+    "sectionSubtitle": "Sometimes you must go AFK... to come back stronger.",
+    "roles": [
+      {
+        "role": "",
+        "name": "",
+        "image": "corchetes.png",
+        "isDecoration": true
+      },
+      {
+        "role": "Sometimes a bug solution comes between pages",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
+      },
+      {
+        "role": "After a lot of mallocs the heap can overflow, so I like to free() myself",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
+      },
+      {
+        "role": "",
+        "name": "",
+        "image": ";.png",
+        "isDecoration": true
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "I would love to work with you!",
+    "text": "Feel free to reach out",
+    "buttonText": "Get in touch"
+  },
+  "contact": {
+    "modalTitle": "Let's Connect",
+    "modalDescription": "Feel free to reach out for collaborations, job opportunities, or just to chat about games!",
+    "email": "andres8sanchez@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/andresama",
+    "linkedinText": "LinkedIn Profile",
+    "twitter": "",
+    "twitterHandle": "",
+    "github": "",
+    "githubText": "",
+    "availability": {
+      "location": "",
+      "status": "",
+      "preferredProjects": ""
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Andrés Sànchez. All rights reserved.",
+    "tagline": "Built with passion for great game experiences"
+  }
+}
