@@ -342,7 +342,7 @@
             {
               "title": "Client-Side Game Logic",
               "description": "Pure JavaScript implementation using ES6+ features: arrow functions, destructuring, template literals. State management through closure patterns and module design for encapsulation.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/features/client-sideLogic.jpg"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/features/client-sideLogic.mp4"
             },
             {
               "title": "Dynamic DOM Rendering",
