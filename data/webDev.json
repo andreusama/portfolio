@@ -342,7 +342,7 @@
             {
               "title": "Client-Side Game Logic",
               "description": "Pure JavaScript implementation using ES6+ features: arrow functions, destructuring, template literals. State management through closure patterns and module design for encapsulation.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/features/client-sideLogic.jpg"
             },
             {
               "title": "Dynamic DOM Rendering",
@@ -352,7 +352,7 @@
             {
               "title": "Responsive CSS Layout",
               "description": "Flexbox and CSS Grid implementation for cross-device compatibility. Custom animations using CSS transitions and keyframes for smooth user interactions.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/features/responsiveness.mp4"
             }
           ],
           "contributions": [
@@ -874,7 +874,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Andrés Sànchez. All rights reserved.",
+    "copyright": "© 2025 Andrés Sànchez. All rights reserved.",
     "tagline": "Built with passion for great game experiences"
   }
 }
