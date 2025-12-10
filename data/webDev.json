@@ -4,7 +4,7 @@
     "description": "Game programmer specializing in gameplay systems, engine development and gameplay optimization"
   },
   "hero": {
-    "greeting": "professional software developer",
+    "greeting": "Professional software developer",
     "headline": "C++ & C# Programmer",
     "description": "Developer with experience on the videogames industry, familiar with web developement and knowledge on c++ engine programming.",
     "ctaPrimary": "View My Work",
@@ -329,30 +329,30 @@
           "DOM API"
         ],
         "mediaType": "video",
-        "mediaSrc": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4",
+        "mediaSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4",
         "mediaPlaceholder": "🎮 FOOTBALL GUESSER",
         "modal": {
           "title": "Football Guesser",
           "windowTitle": "Football Guesser.html",
           "videoType": "video",
-          "videoSrc": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4",
+          "videoSrc": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4",
           "videoPlaceholder": "🎬 PROJECT VIDEO",
           "brands": [],
           "features": [
             {
               "title": "Client-Side Game Logic",
               "description": "Pure JavaScript implementation using ES6+ features: arrow functions, destructuring, template literals. State management through closure patterns and module design for encapsulation.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4"
             },
             {
               "title": "Dynamic DOM Rendering",
               "description": "Event-driven UI updates using vanilla JavaScript DOM API. Implements efficient element creation, attribute manipulation, and event delegation for optimal performance without frameworks.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4"
             },
             {
               "title": "Responsive CSS Layout",
               "description": "Flexbox and CSS Grid implementation for cross-device compatibility. Custom animations using CSS transitions and keyframes for smooth user interactions.",
-              "image": "assets/casualGames/SideProjects/FootballGuesser/football-guesserShowcase.mp4"
+              "image": "assets/casualGames/SideProjects/FootballGuesser/thumbnail/football-guesserShowcase.mp4"
             }
           ],
           "contributions": [
