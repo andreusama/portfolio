@@ -1,5 +1,7 @@
 # Estalvia DEMO
 
+Status: done. The clips are live in the Software entry. This ticket is kept for reference.
+
 Produce the audiovisual material and a safe demo for Estalvia, the Django AI prototype platform for small businesses. It gets its own focused pass because it carries the Python/Django profile.
 
 ## Deliverables

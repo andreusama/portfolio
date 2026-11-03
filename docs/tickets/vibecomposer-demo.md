@@ -1,5 +1,7 @@
 # VibeComposer DEMO
 
+Status: done. The clips are live in the Software entry. This ticket is kept for reference.
+
 Produce the audiovisual material that presents VibeComposer in the Software entry. Quality bar: it is the first thing an employer sees, so it gets its own focused pass.
 
 ## Deliverables

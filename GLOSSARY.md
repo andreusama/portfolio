@@ -43,3 +43,7 @@ _Avoid_: Dev CV, web CV
 **Games CV**:
 The one-page CV that leads with the shipped commercial titles and treats software as a complement.
 _Avoid_: Unity CV, Gamedev CV
+
+**Collage**:
+The set of windows that presents one Flagship project in its section, optionally split into chapters by headings.
+_Avoid_: Gallery, grid
