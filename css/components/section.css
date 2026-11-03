@@ -241,6 +241,51 @@
     }
 }
 
+/* Project collage: a section's project as evenly spaced columns of cards */
+.projects-grid--collage {
+    display: block;
+    column-count: auto;
+    margin-top: 3rem;
+}
+
+.project-collage {
+    --collage-width: min(92vw, 1600px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: var(--collage-width);
+    margin-left: calc(50% - var(--collage-width) / 2);
+}
+
+.project-collage__column {
+    flex: var(--grow) 1 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 0;
+    margin-top: var(--y);
+}
+
+.project-collage__column--narrow {
+    flex-basis: 200px;
+    max-width: 320px;
+}
+
+/* Too narrow for one row: two even rows of three, then a single column on phones */
+@media (max-width: 1399px) {
+    .project-collage__column--narrow {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-collage__column--narrow {
+        flex-basis: 240px;
+    }
+}
+
 /* Prevent cards from breaking across columns */
 .student-projects-grid .project-card {
     break-inside: avoid;
@@ -250,14 +295,16 @@
 }
 
 /* Let side projects use their natural video aspect ratio */
-.student-projects-grid .project-card__video {
+.student-projects-grid .project-card__video,
+.project-collage .project-card__video {
     width: 100%;
     height: auto;
     min-height: 0;
 }
 
 /* Let video elements in side projects maintain their aspect ratio */
-.student-projects-grid .project-card__video video {
+.student-projects-grid .project-card__video video,
+.project-collage .project-card__video video {
     width: 100%;
     height: auto;
     display: block;
@@ -363,6 +410,16 @@
 
 .project-card:hover .project-card__video::after {
     opacity: 1;
+}
+
+/* Cards that don't open a modal: no eye overlay, so video controls stay clickable */
+.project-card__video--static::before,
+.project-card__video--static::after {
+    content: none;
+}
+
+.project-card:hover .project-card__video--static {
+    filter: none;
 }
 
 .project-card__content {

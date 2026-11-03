@@ -27,6 +27,7 @@ class ContentLoader {
             this.populateFeaturedProjects();
             this.populateSideProjects();
             this.populateSkills();
+            this.setupCollageVideos();
             this.populateThatsMe();
             this.populateFinalCta();
             this.populateContact();
@@ -171,6 +172,14 @@ class ContentLoader {
             const hidden = !label || (this.view === 'landing' && !landingKeys.includes(key));
             if (item) item.hidden = hidden;
             if (label) link.textContent = label;
+
+            // In an entry, Home goes back to the Landing (same language, no version)
+            if (key === 'home' && this.view !== 'landing') {
+                const url = new URL(window.location.href);
+                url.searchParams.delete('version');
+                url.hash = '';
+                link.setAttribute('href', url.pathname + url.search);
+            }
         });
 
         const cv = this.data.cv;
@@ -213,15 +222,16 @@ class ContentLoader {
 
         const landing = this.view === 'landing';
         const visibility = {
-            '.marquee-double': !landing,
+            '.marquee-double, main > .marquee': !landing,
             '#projects': !landing && this.data.featuredProjects.projects.length > 0,
             '#student-projects': !landing && this.data.sideProjects.projects.length > 0,
-            '#skills': !landing && this.data.skills.skillsList.length > 0,
+            '#skills': !landing && (this.data.skills.skillsList.length > 0 || (this.data.skills.projects || []).length > 0),
             '#thats-me': !landing
         };
         Object.entries(visibility).forEach(([selector, visible]) => {
-            const element = document.querySelector(selector);
-            if (element) element.hidden = !visible;
+            document.querySelectorAll(selector).forEach(element => {
+                element.hidden = !visible;
+            });
         });
     }
 
@@ -242,16 +252,18 @@ class ContentLoader {
     /**
      * Helper to populate a single marquee
      */
-    populateMarquee(selector, items) {
-        const container = document.querySelector(selector);
+    populateMarquee(target, items) {
+        const container = typeof target === 'string' ? document.querySelector(target) : target;
         if (!container) return;
 
         // Clear existing content
         container.innerHTML = '';
 
-        // Repeat items 4 times for seamless scrolling
-        for (let i = 0; i < 4; i++) {
-            (items || []).forEach(item => {
+        // Repeat items for seamless scrolling (at least 4 times, more for short lists)
+        const list = items || [];
+        const repeats = Math.max(4, 2 * Math.ceil(20 / Math.max(list.length, 1)));
+        for (let i = 0; i < repeats; i++) {
+            list.forEach(item => {
                 const span = document.createElement('span');
                 span.className = 'marquee__item';
                 span.textContent = item;
@@ -275,6 +287,11 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach(project => {
+            if (project.collage) {
+                this.appendCollage(grid, project);
+                return;
+            }
+
             const card = this.createProjectCard(project);
             grid.appendChild(card);
 
@@ -290,6 +307,149 @@ class ContentLoader {
                 });
             }
         });
+    }
+
+    /**
+     * Add a project's collage to a section's grid
+     */
+    appendCollage(grid, project) {
+        grid.classList.add('projects-grid--collage');
+        grid.appendChild(this.createProjectCollage(project));
+    }
+
+    /**
+     * Create a project block: evenly spaced columns of project cards
+     */
+    createProjectCollage(project) {
+        const collage = project.collage;
+        const block = document.createDocumentFragment();
+
+        if (collage.links) {
+            const links = document.createElement('div');
+            links.className = 'project-card__tags';
+            links.style.justifyContent = 'center';
+            links.style.marginBottom = '3rem';
+            links.innerHTML = collage.links.map(link =>
+                `<a class="tag" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`
+            ).join('');
+            block.appendChild(links);
+        }
+
+        const columns = document.createElement('article');
+        columns.className = 'project-collage';
+        columns.setAttribute('data-project', project.id);
+
+        collage.columns.forEach(column => {
+            const el = document.createElement('div');
+            el.className = 'project-collage__column';
+            el.style.setProperty('--grow', column.grow || 1);
+            el.style.setProperty('--y', `${column.y || 0}rem`);
+            if (column.narrow) el.classList.add('project-collage__column--narrow');
+            column.items.forEach(item => el.appendChild(this.createCollageCard(project, item)));
+            columns.appendChild(el);
+        });
+
+        block.appendChild(columns);
+        return block;
+    }
+
+    /**
+     * Create one window of a collage, same structure as the project cards
+     */
+    createCollageCard(project, win) {
+        const article = document.createElement('div');
+        article.className = 'project-card';
+        if (!win.main) article.style.cursor = 'default';
+
+        article.innerHTML = `
+            <div class="project-card__titlebar">
+                <div class="macos-dots">
+                    <span class="macos-dot macos-dot--red"></span>
+                    <span class="macos-dot macos-dot--yellow"></span>
+                    <span class="macos-dot macos-dot--green"></span>
+                </div>
+            </div>
+            ${this.generateCollageMedia(win)}
+            <div class="project-card__content">
+                <div class="project-card__header">
+                    <h3 class="project-card__title">${win.title}</h3>
+                </div>
+                ${win.caption ? `<p style="margin: 0; text-align: center;">${win.caption}</p>` : ''}
+                ${win.main ? `<button class="btn btn--primary btn--sm project-card__btn" data-open-window="${project.id}">
+                    <span class="btn__circle"></span>
+                    <span class="btn__circle"></span>
+                    <span class="btn__circle"></span>
+                    <span class="btn__circle"></span>
+                    View Details
+                </button>` : ''}
+            </div>
+        `;
+
+        const media = article.querySelector('.project-card__video');
+        if (!win.main) media.classList.add('project-card__video--static');
+
+        if (win.main) {
+            media.addEventListener('click', () => {
+                const modalManager = window.modalManager;
+                if (modalManager) {
+                    modalManager.openModal(project.id);
+                }
+            });
+        }
+
+        return article;
+    }
+
+    /**
+     * Generate the media of a collage window based on its type
+     */
+    generateCollageMedia(win) {
+        if (win.type === 'clip') {
+            const playback = win.controls ? 'controls' : 'data-autoplay';
+            return `<div class="project-card__video" style="aspect-ratio: 720 / 1600;">
+                <video class="project-card__media" muted loop playsinline preload="none" poster="${win.src}-poster.jpg" ${playback}>
+                    <source src="${win.src}.webm" type="video/webm">
+                    <source src="${win.src}.mp4" type="video/mp4">
+                </video>
+            </div>`;
+        }
+        if (win.type === 'image') {
+            return `<div class="project-card__video">
+                <img class="project-card__media" src="${win.src}" alt="${win.title}" loading="lazy" style="width: 100%; display: block;">
+            </div>`;
+        }
+        if (win.type === 'stat') {
+            return `<div class="project-card__video" style="padding: 2rem 1rem; text-align: center; background: none;">
+                <span class="section__title" style="margin: 0; font-size: clamp(2.2rem, 4.5vw, 5rem);">${win.value}</span>
+            </div>`;
+        }
+        if (win.type === 'readme') {
+            return `<div class="project-card__video" style="padding: 1.5rem; background: none;">
+                ${this.generateContributionsHTML(win.contributions)}
+            </div>`;
+        }
+        return `<div class="project-card__video">
+            <div class="media-placeholder media-placeholder--video">${win.text}</div>
+        </div>`;
+    }
+
+    /**
+     * Clips play only while visible. With reduced motion, viewers see the posters.
+     */
+    setupCollageVideos() {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (!entry.isIntersecting) {
+                    video.pause();
+                } else if (video.hasAttribute('data-autoplay') && !reducedMotion) {
+                    video.play().catch(() => {});
+                }
+            });
+        }, { rootMargin: '100px' });
+
+        document.querySelectorAll('.project-collage video').forEach(video => observer.observe(video));
     }
 
     /**
@@ -400,6 +560,11 @@ class ContentLoader {
         grid.innerHTML = '';
 
         section.projects.forEach((project, index) => {
+            if (project.collage) {
+                this.appendCollage(grid, project);
+                return;
+            }
+
             const card = this.createProjectCard(project);
             grid.appendChild(card);
 
@@ -430,6 +595,8 @@ class ContentLoader {
         if (!container) return;
 
         container.innerHTML = '';
+
+        (section.projects || []).forEach(project => this.appendCollage(container, project));
 
         section.skillsList.forEach(skill => {
             const skillRow = document.createElement('div');
@@ -578,6 +745,20 @@ class ContentLoader {
     }
 
     /**
+     * Generate the grouped lists used by project modals and README windows
+     */
+    generateContributionsHTML(contributions) {
+        return contributions.map(contrib => `
+            <div class="project-modal-contribution-group">
+                <h3 class="project-modal-contribution-group__title">${contrib.category}</h3>
+                <ul class="project-modal-contribution-group__list">
+                    ${contrib.items.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+        `).join('');
+    }
+
+    /**
      * Generate video HTML based on video type
      */
     generateVideoHTML(modalData) {
@@ -601,6 +782,7 @@ class ContentLoader {
                 // Local video file
                 return `<video
                     controls
+                    preload="${modalData.videoPoster ? 'none' : 'metadata'}"
                     style="width: 100%; height: 100%; object-fit: contain;"
                     poster="${modalData.videoPoster || ''}">
                     <source src="${modalData.videoSrc}" type="video/mp4">
@@ -633,8 +815,8 @@ class ContentLoader {
             modalContainer.appendChild(modal);
         });
 
-        // Create modals for side projects
-        this.data.sideProjects.projects.forEach(project => {
+        // Create modals for side projects and for projects shown in the skills section
+        [...this.data.sideProjects.projects, ...(this.data.skills.projects || [])].forEach(project => {
             if (project.modal) {
                 const modal = this.createProjectModal(project, true);
                 modalContainer.appendChild(modal);
@@ -653,14 +835,7 @@ class ContentLoader {
         overlay.setAttribute('data-modal', project.id);
 
         // Build contributions HTML
-        const contributionsHTML = modalData.contributions.map(contrib => `
-            <div class="project-modal-contribution-group">
-                <h3 class="project-modal-contribution-group__title">${contrib.category}</h3>
-                <ul class="project-modal-contribution-group__list">
-                    ${contrib.items.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-            </div>
-        `).join('');
+        const contributionsHTML = this.generateContributionsHTML(modalData.contributions);
 
         // Build platforms HTML if available
         const platformsHTML = modalData.platforms ? `
