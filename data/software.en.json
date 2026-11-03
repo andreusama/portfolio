@@ -471,16 +471,16 @@
               ]
             },
             {
-              "heading": "2. How we used AI: to automate development processes. Users never see any AI."
+              "heading": "2. What I did, as Full Stack Engineer at IRTA. AI only automates development: users never see it."
             },
             {
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Translation",
-                  "value": "13,000",
-                  "caption": "strings localized into 6 languages with a local LLM, at zero API cost."
+                  "type": "icon",
+                  "title": "Visual rework",
+                  "src": "assets/software/irrigation/icon-visual-rework.svg",
+                  "caption": "From a long scrolling page to a map-first view, live for paying users."
                 }
               ]
             },
@@ -488,10 +488,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Human review",
-                  "value": "490",
-                  "caption": "professionally reviewed translations that always override the AI."
+                  "type": "icon",
+                  "title": "Optimization",
+                  "src": "assets/software/irrigation/icon-optimization.svg",
+                  "caption": "57% less map data and 22% faster load across 11,160 plots."
                 }
               ]
             },
@@ -499,64 +499,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Hours saved",
-                  "value": "140+",
-                  "caption": "of manual work replaced (estimate: about 43,000 words at 300 words per hour)."
-                }
-              ]
-            },
-            {
-              "heading": "3. What I did: rebuilt the farmer view, as Full Stack Engineer at IRTA"
-            },
-            {
-              "narrow": true,
-              "items": [
-                {
-                  "type": "readme",
-                  "title": "Where it started",
-                  "contributions": [
-                    {
-                      "category": "The old view",
-                      "items": [
-                        "One long scrolling page, so the map disappeared as soon as you read the details.",
-                        "Lots of colours with no clear code."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "stat",
-                  "title": "Rollout",
-                  "value": "10+",
-                  "caption": "regional irrigation authorities served from one codebase, each with its own configuration and terminology."
-                }
-              ]
-            },
-            {
-              "narrow": true,
-              "y": 2,
-              "items": [
-                {
-                  "type": "readme",
-                  "title": "What I built",
-                  "contributions": [
-                    {
-                      "category": "Map first",
-                      "items": [
-                        "The map stays on screen and details slide over it, in the style of Google Maps and Glovo. It is live for paying users.",
-                        "Colour only appears on what you can tap."
-                      ]
-                    },
-                    {
-                      "category": "Reading the map",
-                      "items": [
-                        "Tap a parcel to see its crop, area and water needs.",
-                        "In periodic irrigation, the deeper the blue, the higher the water need.",
-                        "Irrigation needs are predicted day by day, next to the weather."
-                      ]
-                    }
-                  ]
+                  "type": "icon",
+                  "title": "Automated translation",
+                  "src": "assets/software/irrigation/icon-translation.svg",
+                  "caption": "13,000 strings into 6 languages with a local LLM. 490 reviewed translations always override it."
                 }
               ]
             },
@@ -564,47 +510,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "readme",
-                  "title": "Built for the field",
-                  "contributions": [
-                    {
-                      "category": "The users",
-                      "items": [
-                        "Non-technical people, outdoors, with big hands and weak mobile signal."
-                      ]
-                    },
-                    {
-                      "category": "The decisions",
-                      "items": [
-                        "Large buttons and generous tap targets."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "readme",
-                  "title": "Automation",
-                  "contributions": [
-                    {
-                      "category": "For the team",
-                      "items": [
-                        "A command that scaffolds every new view.",
-                        "Task creation through the GitLab Issues API."
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "narrow": true,
-              "y": 2,
-              "items": [
-                {
-                  "type": "stat",
-                  "title": "Less data, same map",
-                  "value": "57%",
-                  "caption": "smaller map payload and 22% faster load across 11,160 plots. Polygons load at the zoom level's resolution, and colours update without redrawing geometry."
+                  "type": "icon",
+                  "title": "Task creation",
+                  "src": "assets/software/irrigation/icon-tasks.svg",
+                  "caption": "Automated through the GitLab Issues API."
                 }
               ]
             }

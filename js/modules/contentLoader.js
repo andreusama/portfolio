@@ -462,6 +462,11 @@ class ContentLoader {
                 <span class="section__title" style="margin: 0; font-size: clamp(2.2rem, 4.5vw, 5rem);">${win.value}</span>
             </div>`;
         }
+        if (win.type === 'icon') {
+            return `<div class="project-card__video" style="padding: 2rem 1rem 0.5rem; display: flex; justify-content: center; background: none;">
+                <img src="${win.src}" alt="" style="width: 72px; height: 72px;">
+            </div>`;
+        }
         if (win.type === 'readme') {
             return `<div class="project-card__video" style="padding: 1.5rem; background: none;">
                 ${this.generateContributionsHTML(win.contributions)}

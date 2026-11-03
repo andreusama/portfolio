@@ -63,7 +63,7 @@ Software projects are drawn from `project.collage.columns` in the data file. A c
 }
 ```
 
-Window types are `clip`, `image`, `stat`, `readme` and `placeholder`. `main: true` adds the "View Details" button that opens the modal. `aspect` is optional and defaults to `720 / 1280`.
+Window types are `clip`, `image`, `stat`, `icon`, `readme` and `placeholder`. `main: true` adds the "View Details" button that opens the modal. `aspect` is optional and defaults to `720 / 1280`.
 
 ## Documentation
 

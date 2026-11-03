@@ -471,16 +471,16 @@
               ]
             },
             {
-              "heading": "2. Cómo usamos la IA: para automatizar procesos de desarrollo. El usuario nunca ve ninguna IA."
+              "heading": "2. Qué hice, como ingeniero full stack en el IRTA. La IA solo automatiza el desarrollo: el usuario nunca la ve."
             },
             {
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Traducción",
-                  "value": "13.000",
-                  "caption": "cadenas localizadas a 6 idiomas con un LLM local, sin coste de API."
+                  "type": "icon",
+                  "title": "Rediseño visual",
+                  "src": "assets/software/irrigation/icon-visual-rework.svg",
+                  "caption": "De una página larga con scroll a una vista centrada en el mapa, en producción para usuarios de pago."
                 }
               ]
             },
@@ -488,10 +488,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Revisión humana",
-                  "value": "490",
-                  "caption": "traducciones revisadas por profesionales que siempre prevalecen sobre la IA."
+                  "type": "icon",
+                  "title": "Optimización",
+                  "src": "assets/software/irrigation/icon-optimization.svg",
+                  "caption": "57 % menos de datos de mapa y 22 % más de velocidad de carga en 11.160 parcelas."
                 }
               ]
             },
@@ -499,64 +499,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "stat",
-                  "title": "Horas ahorradas",
-                  "value": "140+",
-                  "caption": "de trabajo manual sustituidas (estimación: unas 43.000 palabras a 300 palabras por hora)."
-                }
-              ]
-            },
-            {
-              "heading": "3. Qué hice: rehacer la vista del agricultor, como ingeniero full stack en el IRTA"
-            },
-            {
-              "narrow": true,
-              "items": [
-                {
-                  "type": "readme",
-                  "title": "De dónde partía",
-                  "contributions": [
-                    {
-                      "category": "La vista antigua",
-                      "items": [
-                        "Una página larga con scroll, así que el mapa desaparecía en cuanto leías los detalles.",
-                        "Muchos colores sin un código claro."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "stat",
-                  "title": "Despliegue",
-                  "value": "10+",
-                  "caption": "autoridades regionales de riego servidas desde un mismo código, cada una con su configuración y su terminología."
-                }
-              ]
-            },
-            {
-              "narrow": true,
-              "y": 2,
-              "items": [
-                {
-                  "type": "readme",
-                  "title": "Qué construí",
-                  "contributions": [
-                    {
-                      "category": "Primero el mapa",
-                      "items": [
-                        "El mapa se queda en pantalla y los detalles se deslizan por encima, al estilo de Google Maps y Glovo. Está en producción para usuarios de pago.",
-                        "El color solo aparece en lo que se puede pulsar."
-                      ]
-                    },
-                    {
-                      "category": "Cómo se lee el mapa",
-                      "items": [
-                        "Pulsa una parcela para ver su cultivo, su superficie y sus necesidades de agua.",
-                        "En riego periódico, cuanto más intenso es el azul, más agua necesita.",
-                        "Las necesidades de riego se predicen día a día, junto al tiempo previsto."
-                      ]
-                    }
-                  ]
+                  "type": "icon",
+                  "title": "Traducción automatizada",
+                  "src": "assets/software/irrigation/icon-translation.svg",
+                  "caption": "13.000 cadenas a 6 idiomas con un LLM local. 490 traducciones revisadas siempre prevalecen."
                 }
               ]
             },
@@ -564,47 +510,10 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "readme",
-                  "title": "Hecha para el campo",
-                  "contributions": [
-                    {
-                      "category": "Los usuarios",
-                      "items": [
-                        "Personas no técnicas, al aire libre, con manos grandes y poca cobertura."
-                      ]
-                    },
-                    {
-                      "category": "Las decisiones",
-                      "items": [
-                        "Botones grandes y zonas táctiles amplias."
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "readme",
-                  "title": "Automatización",
-                  "contributions": [
-                    {
-                      "category": "Para el equipo",
-                      "items": [
-                        "Un comando que genera la base de cada vista nueva.",
-                        "Creación de tareas con la API de GitLab Issues."
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "narrow": true,
-              "y": 2,
-              "items": [
-                {
-                  "type": "stat",
-                  "title": "Menos datos, el mismo mapa",
-                  "value": "57 %",
-                  "caption": "menos datos de mapa y 22 % más de velocidad de carga en 11.160 parcelas. Los polígonos se cargan a la resolución de cada nivel de zoom y los colores se actualizan sin redibujar la geometría."
+                  "type": "icon",
+                  "title": "Creación de tareas",
+                  "src": "assets/software/irrigation/icon-tasks.svg",
+                  "caption": "Automatizada con la API de GitLab Issues."
                 }
               ]
             }
