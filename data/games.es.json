@@ -1,0 +1,856 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Juegos | Ingeniero de software full stack",
+    "description": "Sección de juegos: títulos comerciales publicados en Unity y proyectos personales."
+  },
+  "hero": {
+    "greeting": "Hola, soy Andrés Sànchez",
+    "headline": "Convierto ideas en software al que la gente juega",
+    "description": "Programador de videojuegos · Unity · C# · cuatro títulos comerciales publicados",
+    "ctaPrimary": "Ver mi trabajo",
+    "ctaSecondary": "Contáctame",
+    "entries": {
+      "software": {
+        "label": "Software",
+        "caption": "Full stack · Python/Django · JavaScript/React",
+        "placeholder": "🎬 DEMO DE VIBECOMPOSER · PRÓXIMAMENTE"
+      },
+      "games": {
+        "label": "Juegos",
+        "caption": "Títulos comerciales publicados · Unity · C#"
+      }
+    }
+  },
+  "marquees": {
+    "skills1": [
+      "C#",
+      "C++",
+      ".NET",
+      "OpenGL",
+      "SDL2"
+    ],
+    "skills2": [
+      "Programación de gameplay",
+      "Programación de motores",
+      "Programación de redes",
+      "Programación de físicas",
+      "Optimización de memoria"
+    ],
+    "platforms": [
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch",
+      "PC",
+      "Móvil",
+      "Multiplataforma",
+      "Cross-platform"
+    ],
+    "genres": [
+      "UDP networking",
+      "Arquitectura cliente-servidor",
+      "Multijugador con Photon",
+      "Scripting en Unity"
+    ],
+    "types": [
+      "Desarrollo indie",
+      "Desarrollo móvil",
+      "Desarrollo para consola",
+      "Proyectos académicos"
+    ],
+    "misc": [
+      "Control de versiones",
+      "Git",
+      "Agile",
+      "Performance profiling",
+      "Optimización de código",
+      "Debug y testing"
+    ]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Juegos comerciales",
+    "sectionSubtitle": "Juegos profesionales publicados para grandes marcas del entretenimiento",
+    "projects": [
+      {
+        "id": "hotwheels",
+        "title": "Hot Wheels Xtreme Overdrive",
+        "genre": "Juego de carreras",
+        "tags": [
+          "Unity",
+          "C#",
+          "Android Studio",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=ee5uKTAfbCU",
+        "mediaPlaceholder": "🎬 TRÁILER DE HOT WHEELS",
+        "modal": {
+          "title": "Hot Wheels Xtreme Overdrive",
+          "windowTitle": "Hot Wheels Xtreme Overdrive.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/hotWheels.mp4",
+          "videoPlaceholder": "🎬 TRÁILER DEL JUEGO",
+          "brands": [
+            {
+              "name": "Hot Wheels",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/HotWheelsLogo.png"
+            },
+            {
+              "name": "BMW",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/BMWLogo.png"
+            },
+            {
+              "name": "airConsole",
+              "logo": "assets/casualGames/FeaturedProjects/logos/HotWheels/airConsole.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Programación de gameplay",
+              "items": [
+                "Físicas de vehículos y sistemas de conducción",
+                "Obstáculos de pista y power-ups",
+                "Progresión de carrera y puntuación"
+              ]
+            },
+            {
+              "category": "Desarrollo de UI",
+              "items": [
+                "HUD y menús del juego",
+                "Interfaz de selección de vehículos"
+              ]
+            },
+            {
+              "category": "Sistemas multijugador",
+              "items": [
+                "Implementación de carreras en red",
+                "Sincronización de jugadores"
+              ]
+            },
+            {
+              "category": "Optimización",
+              "items": [
+                "Optimización de rendimiento para hardware de automoción",
+                "Gestión de memoria y cargas"
+              ]
+            }
+          ],
+          "role": "Programador de gameplay / Desarrollador Android / Programador de UI / Diseñador técnico",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Android Studio",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
+        }
+      },
+      {
+        "id": "dracamar",
+        "title": "Dracamar",
+        "genre": "Plataformas 3D",
+        "tags": [
+          "Unity",
+          "C#",
+          "Porting multiplataforma"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=4ZHwP0Y-2As",
+        "mediaPlaceholder": "🎬 TRÁILER DE DRACAMAR",
+        "modal": {
+          "title": "Dracamar",
+          "windowTitle": "Dracamar.exe",
+          "platforms": [
+            "PC",
+            "Móvil"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/dracamar.mp4",
+          "videoPlaceholder": "🎬 TRÁILER DEL JUEGO",
+          "brands": [
+            {
+              "name": "3Cat",
+              "logo": "assets/casualGames/FeaturedProjects/logos/Dracamar/3cat.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Porting multiplataforma y optimización",
+              "items": [
+                "Corrección de crashes en Nintendo Switch, Xbox, PS4 y PS5",
+                "Optimización de la carga de asset bundles",
+                "Optimización de render con impostores",
+                "Arquitectura e implementación de gráficos personalizados por plataforma",
+                "Estudios de caso e implementación de GPU Instancing / SRP Batching"
+              ]
+            },
+            {
+              "category": "Programación de gameplay",
+              "items": [
+                "Programación de feedback de gameplay para mejorar el game feel",
+                "Depuración de misiones"
+              ]
+            }
+          ],
+          "role": "Programador de gameplay / Ingeniero de porting",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Porting multiplataforma"
+          ]
+        }
+      },
+      {
+        "id": "pjmasks",
+        "title": "PJ Masks Power Heroes",
+        "genre": "Plataformas 2D",
+        "tags": [
+          "Unity",
+          "C#",
+          "Porting multiplataforma"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=JqxbOwEULMY",
+        "mediaPlaceholder": "🎬 TRÁILER DE PJ MASKS",
+        "modal": {
+          "title": "PJ Masks Power Heroes: Mighty Alliance",
+          "windowTitle": "PJ Masks Power Heroes.exe",
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X|S",
+            "Nintendo Switch"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/pjMasks.mp4",
+          "videoPlaceholder": "🎬 TRÁILER DEL JUEGO",
+          "brands": [
+            {
+              "name": "PJ Masks",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/PJ-Masks-logo-2.png"
+            },
+            {
+              "name": "Hasbro",
+              "logo": "assets/casualGames/FeaturedProjects/logos/PJMasks/Hasbro_logo.svg.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Desarrollo profesional",
+              "items": [
+                "Primer proyecto profesional: aprendí los SDK de las plataformas y a portar, depurar y hacer profiling de un juego"
+              ]
+            },
+            {
+              "category": "Programación y optimización de UI",
+              "items": [
+                "Depuración de varios sistemas de UI",
+                "QA del juego",
+                "Optimización del bucle de render de la UI"
+              ]
+            }
+          ],
+          "role": "Ingeniero de porting / QA",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Porting multiplataforma"
+          ]
+        }
+      },
+      {
+        "id": "monsterhigh",
+        "title": "Monster High Skulltimate Secrets",
+        "genre": "Plataformas 3D",
+        "tags": [
+          "Unity",
+          "C#",
+          "Porting multiplataforma"
+        ],
+        "mediaType": "youtube",
+        "mediaSrc": "https://www.youtube.com/watch?v=etbysGnthu8",
+        "mediaPlaceholder": "🎬 TRÁILER DE MONSTER HIGH",
+        "modal": {
+          "title": "Monster High Skulltimate Secrets",
+          "windowTitle": "Monster High Skulltimate Secrets.exe",
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X|S",
+            "Nintendo Switch"
+          ],
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/FeaturedProjects/videos/monsterHigh.mp4",
+          "videoPlaceholder": "🎬 TRÁILER DEL JUEGO",
+          "brands": [
+            {
+              "name": "Monster High",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Monster-High-Logo-2010.png"
+            },
+            {
+              "name": "Mattel",
+              "logo": "assets/casualGames/FeaturedProjects/logos/MonsterHigh/Mattel_logo.svg.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Streaming del mundo y optimización",
+              "items": [
+                "Implementación del streaming del mundo con SECTR",
+                "Implementación de impostores para simular zonas no cargadas y puntos de carga de bajo impacto, para no bajar de 30 fps",
+                "Profiling y optimización profundos de memoria"
+              ]
+            },
+            {
+              "category": "Programación de gameplay",
+              "items": [
+                "Programación de misiones",
+                "Programación del sistema de personalización",
+                "Programación de la UI de menús y optimización de UI"
+              ]
+            }
+          ],
+          "role": "Programador de gameplay / Ingeniero de porting",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Porting multiplataforma"
+          ]
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Proyectos personales",
+    "sectionSubtitle": "Proyectos y experimentos personales de desarrollo de videojuegos",
+    "projects": [
+      {
+        "id": "apigalypsis",
+        "title": "Apigalypsis",
+        "genre": "Juego móvil",
+        "description": "Aventura de aprendizaje de UI/UX - Adaptación del Juego de la Oca",
+        "tags": [
+          "Unity",
+          "Game feel"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
+        "mediaPlaceholder": "🎮 APIGALYPSIS",
+        "modal": {
+          "title": "Apigalypsis",
+          "windowTitle": "Apigalypsis.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Apigalypsis/thumbnail/thumbnailVideo.mp4",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Primero, que funcione",
+              "description": "Empecé por la lógica y las mecánicas principales. Me centré en que los sistemas de juego funcionaran antes de pulir nada visual: que las tiradas de dados, el movimiento y las reglas fueran correctos.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/firstMakeItWork.webp"
+            },
+            {
+              "title": "Después, que sea bonito",
+              "description": "Convertí el prototipo funcional en una experiencia pulida. Este proyecto fue una aventura en game feel: exploré animaciones, transiciones, feedback visual y acabado de la UI para crear interacciones satisfactorias y un diseño adaptable.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/fancyTiledBoard.mp4"
+            },
+            {
+              "title": "Casillas de temática de granja",
+              "description": "Creé yo todo el arte. Diseñé casillas propias de temática de granja, con puentes, campos y elementos agrícolas, para dar al tablero una identidad visual coherente.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/tiles.png"
+            },
+            {
+              "title": "Llega al final para liberar a tu especie",
+              "description": "Condición de victoria: guía a tu abeja por el peligroso tablero de la granja hasta el final para alcanzar la libertad. Completa el viaje para liberar a tu especie de los peligros del mundo agrícola.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/win.mp4"
+            },
+            {
+              "title": "O muere a manos de los granjeros",
+              "description": "Hay mucho en juego: cae en las casillas equivocadas y te derrotarán los granjeros. Evita los peligros y las casillas arriesgadas o encontrarás tu final en esta aventura.",
+              "image": "assets/casualGames/SideProjects/Apigalypsis/features/lose.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Desarrollo",
+              "items": [
+                "Todo programado y diseñado por mí: lógica del juego, implementación de UI/UX, animaciones y acabado visual",
+                "Proyecto de aprendizaje de UI/UX que explora el game feel y el feedback al jugador",
+                "Adaptación del Juego de la Oca con una temática de granja propia",
+                "Todo el arte creado por mí"
+              ]
+            }
+          ],
+          "role": "Desarrollador en solitario",
+          "technologies": [
+            "Unity",
+            "Diseño de UI/UX",
+            "Diseño de juegos de aventura"
+          ],
+          "timeline": "Proyecto personal"
+        }
+      },
+      {
+        "id": "kofi-engine",
+        "title": "Ko-Fi Engine",
+        "genre": "Motor de juego",
+        "description": "Motor de juego propio en C++ - Base de Dune Special Spice Ops",
+        "tags": [
+          "C++",
+          "Desarrollo de motores"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
+        "mediaPlaceholder": "🎮 KO-FI ENGINE",
+        "modal": {
+          "title": "Ko-Fi Engine",
+          "windowTitle": "Ko-Fi Engine.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Ko-Fi-Engine/thumbnail/kofiEngine.mp4",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Sistema de físicas",
+              "description": "Físicas propias con detección de colisiones, dinámica de sólidos rígidos y cálculo de fuerzas. Construidas desde cero para lograr interacciones y movimientos realistas.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/Physics.gif"
+            },
+            {
+              "title": "Módulo de animación",
+              "description": "Sistema de animación esquelética con interpolación de keyframes y mezcla de animaciones. Admite movimientos complejos de personajes y transiciones suaves entre estados de animación.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/engine_animation.gif"
+            },
+            {
+              "title": "Sistema de cámara",
+              "description": "Cámara flexible con varios modos de vista, controles de movimiento suaves y mecánicas de seguimiento. Admite perspectivas 2D y 3D.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/camera.gif"
+            },
+            {
+              "title": "Efectos de partículas",
+              "description": "Sistema avanzado de partículas para efectos visuales como explosiones, humo, fuego y ambientación. Incluye configuración de emisores y gestión del ciclo de vida de las partículas.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/particles.gif"
+            },
+            {
+              "title": "Pipeline de shaders",
+              "description": "Sistema de shaders propio, con vertex y fragment shaders para efectos de render avanzados. Permite pulir el aspecto visual y añadir funciones gráficas especializadas.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/shaders.gif"
+            },
+            {
+              "title": "Sistema de scripting",
+              "description": "Framework de scripting integrado para implementar la lógica de gameplay. Da flexibilidad para prototipar rápido y personalizar el comportamiento del juego.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/scripting.gif"
+            },
+            {
+              "title": "Interfaz de usuario",
+              "description": "Framework de UI para crear menús, elementos de HUD y componentes interactivos. Admite renderizado de texto, botones y gestión de la disposición.",
+              "image": "assets/casualGames/SideProjects/Ko-Fi-Engine/features/audio.gif"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Módulo de animación",
+              "items": [
+                "Desarrollé todo el sistema de animación, desde la importación hasta la deformación de mallas",
+                "Implementé la importación de animaciones y la gestión de sus datos",
+                "Construí el sistema de creación y colocación de huesos",
+                "Programé la interpolación de keyframes en todo el motor"
+              ]
+            },
+            {
+              "category": "Sistema de transición de escenas",
+              "items": [
+                "Construí la interfaz de mejoras y tienda con rotación de personajes",
+                "Implementé las mecánicas de subida de nivel de habilidades",
+                "Creé una UI reactiva con descripciones de habilidades basadas en JSON",
+                "Desarrollé la persistencia del estado del juego"
+              ]
+            },
+            {
+              "category": "Sistema de desbloqueo",
+              "items": [
+                "Implementé el desbloqueo de personajes activado por diálogos",
+                "Controlé la disponibilidad y la visualización de personajes durante el juego",
+                "Creé un sistema de feedback de UI basado en JSON"
+              ]
+            },
+            {
+              "category": "Optimización de memoria",
+              "items": [
+                "Identifiqué y resolví fugas de memoria importantes",
+                "Reduje 150 MB una escena de 500 MB (optimización del 30 %)",
+                "Evité crashes cerca del límite de 2 GB del motor",
+                "Corregí operaciones de malloc/delete"
+              ]
+            },
+            {
+              "category": "Sistema de cámara",
+              "items": [
+                "Implementé la cámara de juego con movimiento por WASD y por los bordes de la pantalla con el ratón",
+                "Añadí controles de rotación con Q/E",
+                "Programé el arrastre con la rueda del ratón con suavizado",
+                "Creé límites para no salir del mapa"
+              ]
+            },
+            {
+              "category": "Mejoras del motor",
+              "items": [
+                "Corregí problemas de activación de eventos y bucles de crash del autoataque",
+                "Resolví problemas de colisión de personajes",
+                "Implementé la selección múltiple y la paralelización de escenas",
+                "Optimicé el sistema de jerarquía",
+                "Creé herramientas de inspección de waypoints y cambio dinámico de cursor",
+                "Añadí tooltips de habilidades y animaciones en las pantallas de carga"
+              ]
+            }
+          ],
+          "role": "Programador de motores",
+          "technologies": [
+            "C++",
+            "OpenGL",
+            "Assimp",
+            "SDL2",
+            "Gestión de memoria",
+            "Sistemas de animación"
+          ],
+          "timeline": "Proyecto académico"
+        }
+      },
+      {
+        "id": "the-tower",
+        "title": "The Tower",
+        "genre": "Juego móvil",
+        "description": "Juego móvil de clicker y construcción - Caso de estudio del Trabajo de Fin de Grado",
+        "tags": [
+          "Unity",
+          "Android"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
+        "mediaPlaceholder": "🎮 THE TOWER",
+        "modal": {
+          "title": "The Tower",
+          "windowTitle": "The Tower.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Los reyes necesitan torres",
+              "description": "Construye para monarcas sin castillo y avanza por retos de construcción cada vez más difíciles en distintos entornos. Levanta torres para los reinos con mecánicas basadas en el martillo, donde la progresión desbloquea mejores herramientas.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/kingsNeedTowers.PNG"
+            },
+            {
+              "title": "Coge un martillo",
+              "description": "Usa mecánicas basadas en el martillo para construir torres. La progresión desbloquea mejores herramientas y habilidades para construir de forma más eficiente.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/grabAHammer.mp4"
+            },
+            {
+              "title": "Reclutamiento de NPC y gestión de recursos",
+              "description": "Recluta NPC gestionando recursos: dales comida y seguridad. Gestiona una reputación que afecta a la dificultad y la complejidad de los encargos mientras equilibras el reparto de recursos.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/NPCRecruitment.PNG"
+            },
+            {
+              "title": "Peligros del entorno",
+              "description": "Afronta condiciones meteorológicas extremas y mecánicas de congelación que dificultan la construcción. Supera los obstáculos del entorno sin perder el avance de la obra ni la seguridad de los trabajadores.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/enviromentalHazards.mp4"
+            },
+            {
+              "title": "Cobra",
+              "description": "Gana recompensas y dinero completando obras y cumpliendo lo que pide el cliente. Gestiona tus ganancias para desbloquear herramientas, contratar trabajadores y construir más.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/getPaid.mp4"
+            },
+            {
+              "title": "Sistema de progresión y recompensas",
+              "description": "Completa niveles para ganar recompensas que financian tu progreso. Forma parte del Trabajo de Fin de Grado 'Fun in simplicity', que demuestra cómo lograr un gameplay atractivo con mecánicas sencillas.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/progression&RewardSystem.mp4"
+            },
+            {
+              "title": "Entre bastidores",
+              "description": "Una mirada a cómo se crearon entornos variados con muy pocos assets. Muestra un desarrollo eficiente: reutilizar assets con inteligencia y colocarlos con estrategia para construir mundos ricos y variados con pocos elementos.",
+              "image": "assets/casualGames/SideProjects/TheTower/features/underTheScenes.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Desarrollo",
+              "items": [
+                "Todo programado por mí: sistemas de gameplay, UI, mecánicas de progresión y lógica del juego",
+                "Proyecto desarrollado en solitario como caso de estudio del Trabajo de Fin de Grado",
+                "Integré assets de terceros: modelos 3D y herramientas de More Mountains",
+                "Pensado para publicarse como mi primer juego comercial"
+              ]
+            }
+          ],
+          "role": "Programador en solitario",
+          "technologies": [
+            "Unity",
+            "C#",
+            "Desarrollo móvil"
+          ],
+          "timeline": "Trabajo de Fin de Grado"
+        }
+      },
+      {
+        "id": "pengo",
+        "title": "Pengo",
+        "genre": "Juego arcade",
+        "description": "Recreación del legendario arcade de Sega",
+        "tags": [
+          "C++",
+          "Motor 2D"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
+        "mediaPlaceholder": "🎮 PENGO",
+        "modal": {
+          "title": "Pengo",
+          "windowTitle": "Pengo.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/Pengo/thumbnail/pengo.mp4",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Diferencias con el original",
+              "description": "Recreación del legendario arcade de Sega con una diferencia clave: esta versión tiene 10 niveles en lugar de los 16 originales. Por lo demás, mantiene la máxima fidelidad al gameplay y las mecánicas del original.",
+              "image": "assets/casualGames/SideProjects/Pengo/features/pengoFeature.png"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Detalles del proyecto",
+              "items": [
+                "Proyecto de primer curso universitario que recrea el Pengo de Sega",
+                "Hecho con un framework básico de motor 2D",
+                "Diseño e implementación de varios niveles",
+                "GitHub: https://github.com/OCA99/PenguBruh-Pengo"
+              ]
+            }
+          ],
+          "role": "Desarrollador",
+          "technologies": [
+            "C++",
+            "Motor 2D",
+            "Desarrollo de juegos arcade"
+          ],
+          "timeline": "Proyecto de primer curso universitario"
+        }
+      },
+      {
+        "id": "7up-pinball",
+        "title": "Clon de 7up Pinball",
+        "genre": "Juego arcade",
+        "description": "Motor de físicas 2D construido desde cero",
+        "tags": [
+          "C++",
+          "Físicas 2D"
+        ],
+        "mediaType": "video",
+        "mediaSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
+        "mediaPlaceholder": "🎮 7UP PINBALL",
+        "modal": {
+          "title": "Clon de 7up Pinball",
+          "windowTitle": "7up Pinball.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/7upPinball/7upPinball.mp4",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Diferencias con el original",
+              "description": "Recreación del clásico 7up Pinball con estas diferencias respecto al original: el embudo izquierdo no tiene gravedad, el agujero derecho hace aparecer la bola arriba, el cañón central hace aparecer la bola arriba y el sistema de puntos se implementa de otra forma.",
+              "image": "assets/casualGames/SideProjects/7upPinball/feature/hqdefault.jpg"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Detalles del proyecto",
+              "items": [
+                "Recreación del clásico 7up Pinball",
+                "Hecho con un motor de físicas 2D propio, desde cero"
+              ]
+            }
+          ],
+          "role": "Desarrollador en solitario",
+          "technologies": [
+            "C",
+            "C++",
+            "Físicas 2D",
+            "SDL2",
+            "Motor propio"
+          ],
+          "timeline": "Proyecto académico"
+        }
+      },
+      {
+        "id": "fire-fighters",
+        "title": "Fire Fighters",
+        "genre": "Battle Royale",
+        "description": "Battle royale multijugador online - Muestra de programación de redes",
+        "tags": [
+          "Unity",
+          "Multijugador"
+        ],
+        "mediaType": "image",
+        "mediaSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
+        "mediaPlaceholder": "🎮 FIRE FIGHTERS",
+        "modal": {
+          "title": "Fire Fighters",
+          "windowTitle": "Fire Fighters.exe",
+          "videoType": "video",
+          "videoSrc": "assets/casualGames/SideProjects/FireFighters/features/firefighters.gif",
+          "videoPlaceholder": "🎬 VÍDEO DEL PROYECTO",
+          "brands": [],
+          "features": [
+            {
+              "title": "Sistema de inicio de sesión",
+              "description": "Autenticación y conexión de jugadores para unirse a partidas multijugador. Gestiona el inicio de sesión del cliente, la identificación del usuario y el handshake inicial con el servidor.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/logIn.mp4"
+            },
+            {
+              "title": "Fuego vivo",
+              "description": "Mecánicas de fuego dinámico que crean tensión y peligros en el entorno. El fuego se extiende por la isla y empuja a los jugadores a zonas cada vez más pequeñas a medida que avanza la partida.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/fireAlive.mp4"
+            },
+            {
+              "title": "Ocultación de latencia",
+              "description": "Técnicas de interpolación para suavizar el movimiento de los jugadores y ocultar la latencia de red. Usa predicción y actualizaciones de posición para que el juego responda bien pese a las condiciones de la red.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/latencyHiding.mp4"
+            },
+            {
+              "title": "Gana quien queda en pie",
+              "description": "Condición de victoria de battle royale: sobrevive más que todos tus rivales para ganar. Los jugadores compiten hasta que solo queda un bombero en pie en una isla cada vez más pequeña.",
+              "image": "assets/casualGames/SideProjects/FireFighters/features/lastRemainingWins.mp4"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Desarrollo",
+              "items": [
+                "Todo programado por mí: sistemas de red, lógica de gameplay, arquitectura cliente-servidor y sincronización multijugador",
+                "Construí una implementación de red UDP propia desde cero",
+                "Implementé la ocultación de latencia, la replicación del estado del mundo y la gestión de paquetes",
+                "Trabajo universitario de cinco meses realizado como único programador",
+                "Mecánicas de battle royale: gana el último jugador en pie"
+              ]
+            }
+          ],
+          "role": "Desarrollador en solitario",
+          "technologies": [
+            "Unity",
+            "C#",
+            ".NET",
+            "UDP networking",
+            "Sistemas multijugador"
+          ],
+          "timeline": "Trabajo universitario de 5 meses"
+        }
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Habilidades y experiencia",
+    "sectionSubtitle": "Herramientas y tecnologías con las que trabajo",
+    "skillsList": [
+      {
+        "title": "Desarrollo en Unity",
+        "description": "He trabajado como desarrollador de Unity para bastantes marcas internacionales, implementando documentos de diseño y resolviendo retos técnicos. Entrego mundos bonitos a los fps objetivo: tus clientes están en buenas manos, y todavía no me he encontrado una funcionalidad que no pudiera sacar adelante.",
+        "image": "assets/casualGames/Skills/Unity.png"
+      },
+      {
+        "title": "Programación de motores en C/C++",
+        "description": "La clave está entre bastidores. He desarrollado proyectos en solitario y en equipo combinando C y C++ para construir software que se convierte en un juego. Hice un módulo de animación completo para un motor, y entendí que todo son datos procesados que se interpretan para que una malla 3D cambie de forma. También contribuí a otros módulos, lo que me dio una comprensión más profunda de cómo funcionan los motores. Ese conocimiento me ha ayudado a resolver muchos problemas en motores comerciales.",
+        "image": "assets/casualGames/Skills/clogo.png"
+      },
+      {
+        "title": "Git y control de versiones",
+        "description": "Tengo experiencia en desarrollo colaborativo con Git. Diseño proyectos modulares para minimizar los conflictos de merge y cuido las modificaciones de archivos en repositorios compartidos. Así el trabajo en equipo fluye y se evitan merges incómodos.",
+        "image": "assets/casualGames/Skills/Git-logo.svg.png"
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "Así soy yo",
+    "sectionSubtitle": "A veces hay que ponerse AFK... para volver con más fuerza.",
+    "roles": [
+      {
+        "role": "",
+        "name": "",
+        "image": "corchetes.png",
+        "isDecoration": true
+      },
+      {
+        "role": "A veces me gusta pasarme a lo analógico",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
+      },
+      {
+        "role": "Tras muchos mallocs el heap puede desbordarse, así que me gusta hacerme free()",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
+      },
+      {
+        "role": "",
+        "name": "",
+        "image": ";.png",
+        "isDecoration": true
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "¡Me encantaría trabajar contigo!",
+    "text": "Escríbeme sin compromiso",
+    "buttonText": "Contáctame"
+  },
+  "contact": {
+    "modalTitle": "Hablemos",
+    "modalDescription": "Disponible para trabajar · Lleida · a partir de enero de 2027. Escríbeme para hablar de puestos, colaboraciones o simplemente para charlar.",
+    "email": "andres8sanchez@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/andresama",
+    "linkedinText": "Perfil de LinkedIn",
+    "twitter": "",
+    "twitterHandle": "",
+    "github": "https://github.com/andreusama",
+    "githubText": "@andreusama",
+    "availability": {
+      "location": "Lleida",
+      "status": "Disponible para trabajar · a partir de enero de 2027",
+      "preferredProjects": ""
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Andrés Sànchez. Todos los derechos reservados.",
+    "tagline": "Hecho con pasión por las grandes experiencias de juego"
+  },
+  "nav": {
+    "home": "Inicio",
+    "projects": "Juegos comerciales",
+    "sideProjects": "Proyectos personales",
+    "skills": "Habilidades",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "cv": {
+    "label": "Descargar CV",
+    "file": "assets/cv/AndresSanchez_CV_Games.pdf"
+  },
+  "ui": {
+    "clickMe": "¡Haz clic!",
+    "viewDetails": "Ver detalles",
+    "links": "Enlaces",
+    "projectHighlights": "Lo más destacado",
+    "myContributions": "Mis aportaciones",
+    "role": "Rol",
+    "technologies": "Tecnologías",
+    "copyEmail": "Copiar correo",
+    "linkedinProfile": "Perfil de LinkedIn",
+    "loading": "Cargando..."
+  }
+}

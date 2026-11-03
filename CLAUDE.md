@@ -18,7 +18,7 @@ Job-search portfolio. Static HTML/CSS/JS on Vercel, one page, driven by JSON. Se
 - `generateCollageMedia` and `createProjectCollage` in `js/modules/contentLoader.js` render the windows.
 - Precision irrigation has size overrides in `css/components/section.css`, scoped by `data-project`.
 - On mobile (768 px and below) the navbar shows only Home. The full menu overflows between about 769 and 950 px; this is a known open issue.
-- Spanish data files don't exist yet, so `?lang=es` falls back to English.
+- `?lang=es` loads `data/software.es.json` and `data/games.es.json`, which mirror the English files. Any copy change must be made in both. Interface labels live under `ui` in the data file (`uiText` in the loader, `data-ui` in `index.html`), with the English text as the default. Both languages share the same English CV PDFs.
 
 ## Git on a new machine
 
@@ -43,4 +43,4 @@ ffmpeg -ss <t> -i clip.mp4 -frames:v 1 -q:v 4 clip-poster.jpg
 - Done: Landing, Software and Games entries, and all three Software sections with media.
 - "Match the bank" (Estalvia clip 2) shows older demo data with warnings. The owner chose to keep it.
 - The supplier name in Estalvia's clips is real, and the owner is fine with it.
-- Not done: Spanish content, hamburger menu, tablet navbar fix.
+- Not done: Spanish CVs, hamburger menu, tablet navbar fix.

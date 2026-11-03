@@ -36,6 +36,7 @@ class ContentLoader {
             this.populateFooter();
             this.populateNav();
             this.populateHeroEntries();
+            this.populateUi();
             this.setupLangToggle();
             this.applyView();
 
@@ -86,6 +87,22 @@ class ContentLoader {
             throw new Error(`Failed to load content: ${response.statusText}`);
         }
         this.data = await response.json();
+    }
+
+    /**
+     * Interface label from the data file (data.ui), or its English default
+     */
+    uiText(key, fallback) {
+        return (this.data.ui && this.data.ui[key]) || fallback;
+    }
+
+    /**
+     * Translate the labels written directly in index.html
+     */
+    populateUi() {
+        document.querySelectorAll('[data-ui]').forEach(element => {
+            element.textContent = this.uiText(element.dataset.ui, element.textContent);
+        });
     }
 
     /**
@@ -402,7 +419,7 @@ class ContentLoader {
                     <span class="btn__circle"></span>
                     <span class="btn__circle"></span>
                     <span class="btn__circle"></span>
-                    View Details
+                    ${this.uiText('viewDetails', 'View Details')}
                 </button>` : ''}
             </div>
         `;
@@ -508,7 +525,7 @@ class ContentLoader {
                 mediaHTML = `
                     <div class="video-container" style="position: relative; width: 100%;">
                         <div class="video-loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 10; width: 80%; max-width: 300px;">
-                            <span style="color: var(--color-cream, #fff); font-size: 0.875rem; margin-bottom: 0.5rem;">Loading...</span>
+                            <span style="color: var(--color-cream, #fff); font-size: 0.875rem; margin-bottom: 0.5rem;">${this.uiText('loading', 'Loading...')}</span>
                             <div style="width: 100%; height: 4px; background-color: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden;">
                                 <div style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); border-radius: 2px; animation: loading 2s ease-in-out infinite;"></div>
                             </div>
@@ -559,7 +576,7 @@ class ContentLoader {
                     <span class="btn__circle"></span>
                     <span class="btn__circle"></span>
                     <span class="btn__circle"></span>
-                    View Details
+                    ${this.uiText('viewDetails', 'View Details')}
                 </button>
             </div>
         `;
@@ -937,7 +954,7 @@ class ContentLoader {
             : '';
         const linksHTML = modalData.links && modalData.links.length > 0 ? `
             <div class="cloud-container project-modal-info-box">
-                <h3 class="project-modal-info-box__title">Links</h3>
+                <h3 class="project-modal-info-box__title">${this.uiText('links', 'Links')}</h3>
                 <div class="project-modal-info-box__tags">
                     ${modalData.links.map(link => `<a class="tag" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`).join('')}
                 </div>
@@ -965,7 +982,7 @@ class ContentLoader {
         // Build features section for side projects (image/video + description like skills section)
         const featuresHTML = isSideProject && modalData.features && modalData.features.length > 0 ? `
             <div class="project-modal-features">
-                <h2 class="project-modal__section-title">Project Highlights</h2>
+                <h2 class="project-modal__section-title">${this.uiText('projectHighlights', 'Project Highlights')}</h2>
                 ${modalData.features.map(feature => {
                     // Check if the feature media is a video (mp4) or image
                     const isVideo = feature.image && feature.image.toLowerCase().endsWith('.mp4');
@@ -1027,18 +1044,18 @@ class ContentLoader {
 
                     <div class="project-modal-grid">
                         <div class="cloud-container project-modal-contributions">
-                            <h2 class="project-modal__section-title">My Contributions</h2>
+                            <h2 class="project-modal__section-title">${this.uiText('myContributions', 'My Contributions')}</h2>
                             ${contributionsHTML}
                         </div>
 
                         <div class="project-modal-sidebar">
                             <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Role</h3>
+                                <h3 class="project-modal-info-box__title">${this.uiText('role', 'Role')}</h3>
                                 <p class="project-modal-info-box__content">${modalData.role}</p>
                             </div>
 
                             <div class="cloud-container project-modal-info-box">
-                                <h3 class="project-modal-info-box__title">Technologies</h3>
+                                <h3 class="project-modal-info-box__title">${this.uiText('technologies', 'Technologies')}</h3>
                                 <div class="project-modal-info-box__tags">
                                     ${modalData.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
                                 </div>

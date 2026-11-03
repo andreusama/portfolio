@@ -10,7 +10,7 @@ Personal portfolio of Andrés Sánchez, one site for two kinds of employer: soft
 | `/?version=software` | Software entry: VibeComposer, Precision irrigation, Estalvia |
 | `/?version=games` | Games entry: shipped commercial titles and side projects |
 
-Add `lang=es` to use the Spanish toggle. Only English content exists so far, so it falls back to English.
+Add `lang=es`, or click ES in the navbar, for the Spanish version.
 
 ## Run it
 
@@ -30,7 +30,7 @@ Vercel deploys `main` to production on every push, and other branches to preview
 
 - `index.html`: the single page. Sections are shown or hidden by view.
 - `data/config.json`: available Entries and languages.
-- `data/software.en.json`, `data/games.en.json`: all the content of each Entry.
+- `data/software.{en,es}.json`, `data/games.{en,es}.json`: all the content of each Entry, per language. Keep both languages in step.
 - `js/modules/contentLoader.js`: reads the URL and the data, then renders the page.
 - `css/`: styles. `css/components/section.css` holds the project windows.
 - `assets/software/`: clips and screenshots of the Software entry. Each clip has `.mp4`, `.webm` and `-poster.jpg`.

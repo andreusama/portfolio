@@ -131,3 +131,10 @@
 [hidden] {
     display: none !important;
 }
+
+/* The Spanish headline is longer: keep it to the same three lines as the English one */
+@media (min-width: 769px) {
+    html[lang="es"] .hero__name {
+        font-size: 4.5rem;
+    }
+}

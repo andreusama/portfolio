@@ -17,7 +17,7 @@ Source: the job-search guide (3 Nov 2026) and the grilling session of the same d
 
 ## Build steps
 
-Status: all done and live, except the Spanish files in step 1.
+Status: all done and live, including the Spanish files in step 1.
 
 1. Data: create `software.en.json`, `games.en.json` from the current data; Spanish files follow.
 2. Loader: `?version=` (done, untested on the live site), add `?lang=`, default Landing when no parameter.

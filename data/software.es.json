@@ -1,0 +1,884 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Ingeniero de software full stack",
+    "description": "Ingeniero de software full stack: Python/Django, JavaScript/React, con experiencia en gameplay y tiempo real."
+  },
+  "hero": {
+    "greeting": "Hola, soy Andrés Sànchez",
+    "headline": "Convierto ideas en software que la gente usa",
+    "description": "Ingeniero de software full stack · Python/Django · JavaScript/React",
+    "landing": {
+      "headline": "Convierto ideas en software que la gente disfruta",
+      "description": "Ingeniero de software full stack · Python/Django · JavaScript/React · gameplay y sistemas en tiempo real"
+    },
+    "ctaPrimary": "Ver mi trabajo",
+    "ctaSecondary": "Contáctame",
+    "entries": {
+      "software": {
+        "label": "Software",
+        "caption": "Full stack · Python/Django · JavaScript/React"
+      },
+      "games": {
+        "label": "Juegos",
+        "caption": "Títulos comerciales publicados · Unity · C#"
+      }
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "projects": "VibeComposer",
+    "sideProjects": "Riego",
+    "skills": "Estalvia",
+    "expertise": "Habilidades",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "cv": {
+    "label": "Descargar CV",
+    "file": "assets/cv/AndresSanchez_CV_Software.pdf"
+  },
+  "marquees": {
+    "skills1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "JavaScript",
+      "React"
+    ],
+    "skills2": [
+      "Supabase",
+      "Capacitor",
+      "Ollama",
+      "GitLab",
+      "Unity"
+    ],
+    "platforms": [
+      "JavaScript",
+      "React",
+      "Supabase",
+      "Capacitor",
+      "Web Audio"
+    ],
+    "genres": [
+      "Python",
+      "Django",
+      "PostgreSQL"
+    ],
+    "types": [
+      "JavaScript",
+      "Ollama",
+      "GitLab API"
+    ],
+    "misc": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "LLM"
+    ],
+    "expertise1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "JavaScript",
+      "React"
+    ],
+    "expertise2": [
+      "Claude API",
+      "Supabase",
+      "Capacitor",
+      "Git",
+      "Rendimiento"
+    ],
+    "estalvia1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "LLM"
+    ],
+    "estalvia2": [
+      "Claude API",
+      "pytest",
+      "ruff",
+      "ADRs"
+    ]
+  },
+  "featuredProjects": {
+    "sectionTitle": "VibeComposer",
+    "sectionSubtitle": "Problema: mi app de notas era un caos, con canciones sin terminar, referencias de libros y progresiones de acordes repartidas por una lista. Solución: reunirlo todo en una app estructurada para escribir canciones y añadir IA para jugar con ella.",
+    "projects": [
+      {
+        "id": "vibecomposer",
+        "title": "VibeComposer",
+        "genre": "App para coescribir letras",
+        "tags": [
+          "JavaScript",
+          "React",
+          "Supabase",
+          "Capacitor"
+        ],
+        "mediaType": "",
+        "mediaSrc": "",
+        "mediaPlaceholder": "🎬 DEMO DE VIBECOMPOSER · PRÓXIMAMENTE",
+        "modal": {
+          "title": "VibeComposer",
+          "windowTitle": "vibecomposer.exe",
+          "summary": "Una app para escribir letras de canciones en castellano y catalán con una IA coautora, un canvas con React Flow, un secuenciador con Web Audio y una versión móvil hecha con Capacitor.",
+          "videoType": "video",
+          "videoSrc": "assets/software/vibecomposer/walkthrough.mp4",
+          "videoPlaceholder": "🎬 DEMO DE VIBECOMPOSER · PRÓXIMAMENTE",
+          "brands": [],
+          "links": [
+            {
+              "label": "App en vivo",
+              "url": "https://vibe-composer.vercel.app"
+            },
+            {
+              "label": "Código",
+              "url": "https://github.com/andreusama/VibeComposer"
+            }
+          ],
+          "contributions": [
+            {
+              "category": "Producto",
+              "items": [
+                "Canvas hecho con React Flow y secuenciador basado en Web Audio.",
+                "Versión móvil empaquetada con Capacitor en lugar de reescribirla."
+              ]
+            },
+            {
+              "category": "Datos y acceso",
+              "items": [
+                "Backend en Supabase con seguridad a nivel de fila (RLS) por usuario."
+              ]
+            },
+            {
+              "category": "Herramientas de lengua",
+              "items": [
+                "Pipeline propio para un léxico de cientos de miles de palabras por idioma.",
+                "Las rimas las verifica una consulta SQL, no las genera el modelo."
+              ]
+            },
+            {
+              "category": "Calidad",
+              "items": [
+                "120 tests de lógica con Vitest."
+              ]
+            }
+          ],
+          "role": "Proyecto personal",
+          "technologies": [
+            "JavaScript",
+            "React",
+            "Supabase",
+            "Capacitor",
+            "Web Audio"
+          ],
+          "videoPoster": "assets/software/vibecomposer/walkthrough-poster.jpg"
+        },
+        "collage": {
+          "links": [
+            {
+              "label": "App en vivo",
+              "url": "https://vibe-composer.vercel.app"
+            },
+            {
+              "label": "Código",
+              "url": "https://github.com/andreusama/VibeComposer"
+            }
+          ],
+          "columns": [
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "1. Escribe",
+                  "caption": "Crea la canción, cámbiala a catalán y escribe el primer verso.",
+                  "src": "assets/software/vibecomposer/clip-write",
+                  "main": true
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "2. Pregunta a la Musa",
+                  "caption": "Selecciona una palabra: la Musa explica qué necesita el verso y luego sugiere una línea.",
+                  "src": "assets/software/vibecomposer/clip-muse"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "3. Rimas",
+                  "caption": "Elige una palabra y obtén rimas reales agrupadas por sílabas.",
+                  "src": "assets/software/vibecomposer/clip-muse-rhyme"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "4. Acordes",
+                  "caption": "Mantén pulsado un acorde y arrástralo a una línea.",
+                  "src": "assets/software/vibecomposer/clip-chord-drag"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "5. Notas de voz",
+                  "caption": "Tararea una melodía y guárdala junto a la letra.",
+                  "src": "assets/software/vibecomposer/clip-voice"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "6. Recursos",
+                  "caption": "Guarda lo que te inspira (una frase, su autor, una carpeta) y encuéntralo cuando escribas.",
+                  "src": "assets/software/vibecomposer/clip-resources"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "7. La canción entera",
+                  "caption": "Léela de principio a fin, con sus acordes.",
+                  "src": "assets/software/vibecomposer/clip-song"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "IA con límites para potenciar la imaginación",
+                  "contributions": [
+                    {
+                      "category": "Objetivo",
+                      "items": [
+                        "Integré la API de Claude para potenciar la inspiración de quien escribe, no para generar canciones solas: la Musa sugiere y quien escribe decide."
+                      ]
+                    },
+                    {
+                      "category": "Límites",
+                      "items": [
+                        "La clave de la API se queda en el servidor, tras un proxy autenticado.",
+                        "Lista de modelos permitidos, tokens limitados y límites de uso por usuario.",
+                        "Cuota diaria aplicada en Postgres; si falla, bloquea el acceso.",
+                        "Las rimas salen de SQL, no del modelo."
+                      ]
+                    },
+                    {
+                      "category": "Stack",
+                      "items": [
+                        "API de Claude, Supabase, JavaScript y React."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "Riego de precisión",
+    "sectionSubtitle": "Problema: los agricultores tienden a usar demasiada agua, sin saber que pueden llegar a un equilibrio: la producción que quieren, con menos agua. Importa sobre todo donde el agua escasea. Solución: una plataforma que lee los sensores y las imágenes de satélite de cada explotación e indica cuánto regar, para que el cultivo reciba lo que necesita y nada más.",
+    "projects": [
+      {
+        "id": "irrigation-platform",
+        "title": "Riego de precisión",
+        "genre": "Plataforma web · IRTA",
+        "tags": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "JavaScript",
+          "CSS"
+        ],
+        "mediaType": "image",
+        "mediaSrc": "assets/software/irrigation/crop-map.jpg",
+        "mediaPlaceholder": "",
+        "modal": {
+          "title": "Riego de precisión",
+          "windowTitle": "irrigation-platform.exe",
+          "summary": "Una plataforma web que lee los sensores y las imágenes de satélite de cada explotación e indica cuánto regar. La IA solo automatiza procesos de desarrollo: el usuario no tiene ninguna IA. Mi trabajo en ella está bajo NDA, así que esta página no muestra capturas.",
+          "videoType": "image",
+          "videoSrc": "assets/software/irrigation/crop-map.jpg",
+          "videoPlaceholder": "",
+          "brands": [],
+          "links": [],
+          "contributions": [
+            {
+              "category": "Frontend y UX",
+              "items": [
+                "Rehíce la vista del agricultor: de una página antigua con scroll a una interfaz centrada en el mapa, al estilo de Google Maps y Glovo.",
+                "Diseñada para usuarios no técnicos en el campo: botones grandes, zonas táctiles amplias y color solo en los elementos pulsables.",
+                "Mapas con códigos de color para riego periódico y a demanda."
+              ]
+            },
+            {
+              "category": "Rendimiento",
+              "items": [
+                "Ajusté los polígonos de las parcelas a la resolución de puntos de cada nivel de zoom: 57 % menos de datos y 22 % más de velocidad de carga en 11.160 parcelas.",
+                "Los colores de los polígonos se actualizan sin redibujar la geometría."
+              ]
+            },
+            {
+              "category": "Traducción asistida por IA",
+              "items": [
+                "Creé un pipeline de traducción con un LLM local (Ollama, qwen2.5:32b, sin coste de API) y un glosario verificado: 490 traducciones revisadas por profesionales siempre prevalecen sobre la IA.",
+                "Localicé unas 13.000 cadenas a 6 idiomas, lo que sustituye más de 140 horas estimadas de trabajo manual (estimación: unas 43.000 palabras a 300 palabras por hora)."
+              ]
+            },
+            {
+              "category": "Plataforma y herramientas",
+              "items": [
+                "Adapté un mismo código a más de 10 autoridades regionales de riego, cada una con su configuración y su terminología.",
+                "Automaticé la creación de tareas con la API de GitLab Issues.",
+                "Creé un comando que genera la base de cada vista nueva."
+              ]
+            }
+          ],
+          "role": "Ingeniero full stack en el IRTA (enero de 2026 - actualidad)",
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "JavaScript",
+            "CSS",
+            "Ollama",
+            "GitLab API"
+          ]
+        },
+        "collage": {
+          "links": [
+            {
+              "label": "IrriDesk (IRTA)",
+              "url": "https://irridesk.com/"
+            },
+            {
+              "label": "Ficha de IRRILANDS (PDF)",
+              "url": "https://xagritech.net/wp-content/uploads/2024/08/TKRV-IRRILANDS.-Supervisio-i-prediccio-de-la-demanda-de-reg-pel-territori.pdf"
+            },
+            {
+              "label": "Artículo de SEGRE",
+              "url": "https://www.segre.com/ca/noticies-empresa/260610/els-canals-d-urgell-preparen-per-gestionar-l-aigua-futur_1234627.html"
+            }
+          ],
+          "columns": [
+            {
+              "heading": "Mi trabajo aquí está bajo NDA, así que no hay capturas. Lo que hace la plataforma viene de las fuentes públicas de arriba, y lo que hice yo lo explico con palabras."
+            },
+            {
+              "heading": "1. Qué hace"
+            },
+            {
+              "grow": 2,
+              "maxWidth": 620,
+              "items": [
+                {
+                  "type": "image",
+                  "title": "Cada parcela, en un solo mapa",
+                  "caption": "Teledetección por satélite de una zona de riego, con cada parcela coloreada según su cultivo. Imagen pública: Canals d'Urgell, vía SEGRE.",
+                  "src": "assets/software/irrigation/crop-map.jpg",
+                  "main": true
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "Un gemelo digital de cada parcela",
+                  "contributions": [
+                    {
+                      "category": "Qué entra",
+                      "items": [
+                        "Datos meteorológicos, sensores de suelo o de planta, teledetección por satélite y lo que el agricultor indica sobre cultivo, suelo y sistema de riego."
+                      ]
+                    },
+                    {
+                      "category": "Qué ocurre",
+                      "items": [
+                        "Cada día los datos nuevos alimentan un gemelo digital de la parcela regada, que simula el cultivo y su estado hídrico."
+                      ]
+                    },
+                    {
+                      "category": "Qué sale",
+                      "items": [
+                        "Una dosis de riego actualizada a diario y enviada a los controladores compatibles. El agricultor puede cambiar el plan cuando quiera."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "De una parcela a un territorio",
+                  "contributions": [
+                    {
+                      "category": "Escala",
+                      "items": [
+                        "La misma idea cubre miles de parcelas, con declaraciones de cultivo abiertas y datos meteorológicos y de observación de la Tierra."
+                      ]
+                    },
+                    {
+                      "category": "A quién ayuda",
+                      "items": [
+                        "Las comunidades de regantes y las administraciones públicas pueden ver cada parcela y sumarlas hasta cubrir toda una zona o región."
+                      ]
+                    },
+                    {
+                      "category": "Previsión",
+                      "items": [
+                        "La demanda de agua se predice hasta el final de la campaña de riego."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "2. Cómo usamos la IA: para automatizar procesos de desarrollo. El usuario nunca ve ninguna IA."
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "stat",
+                  "title": "Traducción",
+                  "value": "13.000",
+                  "caption": "cadenas localizadas a 6 idiomas con un LLM local, sin coste de API."
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "stat",
+                  "title": "Revisión humana",
+                  "value": "490",
+                  "caption": "traducciones revisadas por profesionales que siempre prevalecen sobre la IA."
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "stat",
+                  "title": "Horas ahorradas",
+                  "value": "140+",
+                  "caption": "de trabajo manual sustituidas (estimación: unas 43.000 palabras a 300 palabras por hora)."
+                }
+              ]
+            },
+            {
+              "heading": "3. Qué hice: rehacer la vista del agricultor, como ingeniero full stack en el IRTA"
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "De dónde partía",
+                  "contributions": [
+                    {
+                      "category": "La vista antigua",
+                      "items": [
+                        "Una página larga con scroll, así que el mapa desaparecía en cuanto leías los detalles.",
+                        "Muchos colores sin un código claro."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "stat",
+                  "title": "Despliegue",
+                  "value": "10+",
+                  "caption": "autoridades regionales de riego servidas desde un mismo código, cada una con su configuración y su terminología."
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "Qué construí",
+                  "contributions": [
+                    {
+                      "category": "Primero el mapa",
+                      "items": [
+                        "El mapa se queda en pantalla y los detalles se deslizan por encima, al estilo de Google Maps y Glovo. Está en producción para usuarios de pago.",
+                        "El color solo aparece en lo que se puede pulsar."
+                      ]
+                    },
+                    {
+                      "category": "Cómo se lee el mapa",
+                      "items": [
+                        "Pulsa una parcela para ver su cultivo, su superficie y sus necesidades de agua.",
+                        "En riego periódico, cuanto más intenso es el azul, más agua necesita.",
+                        "Las necesidades de riego se predicen día a día, junto al tiempo previsto."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "Hecha para el campo",
+                  "contributions": [
+                    {
+                      "category": "Los usuarios",
+                      "items": [
+                        "Personas no técnicas, al aire libre, con manos grandes y poca cobertura."
+                      ]
+                    },
+                    {
+                      "category": "Las decisiones",
+                      "items": [
+                        "Botones grandes y zonas táctiles amplias."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "readme",
+                  "title": "Automatización",
+                  "contributions": [
+                    {
+                      "category": "Para el equipo",
+                      "items": [
+                        "Un comando que genera la base de cada vista nueva.",
+                        "Creación de tareas con la API de GitLab Issues."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "stat",
+                  "title": "Menos datos, el mismo mapa",
+                  "value": "57 %",
+                  "caption": "menos datos de mapa y 22 % más de velocidad de carga en 11.160 parcelas. Los polígonos se cargan a la resolución de cada nivel de zoom y los colores se actualizan sin redibujar la geometría."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Estalvia",
+    "sectionSubtitle": "Problema: los dueños de bares pequeños lidian con la logística de proveedores, albaranes, facturas y cargos del banco, y no pueden pagar una administración ni un software caro que lo resuelva. Solución: herramientas sencillas para el móvil que muestran qué está pagado, qué no cuadra y cuánto gana de verdad cada barril.",
+    "skillsList": [],
+    "projects": [
+      {
+        "id": "estalvia",
+        "title": "Estalvia",
+        "genre": "Herramientas para dueños de bares pequeños",
+        "tags": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "LLM"
+        ],
+        "mediaType": "",
+        "mediaSrc": "",
+        "mediaPlaceholder": "",
+        "modal": {
+          "title": "Estalvia",
+          "windowTitle": "estalvia.exe",
+          "summary": "Herramientas para dueños de bares pequeños con problemas de logística y sin presupuesto para una administración. Una lee con IA los albaranes y las facturas de los proveedores, muestra qué está pagado y qué no cuadra, y concilia los pagos con un extracto bancario en CSV. La otra calcula cuánto gana cada barril de cerveza. En desarrollo: solo es una idea que todavía necesita iteración.",
+          "videoType": "video",
+          "videoSrc": "assets/software/estalvia/clip-review.mp4",
+          "videoPlaceholder": "",
+          "brands": [],
+          "links": [],
+          "contributions": [
+            {
+              "category": "Arquitectura",
+              "items": [
+                "Un proyecto Django que monta cada prototipo como una app bajo su propio prefijo.",
+                "Decisiones técnicas y sus límites registrados en ADR."
+              ]
+            },
+            {
+              "category": "IA y conciliación",
+              "items": [
+                "Facturas y albaranes leídos con IA.",
+                "El extracto bancario se procesa con reglas, no con IA."
+              ]
+            },
+            {
+              "category": "Cuentas y calidad",
+              "items": [
+                "Cuentas de usuario con registro por código de invitación y comandos de gestión.",
+                "Tests que no llaman al modelo."
+              ]
+            }
+          ],
+          "role": "Proyecto personal",
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "LLM"
+          ],
+          "videoPoster": "assets/software/estalvia/clip-review-poster.jpg"
+        },
+        "collage": {
+          "columns": [
+            {
+              "narrow": true,
+              "maxWidth": 290,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "1. Revisa los papeles",
+                  "caption": "La foto junto a lo que se ha leído. Un toque para confirmar, o toca un campo para corregirlo.",
+                  "src": "assets/software/estalvia/clip-review",
+                  "aspect": "720 / 1558",
+                  "main": true
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "maxWidth": 290,
+              "y": 2,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "2. Cuadra con el banco",
+                  "caption": "Cargos dobles, importes erróneos y pagos sin factura. Nada cuenta como pagado hasta que lo confirma una persona.",
+                  "src": "assets/software/estalvia/clip-payments",
+                  "aspect": "720 / 1558"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "maxWidth": 290,
+              "items": [
+                {
+                  "type": "clip",
+                  "title": "3. Saber cuánto gana un barril",
+                  "caption": "Beneficio por ración y por barril, con un aviso cuando el proveedor sube el precio.",
+                  "src": "assets/software/estalvia/clip-kegs",
+                  "aspect": "720 / 1558"
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "maxWidth": 290,
+              "y": 2,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "Las apps pequeñas pueden cambiar mucho las cosas",
+                  "contributions": [
+                    {
+                      "category": "Objetivo",
+                      "items": [
+                        "Las apps pequeñas pueden facilitar mucho el trabajo."
+                      ]
+                    },
+                    {
+                      "category": "Límites",
+                      "items": [
+                        "Claude lee los documentos y una persona los confirma.",
+                        "El extracto bancario y la calculadora de barriles no usan IA.",
+                        "Los importes deben cuadrar al céntimo."
+                      ]
+                    },
+                    {
+                      "category": "Estado",
+                      "items": [
+                        "En desarrollo: solo es una idea que todavía necesita iteración."
+                      ]
+                    },
+                    {
+                      "category": "Stack",
+                      "items": [
+                        "Python, Django, PostgreSQL y la API de Claude."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "expertise": {
+    "sectionTitle": "Habilidades y experiencia",
+    "sectionSubtitle": "Lo que aporto a un equipo full stack",
+    "skillsList": [
+      {
+        "title": "Python, Django y PostgreSQL",
+        "image": "assets/software/skills/python.svg",
+        "description": "Mi stack principal de backend. En el IRTA trabajo en una plataforma de riego de precisión a escala nacional, adaptando un mismo código a más de 10 autoridades regionales de riego. En Estalvia cada herramienta es su propia app de Django, cada usuario ve solo sus datos y los tests se ejecutan sin llamar al modelo."
+      },
+      {
+        "title": "JavaScript y React",
+        "image": "assets/software/skills/react.svg",
+        "description": "VibeComposer es mi prueba full stack: React con un canvas de React Flow, un secuenciador con Web Audio, Supabase con seguridad a nivel de fila por usuario y una versión móvil con Capacitor, respaldado por 120 tests de lógica. En el IRTA lideré la refactorización del frontend, de una página antigua a una interfaz centrada en el mapa."
+      },
+      {
+        "title": "IA aplicada",
+        "image": "assets/software/skills/ai.svg",
+        "description": "Integro la IA en productos con límites claros. En VibeComposer la API de Claude está tras un proxy serverless, así que la clave nunca llega al navegador. En Estalvia la IA lee documentos, pero el extracto bancario pasa por reglas. En el IRTA la IA solo automatiza el desarrollo: creé un pipeline de traducción con un LLM local en el que las traducciones revisadas siempre prevalecen."
+      },
+      {
+        "title": "Rendimiento y tiempo real",
+        "image": "assets/casualGames/Skills/Unity.png",
+        "description": "Dos años publicando cuatro títulos comerciales en Unity me enseñaron a medir primero. Hice profiling y corregí problemas graves de memoria y de framerate en Android y en consolas, y construí un multijugador en tiempo real para cuatro jugadores a 30 fps estables en móvil. En la web, esa misma mentalidad hace que los mapas carguen solo el detalle que necesita cada nivel de zoom."
+      },
+      {
+        "title": "Git y decisiones técnicas",
+        "image": "assets/casualGames/Skills/Git-logo.svg.png",
+        "description": "Registro las decisiones y sus límites en ADR, para poder defender cada elección. Trabajo a diario con Git y GitLab, y automaticé la creación de tareas con la API de GitLab Issues. Liderar un departamento de porting me enseñó a planificar el trabajo y a asesorar a artistas sobre optimización."
+      }
+    ]
+  },
+  "approach": {
+    "sectionTitle": "Mi enfoque ante la revolución de la IA",
+    "sectionSubtitle": "La IA escribe código rápido y, sin un proceso, esa velocidad acaba en código basura. Organizo mi trabajo con la <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">librería de skills de Matt Pocock</a>.",
+    "windows": [
+      {
+        "title": "Grilling with docs",
+        "image": "assets/software/skills/grilling.png",
+        "description": "El agente me entrevista antes de escribir código. Las decisiones quedan en el repo como glosario y ADR."
+      },
+      {
+        "title": "Arquitectura",
+        "image": "assets/software/skills/architecture.png",
+        "description": "Yo decido la forma y el agente trabaja dentro de ella. Módulos profundos: mucho comportamiento tras interfaces pequeñas."
+      },
+      {
+        "title": "Tests",
+        "image": "assets/software/skills/tests.png",
+        "description": "Un ciclo rojo-verde cada vez, así compruebo el trabajo del agente en lugar de fiarme. Estalvia tiene 121 tests y VibeComposer, 120."
+      },
+      {
+        "title": "Código limpio",
+        "image": "assets/software/skills/clean-code.png",
+        "description": "Cada diff se revisa frente a los estándares de código y el ticket. En Estalvia, ruff y pytest se ejecutan en CI."
+      }
+    ]
+  },
+  "thatsMe": {
+    "sectionTitle": "Así soy yo",
+    "sectionSubtitle": "A veces hay que ponerse AFK... para volver con más fuerza.",
+    "roles": [
+      {
+        "role": "",
+        "name": "",
+        "image": "corchetes.png",
+        "isDecoration": true
+      },
+      {
+        "role": "A veces me gusta pasarme a lo analógico",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
+      },
+      {
+        "role": "Tras muchos mallocs el heap puede desbordarse, así que me gusta hacerme free()",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
+      },
+      {
+        "role": "",
+        "name": "",
+        "image": ";.png",
+        "isDecoration": true
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "¡Me encantaría trabajar contigo!",
+    "text": "Escríbeme sin compromiso",
+    "buttonText": "Contáctame"
+  },
+  "contact": {
+    "modalTitle": "Hablemos",
+    "modalDescription": "Disponible para trabajar · Lleida · a partir de enero de 2027. Escríbeme para hablar de puestos, colaboraciones o simplemente para charlar.",
+    "email": "andres8sanchez@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/andresama",
+    "linkedinText": "Perfil de LinkedIn",
+    "twitter": "",
+    "twitterHandle": "",
+    "github": "https://github.com/andreusama",
+    "githubText": "@andreusama",
+    "availability": {
+      "location": "Lleida",
+      "status": "Disponible para trabajar · a partir de enero de 2027",
+      "preferredProjects": ""
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Andrés Sànchez. Todos los derechos reservados.",
+    "tagline": "Ingeniería full stack, con experiencia en videojuegos"
+  },
+  "ui": {
+    "clickMe": "¡Haz clic!",
+    "viewDetails": "Ver detalles",
+    "links": "Enlaces",
+    "projectHighlights": "Lo más destacado",
+    "myContributions": "Mis aportaciones",
+    "role": "Rol",
+    "technologies": "Tecnologías",
+    "copyEmail": "Copiar correo",
+    "linkedinProfile": "Perfil de LinkedIn",
+    "loading": "Cargando..."
+  }
+}
