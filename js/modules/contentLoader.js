@@ -105,7 +105,9 @@ class ContentLoader {
      * Populate hero section
      */
     populateHero() {
-        const hero = this.data.hero;
+        // The Landing can override the entry's hero text with a neutral one (hero.landing)
+        const base = this.data.hero;
+        const hero = this.view === 'landing' && base.landing ? { ...base, ...base.landing } : base;
 
         this.setTextContent('[data-content="hero-greeting"]', hero.greeting);
         this.setTextContent('[data-content="hero-headline"]', hero.headline);

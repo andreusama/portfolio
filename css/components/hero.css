@@ -61,6 +61,7 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: var(--color-base-dark);
+    text-wrap: balance;
 }
 
 .hero__subtitle {
