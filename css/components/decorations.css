@@ -348,6 +348,18 @@
     aspect-ratio: 4 / 3;
 }
 
+/* The Software clip is tall: a narrower window, centred in a column as wide as the Games one */
+@media (min-width: 769px) {
+    .hero-column--left {
+        width: calc(clamp(170px, 14vw + 70px, 250px) + 40px);
+    }
+}
+
+.hero-window.hero-entry[data-entry="software"] {
+    width: 170px;
+    margin-inline: auto;
+}
+
 .hero-window__content--placeholder {
     padding: 0.75rem;
     text-align: center;

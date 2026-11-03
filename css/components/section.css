@@ -269,21 +269,31 @@
 }
 
 .project-collage__column--narrow {
-    flex-basis: 200px;
+    flex-grow: 0;
+    flex-basis: calc(25% - 2rem);
     max-width: 320px;
 }
 
-/* Too narrow for one row: two even rows of three, then a single column on phones */
-@media (max-width: 1399px) {
+/* Too narrow for four across: rows of two, then a single column on phones */
+@media (max-width: 1024px) {
     .project-collage__column--narrow {
-        flex-basis: 30%;
+        flex-basis: calc(50% - 2rem);
     }
 }
 
 @media (max-width: 768px) {
     .project-collage__column--narrow {
-        flex-basis: 240px;
+        flex-basis: 100%;
     }
+}
+
+/* Precision irrigation: smaller windows, so the numbers shrink with them */
+.project-collage[data-project="irrigation-platform"] .project-collage__column--narrow {
+    max-width: 290px;
+}
+
+.project-collage[data-project="irrigation-platform"] .section__title {
+    font-size: clamp(2.2rem, 3.4vw, 3.5rem) !important;
 }
 
 /* Prevent cards from breaking across columns */

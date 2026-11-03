@@ -340,11 +340,20 @@ class ContentLoader {
         columns.setAttribute('data-project', project.id);
 
         collage.columns.forEach(column => {
+            if (column.heading) {
+                const heading = document.createElement('p');
+                heading.className = 'section__subtitle';
+                heading.style.cssText = 'flex: 0 0 100%; max-width: 100%; margin-top: 2rem; margin-bottom: 0; font-weight: 700;';
+                heading.textContent = column.heading;
+                columns.appendChild(heading);
+                return;
+            }
             const el = document.createElement('div');
             el.className = 'project-collage__column';
             el.style.setProperty('--grow', column.grow || 1);
             el.style.setProperty('--y', `${column.y || 0}rem`);
             if (column.narrow) el.classList.add('project-collage__column--narrow');
+            if (column.maxWidth) el.style.maxWidth = `${column.maxWidth}px`;
             column.items.forEach(item => el.appendChild(this.createCollageCard(project, item)));
             columns.appendChild(el);
         });
@@ -372,7 +381,7 @@ class ContentLoader {
             ${this.generateCollageMedia(win)}
             <div class="project-card__content">
                 <div class="project-card__header">
-                    <h3 class="project-card__title">${win.title}</h3>
+                    <h3 class="project-card__title" style="text-align: center;">${win.title}</h3>
                 </div>
                 ${win.caption ? `<p style="margin: 0; text-align: center;">${win.caption}</p>` : ''}
                 ${win.main ? `<button class="btn btn--primary btn--sm project-card__btn" data-open-window="${project.id}">
@@ -406,7 +415,7 @@ class ContentLoader {
     generateCollageMedia(win) {
         if (win.type === 'clip') {
             const playback = win.controls ? 'controls' : 'data-autoplay';
-            return `<div class="project-card__video" style="aspect-ratio: 720 / 1600;">
+            return `<div class="project-card__video" style="aspect-ratio: ${win.aspect || '720 / 1280'};">
                 <video class="project-card__media" muted loop playsinline preload="none" poster="${win.src}-poster.jpg" ${playback}>
                     <source src="${win.src}.webm" type="video/webm">
                     <source src="${win.src}.mp4" type="video/mp4">
