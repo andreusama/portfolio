@@ -796,22 +796,22 @@
     "windows": [
       {
         "title": "Grilling with docs",
-        "image": "assets/software/skills/grilling.png",
+        "image": "assets/software/skills/grilling.svg",
         "description": "The agent interviews me before any code. Decisions stay in the repo as a glossary and ADRs."
       },
       {
         "title": "Architecture",
-        "image": "assets/software/skills/architecture.png",
+        "image": "assets/software/skills/architecture.svg",
         "description": "I decide the shape, the agent works inside it. Deep modules: a lot of behaviour behind small interfaces."
       },
       {
         "title": "Tests",
-        "image": "assets/software/skills/tests.png",
+        "image": "assets/software/skills/tests.svg",
         "description": "One red-green slice at a time, so I check the agent's work instead of trusting it. Estalvia has 121 tests, VibeComposer 120."
       },
       {
         "title": "Clean code",
-        "image": "assets/software/skills/clean-code.png",
+        "image": "assets/software/skills/clean-code.svg",
         "description": "Every diff is reviewed against the coding standards and the ticket. In Estalvia, ruff and pytest run in CI."
       }
     ]
