@@ -11,7 +11,7 @@
     "ctaSecondary": "Get In Touch"
   },
   "marquees": {
-    "skills1": ["React", "Node.js", "TypeScript", "Python", "Unity"],
+    "skills1": ["React", "Node.js", "JavaScript", "Python", "Unity"],
     "skills2": ["Full-Stack Development", "Web Applications", "API Design", "Database Design"],
     "platforms": ["Web", "Desktop", "Mobile", "Cloud (AWS/Azure)", "Cross-platform"],
     "genres": ["Web Apps", "Game Tools", "Business Software", "Data Visualization"],
@@ -168,7 +168,7 @@
       {
         "id": "game-jam-tool",
         "title": "Game Jam Management Tool",
-        "tags": ["TypeScript", "Firebase"],
+        "tags": ["JavaScript", "Firebase"],
         "mediaType": "image",
         "mediaSrc": "assets/freelanceTech/SideProjects/game-jam-tool-thumbnail.jpg",
         "mediaPlaceholder": "🎮 JAM TOOL"

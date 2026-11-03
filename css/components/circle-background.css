@@ -121,8 +121,84 @@
     opacity: 0.08;
 }
 
+/* Skills & Expertise (Software entry): more rings, sized from the section height.
+   The largest ring keeps the Games ratio: 74% of the height, 32% on mobile. */
+#expertise .circle-background {
+    container-type: size;
+    --ring-step: 7.44cqh;
+}
+
+#expertise .circle-background__circle {
+    border-color: #B79CFF;
+    transition: transform 0.4s ease-out;
+}
+
+#expertise .circle-background__circle--1 {
+    width: calc(var(--ring-step) * 1);
+    height: calc(var(--ring-step) * 1);
+    opacity: 0.4;
+}
+
+#expertise .circle-background__circle--2 {
+    width: calc(var(--ring-step) * 2);
+    height: calc(var(--ring-step) * 2);
+    opacity: 0.38;
+}
+
+#expertise .circle-background__circle--3 {
+    width: calc(var(--ring-step) * 3);
+    height: calc(var(--ring-step) * 3);
+    opacity: 0.36;
+}
+
+#expertise .circle-background__circle--4 {
+    width: calc(var(--ring-step) * 4);
+    height: calc(var(--ring-step) * 4);
+    opacity: 0.34;
+}
+
+#expertise .circle-background__circle--5 {
+    width: calc(var(--ring-step) * 5);
+    height: calc(var(--ring-step) * 5);
+    opacity: 0.32;
+}
+
+#expertise .circle-background__circle--6 {
+    width: calc(var(--ring-step) * 6);
+    height: calc(var(--ring-step) * 6);
+    opacity: 0.3;
+}
+
+#expertise .circle-background__circle--7 {
+    width: calc(var(--ring-step) * 7);
+    height: calc(var(--ring-step) * 7);
+    opacity: 0.28;
+}
+
+#expertise .circle-background__circle--8 {
+    width: calc(var(--ring-step) * 8);
+    height: calc(var(--ring-step) * 8);
+    opacity: 0.26;
+}
+
+#expertise .circle-background__circle--9 {
+    width: calc(var(--ring-step) * 9);
+    height: calc(var(--ring-step) * 9);
+    opacity: 0.24;
+}
+
+#expertise .circle-background__circle--10 {
+    width: calc(var(--ring-step) * 10);
+    height: calc(var(--ring-step) * 10);
+    opacity: 0.22;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    #expertise .circle-background {
+        --ring-step: 3.2cqh;
+    }
+
     .circle-background__circle--1 {
         width: 150px;
         height: 150px;

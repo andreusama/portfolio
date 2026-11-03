@@ -1,22 +1,22 @@
 {
   "meta": {
     "title": "Andrés Sànchez - Full stack software engineer",
-    "description": "Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience."
+    "description": "Full stack software engineer: Python/Django, JavaScript/React, with gameplay and real-time experience."
   },
   "hero": {
     "greeting": "Hi, I'm Andrés Sànchez",
     "headline": "I turn ideas into software people use",
-    "description": "Full stack software engineer · Python/Django · TypeScript/React",
+    "description": "Full stack software engineer · Python/Django · JavaScript/React",
     "landing": {
       "headline": "I turn ideas into software people enjoy",
-      "description": "Full stack software engineer · Python/Django · TypeScript/React · gameplay and real-time systems"
+      "description": "Full stack software engineer · Python/Django · JavaScript/React · gameplay and real-time systems"
     },
     "ctaPrimary": "View My Work",
     "ctaSecondary": "Get In Touch",
     "entries": {
       "software": {
         "label": "Software",
-        "caption": "Full stack · Python/Django · TypeScript/React"
+        "caption": "Full stack · Python/Django · JavaScript/React"
       },
       "games": {
         "label": "Games",
@@ -29,6 +29,7 @@
     "projects": "VibeComposer",
     "sideProjects": "Irrigation",
     "skills": "Estalvia",
+    "expertise": "Skills",
     "about": "About",
     "contact": "Contact"
   },
@@ -41,7 +42,7 @@
       "Python",
       "Django",
       "PostgreSQL",
-      "TypeScript",
+      "JavaScript",
       "React"
     ],
     "skills2": [
@@ -52,7 +53,7 @@
       "Unity"
     ],
     "platforms": [
-      "TypeScript",
+      "JavaScript",
       "React",
       "Supabase",
       "Capacitor",
@@ -73,6 +74,32 @@
       "Django",
       "PostgreSQL",
       "LLM"
+    ],
+    "expertise1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "JavaScript",
+      "React"
+    ],
+    "expertise2": [
+      "Claude API",
+      "Supabase",
+      "Capacitor",
+      "Git",
+      "Performance"
+    ],
+    "estalvia1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "LLM"
+    ],
+    "estalvia2": [
+      "Claude API",
+      "pytest",
+      "ruff",
+      "ADRs"
     ]
   },
   "featuredProjects": {
@@ -84,7 +111,7 @@
         "title": "VibeComposer",
         "genre": "Lyric co-writing app",
         "tags": [
-          "TypeScript",
+          "JavaScript",
           "React",
           "Supabase",
           "Capacitor"
@@ -140,7 +167,7 @@
           ],
           "role": "Personal project",
           "technologies": [
-            "TypeScript",
+            "JavaScript",
             "React",
             "Supabase",
             "Capacitor",
@@ -295,14 +322,14 @@
           "CSS"
         ],
         "mediaType": "image",
-        "mediaSrc": "assets/software/precision-irrigation-map.jpg",
+        "mediaSrc": "assets/software/irrigation/crop-map.jpg",
         "mediaPlaceholder": "",
         "modal": {
           "title": "Precision irrigation",
           "windowTitle": "irrigation-platform.exe",
-          "summary": "A web platform that reads each farm's sensors and satellite imagery and tells the grower how much to irrigate. AI speeds up slow, tedious tasks around it and makes no irrigation decisions.",
+          "summary": "A web platform that reads each farm's sensors and satellite imagery and tells the grower how much to irrigate. AI only automates development processes: there is no AI for the user. My work on it is under NDA, so this page shows no screenshots of it.",
           "videoType": "image",
-          "videoSrc": "assets/software/precision-irrigation-map.jpg",
+          "videoSrc": "assets/software/irrigation/crop-map.jpg",
           "videoPlaceholder": "",
           "brands": [],
           "links": [],
@@ -334,7 +361,7 @@
               "items": [
                 "Adapted one codebase to 10+ regional irrigation authorities, each with its own configuration and terminology.",
                 "Automated task creation through the GitLab Issues API.",
-                "Built a command that scaffolds every new view (DataManager, MapManager, UIManager and components)."
+                "Built a command that scaffolds every new view."
               ]
             }
           ],
@@ -350,18 +377,36 @@
           ]
         },
         "collage": {
+          "links": [
+            {
+              "label": "IrriDesk (IRTA)",
+              "url": "https://irridesk.com/"
+            },
+            {
+              "label": "IRRILANDS factsheet (PDF)",
+              "url": "https://xagritech.net/wp-content/uploads/2024/08/TKRV-IRRILANDS.-Supervisio-i-prediccio-de-la-demanda-de-reg-pel-territori.pdf"
+            },
+            {
+              "label": "SEGRE article",
+              "url": "https://www.segre.com/ca/noticies-empresa/260610/els-canals-d-urgell-preparen-per-gestionar-l-aigua-futur_1234627.html"
+            }
+          ],
           "columns": [
+            {
+              "heading": "My work here is under NDA, so there are no screenshots of it. What the platform does comes from the public sources above, and what I did is explained in words."
+            },
             {
               "heading": "1. What it does"
             },
             {
-              "narrow": true,
+              "grow": 2,
+              "maxWidth": 620,
               "items": [
                 {
                   "type": "image",
-                  "title": "Tap a parcel",
-                  "caption": "Every parcel on the map shows its crop, area and water needs.",
-                  "src": "assets/software/irrigation/tap-a-parcel.jpg",
+                  "title": "Every plot, on one map",
+                  "caption": "Satellite remote sensing of an irrigation district, with each plot coloured by crop. Public image: Canals d'Urgell, via SEGRE.",
+                  "src": "assets/software/irrigation/crop-map.jpg",
                   "main": true
                 }
               ]
@@ -371,10 +416,28 @@
               "y": 2,
               "items": [
                 {
-                  "type": "image",
-                  "title": "Periodic irrigation",
-                  "caption": "The deeper the blue, the higher the water need.",
-                  "src": "assets/software/irrigation/periodic-blue-map.jpg"
+                  "type": "readme",
+                  "title": "A digital twin of each plot",
+                  "contributions": [
+                    {
+                      "category": "What goes in",
+                      "items": [
+                        "Weather data, soil or plant sensors, satellite remote sensing and what the farmer enters about crop, soil and irrigation system."
+                      ]
+                    },
+                    {
+                      "category": "What happens",
+                      "items": [
+                        "Every day the new data feeds a digital twin of the irrigated plot, which simulates the crop and its water state."
+                      ]
+                    },
+                    {
+                      "category": "What comes out",
+                      "items": [
+                        "An irrigation dose updated daily, sent to compatible controllers. The farmer can change the plan at any time."
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -382,27 +445,33 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "image",
-                  "title": "On-demand irrigation (old design)",
-                  "caption": "Some crops don't need daily water. Orange shows which parcels need attention, and how urgently.",
-                  "src": "assets/software/irrigation/on-demand-orange-map.jpg"
+                  "type": "readme",
+                  "title": "From one plot to a territory",
+                  "contributions": [
+                    {
+                      "category": "Scale",
+                      "items": [
+                        "The same idea covers thousands of plots, using open crop declarations, weather and Earth observation data."
+                      ]
+                    },
+                    {
+                      "category": "Who it helps",
+                      "items": [
+                        "Irrigation communities and public administrations can see each plot and add them up to a whole district or region."
+                      ]
+                    },
+                    {
+                      "category": "Forecast",
+                      "items": [
+                        "Water demand is predicted up to the end of the irrigation season."
+                      ]
+                    }
+                  ]
                 }
               ]
             },
             {
-              "narrow": true,
-              "y": 2,
-              "items": [
-                {
-                  "type": "image",
-                  "title": "Forecast",
-                  "caption": "Irrigation needs predicted day by day, next to the weather.",
-                  "src": "assets/software/irrigation/forecast.jpg"
-                }
-              ]
-            },
-            {
-              "heading": "2. How we used AI: to speed up slow, tedious tasks. It makes no irrigation decisions."
+              "heading": "2. How we used AI: to automate development processes. Users never see any AI."
             },
             {
               "narrow": true,
@@ -442,13 +511,52 @@
             },
             {
               "narrow": true,
-              "maxWidth": 340,
               "items": [
                 {
-                  "type": "image",
-                  "title": "Before",
-                  "caption": "Lots of colours with no clear code, and the map lost when scrolling.",
-                  "src": "assets/software/irrigation/before.jpg"
+                  "type": "readme",
+                  "title": "Where it started",
+                  "contributions": [
+                    {
+                      "category": "The old view",
+                      "items": [
+                        "One long scrolling page, so the map disappeared as soon as you read the details.",
+                        "Lots of colours with no clear code."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "stat",
+                  "title": "Rollout",
+                  "value": "10+",
+                  "caption": "regional irrigation authorities served from one codebase, each with its own configuration and terminology."
+                }
+              ]
+            },
+            {
+              "narrow": true,
+              "y": 2,
+              "items": [
+                {
+                  "type": "readme",
+                  "title": "What I built",
+                  "contributions": [
+                    {
+                      "category": "Map first",
+                      "items": [
+                        "The map stays on screen and details slide over it, in the style of Google Maps and Glovo. It is live for paying users.",
+                        "Colour only appears on what you can tap."
+                      ]
+                    },
+                    {
+                      "category": "Reading the map",
+                      "items": [
+                        "Tap a parcel to see its crop, area and water needs.",
+                        "In periodic irrigation, the deeper the blue, the higher the water need.",
+                        "Irrigation needs are predicted day by day, next to the weather."
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -456,49 +564,49 @@
               "narrow": true,
               "items": [
                 {
-                  "type": "image",
-                  "title": "After",
-                  "caption": "Just scroll to see information, with colour only on what you can tap. Live for paying users.",
-                  "src": "assets/software/irrigation/after.jpg"
+                  "type": "readme",
+                  "title": "Built for the field",
+                  "contributions": [
+                    {
+                      "category": "The users",
+                      "items": [
+                        "Non-technical people, outdoors, with big hands and weak mobile signal."
+                      ]
+                    },
+                    {
+                      "category": "The decisions",
+                      "items": [
+                        "Large buttons and generous tap targets."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "readme",
+                  "title": "Automation",
+                  "contributions": [
+                    {
+                      "category": "For the team",
+                      "items": [
+                        "A command that scaffolds every new view.",
+                        "Task creation through the GitLab Issues API."
+                      ]
+                    }
+                  ]
                 }
-              ],
-              "maxWidth": 340,
-              "y": 2
+              ]
             },
             {
               "narrow": true,
+              "y": 2,
               "items": [
                 {
                   "type": "stat",
                   "title": "Less data, same map",
                   "value": "57%",
-                  "caption": "smaller map payload and 22% faster load across 11,160 plots. Colours update without redrawing geometry."
-                },
-                {
-                  "type": "image",
-                  "title": "Built for big hands",
-                  "caption": "Used in the field on weak mobile signal, so buttons are large and tap targets generous.",
-                  "src": "assets/software/irrigation/tap-targets.jpg"
+                  "caption": "smaller map payload and 22% faster load across 11,160 plots. Polygons load at the zoom level's resolution, and colours update without redrawing geometry."
                 }
               ]
-            },
-            {
-              "narrow": true,
-              "items": [
-                {
-                  "type": "stat",
-                  "title": "Rollout",
-                  "value": "10+",
-                  "caption": "regional irrigation authorities served from one codebase."
-                },
-                {
-                  "type": "image",
-                  "title": "Automation",
-                  "caption": "A command that scaffolds each new view, and task creation through the GitLab Issues API.",
-                  "src": "assets/software/irrigation/scaffold-command.jpg"
-                }
-              ],
-              "y": 2
             }
           ]
         }
@@ -648,6 +756,63 @@
             }
           ]
         }
+      }
+    ]
+  },
+  "expertise": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "What I bring to a full stack team",
+    "skillsList": [
+      {
+        "title": "Python, Django & PostgreSQL",
+        "image": "assets/software/skills/python.svg",
+        "description": "My main backend stack. At IRTA I work on a national-scale precision-irrigation platform, adapting one codebase to 10+ regional irrigation authorities. In Estalvia each tool is its own Django app, every user sees only their own data, and the tests run without calling the model."
+      },
+      {
+        "title": "JavaScript & React",
+        "image": "assets/software/skills/react.svg",
+        "description": "VibeComposer is my full stack proof: React with a React Flow canvas, a Web Audio sequencer, Supabase with per-user row-level security and a mobile build with Capacitor, backed by 120 logic tests. At IRTA I led the frontend refactor from a legacy page to a map-centered interface."
+      },
+      {
+        "title": "Applied AI",
+        "image": "assets/software/skills/ai.svg",
+        "description": "I build AI into products with clear limits. In VibeComposer the Claude API sits behind a serverless proxy, so the key never reaches the browser. In Estalvia AI reads documents, but the bank statement goes through rules. At IRTA AI only automates development: I built a local LLM translation pipeline where reviewed translations always override it."
+      },
+      {
+        "title": "Performance & real-time",
+        "image": "assets/casualGames/Skills/Unity.png",
+        "description": "Two years shipping four commercial Unity titles taught me to measure first. I profiled and fixed severe memory and framerate issues on Android and console hardware, and built a real-time four-player multiplayer mode at a steady 30 fps on mobile. On the web, the same mindset means maps load only the detail the zoom level needs."
+      },
+      {
+        "title": "Git & technical decisions",
+        "image": "assets/casualGames/Skills/Git-logo.svg.png",
+        "description": "I record decisions and their limits as ADRs, so I can defend every choice. I work daily with Git and GitLab, and I automated task creation through the GitLab Issues API. Leading a porting department taught me to plan work and advise artists on optimization."
+      }
+    ]
+  },
+  "approach": {
+    "sectionTitle": "My approach to the AI revolution",
+    "sectionSubtitle": "AI writes code fast, and without a process that speed turns into slop. I organize my work with <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">Matt Pocock's skills library</a>.",
+    "windows": [
+      {
+        "title": "Grilling with docs",
+        "image": "assets/software/skills/grilling.png",
+        "description": "The agent interviews me before any code. Decisions stay in the repo as a glossary and ADRs."
+      },
+      {
+        "title": "Architecture",
+        "image": "assets/software/skills/architecture.png",
+        "description": "I decide the shape, the agent works inside it. Deep modules: a lot of behaviour behind small interfaces."
+      },
+      {
+        "title": "Tests",
+        "image": "assets/software/skills/tests.png",
+        "description": "One red-green slice at a time, so I check the agent's work instead of trusting it. Estalvia has 121 tests, VibeComposer 120."
+      },
+      {
+        "title": "Clean code",
+        "image": "assets/software/skills/clean-code.png",
+        "description": "Every diff is reviewed against the coding standards and the ticket. In Estalvia, ruff and pytest run in CI."
       }
     ]
   },

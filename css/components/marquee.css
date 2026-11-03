@@ -38,6 +38,16 @@
     margin-top: -0.5rem;
 }
 
+/* Between two dark sections: they meet under the ribbon, so the cream page background never shows */
+#estalvia-ribbon {
+    margin: -3rem 0;
+}
+
+#expertise,
+#approach {
+    padding-top: 8rem;
+}
+
 .marquee--reverse {
     transform: rotate(2deg);
 }

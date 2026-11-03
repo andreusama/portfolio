@@ -6,7 +6,7 @@ Personal portfolio of Andrés Sánchez, one site for two kinds of employer: soft
 
 | URL | Page |
 | --- | --- |
-| `/` | Landing, with one Hero window per Entry |
+| `/` | Landing, with one Hero window per Entry and the AI approach section |
 | `/?version=software` | Software entry: VibeComposer, Precision irrigation, Estalvia |
 | `/?version=games` | Games entry: shipped commercial titles and side projects |
 

@@ -6,14 +6,15 @@ Job-search portfolio. Static HTML/CSS/JS on Vercel, one page, driven by JSON. Se
 
 - **Never commit or push without approval.** Commit messages and PR bodies carry no mention of Claude and no co-author line.
 - **Reuse the existing structure.** No new CSS or components when an existing one fits, and no change that breaks other pages. Test the Landing, both Entries and every project section after shared changes, at desktop and phone widths.
-- **This repo and site are public.** The IRTA project's product name and funding programme are under NDA and must never appear in code, copy, commit messages or file names. "IRTA" itself is allowed. If unsure, ask.
+- **This repo and site are public, and the owner's IRTA work is under NDA.** Never publish screenshots or other non-public material from it. Describe the platform only from the public sources linked in the Precision irrigation section, and what the owner did only in words. If unsure, ask.
 - **Original design screenshots are not for the repo.** They live in a local-only folder under `assets/software/`, excluded through `.git/info/exclude`, which does not travel between machines. Re-add the exclusion before any `git add -A` if that folder is copied to a new PC.
 - **Only verified claims.** Check numbers, stacks and features against the source repo. Don't invent figures. Show what the product does today, and say so when something is unfinished.
 - Copy stays brief, visual and achievement-centred. Each Software project opens with a "Problem: … Solution: …" subtitle. The user writes the problem; the solution can be drafted.
 
 ## Site structure
 
-- Software entry sections reuse the data keys: `featuredProjects` = VibeComposer, `sideProjects` = Precision irrigation, `skills` = Estalvia.
+- Software entry sections reuse the data keys: `featuredProjects` = VibeComposer, `sideProjects` = Precision irrigation, `skills` = Estalvia, and `expertise` = its own Skills & Expertise section, which Games doesn't use (Games uses `skills.skillsList`).
+- The Landing shows Hero, a ribbon, My approach to the AI revolution (data key `approach` in `data/software.en.json`, reusing the That's Me windows) and Contact, with no ribbon before Contact.
 - `generateCollageMedia` and `createProjectCollage` in `js/modules/contentLoader.js` render the windows.
 - Precision irrigation has size overrides in `css/components/section.css`, scoped by `data-project`.
 - On mobile (768 px and below) the navbar shows only Home. The full menu overflows between about 769 and 950 px; this is a known open issue.

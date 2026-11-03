@@ -335,9 +335,68 @@
 .hero-entry:hover,
 .hero-entry:focus-visible {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation-play-state: paused;
+}
+
+.hero-entry:focus-visible {
     outline: 3px solid var(--color-accent-purple);
     outline-offset: 3px;
-    animation-play-state: paused;
+}
+
+/* Eye on hover, same as the project windows */
+.hero-entry .hero-window__content {
+    position: relative;
+}
+
+.hero-entry .hero-window__content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 52px;
+    background-image: url('../../eyeHover.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero-entry .hero-window__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-entry:hover .hero-window__content::before,
+.hero-entry:hover .hero-window__content::after,
+.hero-entry:focus-visible .hero-window__content::before,
+.hero-entry:focus-visible .hero-window__content::after {
+    opacity: 1;
+}
+
+/* "Click me!" in the colours of the contact wheel */
+.hero-entry__cta {
+    align-self: center;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--color-accent-turquoise), var(--color-accent-purple), var(--color-accent-pink), var(--color-accent-orange), var(--color-accent-indigo));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-entry--active {

@@ -222,6 +222,22 @@
     background-size: 15% 100%;   /* or a value so the tile fits evenly */
 }
 
+/* Estalvia uses the Skills section: white lines instead of the Games rings */
+#approach .section__subtitle a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+body[data-view="software"] #skills {
+    background-position: center top;
+    background-image: url('../../whiteLine.png');
+    background-size: 15% 100%;
+}
+
+body[data-view="software"] #skills .circle-background {
+    display: none;
+}
+
 /* Student Projects Grid - Column-based Masonry Layout */
 .student-projects-grid {
     column-count: 3;
@@ -1091,6 +1107,108 @@
 
     .team-column__image {
         max-width: 150px;
+    }
+}
+
+/* Approach section (Landing): the dark hero ends in a diagonal hidden under the 2deg ribbon.
+   --ribbon-rise is half that ribbon's vertical travel across the page, 22px its centre below the section top */
+body[data-view="landing"] {
+    --ribbon-rise: 1.75vw;
+    --ribbon-cut: calc(30px + var(--ribbon-rise));
+}
+
+body[data-view="landing"] #hero {
+    padding-bottom: calc(2rem + var(--ribbon-cut));
+}
+
+body[data-view="landing"] #hero-ribbon {
+    margin: calc(-3rem - var(--ribbon-cut)) 0 -3rem;
+}
+
+/* One line every 25%, so the lines run between the columns and not through them */
+.section#approach {
+    background-color: var(--color-base-light);
+    background-position: left top;
+    background-size: 25% 100%;
+    background-origin: border-box;
+    background-clip: padding-box;
+    border-left: 2px solid var(--color-base-light); /* hides the line on the page edge */
+    clip-path: polygon(0 calc(22px - var(--ribbon-rise)), 100% calc(22px + var(--ribbon-rise)), 100% 100%, 0 100%);
+}
+
+#approach .team-grid {
+    --approach-width: min(92vw, 1400px);
+    width: var(--approach-width);
+    max-width: none;
+    margin-top: 2.5rem;
+    margin-left: calc(50% - var(--approach-width) / 2);
+    gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+    #approach .section__title {
+        font-size: 4rem;
+    }
+
+    #approach .team-window {
+        max-width: 336px;
+    }
+
+    #approach .team-window__role {
+        font-size: 1.2rem;
+    }
+
+    #approach .team-window__name {
+        font-size: 1.14rem;
+    }
+}
+
+#approach .team-window {
+    flex: 1;
+}
+
+#approach .team-window__content--decoration {
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 1.2rem;
+}
+
+#approach .team-window__decoration-icon {
+    width: 67px;
+}
+
+#approach .team-window__info {
+    padding: 0 1.2rem 1.5rem;
+}
+
+/* Two columns per row from here down */
+@media (max-width: 1200px) {
+    .section#approach {
+        background-size: 50% 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* The ribbon tilts 3deg on phones */
+    body[data-view="landing"] {
+        --ribbon-rise: 2.62vw;
+    }
+
+    #approach .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    #approach .team-column__image {
+        max-width: 90px;
+    }
+
+    #approach .team-window__info {
+        padding: 0 0.75rem 1rem;
+    }
+
+    #approach .team-window__name {
+        font-size: 0.8rem;
     }
 }
 

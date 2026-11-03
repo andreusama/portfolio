@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Sànchez - Full stack software engineer</title>
-    <meta name="description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
+    <meta name="description" content="Full stack software engineer: Python/Django, JavaScript/React, with gameplay and real-time experience.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Andrés Sànchez - Full stack software engineer">
-    <meta property="og:description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
+    <meta property="og:description" content="Full stack software engineer: Python/Django, JavaScript/React, with gameplay and real-time experience.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Andrés Sànchez - Full stack software engineer">
-    <meta property="twitter:description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
+    <meta property="twitter:description" content="Full stack software engineer: Python/Django, JavaScript/React, with gameplay and real-time experience.">
 
     <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities → Theme -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -121,6 +121,7 @@
                 <li><a href="#projects" class="navbar__link">Commercial Games</a></li>
                 <li><a href="#student-projects" class="navbar__link">Side Projects</a></li>
                 <li><a href="#skills" class="navbar__link">Skills</a></li>
+                <li><a href="#expertise" class="navbar__link">Skills</a></li>
                 <li><a href="#thats-me" class="navbar__link">About</a></li>
                 <li><a href="#contact" class="navbar__link">Contact</a></li>
             </ul>
@@ -155,7 +156,8 @@
                             </div>
                             <div class="hero-window__label">
                                 <strong data-content="hero-entry-software-label">Software</strong>
-                                <span data-content="hero-entry-software-caption">Full stack · Python/Django · TypeScript/React</span>
+                                <span data-content="hero-entry-software-caption">Full stack · Python/Django · JavaScript/React</span>
+                                <span class="hero-entry__cta">Click me!</span>
                             </div>
                         </a>
                         <img src="column.svg" alt="Decorative column" class="hero-column__image">
@@ -164,7 +166,7 @@
                     <div class="hero__content">
                         <p class="hero__greeting" data-content="hero-greeting">Hi, I'm Andrés Sànchez</p>
                         <h1 class="hero__name" data-content="hero-headline">I turn ideas into software people enjoy</h1>
-                        <p class="hero__description" data-content="hero-description">Full stack software engineer · Python/Django · TypeScript/React · gameplay and real-time systems</p>
+                        <p class="hero__description" data-content="hero-description">Full stack software engineer · Python/Django · JavaScript/React · gameplay and real-time systems</p>
                         <div class="hero__cta">
                             <a href="#projects" class="btn btn--primary">
                                 <span class="btn__circle"></span>
@@ -200,6 +202,7 @@
                             <div class="hero-window__label">
                                 <strong data-content="hero-entry-games-label">Games</strong>
                                 <span data-content="hero-entry-games-caption">Shipped commercial titles · Unity · C#</span>
+                                <span class="hero-entry__cta">Click me!</span>
                             </div>
                         </a>
                         <img src="column.svg" alt="Decorative column" class="hero-column__image">
@@ -209,7 +212,7 @@
         </section>
 
         <!-- Animated Marquee Scroller - Double -->
-        <div class="marquee-double">
+        <div class="marquee-double" id="hero-ribbon">
             <div class="marquee marquee--cream marquee--narrow">
                 <div class="marquee__content" data-content="marquee-skills1">
                     <!-- Content loaded dynamically -->
@@ -296,10 +299,64 @@
             </div>
         </section>
 
+        <!-- Animated Marquee Scroller - Double (Software entry) -->
+        <div class="marquee-double" id="estalvia-ribbon">
+            <div class="marquee marquee--cream marquee--narrow">
+                <div class="marquee__content" data-content="marquee-estalvia1">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+            <div class="marquee marquee--cream marquee--reverse marquee--narrow">
+                <div class="marquee__content" data-content="marquee-estalvia2">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
         <!-- Animated Marquee Scroller - Reverse -->
-        <div class="marquee marquee--reverse marquee--slow marquee--narrow">
+        <div class="marquee marquee--reverse marquee--slow marquee--narrow" id="skills-ribbon">
             <div class="marquee__content" data-content="marquee-misc">
                 <!-- Content loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Expertise Section (Software entry) -->
+        <section id="expertise" class="section section--skills">
+            <div class="circle-background circle-background--dark">
+                <div class="circle-background__container">
+                    <div class="circle-background__circle circle-background__circle--1"></div>
+                    <div class="circle-background__circle circle-background__circle--2"></div>
+                    <div class="circle-background__circle circle-background__circle--3"></div>
+                    <div class="circle-background__circle circle-background__circle--4"></div>
+                    <div class="circle-background__circle circle-background__circle--5"></div>
+                    <div class="circle-background__circle circle-background__circle--6"></div>
+                    <div class="circle-background__circle circle-background__circle--7"></div>
+                    <div class="circle-background__circle circle-background__circle--8"></div>
+                    <div class="circle-background__circle circle-background__circle--9"></div>
+                    <div class="circle-background__circle circle-background__circle--10"></div>
+                </div>
+            </div>
+            <div class="section__container">
+                <h2 class="section__title" data-content="expertise-title"></h2>
+                <p class="section__subtitle" data-content="expertise-subtitle"></p>
+
+                <div class="skills-column" data-content="expertise-list">
+                    <!-- Skills loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Animated Marquee Scroller - Double -->
+        <div class="marquee-double" id="expertise-ribbon">
+            <div class="marquee marquee--cream marquee--narrow">
+                <div class="marquee__content" data-content="marquee-expertise1">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+            <div class="marquee marquee--cream marquee--reverse marquee--narrow">
+                <div class="marquee__content" data-content="marquee-expertise2">
+                    <!-- Content loaded dynamically -->
+                </div>
             </div>
         </div>
 
@@ -312,6 +369,18 @@
                 <div class="team-grid" data-content="thatsme-grid">
                     <!-- Team members loaded dynamically -->
                 </div>
+        </section>
+
+        <!-- Approach Section (Landing) -->
+        <section id="approach" class="section section--student-projects">
+            <div class="section__container">
+                <h2 class="section__title" data-content="approach-title"></h2>
+                <p class="section__subtitle" data-content="approach-subtitle"></p>
+
+                <div class="team-grid" data-content="approach-grid">
+                    <!-- Windows loaded dynamically -->
+                </div>
+            </div>
         </section>
 
         <!-- Final CTA Section with Roulette -->

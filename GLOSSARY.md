@@ -37,7 +37,7 @@ The write-up of a Flagship project: problem, stack, own role, key decisions, out
 _Avoid_: Project card, project page
 
 **Software CV**:
-The one-page CV that leads with Python/Django and TypeScript/React and presents games as real-time experience.
+The one-page CV that leads with Python/Django and JavaScript/React and presents games as real-time experience.
 _Avoid_: Dev CV, web CV
 
 **Games CV**:

@@ -98,7 +98,7 @@ class CircleBackground {
             // Apply transforms to each circle with different intensities
             instance.circles.forEach((circle, index) => {
                 // Smaller circles move more, larger circles move less
-                const intensity = 1 - (index * 0.15);
+                const intensity = Math.max(0, 1 - (index * 0.15));
                 const x = instance.currentX * intensity;
                 const y = instance.currentY * intensity;
 

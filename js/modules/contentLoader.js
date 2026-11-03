@@ -27,6 +27,8 @@ class ContentLoader {
             this.populateFeaturedProjects();
             this.populateSideProjects();
             this.populateSkills();
+            this.populateExpertise();
+            this.populateApproach();
             this.setupCollageVideos();
             this.populateThatsMe();
             this.populateFinalCta();
@@ -160,6 +162,7 @@ class ContentLoader {
             '#projects': 'projects',
             '#student-projects': 'sideProjects',
             '#skills': 'skills',
+            '#expertise': 'expertise',
             '#thats-me': 'about',
             '#contact': 'contact'
         };
@@ -214,7 +217,7 @@ class ContentLoader {
 
     /**
      * Show the sections that belong to the current view.
-     * Landing: hero and contact only. Entry: sections with content.
+     * Landing: hero, approach and contact. Entry: sections with content.
      */
     applyView() {
         document.body.dataset.view = this.view;
@@ -226,7 +229,13 @@ class ContentLoader {
             '#projects': !landing && this.data.featuredProjects.projects.length > 0,
             '#student-projects': !landing && this.data.sideProjects.projects.length > 0,
             '#skills': !landing && (this.data.skills.skillsList.length > 0 || (this.data.skills.projects || []).length > 0),
-            '#thats-me': !landing
+            '#expertise': !landing && !!this.data.expertise,
+            '#expertise-ribbon': !landing && !!this.data.expertise,
+            '#estalvia-ribbon': !landing && !!this.data.expertise,
+            '#skills-ribbon': !landing && !this.data.expertise,
+            '#thats-me': !landing,
+            '#approach': landing && !!this.data.approach,
+            '#hero-ribbon': !landing || !!this.data.approach
         };
         Object.entries(visibility).forEach(([selector, visible]) => {
             document.querySelectorAll(selector).forEach(element => {
@@ -247,6 +256,10 @@ class ContentLoader {
         this.populateMarquee('[data-content="marquee-genres"]', marquees.genres);
         this.populateMarquee('[data-content="marquee-types"]', marquees.types);
         this.populateMarquee('[data-content="marquee-misc"]', marquees.misc);
+        this.populateMarquee('[data-content="marquee-estalvia1"]', marquees.estalvia1 || []);
+        this.populateMarquee('[data-content="marquee-estalvia2"]', marquees.estalvia2 || []);
+        this.populateMarquee('[data-content="marquee-expertise1"]', marquees.expertise1 || []);
+        this.populateMarquee('[data-content="marquee-expertise2"]', marquees.expertise2 || []);
     }
 
     /**
@@ -607,7 +620,72 @@ class ContentLoader {
 
         (section.projects || []).forEach(project => this.appendCollage(container, project));
 
-        section.skillsList.forEach(skill => {
+        this.appendSkillRows(container, section.skillsList);
+    }
+
+    /**
+     * Populate the Software entry's skills section
+     */
+    populateExpertise() {
+        const section = this.data.expertise;
+        if (!section) return;
+
+        this.setTextContent('[data-content="expertise-title"]', section.sectionTitle);
+        this.setTextContent('[data-content="expertise-subtitle"]', section.sectionSubtitle);
+
+        const container = document.querySelector('[data-content="expertise-list"]');
+        if (!container) return;
+
+        container.innerHTML = '';
+        this.appendSkillRows(container, section.skillsList);
+    }
+
+    /**
+     * Populate the Landing's approach section. The subtitle can hold a link.
+     */
+    populateApproach() {
+        const section = this.data.approach;
+        if (!section) return;
+
+        this.setTextContent('[data-content="approach-title"]', section.sectionTitle);
+        document.querySelector('[data-content="approach-subtitle"]').innerHTML = section.sectionSubtitle;
+
+        const grid = document.querySelector('[data-content="approach-grid"]');
+        if (!grid) return;
+
+        grid.innerHTML = '';
+
+        section.windows.forEach(win => {
+            const column = document.createElement('div');
+            column.className = 'team-column';
+            column.innerHTML = `
+                <div class="team-window">
+                    <div class="team-window__titlebar">
+                        <div class="macos-dots">
+                            <span class="macos-dot macos-dot--red"></span>
+                            <span class="macos-dot macos-dot--yellow"></span>
+                            <span class="macos-dot macos-dot--green"></span>
+                        </div>
+                    </div>
+                    <div class="team-window__content team-window__content--decoration">
+                        <img src="${win.image}" alt="" class="team-window__decoration-icon">
+                    </div>
+                    <div class="team-window__info">
+                        <h3 class="team-window__role">${win.title}</h3>
+                        <p class="team-window__name">${win.description}</p>
+                    </div>
+                </div>
+                <img src="column.svg" alt="Decorative column" class="team-column__image">
+            `;
+            grid.appendChild(column);
+        });
+    }
+
+    /**
+     * Append one row per skill to a skills column
+     */
+    appendSkillRows(container, skills) {
+        skills.forEach(skill => {
             const skillRow = document.createElement('div');
             skillRow.className = 'skill-row';
             skillRow.innerHTML = `
