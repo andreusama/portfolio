@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Sànchez - Game Programmer Portfolio</title>
-    <meta name="description" content="Game programmer specializing in gameplay systems, engine development and gameplay optimization">
+    <title>Andrés Sànchez - Full stack software engineer</title>
+    <meta name="description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Andrés Sànchez - Game Programmer Portfolio">
-    <meta property="og:description" content="Game programmer specializing in gameplay systems, engine development and gameplay optimization">
+    <meta property="og:title" content="Andrés Sànchez - Full stack software engineer">
+    <meta property="og:description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Andrés Sànchez - Game Programmer Portfolio">
-    <meta property="twitter:description" content="Game programmer specializing in gameplay systems, engine development and gameplay optimization">
+    <meta property="twitter:title" content="Andrés Sànchez - Full stack software engineer">
+    <meta property="twitter:description" content="Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience.">
 
     <!-- CSS Architecture: Variables → Base → Layout → Components → Utilities → Theme -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -115,7 +115,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="assets/cv/AndresSanchez_CV.pdf" class="navbar__logo navbar__cv-download" download>Download CV</a>
+            <a href="assets/cv/AndresSanchez_CV_Games.pdf" class="navbar__logo navbar__cv-download" download>Download CV</a>
             <ul class="navbar__menu">
                 <li><a href="#hero" class="navbar__link">Home</a></li>
                 <li><a href="#projects" class="navbar__link">Commercial Games</a></li>
@@ -124,6 +124,11 @@
                 <li><a href="#thats-me" class="navbar__link">About</a></li>
                 <li><a href="#contact" class="navbar__link">Contact</a></li>
             </ul>
+            <div class="navbar__lang" role="group" aria-label="Language">
+                <a href="?lang=en" data-lang="en">EN</a>
+                <span aria-hidden="true">/</span>
+                <a href="?lang=es" data-lang="es">ES</a>
+            </div>
         </div>
     </nav>
 
@@ -134,7 +139,7 @@
             <div class="hero__container">
                 <div class="cloud-container cloud-container--large">
                     <div class="hero-column hero-column--left">
-                        <div class="hero-window hero-window--left">
+                        <a class="hero-window hero-window--left hero-entry" data-entry="software" href="?version=software">
                             <div class="hero-window__titlebar">
                                 <div class="macos-dots">
                                     <span class="macos-dot macos-dot--red"></span>
@@ -142,19 +147,21 @@
                                     <span class="macos-dot macos-dot--green"></span>
                                 </div>
                             </div>
-                            <div class="hero-window__content">
-                                <video autoplay muted loop playsinline class="hero-window__video">
-                                    <source src="assets/casualGames/SideProjects/TheTower/thumbnail/conditions.mp4" type="video/mp4">
-                                </video>
+                            <div class="hero-window__content hero-window__content--placeholder">
+                                <span class="hero-window__placeholder" data-content="hero-entry-software-placeholder">🎬 VIBECOMPOSER DEMO · COMING SOON</span>
                             </div>
-                        </div>
+                            <div class="hero-window__label">
+                                <strong data-content="hero-entry-software-label">Software</strong>
+                                <span data-content="hero-entry-software-caption">Full stack · Python/Django · TypeScript/React</span>
+                            </div>
+                        </a>
                         <img src="column.svg" alt="Decorative column" class="hero-column__image">
                     </div>
                     <!-- Decorative Windows and Columns -->
                     <div class="hero__content">
-                        <p class="hero__greeting" data-content="hero-greeting">Hi, I'm Andrés Sànchez, Game Designer & Developer</p>
-                        <h1 class="hero__name" data-content="hero-headline">Games that impact</h1>
-                        <p class="hero__description" data-content="hero-description">Welcome! Creating engaging gameplay experiences for major brands like Hot Wheels, PJ Masks, and Monster High. Specialized in gameplay programming, UI development, and multiplayer systems.</p>
+                        <p class="hero__greeting" data-content="hero-greeting">Hi, I'm Andrés Sànchez</p>
+                        <h1 class="hero__name" data-content="hero-headline">Full stack software engineer</h1>
+                        <p class="hero__description" data-content="hero-description">Python/Django and TypeScript/React, with gameplay and real-time experience.</p>
                         <div class="hero__cta">
                             <a href="#projects" class="btn btn--primary">
                                 <span class="btn__circle"></span>
@@ -174,7 +181,7 @@
                     </div>
                     
                     <div class="hero-column hero-column--right">
-                        <div class="hero-window hero-window--right">
+                        <a class="hero-window hero-window--right hero-entry" data-entry="games" href="?version=games">
                             <div class="hero-window__titlebar">
                                 <div class="macos-dots">
                                     <span class="macos-dot macos-dot--red"></span>
@@ -187,7 +194,11 @@
                                     <source src="assets/casualGames/FeaturedProjects/videos/hotWheels.mp4" type="video/mp4">
                                 </video>
                             </div>
-                        </div>
+                            <div class="hero-window__label">
+                                <strong data-content="hero-entry-games-label">Games</strong>
+                                <span data-content="hero-entry-games-caption">Shipped commercial titles · Unity · C#</span>
+                            </div>
+                        </a>
                         <img src="column.svg" alt="Decorative column" class="hero-column__image">
                     </div>
                 </div>
@@ -374,6 +385,16 @@
                                     <span class="btn__handle">@andresama</span>
                                 </span>
                             </a>
+                            <a href="https://github.com/andreusama" class="btn btn--primary btn--contact btn--github" data-content="contact-github" target="_blank" rel="noopener noreferrer">
+                                <span class="btn__circle"></span>
+                                <span class="btn__circle"></span>
+                                <span class="btn__circle"></span>
+                                <span class="btn__circle"></span>
+                                <span class="btn__text">
+                                    <span class="btn__label">GitHub</span>
+                                    <span class="btn__handle" data-content="contact-github-text">@andreusama</span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -385,7 +406,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
-            <p class="footer__text" data-content="footer-copyright">&copy; 2024 Andrés Sànchez. All rights reserved.</p>
+            <p class="footer__text" data-content="footer-copyright">&copy; 2026 Andrés Sànchez. All rights reserved.</p>
             <p class="footer__subtext" data-content="footer-tagline">Built with passion for great game experiences</p>
         </div>
     </footer>

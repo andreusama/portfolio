@@ -320,3 +320,57 @@
   }
 }
 
+
+/* Hero entries: the two windows that open the Software and Games entries */
+.hero-window.hero-entry {
+    display: block;
+    width: clamp(170px, 14vw + 70px, 250px);
+    color: var(--color-base-dark);
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.hero-entry:hover,
+.hero-entry:focus-visible {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    outline: 3px solid var(--color-accent-purple);
+    outline-offset: 3px;
+    animation-play-state: paused;
+}
+
+.hero-entry--active {
+    border-color: var(--color-accent-purple);
+}
+
+.hero-entry .hero-window__content {
+    aspect-ratio: 4 / 3;
+}
+
+.hero-window__content--placeholder {
+    padding: 0.75rem;
+    text-align: center;
+    background: var(--color-cream);
+}
+
+.hero-window__placeholder {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.hero-window__label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0.6rem 0.75rem;
+    border-top: 3px solid var(--color-base-dark);
+    background: var(--color-base-light);
+    font-size: 0.8rem;
+    line-height: 1.25;
+}
+
+.hero-window__label strong {
+    font-size: 1rem;
+}

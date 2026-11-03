@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "title": "Andrés Sànchez - Full stack software engineer",
+    "description": "Full stack software engineer: Python/Django, TypeScript/React, with gameplay and real-time experience."
+  },
+  "hero": {
+    "greeting": "Hi, I'm Andrés Sànchez",
+    "headline": "Full stack software engineer",
+    "description": "Python/Django and TypeScript/React, with gameplay and real-time experience.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Get In Touch",
+    "entries": {
+      "software": {
+        "label": "Software",
+        "caption": "Full stack · Python/Django · TypeScript/React",
+        "placeholder": "🎬 VIBECOMPOSER DEMO · COMING SOON"
+      },
+      "games": {
+        "label": "Games",
+        "caption": "Shipped commercial titles · Unity · C#"
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "sideProjects": "",
+    "skills": "",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "cv": {
+    "label": "Download CV",
+    "file": "assets/cv/AndresSanchez_CV_Software.pdf"
+  },
+  "marquees": {
+    "skills1": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "TypeScript",
+      "React"
+    ],
+    "skills2": [
+      "Supabase",
+      "Capacitor",
+      "Ollama",
+      "GitLab",
+      "Unity"
+    ],
+    "platforms": [],
+    "genres": [],
+    "types": [],
+    "misc": []
+  },
+  "featuredProjects": {
+    "sectionTitle": "Flagship projects",
+    "sectionSubtitle": "Software built end to end, with the decisions behind it",
+    "projects": [
+      {
+        "id": "irrigation-platform",
+        "title": "Precision-irrigation platform",
+        "genre": "Web platform · IRTA",
+        "tags": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "JavaScript",
+          "CSS"
+        ],
+        "mediaType": "image",
+        "mediaSrc": "assets/software/precision-irrigation-map.jpg",
+        "mediaPlaceholder": "",
+        "modal": {
+          "title": "Precision-irrigation platform",
+          "windowTitle": "irrigation-platform.exe",
+          "summary": "A web platform that helps farmers plan irrigation using crop, weather and sensor data. Text-only case study: a public demo will replace this screenshot later.",
+          "videoType": "image",
+          "videoSrc": "assets/software/precision-irrigation-map.jpg",
+          "videoPlaceholder": "",
+          "brands": [],
+          "links": [],
+          "contributions": [
+            {
+              "category": "Frontend",
+              "items": [
+                "Led the refactor from a legacy scrolling page to a modern map-centered interface, in the style of Google Maps and Glovo."
+              ]
+            },
+            {
+              "category": "Performance",
+              "items": [
+                "Cut map load time by resolving parcel polygons to the zoom level's point resolution, so far less data is loaded."
+              ]
+            },
+            {
+              "category": "AI-assisted translation",
+              "items": [
+                "Built a local-LLM translation pipeline (Ollama, qwen2.5:32b, zero API cost) with a verified glossary: 490 professionally reviewed translations always override the AI.",
+                "Localized about 13,000 strings into 6 languages, replacing an estimated 140+ hours of manual work (estimate: about 43,000 words at 300 words per hour)."
+              ]
+            },
+            {
+              "category": "Platform and tooling",
+              "items": [
+                "Adapted one codebase to 10+ regional irrigation authorities, each with its own configuration and terminology.",
+                "Automated task creation through the GitLab Issues API."
+              ]
+            }
+          ],
+          "role": "Full Stack Engineer at IRTA (Jan 2026 - present)",
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "JavaScript",
+            "CSS",
+            "Ollama",
+            "GitLab API"
+          ]
+        }
+      },
+      {
+        "id": "estalvia",
+        "title": "Estalvia",
+        "genre": "Django AI prototypes for small businesses",
+        "tags": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "LLM"
+        ],
+        "mediaType": "",
+        "mediaSrc": "",
+        "mediaPlaceholder": "🎬 ESTALVIA DEMO · COMING SOON",
+        "modal": {
+          "title": "Estalvia",
+          "windowTitle": "estalvia.exe",
+          "summary": "A Django platform of AI prototypes for small businesses. The first prototype reads supplier delivery notes and invoices with AI, shows what is paid and what does not add up, and reconciles payments against a CSV bank statement.",
+          "videoType": "video",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 ESTALVIA DEMO · COMING SOON",
+          "brands": [],
+          "links": [],
+          "contributions": [
+            {
+              "category": "Architecture",
+              "items": [
+                "One Django project that mounts each prototype as an app under its own prefix.",
+                "Technical decisions and their limits recorded as ADRs."
+              ]
+            },
+            {
+              "category": "AI and reconciliation",
+              "items": [
+                "Invoices and delivery notes read with AI.",
+                "The bank statement is processed with rules, not AI."
+              ]
+            },
+            {
+              "category": "Accounts and quality",
+              "items": [
+                "User accounts with invite-code registration and management commands.",
+                "Tests that do not call the model."
+              ]
+            }
+          ],
+          "role": "Personal project",
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "LLM"
+          ]
+        }
+      },
+      {
+        "id": "vibecomposer",
+        "title": "VibeComposer",
+        "genre": "Lyric co-writing app",
+        "tags": [
+          "TypeScript",
+          "React",
+          "Supabase",
+          "Capacitor"
+        ],
+        "mediaType": "",
+        "mediaSrc": "",
+        "mediaPlaceholder": "🎬 VIBECOMPOSER DEMO · COMING SOON",
+        "modal": {
+          "title": "VibeComposer",
+          "windowTitle": "vibecomposer.exe",
+          "summary": "An app for writing song lyrics in Spanish and Catalan with an AI co-writer, a React Flow canvas, a Web Audio sequencer and a mobile version built with Capacitor.",
+          "videoType": "video",
+          "videoSrc": "",
+          "videoPlaceholder": "🎬 VIBECOMPOSER DEMO · COMING SOON",
+          "brands": [],
+          "links": [],
+          "contributions": [
+            {
+              "category": "Product",
+              "items": [
+                "Canvas built with React Flow and a sequencer built on Web Audio.",
+                "Mobile version wrapped with Capacitor instead of a rewrite."
+              ]
+            },
+            {
+              "category": "Data and access",
+              "items": [
+                "Supabase backend with per-user row-level security (RLS)."
+              ]
+            },
+            {
+              "category": "Language tooling",
+              "items": [
+                "Own pipeline for a word lexicon of hundreds of thousands of words per language.",
+                "Rhymes are verified by an SQL query rather than generated by the model."
+              ]
+            },
+            {
+              "category": "Quality",
+              "items": [
+                "120 logic tests with Vitest."
+              ]
+            }
+          ],
+          "role": "Personal project",
+          "technologies": [
+            "TypeScript",
+            "React",
+            "Supabase",
+            "Capacitor",
+            "Web Audio"
+          ]
+        }
+      }
+    ]
+  },
+  "sideProjects": {
+    "sectionTitle": "",
+    "sectionSubtitle": "",
+    "projects": []
+  },
+  "skills": {
+    "sectionTitle": "Skills & Expertise",
+    "sectionSubtitle": "",
+    "skillsList": []
+  },
+  "thatsMe": {
+    "sectionTitle": "That's Me",
+    "sectionSubtitle": "Sometimes you must go AFK... to come back stronger.",
+    "roles": [
+      {
+        "role": "",
+        "name": "",
+        "image": "corchetes.png",
+        "isDecoration": true
+      },
+      {
+        "role": "Sometimes a bug solution comes between pages",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/CookingPortfolio.jpeg"
+      },
+      {
+        "role": "After a lot of mallocs the heap can overflow, so I like to free() myself",
+        "name": "",
+        "image": "assets/casualGames/PersonalPhotos/TravelerPortfolio.jpeg"
+      },
+      {
+        "role": "",
+        "name": "",
+        "image": ";.png",
+        "isDecoration": true
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "I would love to work with you!",
+    "text": "Feel free to reach out",
+    "buttonText": "Get in touch"
+  },
+  "contact": {
+    "modalTitle": "Let's Connect",
+    "modalDescription": "Open to work · Lleida · available from January 2027. Reach out about roles, collaborations, or just to chat.",
+    "email": "andres8sanchez@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/andresama",
+    "linkedinText": "LinkedIn Profile",
+    "twitter": "",
+    "twitterHandle": "",
+    "github": "https://github.com/andreusama",
+    "githubText": "@andreusama",
+    "availability": {
+      "location": "Lleida",
+      "status": "Open to work · available from January 2027",
+      "preferredProjects": ""
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Andrés Sànchez. All rights reserved.",
+    "tagline": "Full stack engineering, with a games background"
+  }
+}

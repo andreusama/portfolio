@@ -194,3 +194,31 @@ body.hybrid-layout {
         max-height: 95vh;
     }
 }
+
+/* Language toggle */
+.navbar__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: auto;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.navbar__lang a {
+    color: var(--color-base-dark);
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.navbar__lang a:hover {
+    color: var(--color-accent-purple);
+    opacity: 1;
+}
+
+.navbar__lang a.is-active {
+    opacity: 1;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-accent-turquoise);
+}

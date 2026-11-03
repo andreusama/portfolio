@@ -1,18 +1,16 @@
 {
-  "version": "casual-games",
-  "dataFile": "data/casual-games.json",
+  "version": "landing",
+  "defaultLanguage": "en",
+  "languages": ["en", "es"],
+  "dataFile": "data/software.{lang}.json",
   "availableVersions": {
-    "casual-games": {
-      "name": "Casual Games Portfolio",
-      "dataFile": "data/casual-games.json"
+    "software": {
+      "name": "Software",
+      "dataFile": "data/software.{lang}.json"
     },
-    "cpp-programming": {
-      "name": "C++ Programming Portfolio",
-      "dataFile": "data/cpp-programming.json"
-    },
-    "freelance-tech": {
-      "name": "Freelance Tech Solutions",
-      "dataFile": "data/freelance-tech.json"
+    "games": {
+      "name": "Games",
+      "dataFile": "data/games.{lang}.json"
     }
   }
 }

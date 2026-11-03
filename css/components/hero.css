@@ -115,9 +115,18 @@
         max-width: 300px;
     }
 
-    /* Hide decorative columns on mobile */
-    .hero-column,
-    .hero-window {
-        display: none !important;
+    /* Keep the two entry windows on mobile; hide only the decorative column images */
+    .hero-column__image {
+        display: none;
     }
+
+    .hero-window.hero-entry {
+        width: min(80vw, 280px);
+        animation: none;
+    }
+}
+
+/* Elements hidden by the content loader (empty sections, unused nav items) */
+[hidden] {
+    display: none !important;
 }

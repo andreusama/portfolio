@@ -31,6 +31,10 @@ class ContentLoader {
             this.populateFinalCta();
             this.populateContact();
             this.populateFooter();
+            this.populateNav();
+            this.populateHeroEntries();
+            this.setupLangToggle();
+            this.applyView();
 
             console.log('✅ Content loaded successfully');
         } catch (error) {
@@ -54,8 +58,27 @@ class ContentLoader {
      * Load content data from JSON
      */
     async loadContent() {
-        const dataFile = this.config.dataFile;
-        const response = await fetch(dataFile);
+        const params = new URLSearchParams(window.location.search);
+        const versions = this.config.availableVersions || {};
+
+        // ?version=<key> opens one Entry; anything else (or nothing) shows the Landing
+        const requested = params.get('version');
+        const isEntry = requested && Object.prototype.hasOwnProperty.call(versions, requested);
+        this.view = isEntry ? requested : 'landing';
+        this.config.version = this.view;
+        const template = isEntry ? versions[requested].dataFile : this.config.dataFile;
+
+        // ?lang=<code>; a missing translation falls back to the default language
+        const languages = this.config.languages || ['en'];
+        const defaultLang = this.config.defaultLanguage || 'en';
+        const requestedLang = params.get('lang');
+        this.lang = languages.includes(requestedLang) ? requestedLang : defaultLang;
+
+        let response = await fetch(template.replace('{lang}', this.lang));
+        if (!response.ok && this.lang !== defaultLang) {
+            this.lang = defaultLang;
+            response = await fetch(template.replace('{lang}', this.lang));
+        }
         if (!response.ok) {
             throw new Error(`Failed to load content: ${response.statusText}`);
         }
@@ -89,6 +112,115 @@ class ContentLoader {
         this.setTextContent('[data-content="hero-description"]', hero.description);
         this.setTextContent('[data-content="hero-cta-primary"]', hero.ctaPrimary);
         this.setTextContent('[data-content="hero-cta-secondary"]', hero.ctaSecondary);
+
+        const workCta = document.querySelector('.hero__cta a[href="#projects"]');
+        if (workCta) {
+            workCta.hidden = this.view === 'landing';
+        }
+    }
+
+    /**
+     * Populate the two Hero windows that open each Entry
+     */
+    populateHeroEntries() {
+        const entries = (this.data.hero && this.data.hero.entries) || {};
+
+        ['software', 'games'].forEach(key => {
+            const link = document.querySelector(`[data-entry="${key}"]`);
+            const entry = entries[key];
+            if (!link || !entry) return;
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('version', key);
+            link.setAttribute('href', url.search);
+            link.classList.toggle('hero-entry--active', this.view === key);
+            if (this.view === key) {
+                link.setAttribute('aria-current', 'page');
+            }
+
+            this.setTextContent(`[data-content="hero-entry-${key}-label"]`, entry.label);
+            this.setTextContent(`[data-content="hero-entry-${key}-caption"]`, entry.caption);
+            if (entry.placeholder) {
+                this.setTextContent(`[data-content="hero-entry-${key}-placeholder"]`, entry.placeholder);
+            }
+        });
+    }
+
+    /**
+     * Populate navbar labels and the CV link from the data file.
+     * An empty label (or empty CV file) hides the item.
+     */
+    populateNav() {
+        const nav = this.data.nav || {};
+        const keys = {
+            '#hero': 'home',
+            '#projects': 'projects',
+            '#student-projects': 'sideProjects',
+            '#skills': 'skills',
+            '#thats-me': 'about',
+            '#contact': 'contact'
+        };
+        const landingKeys = ['home', 'contact'];
+
+        document.querySelectorAll('.navbar__link').forEach(link => {
+            const key = keys[link.getAttribute('href')];
+            const label = key && nav[key];
+            const item = link.closest('li');
+            const hidden = !label || (this.view === 'landing' && !landingKeys.includes(key));
+            if (item) item.hidden = hidden;
+            if (label) link.textContent = label;
+        });
+
+        const cv = this.data.cv;
+        const cvLink = document.querySelector('.navbar__cv-download');
+        if (cvLink) {
+            cvLink.hidden = !(cv && cv.file);
+            if (cv && cv.file) {
+                cvLink.setAttribute('href', cv.file);
+                cvLink.textContent = cv.label;
+            }
+        }
+    }
+
+    /**
+     * Point the EN/ES toggle at the current URL with the other language
+     */
+    setupLangToggle() {
+        document.querySelectorAll('[data-lang]').forEach(link => {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', link.dataset.lang);
+            link.setAttribute('href', url.search);
+
+            const active = link.dataset.lang === this.lang;
+            link.classList.toggle('is-active', active);
+            if (active) {
+                link.setAttribute('aria-current', 'true');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    /**
+     * Show the sections that belong to the current view.
+     * Landing: hero and contact only. Entry: sections with content.
+     */
+    applyView() {
+        document.body.dataset.view = this.view;
+        document.documentElement.lang = this.lang;
+
+        const landing = this.view === 'landing';
+        const visibility = {
+            '.marquee-double': !landing,
+            '#projects': !landing && this.data.featuredProjects.projects.length > 0,
+            '#student-projects': !landing && this.data.sideProjects.projects.length > 0,
+            '#skills': !landing && this.data.skills.skillsList.length > 0,
+            '#thats-me': !landing
+        };
+        Object.entries(visibility).forEach(([selector, visible]) => {
+            const element = document.querySelector(selector);
+            if (element) element.hidden = !visible;
+        });
     }
 
     /**
@@ -117,7 +249,7 @@ class ContentLoader {
 
         // Repeat items 4 times for seamless scrolling
         for (let i = 0; i < 4; i++) {
-            items.forEach(item => {
+            (items || []).forEach(item => {
                 const span = document.createElement('span');
                 span.className = 'marquee__item';
                 span.textContent = item;
@@ -458,6 +590,11 @@ class ContentLoader {
                     allowfullscreen
                     style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
                 </iframe>`;
+            } else if (modalData.videoType === 'image') {
+                return `<img
+                    src="${modalData.videoSrc}"
+                    alt="${modalData.title}"
+                    style="width: 100%; height: 100%; object-fit: contain;">`;
             } else if (modalData.videoType === 'video' || modalData.videoType === 'local') {
                 // Local video file
                 return `<video
@@ -530,6 +667,19 @@ class ContentLoader {
             </div>
         ` : '';
 
+        // Optional one-paragraph summary and external links
+        const summaryHTML = modalData.summary
+            ? `<p class="project-modal-header__summary">${modalData.summary}</p>`
+            : '';
+        const linksHTML = modalData.links && modalData.links.length > 0 ? `
+            <div class="cloud-container project-modal-info-box">
+                <h3 class="project-modal-info-box__title">Links</h3>
+                <div class="project-modal-info-box__tags">
+                    ${modalData.links.map(link => `<a class="tag" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`).join('')}
+                </div>
+            </div>
+        ` : '';
+
         // Build brands HTML
         const brandsHTML = modalData.brands && modalData.brands.length > 0 ? `
             <div class="project-modal-brands">
@@ -598,6 +748,7 @@ class ContentLoader {
                     <div class="project-modal-header">
                         <h1 class="project-modal-header__title">${modalData.title}</h1>
                         ${platformsHTML}
+                        ${summaryHTML}
                     </div>
 
                     <div class="project-modal-video">
@@ -628,6 +779,8 @@ class ContentLoader {
                                     ${modalData.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
                                 </div>
                             </div>
+
+                            ${linksHTML}
                         </div>
                     </div>
                 </div>
