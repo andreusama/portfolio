@@ -387,16 +387,30 @@
     opacity: 1;
 }
 
-/* "Click me!" in the colours of the contact wheel */
+/* "Click me!" reads as a button, in the colours of the contact wheel */
 .hero-entry__cta {
-    align-self: center;
-    margin-top: 0.25rem;
-    font-size: 1rem;
+    align-self: stretch;
+    margin-top: 0.5rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    background: linear-gradient(90deg, var(--color-accent-turquoise), var(--color-accent-purple), var(--color-accent-pink), var(--color-accent-orange), var(--color-accent-indigo));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    text-align: center;
+    color: var(--color-base-dark);
+    background: linear-gradient(90deg, var(--color-accent-orange), var(--color-accent-pink), var(--color-accent-orange));
+    background-size: 300% 100%;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border: 2px solid var(--color-base-dark);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 var(--color-base-dark);
+    animation: heroEntryCta 6s linear infinite;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero-entry:hover .hero-entry__cta,
+.hero-entry:focus-visible .hero-entry__cta {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 var(--color-base-dark);
 }
 
 .hero-entry--active {
@@ -428,30 +442,6 @@
     .hero-entry:hover,
     .hero-entry:focus-visible {
         box-shadow: 8px 8px 0 var(--color-accent-purple);
-    }
-
-    .hero-entry__cta {
-        align-self: stretch;
-        margin-top: 0.5rem;
-        padding: 0.45rem 0.75rem;
-        font-size: 1.2rem;
-        text-align: center;
-        color: var(--color-base-dark);
-        background: linear-gradient(90deg, var(--color-accent-orange), var(--color-accent-pink), var(--color-accent-orange));
-        background-size: 300% 100%;
-        -webkit-background-clip: border-box;
-        background-clip: border-box;
-        border: 2px solid var(--color-base-dark);
-        border-radius: 8px;
-        box-shadow: 3px 3px 0 var(--color-base-dark);
-        animation: heroEntryCta 6s linear infinite;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .hero-entry:hover .hero-entry__cta,
-    .hero-entry:focus-visible .hero-entry__cta {
-        transform: translate(3px, 3px);
-        box-shadow: 0 0 0 var(--color-base-dark);
     }
 }
 
