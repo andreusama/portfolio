@@ -132,9 +132,40 @@
     display: none !important;
 }
 
+/* Leaves room for the larger entry windows, and keeps the hero within the screen height */
+@media (min-width: 1261px) {
+    .hero__name {
+        font-size: clamp(2.75rem, min(5.6vw, 8.5svh), 6rem);
+        margin-bottom: 1rem;
+    }
+
+    .hero__description {
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* Very short screens */
+@media (min-width: 1261px) and (max-height: 680px) {
+    .hero__greeting {
+        font-size: 1.4rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
 /* The Spanish headline is longer: keep it to the same three lines as the English one */
 @media (min-width: 769px) {
     html[lang="es"] .hero__name {
         font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1261px) {
+    html[lang="es"] .hero__name {
+        font-size: clamp(2.5rem, min(4.6vw, 7.5svh), 4.5rem);
     }
 }

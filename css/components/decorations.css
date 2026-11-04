@@ -419,6 +419,106 @@
     margin-inline: auto;
 }
 
+.hero-entry[data-entry="software"] .hero-window__content {
+    aspect-ratio: 720 / 1280;
+}
+
+/* Desktop: the entries are the main way in, so they are large and read as buttons */
+@media (min-width: 769px) {
+    .hero-entry:hover,
+    .hero-entry:focus-visible {
+        box-shadow: 8px 8px 0 var(--color-accent-purple);
+    }
+
+    .hero-entry__cta {
+        align-self: stretch;
+        margin-top: 0.5rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 1.2rem;
+        text-align: center;
+        color: var(--color-base-dark);
+        background: linear-gradient(90deg, var(--color-accent-orange), var(--color-accent-pink), var(--color-accent-orange));
+        background-size: 300% 100%;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        border: 2px solid var(--color-base-dark);
+        border-radius: 8px;
+        box-shadow: 3px 3px 0 var(--color-base-dark);
+        animation: heroEntryCta 6s linear infinite;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .hero-entry:hover .hero-entry__cta,
+    .hero-entry:focus-visible .hero-entry__cta {
+        transform: translate(3px, 3px);
+        box-shadow: 0 0 0 var(--color-base-dark);
+    }
+}
+
+@keyframes heroEntryCta {
+    to {
+        background-position: 300% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-entry__cta {
+        animation: none;
+    }
+}
+
+/* Desktop: the hero fits the screen. Sizes follow the height left under the navbar */
+@media (min-width: 1261px) {
+    .cloud-container--large {
+        --hero-inner: calc(100svh - 208px);
+        --hero-column: clamp(80px, min(13vw, 15svh), 220px);
+        --hero-entry: clamp(210px, min(20.8vw, 34svh), 340px);
+        --hero-entry-software: clamp(190px, min(14vw, 30svh), 240px);
+        min-height: 0;
+        padding: 1.5rem 2rem;
+    }
+
+    .hero-column {
+        padding: 0 20px;
+        width: calc(var(--hero-entry) + 40px);
+    }
+
+    .hero-column--left {
+        width: calc(var(--hero-entry) + 40px);
+    }
+
+    .hero-window.hero-entry {
+        width: var(--hero-entry);
+    }
+
+    .hero-window.hero-entry[data-entry="software"] {
+        width: var(--hero-entry-software);
+    }
+
+    /* Crops the tall clip from the top when the screen is short */
+    .hero-entry[data-entry="software"] .hero-window__content {
+        aspect-ratio: auto;
+        height: min(calc(var(--hero-inner) - var(--hero-column) - 200px), calc(var(--hero-entry-software) * 1.4));
+    }
+
+    .hero-entry[data-entry="software"] .hero-window__video {
+        object-position: top;
+    }
+
+    .hero-column__image {
+        width: var(--hero-column);
+        height: var(--hero-column);
+    }
+
+    .hero-entry .hero-window__label {
+        font-size: 0.95rem;
+    }
+
+    .hero-entry .hero-window__label strong {
+        font-size: 1.35rem;
+    }
+}
+
 .hero-window__content--placeholder {
     padding: 0.75rem;
     text-align: center;

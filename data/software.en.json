@@ -176,16 +176,6 @@
           "videoPoster": "assets/software/vibecomposer/walkthrough-poster.jpg"
         },
         "collage": {
-          "links": [
-            {
-              "label": "Live app",
-              "url": "https://vibe-composer.vercel.app"
-            },
-            {
-              "label": "Code",
-              "url": "https://github.com/andreusama/VibeComposer"
-            }
-          ],
           "columns": [
             {
               "narrow": true,
@@ -377,23 +367,9 @@
           ]
         },
         "collage": {
-          "links": [
-            {
-              "label": "IrriDesk (IRTA)",
-              "url": "https://irridesk.com/"
-            },
-            {
-              "label": "IRRILANDS factsheet (PDF)",
-              "url": "https://xagritech.net/wp-content/uploads/2024/08/TKRV-IRRILANDS.-Supervisio-i-prediccio-de-la-demanda-de-reg-pel-territori.pdf"
-            },
-            {
-              "label": "SEGRE article",
-              "url": "https://www.segre.com/ca/noticies-empresa/260610/els-canals-d-urgell-preparen-per-gestionar-l-aigua-futur_1234627.html"
-            }
-          ],
           "columns": [
             {
-              "heading": "My work here is under NDA, so there are no screenshots of it. What the platform does comes from the public sources above, and what I did is explained in words."
+              "heading": "My work here is under NDA, so there are no screenshots of it. What I did is explained in words."
             },
             {
               "heading": "1. What it does"

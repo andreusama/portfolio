@@ -309,7 +309,7 @@ class ContentLoader {
         const section = this.data.featuredProjects;
 
         this.setTextContent('[data-content="featured-projects-title"]', section.sectionTitle);
-        this.setTextContent('[data-content="featured-projects-subtitle"]', section.sectionSubtitle);
+        this.setProjectSubtitle('[data-content="featured-projects-subtitle"]', section.sectionSubtitle);
 
         const grid = document.querySelector('[data-content="featured-projects-grid"]');
         if (!grid) return;
@@ -596,7 +596,7 @@ class ContentLoader {
         const section = this.data.sideProjects;
 
         this.setTextContent('[data-content="side-projects-title"]', section.sectionTitle);
-        this.setTextContent('[data-content="side-projects-subtitle"]', section.sectionSubtitle);
+        this.setProjectSubtitle('[data-content="side-projects-subtitle"]', section.sectionSubtitle);
 
         const grid = document.querySelector('[data-content="side-projects-grid"]');
         if (!grid) return;
@@ -633,7 +633,7 @@ class ContentLoader {
         const section = this.data.skills;
 
         this.setTextContent('[data-content="skills-title"]', section.sectionTitle);
-        this.setTextContent('[data-content="skills-subtitle"]', section.sectionSubtitle);
+        this.setProjectSubtitle('[data-content="skills-subtitle"]', section.sectionSubtitle);
 
         const container = document.querySelector('[data-content="skills-list"]');
         if (!container) return;
@@ -841,6 +841,27 @@ class ContentLoader {
         if (element) {
             element.textContent = text;
         }
+    }
+
+    /**
+     * Helper: Show a "Problem: ... Solution: ..." subtitle as a pill. Any other text stays plain
+     */
+    setProjectSubtitle(selector, text) {
+        const element = document.querySelector(selector);
+        const parts = text && text.match(/^(Problem[a]?:)\s*(.*?)\s*(Solution:|Solución:)\s*(.*)$/s);
+        if (!element || !parts) {
+            this.setTextContent(selector, text);
+            return;
+        }
+        element.classList.add('section__subtitle--pill');
+        element.textContent = '';
+        [[parts[1], parts[2]], [parts[3], parts[4]]].forEach(([label, body]) => {
+            const part = document.createElement('span');
+            const strong = document.createElement('strong');
+            strong.textContent = label;
+            part.append(strong, body);
+            element.appendChild(part);
+        });
     }
 
     /**

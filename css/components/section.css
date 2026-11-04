@@ -1501,3 +1501,44 @@ body[data-view="landing"] #hero-ribbon {
         font-size: 1rem;
     }
 }
+
+/* Problem and solution of a Software project: one wide pill, so the text takes little height */
+.section__subtitle.section__subtitle--pill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: min(1100px, 100%);
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45;
+    text-align: left;
+    color: var(--color-base-dark);
+    background: var(--color-base-light);
+    border: 2px solid var(--color-base-dark);
+    border-radius: 16px;
+    text-shadow: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.section__subtitle--pill:hover {
+    box-shadow: 10px 10px 0 var(--color-base-dark);
+}
+
+/* The dark shadow wouldn't show on a dark section */
+.section--skills .section__subtitle--pill:hover {
+    box-shadow: 10px 10px 0 var(--color-accent-purple);
+}
+
+.section__subtitle--pill strong {
+    display: block;
+    color: var(--color-accent-purple);
+}
+
+@media (max-width: 768px) {
+    .section__subtitle.section__subtitle--pill {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.25rem 1.5rem;
+    }
+}
