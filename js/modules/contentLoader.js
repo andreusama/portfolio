@@ -181,15 +181,16 @@ class ContentLoader {
             '#skills': 'skills',
             '#expertise': 'expertise',
             '#thats-me': 'about',
+            '#approach': 'approach',
             '#contact': 'contact'
         };
-        const landingKeys = ['home', 'contact'];
+        const landingKeys = ['home', 'approach', 'contact'];
 
         document.querySelectorAll('.navbar__link').forEach(link => {
             const key = keys[link.getAttribute('href')];
             const label = key && nav[key];
             const item = link.closest('li');
-            const hidden = !label || (this.view === 'landing' && !landingKeys.includes(key));
+            const hidden = !label || (this.view === 'landing' ? !landingKeys.includes(key) : key === 'approach');
             if (item) item.hidden = hidden;
             if (label) link.textContent = label;
 

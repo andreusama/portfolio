@@ -475,10 +475,13 @@
         --hero-entry: clamp(210px, min(20.8vw, 34svh), 340px);
         --hero-entry-software: clamp(190px, min(14vw, 30svh), 240px);
         min-height: 0;
-        padding: 1.5rem 2rem;
+        padding: calc(44px + 2.5svh) 2rem;
     }
 
+    /* Both columns stand on the same line, so the capitals line up */
     .hero-column {
+        align-self: stretch;
+        justify-content: flex-end;
         padding: 0 20px;
         width: calc(var(--hero-entry) + 40px);
     }
@@ -498,7 +501,7 @@
     /* Crops the tall clip from the top when the screen is short */
     .hero-entry[data-entry="software"] .hero-window__content {
         aspect-ratio: auto;
-        height: min(calc(var(--hero-inner) - var(--hero-column) - 200px), calc(var(--hero-entry-software) * 1.4));
+        height: calc(var(--hero-entry) * 0.75);
     }
 
     .hero-entry[data-entry="software"] .hero-window__video {
