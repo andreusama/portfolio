@@ -678,17 +678,17 @@
   },
   "approach": {
     "sectionTitle": "My approach to the AI revolution",
-    "sectionSubtitle": "AI can be chaotic, and without a process that speed turns into slop. I organize my work with <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">Matt Pocock's skills library</a>.",
+    "sectionSubtitle": "AI can be chaotic, and without a process speed might turn into slop. I organize my work with <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">Matt Pocock's skills library</a>.",
     "windows": [
       {
         "title": "Grilling with docs",
         "image": "assets/software/skills/grilling.svg",
-        "description": "The agent interviews me before any code. Decisions stay in the repo as a glossary and ADRs."
+        "description": "I get interviewed by an agent before any coding. Decisions stay in the repo as a glossary and ADRs."
       },
       {
         "title": "Architecture",
         "image": "assets/software/skills/architecture.svg",
-        "description": "I decide the shape, the agent works inside it. Deep modules: a lot of behaviour behind small interfaces."
+        "description": "I decide the shape, but the agent works inside it. Deep modules: a lot of behaviour behind small interfaces."
       },
       {
         "title": "Tests",
@@ -698,7 +698,7 @@
       {
         "title": "Clean code",
         "image": "assets/software/skills/clean-code.svg",
-        "description": "Every diff is reviewed against the coding standards and the ticket. In Estalvia, ruff and pytest run in CI."
+        "description": "Every diff is reviewed against the coding standards and the ticket, and in Estalvia ruff and pytest run in CI."
       }
     ]
   },

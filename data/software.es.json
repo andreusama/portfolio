@@ -678,17 +678,17 @@
   },
   "approach": {
     "sectionTitle": "Mi enfoque ante la revolución de la IA",
-    "sectionSubtitle": "La IA puede ser caótica y, sin un proceso, esa velocidad acaba en código basura. Organizo mi trabajo con la <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">librería de skills de Matt Pocock</a>.",
+    "sectionSubtitle": "La IA puede ser caótica y, sin un proceso, la velocidad puede acabar en código basura. Organizo mi trabajo con la <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">librería de skills de Matt Pocock</a>.",
     "windows": [
       {
         "title": "Grilling with docs",
         "image": "assets/software/skills/grilling.svg",
-        "description": "El agente me entrevista antes de escribir código. Las decisiones quedan en el repo como glosario y ADR."
+        "description": "Un agente me entrevista antes de programar. Las decisiones quedan en el repo como glosario y ADR."
       },
       {
         "title": "Arquitectura",
         "image": "assets/software/skills/architecture.svg",
-        "description": "Yo decido la forma y el agente trabaja dentro de ella. Módulos profundos: mucho comportamiento tras interfaces pequeñas."
+        "description": "Yo decido la forma, pero el agente trabaja dentro de ella. Módulos profundos: mucho comportamiento tras interfaces pequeñas."
       },
       {
         "title": "Tests",
@@ -698,7 +698,7 @@
       {
         "title": "Código limpio",
         "image": "assets/software/skills/clean-code.svg",
-        "description": "Cada diff se revisa frente a los estándares de código y el ticket. En Estalvia, ruff y pytest se ejecutan en CI."
+        "description": "Cada diff se revisa frente a los estándares de código y el ticket, y en Estalvia ruff y pytest se ejecutan en CI."
       }
     ]
   },
