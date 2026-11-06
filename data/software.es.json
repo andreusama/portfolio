@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Andrés Sànchez - Ingeniero de software full stack",
-    "description": "Ingeniero de software full stack: Python/Django, JavaScript/React, con experiencia en gameplay y tiempo real."
+    "description": "Ingeniero de software full stack: Python/Django, JavaScript/React, con experiencia en desarrollo de videojuegos y tiempo real."
   },
   "hero": {
     "greeting": "Hola, soy Andrés Sànchez",
@@ -105,7 +105,7 @@
   },
   "featuredProjects": {
     "sectionTitle": "VibeComposer",
-    "sectionSubtitle": "Problema: mi app de notas era un caos, con canciones sin terminar, referencias de libros y progresiones de acordes repartidas por una lista. Solución: reunirlo todo en una app estructurada para escribir canciones y añadir IA para jugar con ella.",
+    "sectionSubtitle": "Problema: Hago canciones para una banda llamada Sexenni y mi app de notas era un caos, con canciones sin terminar, referencias de libros y progresiones de acordes repartidas por una lista. Solución: reunirlo todo en una app estructurada para escribir canciones y añadir IA para apoyar la creación (sin escribir!)",
     "projects": [
       {
         "id": "vibecomposer",
@@ -131,7 +131,7 @@
           "links": [
             {
               "label": "App en vivo",
-              "url": "https://vibe-composer.vercel.app"
+              "url": "https://vibecomposer-demo.vercel.app/"
             },
             {
               "label": "Código",
@@ -265,7 +265,7 @@
               "items": [
                 {
                   "type": "readme",
-                  "title": "IA con límites para potenciar la imaginación",
+                  "title": "IA con límites para potenciar la imaginación pero controlar el resultado",
                   "contributions": [
                     {
                       "category": "Objetivo",
@@ -336,7 +336,7 @@
             {
               "category": "Rendimiento",
               "items": [
-                "Ajusté los polígonos de las parcelas a la resolución de puntos de cada nivel de zoom: 57 % menos de datos y 22 % más de velocidad de carga en 11.160 parcelas.",
+                "Ajusté los polígonos de las parcelas a la resolución de puntos de cada nivel de zoom: 57 % menos de datos en 11.160 parcelas.",
                 "Los colores de los polígonos se actualizan sin redibujar la geometría."
               ]
             },
@@ -468,7 +468,7 @@
                   "type": "icon",
                   "title": "Optimización",
                   "src": "assets/software/irrigation/icon-optimization.svg",
-                  "caption": "57 % menos de datos de mapa y 22 % más de velocidad de carga en 11.160 parcelas."
+                  "caption": "57 % menos de datos de mapa en 11.160 parcelas."
                 }
               ]
             },
@@ -678,7 +678,7 @@
   },
   "approach": {
     "sectionTitle": "Mi enfoque ante la revolución de la IA",
-    "sectionSubtitle": "La IA escribe código rápido y, sin un proceso, esa velocidad acaba en código basura. Organizo mi trabajo con la <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">librería de skills de Matt Pocock</a>.",
+    "sectionSubtitle": "La IA puede ser caótica y, sin un proceso, esa velocidad acaba en código basura. Organizo mi trabajo con la <a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener\">librería de skills de Matt Pocock</a>.",
     "windows": [
       {
         "title": "Grilling with docs",
