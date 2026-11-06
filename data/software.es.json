@@ -101,11 +101,25 @@
       "pytest",
       "ruff",
       "ADRs"
+    ],
+    "band1": [
+      "Hablar en público",
+      "Negocio",
+      "Diseño de producto",
+      "Marketing",
+      "Composición"
+    ],
+    "band2": [
+      "Sexenni",
+      "+130K oyentes mensuales",
+      "Sala Apolo",
+      "La Mercè",
+      "Lleida"
     ]
   },
   "featuredProjects": {
     "sectionTitle": "VibeComposer",
-    "sectionSubtitle": "Problema: Hago canciones para una banda llamada Sexenni y mi app de notas era un caos, con canciones sin terminar, referencias de libros y progresiones de acordes repartidas por una lista. Solución: reunirlo todo en una app estructurada para escribir canciones y añadir IA para apoyar la creación (sin escribir!)",
+    "sectionSubtitle": "Problema: Hago canciones para una banda llamada Sexenni y mi app de notas era un caos, con canciones sin terminar, referencias de libros y progresiones de acordes repartidas por una lista. Solución: reunirlo todo en una app compacta para escribir canciones y añadir IA para apoyar la creación (¡no para escribir!)",
     "projects": [
       {
         "id": "vibecomposer",
@@ -123,7 +137,7 @@
         "modal": {
           "title": "VibeComposer",
           "windowTitle": "vibecomposer.exe",
-          "summary": "Una app para escribir letras de canciones en castellano y catalán con una IA coautora, un canvas con React Flow, un secuenciador con Web Audio y una versión móvil hecha con Capacitor.",
+          "summary": "Una app para componer canciones en castellano y catalán con una IA coautora, un canvas con React Flow, un secuenciador con Web Audio y una versión móvil hecha con Capacitor.",
           "videoType": "video",
           "videoSrc": "assets/software/vibecomposer/walkthrough.mp4",
           "videoPlaceholder": "🎬 DEMO DE VIBECOMPOSER · PRÓXIMAMENTE",
@@ -329,7 +343,7 @@
               "category": "Frontend y UX",
               "items": [
                 "Rehíce la vista del agricultor: de una página antigua con scroll a una interfaz centrada en el mapa, al estilo de Google Maps y Glovo.",
-                "Diseñada para usuarios no técnicos en el campo: botones grandes, zonas táctiles amplias y color solo en los elementos pulsables.",
+                "Diseñada para usuarios no técnicos en el campo: botones grandes, zonas táctiles grandes y color solo en los elementos pulsables. Los agricultores no están acostumbrados al software.",
                 "Mapas con códigos de color para riego periódico y a demanda."
               ]
             },
@@ -652,12 +666,12 @@
       {
         "title": "Python, Django y PostgreSQL",
         "image": "assets/software/skills/python.svg",
-        "description": "Mi stack principal de backend. En el IRTA trabajo en una plataforma de riego de precisión a escala nacional, adaptando un mismo código a más de 10 autoridades regionales de riego. En Estalvia cada herramienta es su propia app de Django, cada usuario ve solo sus datos y los tests se ejecutan sin llamar al modelo."
+        "description": "Mi stack principal de backend. En el IRTA trabajo en una plataforma de riego automatizado a escala nacional, adaptando un mismo código a más de 10 autoridades regionales de riego. En Estalvia cada herramienta es su propia app de Django, cada usuario ve solo sus datos y los tests se ejecutan sin llamar al modelo."
       },
       {
         "title": "JavaScript y React",
         "image": "assets/software/skills/react.svg",
-        "description": "VibeComposer es mi prueba full stack: React con un canvas de React Flow, un secuenciador con Web Audio, Supabase con seguridad a nivel de fila por usuario y una versión móvil con Capacitor, respaldado por 120 tests de lógica. En el IRTA lideré la refactorización del frontend, de una página antigua a una interfaz centrada en el mapa."
+        "description": "VibeComposer es mi prueba full stack: React con un canvas de React Flow, una función para grabar y guardar memos, Supabase con seguridad a nivel de fila por usuario y una versión móvil con Capacitor, respaldado por 120 tests de lógica. En el IRTA lideré la refactorización del frontend, de una página antigua a una interfaz centrada en el mapa."
       },
       {
         "title": "IA aplicada",
@@ -693,7 +707,7 @@
       {
         "title": "Tests",
         "image": "assets/software/skills/tests.svg",
-        "description": "Un ciclo rojo-verde cada vez, así compruebo el trabajo del agente en lugar de fiarme. Estalvia tiene 121 tests y VibeComposer, 120."
+        "description": "Compruebo el trabajo del agente en lugar de fiarme. Estalvia tiene 121 tests y VibeComposer, 120."
       },
       {
         "title": "Código limpio",
@@ -701,6 +715,114 @@
         "description": "Cada diff se revisa frente a los estándares de código y el ticket, y en Estalvia ruff y pytest se ejecutan en CI."
       }
     ]
+  },
+  "band": {
+    "sectionTitle": "Fuera de la pantalla: Sexenni",
+    "sectionSubtitle": "Escribo canciones para Sexenni, una banda de pop de Lleida. Una banda es una pequeña empresa: me enseñó lo que un equipo necesita más allá del código.",
+    "collage": {
+      "columns": [
+        {
+          "grow": 2,
+          "maxWidth": 760,
+          "items": [
+            {
+              "type": "image",
+              "title": "En directo con Sexenni",
+              "caption": "Hablar ante una sala llena también es parte del trabajo.",
+              "src": "assets/software/band/sexenni-live.jpg"
+            }
+          ]
+        },
+        {
+          "maxWidth": 420,
+          "items": [
+            {
+              "type": "readme",
+              "title": "Lo que me enseñó la banda",
+              "contributions": [
+                {
+                  "category": "Hablar en público",
+                  "items": [
+                    "En el escenario y ante prensa, promotores y salas."
+                  ]
+                },
+                {
+                  "category": "Negocio",
+                  "items": [
+                    "Presupuestos, contrataciones y negociaciones: llevamos la banda como una pequeña empresa."
+                  ]
+                },
+                {
+                  "category": "Producto y marketing",
+                  "items": [
+                    "Cada lanzamiento es un producto: concepto, portada, estreno y campaña en redes."
+                  ]
+                },
+                {
+                  "category": "Arte",
+                  "items": [
+                    "Composición, arreglos y la identidad visual de la banda."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rowBreak": true
+        },
+        {
+          "maxWidth": 420,
+          "items": [
+            {
+              "type": "readme",
+              "title": "Resultados",
+              "contributions": [
+                {
+                  "category": "Público",
+                  "items": [
+                    "Más de 130.000 oyentes mensuales en Spotify.",
+                    "Oyentes en más de 50 países."
+                  ]
+                },
+                {
+                  "category": "Reconocimiento",
+                  "items": [
+                    "Premio Enderrock de la crítica 2026: mejor disco de grupo de pop-rock, por Joc de nens.",
+                    "El Disc de La Marató (TV3, 2024), con Santi Balmes de Love of Lesbian."
+                  ]
+                },
+                {
+                  "category": "Grandes escenarios",
+                  "items": [
+                    "Sala Apolo, Barcelona (2025).",
+                    "La Mercè, la fiesta mayor de Barcelona."
+                  ]
+                },
+                {
+                  "category": "Desde",
+                  "items": [
+                    "2019, desde el sótano de un instituto de Lleida."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "grow": 2,
+          "maxWidth": 760,
+          "items": [
+            {
+              "type": "image",
+              "title": "Desde el escenario",
+              "caption": "La vista por la que trabajamos.",
+              "src": "assets/software/band/sexenni-crowd.jpg"
+            }
+          ]
+        }
+      ]
+    }
   },
   "thatsMe": {
     "sectionTitle": "Así soy yo",

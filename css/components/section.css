@@ -222,13 +222,14 @@
     background-size: 15% 100%;   /* or a value so the tile fits evenly */
 }
 
-/* Estalvia uses the Skills section: white lines instead of the Games rings */
+/* Estalvia and the Landing band use the Skills section: white lines instead of the Games rings */
 #approach .section__subtitle a {
     color: inherit;
     text-decoration: underline;
 }
 
-body[data-view="software"] #skills {
+body[data-view="software"] #skills,
+#band {
     background-position: center top;
     background-image: url('../../whiteLine.png');
     background-size: 15% 100%;
@@ -349,6 +350,11 @@ body[data-view="software"] #skills .circle-background {
 .project-card:hover {
     box-shadow: 10px 10px 0 var(--color-base-dark);
     animation: cardFloat 4s ease-in-out infinite; /* Keep floating on hover */
+}
+
+/* The dark shadow wouldn't show on a dark section */
+.section--skills .project-card:hover {
+    box-shadow: 10px 10px 0 var(--color-base-light);
 }
 
 .project-card__titlebar {
@@ -1125,14 +1131,12 @@ body[data-view="landing"] #hero-ribbon {
     margin: calc(-3rem - var(--ribbon-cut)) 0 -3rem;
 }
 
-/* One line every 25%, so the lines run between the columns and not through them */
+/* Approach keeps the projects' line pattern (15%, centred), the same spacing as the hero */
 .section#approach {
     background-color: var(--color-base-light);
-    background-position: left top;
-    background-size: 25% 100%;
-    background-origin: border-box;
-    background-clip: padding-box;
-    border-left: 2px solid var(--color-base-light); /* hides the line on the page edge */
+}
+
+.section#approach {
     clip-path: polygon(0 calc(22px - var(--ribbon-rise)), 100% calc(22px + var(--ribbon-rise)), 100% 100%, 0 100%);
 }
 
@@ -1179,13 +1183,6 @@ body[data-view="landing"] #hero-ribbon {
 
 #approach .team-window__info {
     padding: 0 1.2rem 1.5rem;
-}
-
-/* Two columns per row from here down */
-@media (max-width: 1200px) {
-    .section#approach {
-        background-size: 50% 100%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1420,23 +1417,38 @@ body[data-view="landing"] #hero-ribbon {
 .contact-modal__buttons {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 700px;
+    gap: 1rem;
+    max-width: 560px;
     margin: 0 auto;
 }
 
-.btn--contact {
+/* Scoped to the modal so it wins over .btn (inline-block), which loads later in button-animations.css */
+.contact-modal .btn--contact {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 1.25rem;
+    padding: 1.1rem 1.5rem;
     font-size: 1rem;
+    text-align: left;
     text-decoration: none;
     border: none;
     cursor: pointer;
     position: relative;
+}
+
+/* Arrow on the right: the whole row is the action */
+.contact-modal .btn--contact::after {
+    content: '→';
+    margin-left: auto;
+    font-size: 1.3rem;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-modal .btn--contact:hover::after {
+    opacity: 1;
+    transform: translateX(4px);
 }
 
 .btn--contact .btn__icon {
@@ -1444,29 +1456,39 @@ body[data-view="landing"] #hero-ribbon {
     flex-shrink: 0;
 }
 
-.btn--contact .btn__icon-img {
-    width: 80px;
-    height: 80px;
+.btn--contact .btn__icon-img,
+.btn--contact .btn__icon-svg {
+    width: 44px;
+    height: 44px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.btn--contact .btn__icon-svg {
+    fill: currentColor;
 }
 
 .btn--contact .btn__text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.15rem;
+    min-width: 0;
+    line-height: 1.3;
 }
 
 .btn--contact .btn__label {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     margin-bottom: 0;
 }
 
 .btn--contact .btn__email,
 .btn--contact .btn__handle {
-    display: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.75;
+    overflow-wrap: anywhere;
 }
 
 .btn--copy-email.copied .btn__label::after {
@@ -1483,18 +1505,25 @@ body[data-view="landing"] #hero-ribbon {
         font-size: 1.8rem;
     }
 
+    .contact-modal__description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
     .contact-modal__buttons {
         max-width: 100%;
     }
 
-    .btn--contact {
-        padding: 1.25rem 1.5rem;
-        gap: 1.5rem;
+    .contact-modal .btn--contact {
+        padding: 0.9rem 1.1rem;
+        gap: 1rem;
     }
 
-    .btn--contact .btn__icon-img {
-        width: 60px;
-        height: 60px;
+    .btn--contact .btn__icon-img,
+    .btn--contact .btn__icon-svg {
+        width: 36px;
+        height: 36px;
     }
 
     .btn--contact .btn__label {

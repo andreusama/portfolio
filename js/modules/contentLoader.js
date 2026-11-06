@@ -29,6 +29,7 @@ class ContentLoader {
             this.populateSkills();
             this.populateExpertise();
             this.populateApproach();
+            this.populateBand();
             this.setupCollageVideos();
             this.populateThatsMe();
             this.populateFinalCta();
@@ -253,6 +254,8 @@ class ContentLoader {
             '#skills-ribbon': !landing && !this.data.expertise,
             '#thats-me': !landing,
             '#approach': landing && !!this.data.approach,
+            '#band': landing && !!this.data.band,
+            '#band-ribbon': landing && !!this.data.band,
             '#hero-ribbon': !landing || !!this.data.approach
         };
         Object.entries(visibility).forEach(([selector, visible]) => {
@@ -278,6 +281,8 @@ class ContentLoader {
         this.populateMarquee('[data-content="marquee-estalvia2"]', marquees.estalvia2 || []);
         this.populateMarquee('[data-content="marquee-expertise1"]', marquees.expertise1 || []);
         this.populateMarquee('[data-content="marquee-expertise2"]', marquees.expertise2 || []);
+        this.populateMarquee('[data-content="marquee-band1"]', marquees.band1 || []);
+        this.populateMarquee('[data-content="marquee-band2"]', marquees.band2 || []);
     }
 
     /**
@@ -377,6 +382,12 @@ class ContentLoader {
                 heading.style.cssText = 'flex: 0 0 100%; max-width: 100%; margin-top: 2rem; margin-bottom: 0; font-weight: 700;';
                 heading.textContent = column.heading;
                 columns.appendChild(heading);
+                return;
+            }
+            if (column.rowBreak) {
+                const rowBreak = document.createElement('div');
+                rowBreak.style.cssText = 'flex: 0 0 100%; height: 0;';
+                columns.appendChild(rowBreak);
                 return;
             }
             const el = document.createElement('div');
@@ -702,6 +713,23 @@ class ContentLoader {
             `;
             grid.appendChild(column);
         });
+    }
+
+    /**
+     * Populate the Landing's band section with the project collage windows
+     */
+    populateBand() {
+        const section = this.data.band;
+        if (!section) return;
+
+        this.setTextContent('[data-content="band-title"]', section.sectionTitle);
+        this.setTextContent('[data-content="band-subtitle"]', section.sectionSubtitle);
+
+        const grid = document.querySelector('[data-content="band-grid"]');
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        this.appendCollage(grid, { id: 'band', collage: section.collage });
     }
 
     /**

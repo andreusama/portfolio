@@ -101,6 +101,20 @@
       "pytest",
       "ruff",
       "ADRs"
+    ],
+    "band1": [
+      "Public speaking",
+      "Business",
+      "Product design",
+      "Marketing",
+      "Songwriting"
+    ],
+    "band2": [
+      "Sexenni",
+      "130K+ monthly listeners",
+      "Sala Apolo",
+      "La Mercè",
+      "Lleida"
     ]
   },
   "featuredProjects": {
@@ -701,6 +715,114 @@
         "description": "Every diff is reviewed against the coding standards and the ticket, and in Estalvia ruff and pytest run in CI."
       }
     ]
+  },
+  "band": {
+    "sectionTitle": "Off the screen: Sexenni",
+    "sectionSubtitle": "I write songs for Sexenni, a pop band from Lleida. A band is a small company: it taught me what a team needs beyond code.",
+    "collage": {
+      "columns": [
+        {
+          "grow": 2,
+          "maxWidth": 760,
+          "items": [
+            {
+              "type": "image",
+              "title": "Live with Sexenni",
+              "caption": "Talking to a full room is part of the job.",
+              "src": "assets/software/band/sexenni-live.jpg"
+            }
+          ]
+        },
+        {
+          "maxWidth": 420,
+          "items": [
+            {
+              "type": "readme",
+              "title": "What the band taught me",
+              "contributions": [
+                {
+                  "category": "Public speaking",
+                  "items": [
+                    "On stage and in front of press, promoters and venues."
+                  ]
+                },
+                {
+                  "category": "Business",
+                  "items": [
+                    "Budgets, bookings and negotiations: we run the band as a small company."
+                  ]
+                },
+                {
+                  "category": "Product and marketing",
+                  "items": [
+                    "Each release is a product: concept, artwork, launch and social media campaign."
+                  ]
+                },
+                {
+                  "category": "Art",
+                  "items": [
+                    "Songwriting, arranging and the band's visual identity."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rowBreak": true
+        },
+        {
+          "maxWidth": 420,
+          "items": [
+            {
+              "type": "readme",
+              "title": "Results",
+              "contributions": [
+                {
+                  "category": "Audience",
+                  "items": [
+                    "130,000+ monthly listeners on Spotify.",
+                    "Listeners in 50+ countries."
+                  ]
+                },
+                {
+                  "category": "Recognition",
+                  "items": [
+                    "Enderrock critics' award 2026: best pop-rock group album, for Joc de nens.",
+                    "El Disc de La Marató (TV3, 2024), with Santi Balmes of Love of Lesbian."
+                  ]
+                },
+                {
+                  "category": "Big stages",
+                  "items": [
+                    "Sala Apolo, Barcelona (2025).",
+                    "La Mercè, Barcelona's city festival."
+                  ]
+                },
+                {
+                  "category": "Since",
+                  "items": [
+                    "2019, from a high school basement in Lleida."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "grow": 2,
+          "maxWidth": 760,
+          "items": [
+            {
+              "type": "image",
+              "title": "From the stage",
+              "caption": "The view we work for.",
+              "src": "assets/software/band/sexenni-crowd.jpg"
+            }
+          ]
+        }
+      ]
+    }
   },
   "thatsMe": {
     "sectionTitle": "That's Me",
